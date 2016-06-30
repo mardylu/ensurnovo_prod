@@ -1,0 +1,72 @@
+TD.MainMenu { Background-color: #FFD000 }
+
+TD.Box 
+{ 
+	Background-color: gray; 
+	color: white; 
+	font-family: arial; 
+	font-size: 12px; 
+	font-weight: bold
+}
+
+
+FONT.Header { font-size: 15px; font-family: arial; color: #640064 }
+
+TH.Pay
+{
+	font-size: 10pt; font-family: arial;
+	border-right: 1pt solid black;
+	border-bottom: 1pt solid black;
+	background-color: #FFD000;
+}
+
+TD.Pay
+{
+	font-size: 10pt; font-family: arial;
+	border-right: 1pt solid black;
+	border-bottom: 1pt solid black;
+	vertical-align: top;
+}
+
+TD.Pay2
+{
+	font-size: 10pt; font-family: arial;
+	border-right: 1pt solid black;
+	border-bottom: 1pt solid black;
+	vertical-align: top;
+	background-color: lightgrey;
+}
+
+.tableclass 
+{ 
+	font-size: 10pt; font-family: arial;
+	border-left: 1pt solid black;
+	border-top: 1pt solid black;
+	width: 500;
+	margin: none;
+}
+
+table#manual { font-face: arial; font-size: 10pt; border: 1pt solid lightgrey; border-collapse: collapse; width: 500pt; }
+table#manual tr td.contents, table#manual tr td.num { white-space: nowrap; }
+table#manual tr td { vertical-align: top; padding: 3pt }
+
+table#manual tr.even { background-color: lightgrey }
+
+
+td.thinborder { border: 1pt solid black; }
+
+hr.objectseparator
+{
+	height: 1px;
+	border: 0pt solid #000;
+	color: #530E53;
+	background-color: #530E53;
+	width: 500px;
+	margin-left: 0;
+	text-align: left;
+}
+
+td.header { background: url('images/header.gif'); background-repeat: no-repeat; }
+
+table#grid { font-face: arial; font-size: 10pt; border: 1pt solid lightgrey; border-collapse: collapse;  }
+table#grid tr td, table#grid tr th { border: 1pt solid lightgrey; }

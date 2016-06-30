@@ -1,0 +1,1217 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 11a: Existing Form Fill-in</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 11a: Existing Form Fill-in
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_12.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 12: Miscellaneous Features"></A>
+	<A HREF="manual_11.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 11: Form Creation"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">	
+	&nbsp;&nbsp;<B>Chapter 11a: Existing Form Fill-in</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#11a_1">11a.1 Form Fill-in Overview</A><BR>
+	<A HREF="#11a_2">11a.2 Adobe Acrobat 7/Designer 7 Issues</A><BR>
+	<A HREF="#11a_3">11a.3 Code Sample</A><BR>
+	<A HREF="#11a_4">11a.4 Image Field Handling</A><BR>
+	<A HREF="#11a_5">11a.5 Form Flattening</A><BR>
+	<A HREF="#11a_6">11a.6 JavaScript Removal and Other Features</A><BR>
+	<A HREF="#11a_7">11a.7 XFA Support</A><BR>
+	<A HREF="#11a_8">11a.8 Barcode-equipped Government Forms</A><BR>
+
+	</B>
+	
+	<P>
+
+	<A NAME="11a_1">
+	<FONT COLOR="#C06000"><B>11a.1 Form Fill-in Overview</B></FONT>
+	<Blockquote>
+	<U><B>11a.1.1 SetFieldValue Method</B></U>
+	<P>
+	In Chapter 9 of this manual, we already described the process of filling in a 
+	form-like document (see <A HREF="manual_09.html">Section 9.2</A>).
+	<P>
+	The approach described in that chapter
+	had one serious drawback: individual blanks in a "form" had to be referenced
+	by their physical coordinates.
+	This is because the Section 9.2 code sample did not involve a <i>real</i>
+	form, but a regular (static) PDF document depicting a form. 
+	<P>
+	Using tools such as Adobe Acrobat, it is possible
+	to place interactive fields on an existing document using
+	a graphical user interface. The form creator chooses a name, size,
+	location and other options for each field.
+	Once a form has been created, it can be filled in either interactively by a 
+	user, or automatically using tools such as AspPDF.
+	A form field can be referenced by name, as opposed to (x, y)-coordinates, 
+	which simplifies the coding significantly.
+	<P>
+	The PdfForm object provides the method <B>FindField</B> which returns 
+	a PdfAnnot object representing a top-level form field with the specified name.
+	If no field under this name is found, the method returns <i>Nothing</i>.
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	Set Field = Doc.Form.FindField("txtLastName")
+	</B></FONT>
+	<P>
+	To specify a text value for a field, the method <B>SetFieldValue</B>
+	of the PdfAnnot object should be used. This method accepts two arguments: a text
+	string, and a font to be used to render the string.
+	The SetFieldValue method uses the field's pre-defined alignment and font
+	size parameters. It also preserves an existing field border if there is one.
+	<P>As of Version 2.6, AspPDF also supports the method <B>SetFieldValueEx</B>
+	which only requires a single argument, the text string. This method is described below.
+	<P>
+	The SetFieldValue method can be used to set a value not only for text fields, but
+	checkboxes, drop-down list boxes and radio buttons as well. 
+	To select or unselect a checkbox, you must specify 
+	a state name for the text string argument. The state name for the "on" state
+	should be obtained  via the <B>FieldOnValue</B> property. The state name for the "off" state
+	is usually "Off".
+	<P>
+	When working with radio button groups, you need to use the PdfAnnot.<B>Children</B>
+	collection to reference each individual radio button within a group.
+	The code snippet below deselects radio button #1 (American Express) and selects
+	radio button #2 via the SetFieldValue method.
+	<P>
+	The following
+	code fragment fills out a credit card form generated
+	in <A HREF="#11_2">Section 11.2</A>:
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	</B>' Credit card number<B><BR>
+	Set Field = Doc.Form.FindField("ccNumber")<BR>
+	Field.SetFieldValue "324234324234", Doc.fonts("Helvetica")<P>
+
+	</B>' Expiration month<B><BR>
+	Set Field = Doc.Form.FindField("ccMonth")<BR>
+	Field.SetFieldValue "Mar", Doc.fonts("Helvetica")<P>
+
+	</B>' Expiration year<B><BR>
+	Set Field = Doc.Form.FindField("ccYear")<BR>
+	Field.SetFieldValue "2010", Doc.fonts("Helvetica")<P>
+
+	</B>' "Need Receipt?" checkbox<B><BR>
+	Set Field = Doc.Form.FindField("Receipt")<BR>
+	Field.SetFieldValue Field.FieldOnValue, Nothing</B> ' "on" state<B><P>
+
+	</B>' Credit card type (radio buttons)<B><BR>
+    Set Field = Doc.Form.FindField("ccType")<BR>
+    Field.Children(1).SetFieldValue "Off", Nothing  ' </B>Unselect Amex<B><BR>
+    Field.Children(2).SetFieldValue field.Children(2).FieldOnValue, Nothing ' </B>Select Visa<B>
+	</B></FONT>
+
+	<P>
+
+	To make a field read-only, Bit 1 of the property <B>FieldFlags</B> needs to be set, as follows:
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	</B>' VBScript<B><BR>
+	Field.FieldFlags = Field.FieldFlags Or 1<P>
+
+	</B>// C#<B><BR>
+	objField.FieldFlags |= 1;
+	</B></FONT>
+
+	<P>
+	<A NAME="11a_1_2">
+	<U><B>11a.1.2 SetFieldValueEx Method</B></U>
+	<P>
+	As of Version 2.6, AspPDF supports a more convenient 
+	way to fill in forms, via the PdfAnnot method <B>SetFieldValueEx</B>.
+	This method takes a single argument,
+	the text string. <B>SetFieldValueEx</B> internally calls <B>SetFieldValue</B>
+	with a font object it automatically creates
+	from the information contained in the PDF form being filled.
+	<P>
+	The SetFieldValueEx method simplifies the coding
+	as the need for a font object is eliminated.
+	For example, the code
+
+	<P>
+
+	<FONT FACE="Courier New" SIZE="2"><B>
+	Set Font = Doc.Fonts("Helvetica")<BR>
+	Set Field = Doc.Form.FindField("ccNumber")<BR>
+	Field.SetFieldValue "324234324234", Font<P>
+	</b></font>
+	<P>
+
+	can now be replaced with:
+
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	Set Field = Doc.Form.FindField("ccNumber")<BR>
+	Field.SetFieldValueEx "324234324234"<P>
+	</b></font>
+	
+	<P>
+	Note that the SetFieldValueEx method does not make SetFieldValue completely obsolete
+	as the former relies on the fonts embedded in the PDF form, and those
+	may not be sufficient to display all the necessary characters.
+	In that case, an external font should be used via the method SetFieldValue.
+
+	</Blockquote>
+
+	<A NAME="11a_2">
+	<FONT COLOR="#C06000"><B>11a.2 Adobe Acrobat 7+/Designer 7+ Issues</B></FONT>
+	<Blockquote>
+	The emergence of Adobe Acrobat 7.0 (and above) and Designed 7.0 (and above) brought about a number of significant
+	changes to the PDF form specifications. Two changes that are most relevant to AspPDF's
+	form fill-in functionality are a new way of naming form fields, and 
+	the Adobe XML Forms Architecture (XFA).
+	<P>
+	When you switch to PDF forms created by Version 7 and later of the Adobe Acrobat suite, 
+	you may have to make some changes to your AspPDF-based applications
+	to accommodate the new Adobe specs.
+	<P>
+	<B><U>11a.2.1 Field Naming</u></B>
+	<p>
+
+	Adobe Designer 7 assigns hierarchically-built names to form fields, 
+	such as <B>form1[0].#subform[0].Address[0]</B>. It is these long names that have to be
+	passed to the <B>Form.FindField</B> method.
+	<P>
+	If you are not sure as to the full name of a field in your PDF, we recommend opening this 
+	document in a text editor (such as WordPad) and searching for your short field name (such as "Address").
+	You are likely to find a fragment which looks similar to this:
+	<P>
+	<font face="courier new"><i>
+	33 0 obj&lt;&lt;/Rect[118.701 659.835 501.165 681.165]/TM(<B>form1[0].#subform[0].Address[0]</B>)
+	/Subtype/Widget/TU(Address:)/Parent 29 0 R/F 4/P 8 0 R/Q 0/T&lt;FEFF0041006400640072006500730073005B0030005D>
+	/StructParent 2/DA(/TimesNewRomanPSMT 10.00 Tf 0 g)/FT/Tx/Type/Annot/MK&lt;&lt;>>>><BR>
+	endobj
+	</i></font>
+	<P>
+	The string in parentheses followed by the word <font face="courier new"><i>/TM</i></font> is likely this field's long name
+	which you can copy and paste into your script.
+
+	<P>
+	To help determine the names of the fields in your form, we have provided the 
+	<A HREF="http://support.persits.com/pdf/demo_formfields.asp" TARGET="_new"><B>Form Field Finder</B></A> online application
+	which enables you to upload your PDF document to our server,
+	and the list of full field names in the document will be instantly displayed.
+
+	<P>
+	<B><U>11a.2.2 Adobe XML Forms Architecture (XFA)</u></B>
+	<p>
+	
+	In a nutshell, XFA is Adobe's new way to describe form structure and content using XML. 
+	XFA is only briefly mentioned in the official PDF 1.6 specifications, but the full description
+	of this new standard is available from the Adobe.com web site.
+	<P>
+	An attempt to programmatically fill in an XFA-based form (such as a form created by Adobe Designer 7) 
+	using AspPDF may fail as AspPDF versions prior to 3.0 lacked XFA support. 
+	As a workaround, AspPDF 1.5.0.1+ offers the method PdfForm.<B>RemoveXFA</B> which completely removes the XFA information
+	from a form, thus making it compatible with older PDF form specifications, which AspPDF does support.
+	In most cases, the user will not even notice any difference between an XFA-based and XFA-free form.
+	<P>
+	The following code snippet demonstrates the usage of the new method:
+	<P>
+	<font face="courier new"><B>
+    Set Doc = Pdf.OpenDocument("c:\path\TheForm.pdf")<br>    
+    Doc.Form.RemoveXFA<P>
+    
+    Set field = Doc.Form.FindField("form1[0].#subform[0].Name[0]")<BR>
+    field.SetFieldValue "John Smith", Doc.fonts("Times-Roman")<br>
+	...<BR>
+	</B>' Fill in other fields<B>
+	</B></font>
+
+	<P>
+	<font color=red><B>UPDATE</B></font>: XFA support was added to AspPDF in Version 3.0. 
+	For details, see <A HREF="#11a_7"><B>Section 11a.7 - XFA Support</B></A> of this chapter below.
+
+	</Blockquote>
+
+	<A NAME="11a_3">
+	<FONT COLOR="#C06000"><B>11a.3 Code Sample</B></FONT>
+	<Blockquote>
+
+	The following code sample fills in a simple form created in Adobe Designer 7.0.
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set PDF = Server.CreateObject("Persits.PDF")<P>
+
+	' Open an existing form<BR>
+	Set Doc = PDF.OpenDocument( Server.MapPath( "SimpleForm.pdf" ) )<P>
+
+	' Create font object<BR>
+	Set Font = Doc.Fonts("Helvetica-Bold")<P>
+
+	' Remove XFA support from it<BR>
+	Doc.Form.RemoveXFA<P>
+
+	' Fill in Name<BR>
+	Set field = Doc.Form.FindField("form1[0].#subform[0].Name[0]")<BR>
+	field.SetFieldValue Request("Name"), Font<P>
+
+	' Fill in Address<BR>
+	Set field = Doc.Form.FindField("form1[0].#subform[0].Address[0]")<BR>
+	field.SetFieldValue Request("Address"), Font<P>
+	
+	' Fill in marital status<BR>
+	Set field = Doc.Form.FindField("form1[0].#subform[0].RadioButtonList[0]")<BR>
+	Set ChildField = field.Children( Request("Type") )<BR>
+	ChildField.SetFieldValue ChildField.FieldOnValue, Nothing<P>
+
+	' Fill in "How did you hear about us" checkboxes<BR>
+	If Request("Internet") <> "" Then<BR>
+	&nbsp;&nbsp;&nbsp;Set field = Doc.Form.FindField("form1[0].#subform[0].Internet[0]")<BR>
+	&nbsp;&nbsp;&nbsp;field.SetFieldValue field.FieldOnValue, Nothing<BR>
+	End if<P>
+
+	If Request("WordOfMouth") <> "" Then<BR>
+	&nbsp;&nbsp;&nbsp;Set field = Doc.Form.FindField("form1[0].#subform[0].WordOfMouth[0]")<BR>
+	&nbsp;&nbsp;&nbsp;field.SetFieldValue field.FieldOnValue, Nothing<BR>
+	End if<P>
+
+	If Request("Newspaper") <> "" Then<BR>
+	&nbsp;&nbsp;&nbsp;Set field = Doc.Form.FindField("form1[0].#subform[0].Newspaper[0]")<BR>
+	&nbsp;&nbsp;&nbsp;field.SetFieldValue field.FieldOnValue, Nothing<BR>
+	End if<P>
+
+	'Save document<BR>
+	Path = Server.MapPath( "filledform.pdf")<BR>
+	FileName = Doc.Save( Path, false)<P>
+	
+	Set Doc = Nothing<BR>
+	Set Pdf = Nothing<BR>
+
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	public void GeneratePDF(object sender, System.EventArgs args)<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;// create instance of the PDF manager<BR>
+	&nbsp;&nbsp;&nbsp;IPdfManager objPDF;<BR>
+	&nbsp;&nbsp;&nbsp;objPDF = new PdfManager();<P>
+
+	&nbsp;&nbsp;&nbsp;// Open existing form<BR>
+	&nbsp;&nbsp;&nbsp;IPdfDocument objDoc = objPDF.OpenDocument( Server.MapPath( "SimpleForm.pdf" ), Missing.Value );<P>
+
+    
+	&nbsp;&nbsp;&nbsp;IPdfFont objFont = objDoc.Fonts["Helvetica-Bold", Missing.Value]; // a standard font<P>
+
+	&nbsp;&nbsp;&nbsp;// Remove XFA support from it<BR>
+	&nbsp;&nbsp;&nbsp;objDoc.Form.RemoveXFA();<P>
+
+	&nbsp;&nbsp;&nbsp;// Fill in Name<BR>
+	&nbsp;&nbsp;&nbsp;IPdfAnnot objField = objDoc.Form.FindField("form1[0].#subform[0].Name[0]");<BR>
+	&nbsp;&nbsp;&nbsp;objField.SetFieldValue( txtName.Text, objFont );<P>
+
+	&nbsp;&nbsp;&nbsp;// Fill in Address<BR>
+	&nbsp;&nbsp;&nbsp;objField = objDoc.Form.FindField("form1[0].#subform[0].Address[0]");<BR>
+	&nbsp;&nbsp;&nbsp;objField.SetFieldValue( txtAddress.Text, objFont );<P>
+		
+	&nbsp;&nbsp;&nbsp;// Fill in marital status<BR>
+	&nbsp;&nbsp;&nbsp;int nIndex = 1; <BR>
+	&nbsp;&nbsp;&nbsp;if( rdMarried.Checked )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nIndex = 2;<P>
+
+	&nbsp;&nbsp;&nbsp;if( rdDivorced.Checked )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nIndex = 3;<P>
+
+	&nbsp;&nbsp;&nbsp;objField = objDoc.Form.FindField("form1[0].#subform[0].RadioButtonList[0]");<BR>
+	&nbsp;&nbsp;&nbsp;IPdfAnnot objChildField = objField.Children[nIndex];<BR>
+	&nbsp;&nbsp;&nbsp;objChildField.SetFieldValue( objChildField.FieldOnValue, null );<P>
+
+	&nbsp;&nbsp;&nbsp;// Fill in "How did you hear about us" checkboxes<BR>
+	&nbsp;&nbsp;&nbsp;if( chkInternet.Checked )<BR>
+	&nbsp;&nbsp;&nbsp;{<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField = objDoc.Form.FindField("form1[0].#subform[0].Internet[0]");<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField.SetFieldValue( objField.FieldOnValue, null );<BR>
+	&nbsp;&nbsp;&nbsp;}<p>
+
+	&nbsp;&nbsp;&nbsp;if( chkWordOfMouth.Checked )<BR>
+	&nbsp;&nbsp;&nbsp;{<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField = objDoc.Form.FindField("form1[0].#subform[0].WordOfMouth[0]");<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField.SetFieldValue( objField.FieldOnValue, null );<BR>
+	&nbsp;&nbsp;&nbsp;}<P>
+
+	&nbsp;&nbsp;&nbsp;if( chkNewspaper.Checked )<BR>
+	&nbsp;&nbsp;&nbsp;{<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField = objDoc.Form.FindField("form1[0].#subform[0].Newspaper[0]");<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objField.SetFieldValue( objField.FieldOnValue, null );<BR>
+	&nbsp;&nbsp;&nbsp;}<P>
+		
+
+	&nbsp;&nbsp;&nbsp;String strFileName = objDoc.Save( Server.MapPath( "filledform.pdf"), false );<br>
+	}
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_fill.asp">http://localhost/asppdf/manual_11/11_fill.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_fill.aspx">http://localhost/asppdf/manual_11/11_fill.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+	</Blockquote>
+
+	<A NAME="11a_4">
+	<FONT COLOR="#C06000"><B>11a.4 Image Field Handling</B></FONT>
+	<Blockquote>
+	As of Version 2.4, AspPDF is capable of filling in image fields via the method <B>SetFieldImage</B>
+	of the <B>PdfAnnot</B> object. This method expects two arguments: an instance of the <B>PdfImage</B>
+	object containing the image, and an optional parameter string or <B>PdfParam</B> object.
+	<P>
+	The parameters currently supported are <i>Mode</i>, <i>ReadOnly</i> and <i>Alignment</i>, all optional 
+	(the <i>Alignment</i> parameter was introduced in version 3.1.0.2).
+	<i>Mode</i> specifies the stretch mode of the image being rendered. The possible values are:
+	
+	<ul>
+	<li>1 - Scale to fit (default);</li>
+	<li>2 - Stretch to fit;</li>
+	<li>3 - Do not scale or stretch.</li>
+	</ul>
+	<P>
+	When <i>Mode</i> is set to 1 (Scale-to-fit mode), the <i>Alignment</i> parameter can also be used. The valid values are:
+	<ul>
+	<li>0 - Alignment to the left or top (default);</li>
+	<li>1 - Alignment to the right or bottom;</li>
+	<li>2 - Alignment to the center.</li>
+	</ul>
+	<P>
+	By default, <B>SetFieldImage</B> makes the image field read-only. The <i>ReadOnly</i>
+	parameter, if set to False, leaves the image field clickable.
+	<P>
+	<B>SetFieldImage</B> can only be called on image fields, all other field types
+	will throw an exception. In most cases, 
+	calling <B>RemoveXFA</B> is also required for this method to work properly.
+	<P>
+	The following code sample demonstrates the use of this method:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+    Set Doc = PDF.OpenDocument("c:\path\form.pdf")<BR>
+    Set Image = Doc.OpenImage("c:\path\image.jpg")<BR>
+    Doc.Form.RemoveXFA<P>
+    
+    Set Field = Doc.Form.FindField("form1[0].#subform[0].ImageField1[0]")<BR>
+    Field.SetFieldImage Image, "mode=2"
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+    IPdfDocument objDoc = objPDF.OpenDocument(@"c:\path\form.pdf", Missing.Value);<BR>
+    IPdfImage objImage = doc.OpenImage(@"c:\path\image.jpg", Missing.Value);<BR>
+    objDoc.Form.RemoveXFA();<P>
+    
+    IPdfAnnot objField = objDoc.Form.FindField("form1[0].#subform[0].ImageField1[0]");<BR>
+    objField.SetFieldImage( objImage, "mode=2" );
+	</font></TD></TR>
+	</table>
+
+	</BlockQuote>
+
+
+	<A NAME="11a_5">
+	<FONT COLOR="#C06000"><B>11a.5 Form Flattening</B></FONT>
+	<Blockquote>
+	As of Version 2.6, AspPDF offers form-flattening functionality via the PdfForm method
+	<B>Flatten</B>. This method has no arguments.
+	<P>
+	To flatten a form means to turn all of its interactive fields into static graphics
+	with no possibility for further editing. Once the <B>Flatten</B> method is called,
+	the PDF document stops being a form and becomes a regular static template.
+	<P>
+	The <B>Flatten</B> method can only be called on an already filled-in form.
+	Calling SetFieldValue/SetFieldValueEx on the same instance of the document
+	has no effect on the output. Therefore, in order to fill in a form and then flatten it,
+	the form has to be filled the regular way, saved, reopened and only then flattened, as follows:
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	Set Doc = Pdf.OpenDocument( "c:\path\form.pdf")<BR>
+	Set Field1 = Doc.Form.FindField("Field1")<BR>
+	Field1.SetFieldValueEx "Text1"<P>
+
+	Set Field2 = Doc.Form.FindField("Field2")<BR>
+	Field2.SetFieldValueEx "Text2"<P>
+	...<P>
+	Set Doc2 = Pdf.OpenDocumentBinary( Doc.SaveToMemory )<BR>
+	Doc2.Form.Flatten<BR>
+	Doc2.Save "c:\path\flattened.pdf", False
+	</b></font>
+
+	<P>
+	After flattening, field text information may appear distorted on some documents. For example, character spacing may become incorrect.
+	To avoid that, a "Save State"
+	command should be put at the beginning of each page's existing content, and a matching "Restore State" command
+	at the end of it, as follows:
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	For Each Page in Doc2.Pages<BR>
+	&nbsp;&nbsp;&nbsp;Page.Background.SaveState<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.RestoreState<BR>
+	Next<BR>
+	...<BR>
+	Doc2.Form.Flatten<BR>
+	</b></font>
+	<P>
+	UPDATE: As of Version 3.4.0.2, as explained in the following section, the code snippet above can be replaced by 
+	<P>
+	<FONT FACE="Courier New" SIZE="2"><B>
+	Doc2.Form.Modify("Flatten=true; <i>Reset=true</i>") 
+	</b></font>
+	<P>
+	<P>
+	Form flattening is demonstrated by <A target="_new" HREF="http://www.support.persits.com/pdf/demo_flatten.asp"><B>Live Demo #16 - Form Flattening</B></A>.
+	</Blockquote>
+
+
+	<A NAME="11a_6">
+	<FONT COLOR="#C06000"><B>11a.6 JavaScript Removal and Other Features</B></FONT>
+	<Blockquote>
+
+	As of Version 2.9, a new PdfForm method, <B>Modify</B>, has been introduced
+	which combines and extends the XFA removal and form flattening functionality described above.
+	The method also enables annotation flattening and JavaScript removal described below.
+	More functions are expected to be added to this method in the future as AspPDF's form-related functionality expands.
+	<P>
+	The <B>Modify</B> method expects a single argument: a PdfParam object or parameter string. The following Boolean parameters,
+	all optional, are currently supported and can be used in any combination:
+	<P>
+	<UL>
+	<li><I>RemoveXFA</i> - using this parameter is equivalent to calling the old PdfForm.<B>RemoveXFA</B> method.</li>
+	<P>
+	<li><I>Flatten</i> - using this parameter is equivalent to calling the old PdfForm.<B>Flatten</B> method.</li>
+	<P>
+	<li><I>FlattenAnnots</i> - this parameter is useful if the PDF form being flattened contains items that are not technically form fields but 
+	field-like annotations. The following line of code flattens both the fields and field-like annotations:
+	<P>
+		<FONT FACE="Courier New" SIZE="2"><B>
+		Doc.Form.Modify("Flatten=true; FlattenAnnots=true")
+		</B></font>
+
+	</li>
+	<P>
+	<li><i>RemoveJavaScript</i> - this parameter removes all JavaScript from the document's catalog.
+	PDF forms created with Adobe products often contain JavaScript that displays the message "This PDF form requires a newer version of Adobe Acrobat"
+	after the form has been flattened:
+	<P>
+	<IMG SRC="images/11_thispdfform.png">
+	<P>
+	
+	The following line of code flattens the form and prevents this message from popping up by removing JavaScript from the document:
+	<P>
+		<FONT FACE="Courier New" SIZE="2"><B>
+		Doc.Form.Modify("Flatten=true; RemoveJavaScript=true")
+		</B></font>
+	
+	</li>
+
+	<li><i>Reset</i> (introduced by Version 3.4.0.2) - this parameter attempts to reset the current graphics state of all pages of the document
+	by placing the Save State ("q") command at the beginning of every page's content and the Restore State ("Q") command
+	at the end of it. Resetting the graphics state may be needed if the flattening procedure produces unexpected output or no output at all.</li>	
+	</UL>
+
+	<P>
+	The Modify method is demonstrated by <A target="_new" HREF="http://www.support.persits.com/pdf/demo_flatten.asp"><B>Live Demo #16 - Form Flattening</B></A>.
+
+	</Blockquote>
+
+
+	<A NAME="11a_7">
+	<FONT COLOR="#C06000"><B>11a.7 XFA Support</B></FONT>
+	<Blockquote>
+	<B><U>11a.7.1 XFA Overview</u></B>
+	<P>
+	A traditional PDF form contains annotation objects representing form fields. 
+	Adobe LifeCycle Designer 7.0+ introduced a new generation of forms called <B>XFA</B>,
+	which stands for <i>XML Forms Architecture</i>. Under XFA, a form layout is defined by an XML document, called <i>template</i>,
+	describing subforms, fields, static text, fonts, images and other elements of the form.
+	Below is the screenshot of a very simple template containing a submit button, two text fields, and two mutually exclusive radio buttons.
+	To save screen space, most of the XML nodes of that template are shown in a collapsed state:
+	<P>
+	<img src="images/11a_template.png">
+	<P>
+	The content of the form fields is also packaged as an XML document called <i>dataset</i>. Both the template and dataset (as well as other information in XML format) 
+	are embedded in a PDF document. A form viewer application such as Adobe Reader merges and template and dataset together
+	using a well-defined set of rules and produces a filled-out form.
+	<P>
+	Even a blank XFA form usually contains a property structured XML-based dataset, but this XML document just contains empty values.
+	For example, the initial dataset for the form shown above looks as follows:
+	<P>
+	<img src="images/11a_dataset.png">
+	<P>
+	If the dataset sheet is filled with values,  such as <P>
+	
+	<Font face="Courier New">...<br>&lt;TextField1><B>Text value 1</B>&lt;/TextField1><br>&lt;TextField2><B>Text value 2</B>&lt;/TextField2><br>...</font> 
+	<P>
+	and plugged back into the PDF form, the fields will contain the specified values when the form is viewed.
+	<P>
+	One important advantage of the XFA architecture over traditional PDF forms is that is enables dynamically growing forms, 
+	while the traditional forms are inherently static.
+	<P>
+	The Adobe XFA format is extensive. Version 3.3 of the XFA specifications is a 1,585-page document. It is available on the Adobe web site
+	and can be downloaded from <A HREF="http://partners.adobe.com/public/developer/en/xml/xfa_spec_3_3.pdf">here</A>.
+	
+	<P>
+	<B><U>11a.7.2 AspPDF's XFA Support</u></B>
+	<P>
+	AspPDF's support for XFA forms is streamlined: it enables the template and dataset data to be retrieved from a PDF form, and 
+	it also enables the modified dataset data to be plugged back into the PDF form. AspPDF provides no functionality for XML parsing and creation
+	but fortunately both classic ASP and .NET provide ample built-in support for XML management.
+	<P>
+	AspPDF's XFA functionality is encapsulated in the <B>PdfForm</B> object
+	via the read-only property <B>XFATemplate</B> and read/write property <B>XFADatasets</B> (note the plural form of the word "datasets".) Also, there is 
+	an auxiliary property <B>HasXFA</B> which returns True if the PDF form contains XFA data. If this property returns False, the form contains no XFA information
+	and the XFATemplate and XFADatasets properties cannot be used.
+	<P>
+	The online retrieval of the template and dataset of a PDF form is implemented by <A HREF="http://support.persits.com/pdf/demo_xfa.aspx" target="_new"><B>Live Demo #15</B></A>.
+	<P>
+	To demonstrate AspPDF's XFA functionality, a sample PDF purchase order form shipped with Adobe LiveCycle Designer, <B>Purchase Order.pdf</B>, will be used.
+	It can be found under the \Samples\manual_11 subfolder of the installation.
+	<P>
+	<img src="images/11a_form.png">
+	<P>
+	This form contains all major types of fields: text boxes, radio boxes, drop-down lists, checkboxes, and a dynamically growing
+	list of items. This form's dataset which can be retrieved using <A HREF="http://support.persits.com/pdf/demo_xfa.aspx" target="_new">Live Demo #15</A> looks as follows:
+	<P>
+	<img src="images/11a_podataset.png">
+	<P>
+	Our code sample will fill out the following fields: PO Number (&lt;txtPONum>), Ordered by Company (&lt;txtOrderedByCompanyName>), 
+	a Terms and Conditions radio box(&lt;TermsConditions>), the State Tax checkbox (&lt;chkStateTax>) and State Tax Rate (&lt;numStateTaxRate>).
+	It will also add three purchase order items to the item list (&lt;detail>).
+	<P>
+	The valid values for a radio button group (1 for cash and 2 for credit in our example)
+	can be obtained from the form's template. The relevant snippet of the template (simplified for better readability) is shown below:
+	<P>
+	<font face="Courier New">
+	&lt;exclGroup name="TermsConditions" x="4.7513mm" y="5.08mm"><BR>
+	&nbsp;&nbsp;&lt;field...><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;caption><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text><B>Cash</B>&lt;/text><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/value><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/caption><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;items><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;integer><B>1</B>&lt;/integer><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/items><BR>
+	&nbsp;&nbsp;&lt;/field><BR>
+	&nbsp;&nbsp;&lt;field...><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;caption><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text><B>Credit</B>&lt;/text><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/value><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/caption><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;items><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;integer><B>2</B>&lt;/integer><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/items><BR>
+	&nbsp;&nbsp;&lt;/field><BR>
+	&lt;/exclGroup><BR>
+	</font>
+
+	<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set PDF = Server.CreateObject("Persits.PDF")<P>
+
+		' Open an XFA form<BR>
+		Set Doc = PDF.OpenDocument( Server.MapPath( "Purchase Order.pdf" ) )<P>
+
+		' Check if the form contains XFA data<BR>
+		If Not Doc.Form.HasXFA Then<BR>
+			Response.Write "This form contains no XFA information."<BR>
+			Response.End<BR>
+		End If<P>
+
+		' Load XFA dataset from the PDF form to Microsoft XML processor object<BR>
+		Set Xml = Server.CreateObject("Microsoft.XMLDOM")<BR>
+		Xml.Async = False ' need synchronous operation<BR>
+		Xml.LoadXml( Doc.Form.XFADatasets )<P>
+
+		' Fill PO number<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode ("/xfa:datasets/xfa:data/form1/header/txtPONum")<BR>
+		Node.text = "1234456577"<P>
+
+		' Fill Ordered By Company<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode ("/xfa:datasets/xfa:data/form1/header/txtOrderedByCompanyName")<BR>
+		Node.text = "Acme, Inc."<P>
+
+		' Fill Terms and Conditions: 1 for cash, 2 for credit<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode ("/xfa:datasets/xfa:data/form1/total/TermsConditions")<BR>
+		Node.text = "2"<P>
+
+		' Fill State Tax checkbox and state tax rate of 8.5%<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode ("/xfa:datasets/xfa:data/form1/total/chkStateTax")<BR>
+		Node.text = "1"<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode ("/xfa:datasets/xfa:data/form1/total/numStateTaxRate")<BR>
+		Node.text = "8.5"<P>
+
+		' Add purchase order items<P>
+
+		' First, delete two existing detail nodes under form1<BR>
+		Set Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1")<BR>
+		Node.RemoveChild Xml.getElementsByTagName("detail")(0)<BR>
+		Node.RemoveChild Xml.getElementsByTagName("detail")(0)<P>
+
+		' Add three new detail nodes<BR>
+		For i = 1 To 3<BR>
+		&nbsp;&nbsp;&nbsp;Set Detail = Xml.createElement("detail")<BR>
+		&nbsp;&nbsp;&nbsp;Set Subdetail = Xml.createElement("txtPartNum")<BR>
+		&nbsp;&nbsp;&nbsp;Subdetail.text = "PART#" & i<BR>
+		&nbsp;&nbsp;&nbsp;Detail.appendChild Subdetail<BR>
+		&nbsp;&nbsp;&nbsp;Set Subdetail = Xml.createElement("txtDescription")<BR>
+		&nbsp;&nbsp;&nbsp;Subdetail.text = "Description #" & i<BR>
+		&nbsp;&nbsp;&nbsp;Detail.appendChild Subdetail<BR>
+		&nbsp;&nbsp;&nbsp;Set Subdetail = Xml.createElement("numQty")<BR>
+		&nbsp;&nbsp;&nbsp;Subdetail.text = 5 * i<BR>
+		&nbsp;&nbsp;&nbsp;Detail.appendChild Subdetail<BR>
+		&nbsp;&nbsp;&nbsp;Set Subdetail = Xml.createElement("numUnitPrice")<BR>
+		&nbsp;&nbsp;&nbsp;Subdetail.text = 100 * i<BR>
+		&nbsp;&nbsp;&nbsp;Detail.appendChild Subdetail<P>
+			
+		&nbsp;&nbsp;&nbsp;Node.insertBefore Detail, Xml.getElementsByTagName("total")(0)<BR>
+		Next<P>
+
+		' Plug the dataset back to the PDF form<BR>
+		Doc.Form.XFADatasets = Xml.xml<P>
+
+		'Save document<BR>
+		Path = Server.MapPath( "xfaform.pdf")<BR>
+		FileName = Doc.Save( Path, false)
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	XmlNode Node;<P>
+
+	IPdfManager objPdf = new PdfManager();<P>
+
+	// Open an XFA form<BR>
+	IPdfDocument objDoc = objPdf.OpenDocument( Server.MapPath( "Purchase Order.pdf" ), Missing.Value );<P>
+
+	// Check if the form contains XFA data<BR>
+	if( !objDoc.Form.HasXFA )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;lblResult.Text = "This form contains no XFA information.";<BR>
+	&nbsp;&nbsp;&nbsp;return;<BR>
+	}<P>
+
+	// Load XFA dataset from the PDF form to Microsoft XML processor object<BR>
+	XmlDocument Xml = new XmlDocument();<BR>
+	Xml.LoadXml( objDoc.Form.XFADatasets  );<P>
+
+	XmlNamespaceManager Mgr = new XmlNamespaceManager(Xml.NameTable);<BR>
+	Mgr.AddNamespace("xfa", "http://www.xfa.org/schema/xfa-data/1.0/");<P>
+
+	// Fill PO number<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1/header/txtPONum", Mgr);<BR>
+	Node.InnerText = "1234456577";<P>
+
+	// Fill Ordered By Company<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1/header/txtOrderedByCompanyName", Mgr);<BR>
+	Node.InnerText = "Acme, Inc.";<P>
+
+	// Fill Terms and Conditions: 1 for cash, 2 for credit<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1/total/TermsConditions", Mgr);<BR>
+	Node.InnerText = "2";<P>
+
+	// Fill State Tax checkbox and state tax rate of 8.5%<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1/total/chkStateTax", Mgr);<BR>
+	Node.InnerText = "1";<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1/total/numStateTaxRate", Mgr);<BR>
+	Node.InnerText = "8.5";<P>
+
+	// Add purchase order items<P>
+
+	// First, delete two existing detail nodes under form1<BR>
+	Node = Xml.DocumentElement.SelectSingleNode("/xfa:datasets/xfa:data/form1", Mgr );<BR>
+	Node.RemoveChild( Xml.GetElementsByTagName("detail")[0] );<BR>
+	Node.RemoveChild( Xml.GetElementsByTagName("detail")[0] );<P>
+
+	// Add three new detail nodes<BR>
+	for( int i = 1; i <= 3; i++ )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;XmlNode Detail, Subdetail;<P>
+
+	&nbsp;&nbsp;&nbsp;Detail = Xml.CreateElement("detail");<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail = Xml.CreateElement("txtPartNum");<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail.InnerText = "PART#" + i.ToString();<BR>
+	&nbsp;&nbsp;&nbsp;Detail.AppendChild( Subdetail );<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail = Xml.CreateElement("txtDescription");<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail.InnerText = "Description #" + i.ToString();<BR>
+	&nbsp;&nbsp;&nbsp;Detail.AppendChild( Subdetail );<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail = Xml.CreateElement("numQty");<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail.InnerText = (5 * i).ToString();<BR>
+	&nbsp;&nbsp;&nbsp;Detail.AppendChild( Subdetail );<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail = Xml.CreateElement("numUnitPrice");<BR>
+	&nbsp;&nbsp;&nbsp;Subdetail.InnerText = (100 * i).ToString();<BR>
+	&nbsp;&nbsp;&nbsp;Detail.AppendChild( Subdetail );<P>
+		
+	&nbsp;&nbsp;&nbsp;Node.InsertBefore( Detail, Xml.GetElementsByTagName("total")[0] );<BR>
+	}<P>
+
+	// Plug the dataset back to the PDF form<BR>
+	objDoc.Form.XFADatasets = Xml.InnerXml;<P>
+
+	// Save document<BR>
+	string Path = Server.MapPath( "xfaform.pdf");<BR>
+	string FileName = objDoc.Save( Path, false);<BR>
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_xfa.asp">http://localhost/asppdf/manual_11/11_xfa.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_xfa.aspx">http://localhost/asppdf/manual_11/11_xfa.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+
+	The resultant PDF form looks as follows:
+	<P>
+	<img src="images/11a_poform2.png">
+
+
+	</Blockquote>
+
+
+	<A NAME="11a_8">
+	<FONT COLOR="#C06000"><B>11a.8 Barcode-equipped Government Forms</B></FONT>
+	<Blockquote>
+	<img src="images/12_govform.png">
+	<P>
+	Some U.S. government agencies, U.S. Citizenship and Immigration Services (USCIS) in particular,
+	have started employing barcode-equipped forms. These forms have a large two-dimensional
+	PDF417 barcode on each page representing the content of this page's fields. Every time a field is modified by the user,
+	the barcode is automatically redrawn to reflect the change. 
+	The barcode enables the processing agent to transfer the content of a paper form to the computer system
+	instantly.
+	<P>
+	The official electronic forms I-821, N-400, G-28, I-90, I-131 and I-864
+	are hybrid: they are based on both the traditional AcroForm and new XFA formats. The easiest way to fill them out
+	programmatically with AspPDF is to circumvent XFA altogether and use the <B>FindField</B>/<B>SetFieldValueEx</B> methods
+	to fill out the individual fields, but doing so breaks the barcode functionality of the form. Therefore, 
+	the PDF417 barcode has to be drawn separately according to the government specifications. Afterwards, the form can optionally be flattened.
+	AspPDF's support for PDF417 barcodes is described in detail in <A HREF="manual_12.html#12_1_5_1">Subsection 12.1.5.1 - PDF417</A> of the next chapter.
+	<P>
+	The USCIS requirements for the 2D barcode can be found here: <B><A HREF="http://www.uscis.gov/forms/uscis-2d-barcode-requirements">http://www.uscis.gov/forms/uscis-2d-barcode-requirements</A></B>.
+	<P>
+	The following code sample fills out Page 1 of USCIS Form N-400 ("Application for Naturalization"). This form can be downloaded from the USCIS.gov web site.
+	<P>
+	With the help of the <A HREF="http://support.persits.com/pdf/demo_formfields.asp" TARGET="_new"><B>Form Field Finder</B></A> application
+	mentioned above, Form N-400 is found to have the following fields on Page 1:
+	<P>
+	<B>
+	form1[0].#subform[0].Part1_Eligibility[0]<BR>
+	form1[0].#subform[0].Part1_Eligibility[1]<BR>
+	form1[0].#subform[0].Part1_Eligibility[2]<BR>
+	form1[0].#subform[0].Part1_Eligibility[3]<BR>
+	form1[0].#subform[0].Part1_Eligibility[4]<BR>
+	form1[0].#subform[0].Part1Line5_OtherExplain[0]<BR>
+	form1[0].#subform[0].Line1_MiddleName[0]<BR>
+	form1[0].#subform[0].Line1_GivenName[0]<BR>
+	form1[0].#subform[0].Line1_FamilyName[0]<BR>
+	form1[0].#subform[0].Line2_FamilyName[0]<BR>
+	form1[0].#subform[0].Line2_GivenName[0]<BR>
+	form1[0].#subform[0].Line3_MiddleName2[0]<BR>
+	form1[0].#subform[0].Line3_GivenName2[0]<BR>
+	form1[0].#subform[0].Line3_FamilyName2[0]<BR>
+	form1[0].#subform[0].Line3_MiddleName1[0]<BR>
+	form1[0].#subform[0].Line3_GivenName1[0]<BR>
+	form1[0].#subform[0].Line3_FamilyName1[0]<BR>
+	form1[0].#subform[0].Line2_MiddleName[0]<BR>
+	form1[0].#subform[0].#area[0].Line1_AlienNumber[0]<BR>
+	form1[0].#subform[0].PaperFormsBarcode1[0]
+	</B>
+	<P>
+	For the sake of demonstration, our code sample will fill out 9 form fields as follows:
+	<P>
+	<table id="grid" cellpadding="3">
+	<tr><th>Field Title</th><th>Field Name</th><th>Field Value</th></tr>
+	<tr><td>A-Number</td><td>form1[0].#subform[0].#area[0].Line1_AlienNumber[0]</td><td>123456789</td></tr>
+	<tr><td>Eligibility, "other" checkbox</td><td>form1[0].#subform[0].Part1_Eligibility[0]</td><td>&lt;checked&gt;</td></tr>
+	<tr><td>Eligibility, "explain" dropbox: RELIGIOUS DUTIES</td><td>form1[0].#subform[0].Part1Line5_OtherExplain[0]</td><td>SECTION 317,INA</td></tr>
+	<tr><td>Your current legal name, Last Name </td><td>form1[0].#subform[0].Line1_FamilyName[0]</td><td>Smith</td></tr>
+	<tr><td>Your current legal name, First Name </td><td>form1[0].#subform[0].Line1_GivenName[0]</td><td>John</td></tr>
+	<tr><td>Your current legal name, Middle Name </td><td>form1[0].#subform[0].Line1_MiddleName[0]</td><td>Frederick</td></tr>
+	<tr><td>Your name as it appears on resident card, Last Name </td><td>form1[0].#subform[0].Line2_FamilyName[0]</td><td>Smith</td></tr>
+	<tr><td>Your name as it appears on resident card, First Name </td><td>form1[0].#subform[0].Line2_GivenName[0]</td><td>John</td></tr>
+	<tr><td>Your name as it appears on resident card, Middle Name </td><td>form1[0].#subform[0].Line2_MiddleName[0]</td><td>Frederick</td></tr>
+	</table>
+	<P>
+	The rest of the fields will be left blank.
+	<P>
+	According to the government barcode specifications (link above), the text string encoded by the barcode for Page 1 must contain
+	18 values separated by the "|" character. The first three are form type ("N-400"), form revision ("09/13/13"), and page number ("1").
+	<P>
+	The other 15 values are the actual content of the form fields: A-Number ("123456789"), Eligibility - option 5 ("D"), Explanation - religious duties ("SECTION 317,INA"),
+	Current legal name ("Smith", "John", "Frederick"),  Name as it appears on resident card ("Smith", "John", "Frederick"),
+	other names ("", "", "", "", "", "" ).
+	<P>
+	Therefore, the entire string to be encoded into a barcode is as follows:
+	<P>
+	<B>"N-400|09/13/13|1|123456789|D|SECTION 317,INA|Smith|John|Frederick|Smith|John|Frederick|||||||"</B>
+	<P>
+	To draw the barcode according to the specifications, the method PdfCanvas.<B>DrawBarcode2D</B> should be called with the following parameters (AspPDF 3.2.0.1+ required):
+	<P>
+	<UL>
+	<li><B>X=36, Y=36</B> (lower-left corner coordinates, obtained empirically);<BR>
+	<li><B>Width=540, Height=108</B> (barcode size: 7.5 x 1.5 inches or 540 x 108 user units per specs);<BR>
+	<li><B>QZV=6, QZH=8</B> (vertical and horizontal extents of the quiet zone around the barcode, obtained empirically);<BR>
+	<li><B>ErrorLevel=5</B> (error correction level 5 per specs);<BR>
+	<li><B>Columns=30</B> (to roughly match the specified bar width, values of 28 and 29 are also acceptable);<BR>
+	<li><B>Rows=5</B> (to match the appearance of the barcode on the official form);<BR>
+	<li><B>Binary=true</B> (optional, see below.)
+	</UL>
+	<P>
+	It is worth noting that the barcode on the official N-400 form does not strictly adhere to the government specifications.
+	In particular, the barcode uses the <i>text compression</i> of data (which is more compact) while the specifications call 
+	for <i>byte compression</i>. The <B>DrawBarcode2D</B> uses text compression by default. If byte compression is required, the parameter <B>Binary=true</B>
+	should be used. The code sample below does not use it, however.
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	' Form field values<BR>
+	Dim arrValues(17) ' 18 values<P>
+
+	arrValues( 0) = "N-400" ' form type<BR>
+	arrValues( 1) = "09/13/13" ' form revision<BR>
+	arrValues( 2) = "1" ' page number<BR>
+	arrValues( 3) = "123456789" ' A-Nunber<BR>
+	arrValues( 4) = "D"	' Eligibility<BR>
+	arrValues( 5) = "SECTION 317,INA"	' Explanation<BR>
+	arrValues( 6) = "Smith"	' Legal name<BR>
+	arrValues( 7) = "John"<BR>
+	arrValues( 8) = "Frederick"<BR>
+	arrValues( 9) = "Smith"	' Name as it appears on card<BR>
+	arrValues(10) = "John"<BR>
+	arrValues(11) = "Frederick"<BR>
+	arrValues(12) = "" ' Other names<BR>
+	arrValues(13) = ""<BR>
+	arrValues(14) = ""<BR>
+	arrValues(15) = ""<BR>
+	arrValues(16) = ""<BR>
+	arrValues(17) = ""<P>
+
+	Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+	Set Doc = Pdf.OpenDocument( Server.MapPath("n-400.pdf") )<P>
+
+	' Disconnect XFA and JavaScript<BR>
+	Doc.Form.Modify( "RemoveXFA=true; RemoveJavaScript=true" )<P>
+
+	' Fill out fields<BR>
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].#area[0].Line1_AlienNumber[0]")<BR>
+	Field.SetFieldValueEx arrValues(3)<P>
+
+	' Option 5 is selected<BR>
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Part1_Eligibility[0]")<BR>
+	Field.SetFieldValueEx Field.FieldOnValue<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Part1Line5_OtherExplain[0]")<BR>
+	Field.SetFieldValueEx "RELIGIOUS DUTIES"<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line1_FamilyName[0]")<BR>
+	Field.SetFieldValueEx arrValues(6)<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line1_GivenName[0]")<BR>
+	Field.SetFieldValueEx arrValues(7)<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line1_MiddleName[0]")<BR>
+	Field.SetFieldValueEx arrValues(8)<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line2_FamilyName[0]")<BR>
+	Field.SetFieldValueEx arrValues(9)<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line2_GivenName[0]")<BR>
+	Field.SetFieldValueEx arrValues(10)<P>
+
+	Set Field = Doc.Form.FindField("form1[0].#subform[0].Line2_MiddleName[0]")<BR>
+	Field.SetFieldValueEx arrValues(11)<P>
+
+	' Draw PDF417 barcode<BR>
+	Dim strBarcodeValue ' |-terminated array of values to encode as a barcode<BR>
+	For i = 0 To 17<BR>
+	&nbsp;&nbsp;&nbsp;strBarcodeValue = strBarcodeValue & arrValues(i) & "|"<BR>
+	Next<P>
+
+	Set Page = Doc.Pages(1)<BR>
+	Page.Canvas.DrawBarcode2D strBarcodeValue, "X=36; Y=36; Width=540; Height=108; QZV=6, QZH=8; " &_<BR>
+	&nbsp;&nbsp;&nbsp;"ErrorLevel=5; Columns=28; Rows=5"<P>
+
+	' Flatten form<BR>
+	Set FlatDoc = Pdf.OpenDocumentBinary( Doc.SaveToMemory() )<BR>
+	FlatDoc.Form.Modify( "Flatten=true; FlattenAnnots=true" )<P>
+
+	Filename = FlatDoc.Save( Server.MapPath("formbarcode.pdf"), False )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	// Form field values<BR>
+	string [] arrValues = new string[18]; // 18 values<P>
+
+	arrValues[ 0] = "N-400"; // form type<BR>
+	arrValues[ 1] = "09/13/13"; // form revision<BR>
+	arrValues[ 2] = "1"; // page number<BR>
+	arrValues[ 3] = "123456789"; // A-Nunber<BR>
+	arrValues[ 4] = "D";	// Eligibility<BR>
+	arrValues[ 5] = "SECTION 317,INA";	// Explanation<BR>
+	arrValues[ 6] = "Smith";	// Legal name<BR>
+	arrValues[ 7] = "John";<BR>
+	arrValues[ 8] = "Frederick";<BR>
+	arrValues[ 9] = "Smith";	// Name as it appears on card<BR>
+	arrValues[10] = "John";<BR>
+	arrValues[11] = "Frederick";<BR>
+	arrValues[12] = ""; // Other names<BR>
+	arrValues[13] = "";<BR>
+	arrValues[14] = "";<BR>
+	arrValues[15] = "";<BR>
+	arrValues[16] = "";<BR>
+	arrValues[17] = "";<P>
+
+	IPdfManager objPdf = new PdfManager();<BR>
+	IPdfDocument objDoc = objPdf.OpenDocument( Server.MapPath("n-400.pdf"), Missing.Value );<P>
+
+	// Disconnect XFA and JavaScript<BR>
+	objDoc.Form.Modify( "RemoveXFA=true; RemoveJavaScript=true" );<P>
+
+	// Fill out fields<BR>
+	IPdfAnnot objField = objDoc.Form.FindField("form1[0].#subform[0].#area[0].Line1_AlienNumber[0]");<BR>
+	objField.SetFieldValueEx( arrValues[3] );<P>
+
+	// Option 5 is selected<BR>
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Part1_Eligibility[0]");<BR>
+	objField.SetFieldValueEx( objField.FieldOnValue );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Part1Line5_OtherExplain[0]");<BR>
+	objField.SetFieldValueEx( "RELIGIOUS DUTIES" );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line1_FamilyName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[6] );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line1_GivenName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[7] );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line1_MiddleName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[8] );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line2_FamilyName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[9] );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line2_GivenName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[10] );<P>
+
+	objField = objDoc.Form.FindField("form1[0].#subform[0].Line2_MiddleName[0]");<BR>
+	objField.SetFieldValueEx( arrValues[11] );<P>
+
+	// Draw PDF417 barcode<BR>
+	string strBarcodeValue = ""; // |-terminated array of values to encode as a barcode<BR>
+	for( int i = 0; i < 18; i++ )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;strBarcodeValue = strBarcodeValue + arrValues[i] + "|";<BR>
+	}<P>
+
+	IPdfPage objPage = objDoc.Pages[1];<BR>
+	objPage.Canvas.DrawBarcode2D( strBarcodeValue, "X=36; Y=36; Width=540; Height=108; QZV=6, QZH=8; " +<BR>
+	&nbsp;&nbsp;&nbsp;"ErrorLevel=5; Columns=28; Rows=5", Missing.Value );<P>
+
+	// Flatten form<BR>
+	IPdfDocument objFlatDoc = objPdf.OpenDocumentBinary( objDoc.SaveToMemory(), Missing.Value );<BR>
+	objFlatDoc.Form.Modify( "Flatten=true; FlattenAnnots=true" );<P>
+
+	string strFilename = objFlatDoc.Save( Server.MapPath("formbarcode.pdf"), false );<BR>
+	</font></TD></TR>
+	</table>
+	<P>
+	<font color=red><B>NOTE</B></font>: This code sample requires that the USCIS form N-400 (file <B>n-400.pdf</B>) be placed in the subfolder \Samples\manual_11 of
+	the installation.
+	This file was not included in the installation because of its large size.
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_formwithbarcode.asp">http://localhost/asppdf/manual_11/11_formwithbarcode.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_11/11_formwithbarcode.aspx">http://localhost/asppdf/manual_11/11_formwithbarcode.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+
+	</Blockquote>
+
+	<A HREF="manual_12.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 12: Miscellaneous Features"></A>
+	<A HREF="manual_11.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 11: Form Creation"></A>
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2014. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

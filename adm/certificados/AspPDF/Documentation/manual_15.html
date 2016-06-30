@@ -1,0 +1,1339 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 15: Color Spaces</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 15: Color Spaces
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD xWIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_16.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 16: IE-based HTML-to-PDF Conversion"></A>
+	<A HREF="manual_14.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 14: PDF to Image Conversion"></A>
+	
+	<br>
+	
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 15: Color Spaces</B> 
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#15_1">15.1 PdfColorSpace Object</A><BR>
+	<A HREF="#15_2">15.2 PdfFunction Object</A><BR>
+	<A HREF="#15_3">15.3 Code Sample</A><BR>
+	<A HREF="#15_4">15.4 Using Color Spaces with PdfTable and Other Objects</A><BR>
+
+	</B>
+	<P>
+	<A NAME="15_1"><FONT COLOR="#c06000"><B>15.1 PdfColorSpace Object</B></FONT>
+	<Blockquote>
+	<B><U>15.1.1 Color Space Overview</U></B>
+	
+	<P>
+
+	The PDF format offers various methods for specifying the colors of graphics objects
+	to be painted on the current page. Colors can be described in any of a variety of color systems,
+	or <i>color spaces</i>. Some color spaces are related to device color representation (grayscale, RGB, CMYK),
+	others to human visual perception (CIE-based.)
+
+	<P>
+	In PDF, a color space is an important component of the current <i>graphics state</i>
+	along with other drawing parameters such as stroking and filling colors, line width, and others.
+	Versions of AspPDF prior to 2.5 only supported RGB and CMYK color spaces
+	via the PdfCanvas method <B>SetColor/SetFillColor</B> and <B>SetColorCMYK/SetFillColorCMYK</B>.
+	These methods implicitly set the current color space to RGB and CMYK, respectively,
+	and then specify the current color within this color space.
+
+	<P>
+	As of Version 2.5, AspPDF provides separate methods for specifying the current color space,
+	and current color: <B>SetColorSpace/SetFillColorSpace</B> and <B>SetColorEx</B>/<B>SetFillColorEx</B>.
+	This version also offers support for many more color spaces in addition to RGB and CMYK: Indexed, Lab, ICC-based,
+	Separation, and others.
+
+	<P>
+	NOTE: A detailed discussion of PDF color spaces is outside the scope of this user manual. Please
+	refer to the Adobe PDF Reference for detailed information on this vast subject.
+
+	<P>
+	<A NAME="15_1_2">
+	<B><U>15.1.2 PdfColorSpace Object Usage</U></B>	
+	<P>
+	To create an instance of the PdfColorSpace object, the PdfDocument method <B>CreateColorSpace</B>
+	should be called. This method expects two arguments: the color space name, and an optional list of parameters.
+	The valid color space names are: <i>"DeviceRGB"</i>, <i>"DeviceCMYK"</i>, 
+	<i>"DeviceGray"</i>, <i>"CalRGB"</i>, <i>"CalGray"</i>, <i>"Lab"</i>, <i>"ICCBased"</i>, <i>"Indexed"</i>, <i>"Separation"</i>
+	and <i>"DeviceN"</i>.
+	<P>
+	When the newly created PdfColorSpace object represents a basic color space such as <i>"DeviceRGB"</i>,
+	no additional steps are required and the object is ready to be used. However, if the color space is an advanced one,
+	some additional properties and/or methods need to be called on the PdfColorSpace object for it to be valid
+	and complete, as shown below. 
+	For debugging purposes, the PdfColorSpace object exposes the property <B>IsValid</B>
+	which returns True if this object is valid and complete, and False otherwise.
+	The exact verbal reason for the object not being valid should be retrieved via the property
+	<B>ValidationError</B>.
+
+	<P>
+	Once a valid instance of the PdfColorSpace object is created, it can be used on the canvas of a page or graphics
+	via the PdfCanvas methods <B>SetColorSpace</B> and <B>SetFillColorSpace</B> to set the new
+	active color space for stroking and fill operations, respectively.
+	<P>
+	Once a color space is made active, the current color within this color space should be specified
+	via the methods <B>SetColorEx</B> and <B>SetFillColorEx</B> for stroking and fill operations, respectively. 
+	These methods expect a single argument, a PdfParam object
+	or parameter string through which all color components <i>c1</i>, <i>c2</i>, ..., <i>cN</i> are specified.	
+	<P>
+	For example, the following sequence creates an RGB color space, activates it for stroking operations
+	and sets the current stroking color
+	to (0.5, 0.7, 1):
+	<P>
+	<font face="Courier New"><B>
+	Set csRGB = Doc.CreateColorSpace("DeviceRGB")<BR>
+	Page.Canvas.SetColorSpace csRGB<BR>
+	Page.Canvas.SetColorEx "c1=0.5; c2=0.7; c3=1"
+	</B></font>
+
+	<P>
+	
+	Note that the sequence above could be replaced by a single line of code:
+	
+	<P>
+	<font face="Courier New"><B>
+	Page.Canvas.SetColor 0.5, 0.7, 1
+	</B></font>
+
+	<P>
+	The following sequence creates an CMYK color space, activates it for fill operations and sets the current fill color to (0.3, 0.5, 0.8, 0.2):
+	<P>
+	<font face="Courier New"><B>
+	Set csCMYK = Doc.CreateColorSpace("DeviceCMYK")<BR>
+	Page.Canvas.SetFillColorSpace csCMYK<BR>
+	Page.Canvas.SetFillColorEx "c1=0.3; c2=0.5; c3=0.8; c4=0.2"
+	</B></font>
+
+	<P>
+	The sequence above has the same effect as:
+	
+	<P>
+	<font face="Courier New"><B>
+	Page.Canvas.SetFillColorCMYK 0.3, 0.5, 0.8, 0.2
+	</B></font>
+	
+	<P>
+	Note that it is the responsibility of the developer to ensure the correct number of color components
+	are passed to the SetColorEx and SetFillColorEx methods in accordance with the currently active color space (e.g. 3 for RGB, 4 for CMYK, 1 for grayscale, etc.)
+
+	<P>
+	In addition to the use with the SetColorSpace and SetFillColorSpace methods of the PdfCanvas object, 
+	a color space object can also be assigned to an image via the method <B>PdfImage.SetColorSpace</B>.
+
+	<P>
+	<B><U>15.1.3 Supported Color Spaces</U></B>	
+	<P>
+	This sub-section describes all color spaces currently supported by AspPDF, and
+	the parameters and steps required to create a PdfColorSpace object representing each one.
+
+	<P>
+	<A NAME="DeviceRGB">
+	<B><u><font color="green">DeviceRGB, DeviceCMYK, DeviceGray</font></u></B>
+
+	<P>
+	These device color spaces enable a page description to specify color values that are directly related
+	to their representation on an output device.
+	<P>
+	To create an RGB, CMYK or Grayscale device color space, the CreateColorSpace method must be called with the
+	string <B>"DeviceRGB"</B>, <B>"DeviceCMYK"</B>, and <B>"DeviceGray"</B> as the first argument, respectively.
+	The 2nd argument should be omitted as these color spaces require no additional parameters.
+	No additional steps are necessary.
+	<P>
+	The number of color components for these color spaces are 3, 4 and 1, respectively.
+	<P>
+	Examples:
+	<P>
+	<font face="Courier New"><B>
+	Set csRGB = Doc.CreateColorSpace("DeviceRGB")
+	<P>
+	Set csCMYK = Doc.CreateColorSpace("DeviceCMYK")
+	<P>
+	Set csGray = Doc.CreateColorSpace("DeviceGray")
+	</B></font>
+	
+	
+	
+	<P>
+	<A NAME="CalGray">
+	<B><u><font color="green">CalGray</font></u></B>
+
+	<P>
+	Calibrated color in PDF is defined in terms of an international standard used in the graphic
+	arts, television and printing industries. CIE-based color spaces enable a page description
+	to specify color values in a way that is related to human visual perception. The CalGray color space
+	(as well as CalRGB, Lab and ICCBased described below) is a CIE-based color space. It has a single color component.
+	<P>
+
+	To create a CalGray color space, the CreateColorSpace method must be called with the string "CalGray"
+	as the first argument. The 2nd argument must be set to a PdfParam object or parameter
+	string specifying CalGray-specific parameters. These are:
+	<ul>
+	<li><i>Xw</i>, <i>Yw</i>, <i>Zw</i> (required) - the diffuse white point. Xw and Zx must be positive and Yw must be equal to 1.</li>
+	<li><i>Xb</i>, <i>Yb</i>, <i>Zb</i> (optional) - the diffuse black point. All three must be non-negative. (0, 0, 0) by default.</li>
+	<li><i>Gamma</i> (optional) - gamma for the gray component. Must be positive, generally greater or equal to 1. 1 by default.
+	</ul>
+
+	<P>
+	Example:
+	<P>
+	
+	<font face="Courier New"><B>
+    Set Param = PDF.CreateParam<BR>
+    Param("Xw") = 0.95<BR>
+    Param("Yw") = 1<BR>
+    Param("Zw") = 1.089<BR>
+    Param("Gamma") = 2.222<BR>
+    Set csCalGray = doc.CreateColorSpace("CalGray", Param)
+	</b></font>
+
+
+	<P>
+	<A NAME="CalRGB">
+	<B><u><font color="green">CalRGB</font></u></B>
+
+	<P>
+	CalRGB is another CIE-based color space which has 3 color components (usually referred to as ABC.)
+	To create a CalRGB color space, the CreateColorSpace method must be called with the string "CalRGB"
+	as the first argument. The 2nd argument must be set to a PdfParam object or parameter
+	string specifying CalRGB-specific parameters. These are:
+	<ul>
+	<li><i>Xw</i>, <i>Yw</i>, <i>Zw</i> (required) - the diffuse white point. Xw and Zx must be positive and Yw must be equal to 1.</li>
+	<li><i>Xb</i>, <i>Yb</i>, <i>Zb</i> (optional) - the diffuse black point. All three must be non-negative. (0, 0, 0) by default.</li>
+	<li><i>GammaR</i>, <i>GammaG</i>, <i>GammaB</i> (optional) - gamma values for the red, green and blue components. 
+		All three must be positive. (1, 1, 1) by default.
+	<li><i>m1</i>, <i>m2</i>, <i>m3</i>, ..., <i>m9</i> (optional) - nine numbers specifying the linear interpretation
+	of the decoded ABC components with respect to the final XYZ representation. Identity matrix (1, 0, 0, 0, 1, 0, 0, 0, 1)
+	by default.
+	</ul>
+
+	<P>
+	Example:
+	<P>
+	<font face="Courier New"><B>
+    Set Param = PDF.CreateParam<BR>
+    Param("Xw") = 0.95<BR>
+    Param("Yw") = 1<BR>
+    Param("Zw") = 1.089<BR>
+    Param("GammaR") = 1.8<BR>
+    Param("GammaG") = 1.8<BR>
+    Param("GammaB") = 1.8<BR>
+    Param.Add( "m1=0.449; m2=0.244; m3=0.025" )<BR>
+    Param.Add( "m4=0.316; m5=0.672; m6=0.141" )<BR>
+    Param.Add( "m7=0.184; m8=0.083; m9=0.923" )<BR>
+    Set csCalRGB = doc.CreateColorSpace("CalRGB", Param)<BR>
+	</b></font>
+
+
+	<P>
+	<A NAME="Lab">
+	<B><u><font color="green">Lab</font></u></B>
+
+	<P>
+	Lab is yet another CIE-based color space which has 3 color components (usually referred to as La*b*.)
+	To create a Lab color space, the CreateColorSpace method must be called with the string "Lab"
+	as the first argument. The 2nd argument must be set to a PdfParam object or parameter
+	string specifying Lab-specific parameters. These are:
+	<ul>
+	<li><i>Xw</i>, <i>Yw</i>, <i>Zw</i> (required) - the diffuse white point. Xw and Zx must be positive and Yw must be equal to 1.</li>
+	<li><i>Xb</i>, <i>Yb</i>, <i>Zb</i> (optional) - the diffuse black point. All three must be non-negative. (0, 0, 0) by default.</li>
+	<li><i>amin</i>, <i>amax</i>, <i>bmin</i>, <i>bmax</i> (optional) - 4 numbers specifying the range
+	of valid values for the a* and b* components. (-100, 100, -100, 100) by default.
+	</ul>
+
+	<P>
+	Example:
+	<P>
+	<font face="Courier New"><B>
+    Set Param = PDF.CreateParam<BR>
+    Param("Xw") = 0.95<BR>
+    Param("Yw") = 1<BR>
+    Param("Zw") = 1.089<BR>
+    Param("amin") = -128<BR>
+	Param("amax") = 127<BR>
+    Param("bmin") = -128<BR>
+	Param("bmax") = 127<BR>
+    Set csLab = doc.CreateColorSpace("Lab", Param)<BR>
+	</b></font>
+
+
+
+	<P>
+	<A NAME="ICCBased">
+	<B><u><font color="green">ICCBased</font></u></B>
+
+	<P>
+	ICCBased color spaces are based on a cross-platform <i>color profile</i>
+	as defined by the International Color Consortium (ICC). 
+	To create an ICCBased color space, the CreateColorSpace method must be called with the string "ICCBased"
+	as the first argument. The 2nd argument must be set to a PdfParam object or parameter
+	string specifying ICCBased-specific parameters. These are:
+	<ul>
+	<li><i>N</i> (required) - the number of color components in the ICC profile data.</li>
+	<li><i>min1</i>, <i>max1</i>, <i>min2</i>, <i>max2</i>, ..., <i>minN</i>, <i>maxN</i> (optional) - N pairs of numbers 
+	specifying the minimum and maximum valid values of the corresponding color components. Default values: (0, 1, 0, 1, ..., 0, 1).
+	</ul>
+
+	<P>
+	Additional steps must be taken to make an ICCBased color space object valid and complete.
+	An actual color profile (usually a file with the extension .icc) must be assigned to the object
+	via the method <B>LoadDataFromFile</B>. Many free color profiles can be downloaded from the Adobe web site.
+	
+	<P>Optionally, an alternative color space for this ICCBased color space can be specified via the <B>SetAltColorSpace</B> method.
+
+	<P>
+
+
+	<P>
+	Example:
+	<P>
+	<font face="Courier New"><B>
+    Set csICC = doc.CreateColorSpace("ICCBased", "N=3")<BR>
+    csICC.LoadDataFromFile "c:\path\VideoPAL.icc"
+	</b></font>
+
+	<P>
+	<A NAME="Indexed">
+	<B><u><font color="green">Indexed</font></u></B>
+
+	<P>	
+	An Indexed color space enables you to specify a color with a single integer number. This number
+	represents an index into a color table rather than an actual color value. Using an indexed color space
+	can significantly reduce the amount of data required to represent an image.
+	To create an Indexed color space, the CreateColorSpace method must be called with the string "Indexed"
+	as the first argument. The 2nd argument must be set to a PdfParam object or parameter
+	string specifying Indexed-specific parameters. These are:
+	<ul>
+	<li><i>Hival</i> (required) - the maximum valid index value.</li>
+	</ul>
+	<P>
+	Additional steps must be taken to make an Indexed color space object valid and complete.
+	The base color space in which the values in the color table are to be interpreted
+	needs to be specified, as well as the color table itself. Both are specified via the method
+	<B>SetIndexedParams</B>. The first argument to this function is another instance of the PdfColorSpace
+	object representing the base color space, and the 2nd argument a VARIANT-packed array of numbers. The size of the array should
+	be (Hival + 1) times the number of color components in the base color space.
+
+	<P>
+	Example:
+	<P>
+	<font face="Courier New"><B>
+    Dim numbers(767)<BR>
+    For i = 0 To 767<BR>
+	&nbsp;&nbsp;&nbsp;numbers(i) = Rnd() * 255 </B>' Fill color table with random numbers<B><BR>
+    Next<P>
+	Set csRGB = doc.CreateColorSpace("DeviceRGB")<P>
+    Set csIndexed = doc.CreateColorSpace("Indexed", "Hival=255")<BR>
+    csIndexed.SetIndexedParams csRGB, numbers
+	</b></font>
+
+
+	<P>
+	<A NAME="Separation">
+	<B><u><font color="green">Separation</font></u></B>
+
+	<P>	
+	A Separation color space provides a means for specifying separate (spot) colorants used in offset printing.
+	Under this color space, a color is specified by a single numeric value in the range [0.0, 1.0] called a <i>tint</i>.
+	To create a Separation color space, the CreateColorSpace method must be called with the string "Separation"
+	as the first argument. The 2nd argument is not used.
+	<P>
+	Additional steps must be taken to make a Separation color space object valid and complete.
+	The name of the colorant that this color space is intended to represent needs to be specified.
+	Also, an alternate color space and transformation function need to be specified to approximate the colorant
+	on a device where the PDF document is viewed or printed in case the intended colorant is not available on that device.
+	<P>
+	These three additional parameters are specified via the method <B>SetSeparationParams</B>.
+	The first argument is a string containing the name of the colorant.
+	The second argument is another instance of the PdfColorSpace representing the alternate color space.
+	The third argument is an instance of the PdfFunction object representing the transformation function.
+	Functions are described in detail in the <A HREF="#15_2">next section</A> of this chapter.
+	<P>
+	In the example below, a Separation color space is created to represent the Pantone color 273.
+	The alternate color space is DeviceRGB and transformation function performs a simple linear
+	transformation from a tint value in the range [0.0, 1.0] to RGB values in the range [ (0, 0, 0), (56, 25, 122) ].
+	
+	<P>
+	Example:
+	<P>
+
+	<font face="Courier New"><B>
+	Set Func = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1;Rmin2=0;Rmax2=1;Rmin3=0;Rmax3=1; Size1=2; BitsPerSample=8")<BR>
+    Func.SetSampleData Array(0, 0, 0, 56, 25, 122)<P>
+	Set csRGB = doc.CreateColorSpace("DeviceRGB")<P>
+    Set csSeparation = doc.CreateColorSpace("Separation")<BR>
+    csSeparation.SetSeparationParams "PANTONE 273", csRGB, Func
+	</b></font>
+
+
+
+	<P>
+	<A NAME="DeviceN">
+	<B><u><font color="green">DeviceN</font></u></B>
+
+	<P>
+
+	DeviceN color spaces can contain an arbitrary number of color components. They provide greater flexibility 
+	than is possible with standard device color spaces such as DeviceCMYK or with individual Separation
+	color spaces. 
+	<P>
+	DeviceN color spaces are defined in a similar way to Separation color space - in fact, a Separation
+	color space can be defined as a DeviceN color space with only one component.
+	<P>
+	To create a DeviceN color space, the CreateColorSpace method must be called with the string "DeviceN"
+	as the first argument. The 2nd argument is not used.
+	<P>
+	Additional steps must be taken to make a DeviceN color space object valid and complete.
+	A list of colorant names separated by the delimiter "##" needs to be specified.
+	Also, an alternate color space and transformation function need to be specified to approximate the colorants
+	on a device where the PDF document is viewed or printed in case the intended colorants are not available on that device.
+	These three additional parameters are specified via the method <B>SetSeparationParams</B>.
+	The transformation function passed to the <B>SetSeparationParams</B> method 
+	must have as many inputs as there are colorants in this color space.
+	<P>
+	Optionally, additional information can be specified for each individual colorant via
+	the method <B>AddColorant</B>. This method accepts three arguments: the name of the colorant,
+	alternate color space and transformation function. These parameters describe the appearance
+	of this particular colorant alone, while the parameters passed to <B>SetSeparationParams</B>
+	describe the appearance of all its colorants in combination. The transformation function
+	passed to the <B>AddColorant</B> method must have a single input.
+	<P>
+	<P>
+	Example 1:
+	<P>
+
+	<font face="Courier New"><B>
+    Set FuncN = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Dmin2=0;Dmax2=1; Rmin1=0;Rmax1=1; Rmin2=0;Rmax2=1; Rmin3=0;Rmax3=1; Size1=2; Size2=2; BitsPerSample=8")<BR>
+    FuncN.SetSampleData Array(0, 0, 0, 255, 45, 142, 56, 25, 122, 128, 128, 128)
+	<P>
+    Set csDeviceN = doc.CreateColorSpace("DeviceN")<BR>
+    csDeviceN.SetSeparationParams "PANTONE 806 U##PANTONE 273", csRGB, FuncN
+	</b></font>
+
+	<P>
+	In the example above, we define a 2-colorant DeviceN color space based on Pantone colors 806-U and 273.
+	The transformation function, which has 2 inputs and 3 outputs, is defined to 
+	convert color (0, 0) to RGB (0, 0, 0), color (1, 0) to RGB (255, 45, 142), color (0, 1) to (56, 25, 122),
+	and, arbitrarily, color (1, 1) to RGB (128, 128, 128). Linear approximation is used for all colors in between.
+
+	<P>
+	<P>
+	Example 2:
+	<P>
+	<font face="Courier New"><B>
+	Set csRGB = doc.CreateColorSpace("DeviceRGB")<P>
+
+	Set Func1 = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Rmin2=0;Rmax2=1; Rmin3=0;Rmax3=1; Size1=2; BitsPerSample=8")<BR>
+    Func1.SetSampleData Array(0, 0, 0, 255, 45, 142)
+	<P>
+	Set Func2 = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Rmin2=0;Rmax2=1; Rmin3=0;Rmax3=1; Size1=2; BitsPerSample=8")<BR>
+    Func2.SetSampleData Array(0, 0, 0, 56, 25, 122)
+	<P>
+    Set FuncN = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Dmin2=0;Dmax2=1; Rmin1=0;Rmax1=1; Rmin2=0;Rmax2=1; Rmin3=0;Rmax3=1; Size1=2; Size2=2; BitsPerSample=8")<BR>
+    FuncN.SetSampleData Array(0, 0, 0, 255, 45, 142, 56, 25, 122, 128, 128, 128)
+	<P>
+    Set csDeviceN = doc.CreateColorSpace("DeviceN")<BR>
+    csDeviceN.SetSeparationParams "PANTONE 806 U##PANTONE 273", csRGB, FuncN<P>
+
+    csDeviceN.AddColorant "PANTONE 806 U", csRGB, Func1<BR>
+    csDeviceN.AddColorant "PANTONE 273", csRGB, Func2	<BR>
+	</b></font>
+
+	<P>
+	Example 2 extends Example 1 to include an individual transformation	function for each colorant.
+
+	</Blockquote>
+
+
+	<A NAME="15_2">
+	<FONT COLOR="#C06000"><B>15.2 PdfFunction Object</B></FONT>
+	<Blockquote>
+	
+	<B><U>15.2.1 Function Overview</U></B>
+	<P>
+
+	As shown above, some of the color spaces make use of <i>functions</i>, a special
+	class of PDF objects representing numeric transformations
+	from a set of input values to a set of output values.
+	<P>
+	A function to add two numbers has two input values and one output value:
+	<P>
+	f(x<sub>0</sub>, x<sub>1</sub>) = x<sub>0</sub> + x<sub>1</sub>
+	<P>
+	Similarly, a function that computes the arithmetic and geometric means
+	of two numbers could be viewed as a function of two input values and two output
+	values:
+	<P>
+	f(x<sub>0</sub>, x<sub>1</sub>) = (x<sub>0</sub> + x<sub>1</sub>) / 2, sqrt( x<sub>0</sub> * x<sub>1</sub> )
+	<P>
+	In general, a function can take any number (<i>m</i>) of input values and
+	produce any number (<i>n</i>) of output values:
+	<P>
+	f(x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>m-1</sub>) = y<sub>0</sub>, y<sub>1</sub>, ..., y<sub>n-1</sub>
+	<P>
+
+	Each function definition includes a <i>domain</i>, the set of legal values for the input.
+	Some types of functions also include a <i>range</i>, the set of legal values for the output.
+	Input values passed to the function are clipped to the domain, and
+	output values produced by the function are clipped to the range.
+
+	<P>
+	In PDF, there are 4 types of functions: 
+	<ul>
+	<li>A <i>sampled function</i> (type 0) uses a table of sample values to define the function.
+	Values that fall between the sample values are interpolated.
+	All color space examples in the previous section use sampled functions.</li>
+
+	<li>An <i>exponential interpolation function</i> (type 2) defines a set of coefficients 
+	for an exponential function.</li>
+
+	<li>A <i>stitching function</i> (type 3) is a combination of other functions, partitioned 
+	across a domain.
+
+	<li>A <i>PostScript calculator function</i> (type 4) uses operators from the PostScript
+	language to describe an arithmetic expression.
+
+	</ul>
+
+	<P>
+	As of Version 2.5, AspPDF provides support for PDF functions via the <B>PdfFunction</B>
+	object.
+
+	<P>
+
+	NOTE: A detailed discussion of PDF functions is outside the scope of this user manual. 
+	Please refer to the Adobe PDF Reference for detailed information on this subject. 
+
+	<P>
+	<A NAME="15_2_2">
+	<B><U>15.2.2 PdfFunction Object Usage</U></B>
+	<P>
+
+	In AspPDF, PDF functions are represented by the <B>PdfFunction</B> object introduced in version 2.5.
+	To create an instance of PdfFunction, the PdfDocument method <B>CreateFunction</B>
+	should be called. This method expects a single argument, a PdfParam object or parameter
+	string specifying the function type and various other properties for the function being created.
+	Some function types require that additional steps be taken to make the PdfFunction
+	object valid and complete, as described below.
+	<P>
+	For debugging purposes, the PdfFunction object exposes the property <B>IsValid</B> which returns 
+	True if this object is valid and complete, and False otherwise. The exact verbal reason for the object 
+	not being valid should be retrieved via the property <B>ValidationError</B>. 
+
+	<P>
+	The required parameters for the <B>CreateFunction</B> method are:
+
+	<UL>
+	<li><i>Type</i> (required) - function type. Valid values: 0 (sampled function), 2 (exponential interpolation
+	function), 3 (stitching function) and 4 (PostScript calculator).</li>
+
+	<li><i>Dmin1</i>, <i>Dmax1</i>, <i>Dmin2</i>, <i>Dmax2</i>, ..., <i>Dmin<B>m</B></i>, <i>Dmax<B>m</B></i></li> (required) - function domain. 
+	There should be <i>m</i> pairs of numbers
+	specifying the minimum and maximum valid values for each input, where <i>m</i> is
+	the number of input values for this function.
+
+	<li><i>Rmin1</i>, <i>Rmax1</i>, <i>Rmin2</i>, <i>Rmax2</i>, ..., <i>Rmin<B>n</B></i>, <i>Rmax<B>n</B></i></li> (required for types 0 and 4) - function range. 
+	There should be <i>n</i> pairs of numbers
+	specifying the minimum and maximum valid values for each output, where <i>n</i> is
+	the number of output values for this function.
+
+	</UL>
+
+	<P>
+
+	Once a valid PdfFunction object is created, it can be passed to any of the methods expecting
+	a function as an argument, such as the PdfColorSpace method <B>SetSeparationParams</B> (see the previous section.)
+
+	<P>
+	<B><U>15.2.3 Function Types</U></B>
+	<P>
+	This sub-section describes all function types in detail, and the parameters and steps 
+	required to create a PdfFunction object representing each one. 
+
+	<P>
+	
+	<A NAME="Sampled">
+	<B><u><font color="darkgreen">Sampled Functions</font></u></B>
+	
+	<P>
+	Sampled (type 0) functions use a sequence of sample values to provide
+	an approximation for functions whose domains and ranges are bounded.
+	The samples are organized as an <i>m</i>-dimensional 
+	table in which each entry has <i>n</i> components.
+
+	<P>
+
+	To create an instance of the PdfFunction object representing a type 0 function,
+	the CreateFunction method must be called with the parameter <B>Type=0</B>,
+	and the required domain and range parameters for each input and output values, as described
+	above. Additionally, a number of required and optional parameters
+	specific to sampled functions are also used. These are:
+	<P>
+	<ul>
+	<li><i>Size1</i>, <i>Size2</i>, ..., <i>Size<B>m</B></i> (required) - the number of samples in each input dimension
+	of the sample table.</li>
+
+	<li><i>BitsPerSample</i> (required) - the number of bits used to represent each sample. 
+	The valid values are 8, 16 and 32.</li>
+
+	<li><i>Order</i> (optional) - the order of interpolation between samples. Valid values are 1 (linear)
+	and 3 (cubic). Default value: 1.</li>
+
+	<li><i>EncodeMin1</i>, <i>EncodeMax1</i>, <i>EncodeMin2</i>, <i>EncodeMax2</i>, ..., <i>EncodeMin<B>m</B></i>, <i>EncodeMax<B>m</B></i></li> (optional) -
+	<i>m</i> pairs of numbers specifying the linear mapping of input values
+	into the domain of the function's sample table. Default values: (0, Size1 - 1, 0, Size2 - 1, ..., 0, Size<i>m</i> - 1).
+
+
+	<li><i>DecodeMin1</i>, <i>DecodeMax1</i>, <i>DecodeMin2</i>, <i>DecodeMax2</i>, ..., <i>DecodeMin<B>n</B></i>, <i>DecodeMax<B>n</B></i></li> (optional) -
+	<i>n</i> pairs of numbers specifying the linear mapping of sample values
+	into the range appropriate for the function's output values. Default: same as the range values.
+
+	</ul>
+
+	<P>
+
+	To explain the relationship between the domain, encode, size, decode and range parameters,
+	the following notation is used:
+
+	<P>
+	y = <i><b>Interpolate</b></i>( x, x<sub>min</sub>, x<sub>max</sub>, y<sub>min</sub>, y<sub>max</sub> ) 
+		= y<sub>min</sub> + ( (x - x<sub>min</sub>) * (y<sub>max</sub> - y<sub>min</sub>) / (x<sub>max</sub> - x<sub>min</sub>) )
+
+	<P>
+	For a given value of x, <i><B>Interpolate</b></i> calculates the y value on the line
+	defined by the two points (x<sub>min</sub>, y<sub>min</sub>) and (x<sub>max</sub>, y<sub>max</sub>).
+
+	<P>
+	When a sampled function is called, each input value x<sub>i</sub> (where i is between 1 and <i>m</i>)
+	is clipped to the domain:
+	<P>
+	x'<sub>i</sub> = min( max( x<sub>i</sub>, Dmin<sub>i</sub>), Dmax<sub>i</sub>)
+
+	<P>
+	That value is encoded:
+	<P>
+	e<sub>i</sub> = <i><b>Interpolate</b></i>( x'<sub>i</sub>, Dmin<sub>i</sub>, Dmax<sub>i</sub>, EncodeMin<sub>i</sub>, EncodeMax<sub>i</sub> )
+
+	<P>
+	That value is clipped to the size of the sample table in that dimension:
+	<P>
+
+	e'<sub>i</sub> = min( max( e<sub>i</sub>, 0 ), Size<sub>i</sub> - 1 )
+
+	<P>
+	The encoded input values are real numbers, not restricted to integers. Interpolation
+	is used to determine output values from the nearest surrounding values
+	in the sample table. Each output value r<sub>j</sub> (where j is between 1 and <i>n</i>)
+	is then decoded:
+	<P>
+	r'<sub>j</sub> = <B><i>Interpolate</i></b>( r<sub>j</sub>, 0, 2<sup>BitsPerSample</sup>-1, DecodeMin<sub>j</sub>, DecodeMax<sub>j</sub> )
+
+	<p>
+	Finally, each decoded value is clipped to the range:
+
+	<P>
+	y<sub>j</sub> = min( max( r'<sub>j</sub>, Rmin<sub>j</sub>), Rmax<sub>j</sub> )
+	
+	<P>
+	In addition to specifying the parameters described above, the method <B>SetSampleData</B>
+	must be called on the PdfFunction object to make it valid and complete.
+	This method expects a single argument, a VARIANT-packed array of numbers.
+	The array length should be <i>n</i> * Size<sub>1</sub> * Size<sub>2</sub> * ... * Size<sub>m</sub>.
+	<P>
+	For a function with multidimensional input (more than one input variable), the
+	sample values in the first dimension vary fastest, and the values in the last dimension vary slowest. 
+	For example, for a function f(a, b, c), where  a,  b,  and c vary
+	from 0 to 9 in steps of 1, the sample values would appear in this order: f(0, 0, 0),
+	f(1, 0, 0), ..., f(9, 0, 0), f(0, 1, 0), f(1, 1, 0), ..., f(9, 1, 0), f(0, 2, 0), f(1, 2, 0), ...,
+	f(9, 9, 0), f(0, 0, 1), f(1, 0, 1), and so on. 
+	<P>
+	For a function with multidimensional output (more than one output value), the
+	values are stored in the same order as in the range parameters.
+
+	<P>
+	Example:
+
+	<P>
+	<IMG SRC="images/15_func.png">
+
+	<P>
+	The graph above shows a simple 1-input, 1-output function with the domain [0, 1] and range [0, 1],
+	approximated with 5 samples:
+	<P>
+
+	f(0.00) = 0.0<BR>
+	f(0.25) = 0.125<BR>
+	f(0.50) = 0.25<BR>
+	f(0.75) = 0.5<BR>
+	f(1.00) = 1.0<BR>
+
+	<P>
+	For this example, we have chosen the BitsPerSample value of 8.
+	The sample data needs to be recalculated according to the normalized range [0, 2<sup>BitsPerSample</sup> - 1],
+	or [0, 255], as follows:
+	<P>
+	(0.0, 0.125, 0.25, 0.5, 1.0) -> (0, 32, 64, 128, 255)
+	<P>
+	The following code sample implements this function and uses it for grayscale transformation
+	in a Separation color space:
+
+	<P>
+	<font face="Courier New"><B>
+	Set Func = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Size1=5; BitsPerSample=8")<br>
+	Func.SetSampleData Array(0, 32, 64, 128, 255)<P>
+	
+	Set csGray = doc.CreateColorSpace("DeviceGray")<br>
+	Set cs = doc.CreateColorSpace("Separation")<br>
+    cs.SetSeparationParams "PANTONE 360 CV", csGray, Func
+
+	</b></font>
+
+	<P>
+
+	If we were to choose the BitsPerSample value of 16 instead, we would need to 
+	recalculate the sample values according to the range [0, 65535] and the code would be as follows:
+
+	<P>
+
+	<font face="Courier New"><B>
+	Set Func = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Size1=5; BitsPerSample=16")<br>
+	Func.SetSampleData Array(0, 8192, 16384, 32768, 65535)<br>
+	...
+	</b></font>
+
+	<P>
+
+	Please refer to the <A HREF="#15_1">previous section</A> of this chapter for more sampled function examples.
+
+
+	<P>
+	<A NAME="Exponential">
+	<B><u><font color="darkgreen">Exponential Interpolation Functions</font></u></B>
+	
+	<P>
+	Exponential interpolation (type 2) functions define an exponential interpolation
+	of one input and <i>n</i> output values.
+	<P>
+	To create an instance of the PdfFunction object representing a type 2 function, the CreateFunction 
+	method must be called with the parameter Type=2, and the required domain and optional range parameters 
+	for the one input and <i>n</i> output values, as described above. 
+	Additionally, a number of required and optional parameters specific 
+	to exponential interpolation functions are also used. These are: 
+
+	<P>
+	<ul>
+	<li><i>CZero1</i>, <i>CZero2</i>, ..., <i>CZero<B>n</B></i> (optional) - define the function result when x=0.0. Default values: (0, 0, ..., 0).</li>
+	<li><i>COne1</i>, <i>COne2</i>, ..., <i>COne<B>n</B></i> (optional) - define the function result when x=1.0. Default values: (1, 1, ..., 1).</li>
+	<li><i>N</i> (required) - the interpolation exponent. Each input value <i>x</i>
+	will return <i>n</i> values computed as follows:
+	<P>
+	y<sub>j</sub> = CZero<sub>j</sub> + x<sup>N</sup> * ( COne<sub>j</sub> - CZero<sub>j</sub>)
+	</ul>
+
+	<P>
+	Example:
+
+	<P>
+
+	<font face="Courier New"><B>
+    Set Param = PDF.CreateParam<BR>
+    Param("Type") = 2<BR>
+    Param("Dmin1") = 0<BR>
+    Param("Dmax1") = 1<BR>
+    Param("CZero1") = 0.2<BR>
+    Param("COne1") = 0.9<BR>
+    Param("CZero2") = 0.2<BR>
+    Param("COne2") = 0.9<BR>
+    Param("CZero3") = 0.2<BR>
+    Param("COne3") = 0.9<BR>
+    Param("N") = 0.6<p>
+    Set Func = doc.CreateFunction(Param)<BR>
+	</b></font>
+
+	<P>
+
+	<A NAME="Stitching">
+	<B><u><font color="darkgreen">Stitching Functions</font></u></B>
+	
+	<P>
+
+	Stitching (type 3) functions define a stitching of the subdomains of several
+	1-input functions (referred to as "subfunctions" in this manual) to produce a single new 1-input function.
+	This manual uses the letter <i>k</i> to denote the total number of subfunctions in this stitching function.
+	<P>
+	To create an instance of the PdfFunction object representing a type 3 function, 
+	the CreateFunction method must be called with the parameter Type=3, and the required 
+	Domain and optional Range parameters for the one input and <i>n</i> output values, as described above. 
+	Additionally, a number of required parameters specific to stitching 
+	functions are also used. These are: 
+
+	<ul>
+	<li><i>Bounds1</i>, <i>Bounds2</i>, ..., </i>Bounds<b>(k-1)</b></i> (required) - a group of (k-1) numbers which, 
+	in combination with the domain parameters, define the intervals to which each subfunction applies.</li>
+	<li><i>EncodeMin1</i>, <i>EncodeMax1</i>, <i>EncodeMin2</i>, <i>EncodeMax2</i>,
+		..., <i>EncodeMin<b>k</b></i>, <i>EncodeMax<b>k</b></i> (required) - a group of k pairs of numbers which
+		map each subset of the domain defined by the Domain and Bounds parameters to the domain
+		of the corresponding subfunction.
+	</ul>
+
+	<P>
+	In addition to these parameters, the method <B>AddFunction</B> must be called on this PdfFunction
+	object <i>k</i> times. This method expects a single argument, another instance of the PdfFunction object
+	which represents a subfunction for this stitching function. The output dimensionality
+	of all subfunctions must be the same and match the range parameters of this stitching function, 
+	if they are specified.
+
+	<P>
+	The Bounds parameters describes a series of half-opened intervals,
+	closed on the left and open on the right (except the last which is closed on the right as well.)
+	<P>
+	The Encode parameters specify <i>k</i> pairs of numbers. A value <i>x</i> from the <i>i</i>th
+	subdomain is encoded as follows:
+
+	<P>
+	x' = <B><i>Interpolate</i></B>( x, Bounds<sub>i-1</sub>, Bounds<sub>i</sub>, EncodeMin<sub>i</sub>, EncodeMax<sub>i</sub>)
+	for <i>i</i> between 1 and k. In this equation, Bounds<sub>0</sub> means Dmin<sub>1</sub>, and 
+	Bounds<sub>k</sub> means Dmax<sub>1</sub>.
+
+	<P>
+	Example:
+	<P>
+	The following example combines two subfunctions, an exponential-interpolation one and a sampled one,
+	into a single stitching function. Both subfunctions have the domains [0, 1]. The first subfunction
+	is mapped to the subdomain [0, 0.5] of the main function, and the 2nd subfunction to the subdomain [0.5, 1].
+
+	<P>
+	Exponential interpolation subfunction:<BR>
+
+	<IMG SRC="images/15_func1.png">
+	<P>
+	Sampled subfunction:<BR>
+
+	<IMG SRC="images/15_func2.png">
+	<P>
+	Resultant stitching function:<BR>
+
+	<IMG SRC="images/15_func3.png">
+
+	<P>
+	<font face="Courier New"><B>
+    Set Func1 = doc.CreateFunction("type=2; Dmin1=0; Dmax1=1; Rmin1=0; Rmax1=1; N=2; CZero1=0; COne1=0.5")<p>
+    Set Func2 = doc.CreateFunction("type=0; Dmin1=0; Dmax1=1; Rmin1=0; Rmax1=1; Size1=5;BitsPerSample=8")<BR>
+    Func2.SetSampleData Array(125, 191, 223, 231, 255)<P>
+    
+       
+    Set Func3 = doc.CreateFunction("type=3; Dmin1=0; Dmax1=1; bounds1=0.5; EncodeMin1=0; EncodeMax1=1; EncodeMin2=0; EncodeMax2=1")<BR>
+    Func3.AddFunction Func1<BR>
+    Func3.AddFunction Func2<BR>
+	</b></font>
+
+	<P>
+
+	<A NAME="PostScript">
+	<B><u><font color="darkgreen">PostScript Calculator Functions</font></u></B>
+	
+	<P>
+
+	A PostScript Calculator (type 4) function is defined as a text string of code written
+	in a small subset of the PostScript language. The detailed description
+	of the commands that can be used in a type 4 function is outside the scope of this manual.
+	Please refer to the Adobe PDF Reference for more information.
+
+	<P>
+
+	To create an instance of the PdfFunction object representing a type 4 function, 
+	the CreateFunction method must be called with the parameter Type=4, and the required domain and range 
+	parameters for each input and output values, as described above. There are no additional parameters.
+
+	<P>
+
+	An additional step must be taken to make a PdfFunction object representing
+	this type of function valid and complete. 
+	A text string containing the actual PostScript code must be specified via the property 
+	<B>PostScript</B>.
+
+	<P>
+	Example:
+
+	<P>
+	<font face="Courier New"><B>
+    Set Func = doc.CreateFunction("Type=4;Dmin1=-1; Dmax1=1; Dmin2=-1; Dmax2=1; Rmin1=-1; Rmax1=1")<BR>
+    Func.PostScript = "{ 360 mul sin 2 div exch 360 mul sin 2 div add }"
+	</b></font>
+
+	</Blockquote>
+
+
+	<A NAME="15_3"><FONT COLOR="#c06000"><B>15.3 Code Sample</B></FONT>
+	<Blockquote>
+	This chapter would not be complete without a few PDF-generating VBScript/C# lines of code.
+	The following code sample displays an image in its default form as
+	well as under an ICCBased color space. It also draws a series of bars
+	under the default grayscale color space, a Separation color space with a sampled
+	transformation function, and a calibrated grayscale color space.
+
+	<P>
+	
+
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2" ID="TableBar1">
+		<TR>
+			<TD BGCOLOR="white" ALIGN="left"><font size="2" face="courier new" color="black"><B>VBScript</B></font></TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="yellow" class="thinborder"><font size="2" face="courier new"><B>
+				Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+				Set Doc = Pdf.CreateDocument<BR>				
+				Set Page = Doc.Pages.Add<P>
+
+				</B>' Create some color spaces<B><BR>
+				Set csICC = Doc.CreateColorSpace( "ICCBased", "N=3" )<BR>
+				csICC.LoadDataFromFile Server.MapPath( "AdobeRGB1998.icc" )<P>
+
+				</B>' Draw an image with the default color space, and the same image with an ICC profile<B><BR>
+				Set Image = Doc.OpenImage( Server.MapPath( "apple.jpg" ) )<BR>
+				Page.Canvas.DrawImage Image, "x=20; y=600; scalex=0.5, scaley=0.5"<BR>
+				Page.Canvas.DrawText "Without a profile", "x=20; y=595", Doc.Fonts("Helvetica")<P>
+
+				Set Image2 = Doc.OpenImage( Server.MapPath( "apple.jpg" ) )<BR>
+				Image2.SetColorSpace csICC<BR>
+				Page.Canvas.DrawImage Image2, "x=240; y=600; scalex=0.5, scaley=0.5"<BR>
+				Page.Canvas.DrawText "With an ICC profile", "x=240; y=595", Doc.Fonts("Helvetica")<P>
+
+				</B>' Grayscale color space<B><BR>
+				Set csGray = doc.CreateColorSpace("DeviceGray")<BR>
+				DrawBars 300, csGray, "Default Grayscale"<P>
+
+				</B>' Separation color space with a sampled transformation function<B><BR>
+				Set Func = doc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Size1=5; BitsPerSample=8")<BR>
+				Func.SetSampleData Array(0, 32, 64, 128, 255)<BR>
+				Set csSep = doc.CreateColorSpace("Separation")<BR>
+				csSep.SetSeparationParams "PANTONE 4525 C", csGray, Func<BR>
+				DrawBars 180, csSep, "Grayscale based on a sampled function"<p>
+
+				</B>' Calibrated Gray<B><BR>
+				Set csCalGray = doc.CreateColorSpace("CalGray", "Xw=0.7; Yw=1; Zw=1.3")<BR>
+				DrawBars 60, csCalGray, "Calibrated Grayscale"<P>
+
+				Filename = Doc.Save( Server.MapPath( "colorspace.pdf" ), False )<P>
+
+				Response.Write "Success! Download your PDF file &lt;A HREF=" & Filename & ">here&lt;/A>"<P>
+
+
+				Sub DrawBars( YCoord, ColorSpace, Title )<BR>
+				&nbsp;&nbsp;&nbsp;</B>' stroking colors: for bar borders<B><BR>
+				&nbsp;&nbsp;&nbsp;Page.Canvas.SetColorEx "c1=0"<BR>
+				&nbsp;&nbsp;&nbsp;Page.Canvas.LineWidth = 5<P>
+
+				&nbsp;&nbsp;&nbsp;Page.Canvas.SetFillColorSpace ColorSpace<P>
+
+				&nbsp;&nbsp;&nbsp;For c = 0 to 1 step 0.1<BR>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page.Canvas.SetFillColorEx "c1=" & c<P>
+						
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page.Canvas.DrawRect 20 + c * 500, YCoord, 50, 100<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Page.Canvas.FillRect 20 + c * 500, YCoord, 50, 100<BR>
+				&nbsp;&nbsp;&nbsp;Next<P>
+
+				&nbsp;&nbsp;&nbsp;Page.Canvas.DrawText Title, "x=20; y=" & YCoord + 10, Doc.Fonts("Helvetica")<BR>
+				End Sub
+				</B></font>
+			</TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="white" ALIGN="left"><font size="2" face="courier new" color="black"><B>C#</B></font></TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="lightblue" class="thinborder"><font size="2" face="courier new"><B>
+				IPdfPage objPage;<BR>
+				IPdfDocument objDoc;<P>
+
+				void Page_Load(Object Source, EventArgs E)<BR>
+				{<BR>
+				&nbsp;&nbsp;&nbsp;IPdfManager objPdf = new PdfManager();<BR>
+				&nbsp;&nbsp;&nbsp;objDoc = objPdf.CreateDocument( Missing.Value );<BR>				
+				&nbsp;&nbsp;&nbsp;objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+				&nbsp;&nbsp;&nbsp;</B>// Create some color spaces<B><BR>
+				&nbsp;&nbsp;&nbsp;IPdfColorSpace csICC = objDoc.CreateColorSpace( "ICCBased", "N=3" );<BR>
+				&nbsp;&nbsp;&nbsp;csICC.LoadDataFromFile( Server.MapPath( "AdobeRGB1998.icc" ) );<P>
+
+				&nbsp;&nbsp;&nbsp;</B>// Draw an image with the default color space, and the same image with an ICC profile<B><BR>
+				&nbsp;&nbsp;&nbsp;IPdfImage objImage = objDoc.OpenImage( Server.MapPath( "apple.jpg" ), Missing.Value );<BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage, "x=20; y=600; scalex=0.5, scaley=0.5" );<BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( "Without a profile", "x=20; y=595", objDoc.Fonts["Helvetica", Missing.Value] );<P>
+
+				&nbsp;&nbsp;&nbsp;IPdfImage objImage2 = objDoc.OpenImage( Server.MapPath( "apple.jpg" ), Missing.Value );<BR>
+				&nbsp;&nbsp;&nbsp;objImage2.SetColorSpace( csICC );<BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage2, "x=240; y=600; scalex=0.5, scaley=0.5" );<BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( "With an ICC profile", "x=240; y=595", objDoc.Fonts["Helvetica", Missing.Value] );<P>
+
+				&nbsp;&nbsp;&nbsp;</B>// Grayscale color space<B><BR>
+				&nbsp;&nbsp;&nbsp;IPdfColorSpace csGray = objDoc.CreateColorSpace("DeviceGray", Missing.Value);<BR>
+				&nbsp;&nbsp;&nbsp;DrawBars( 300, csGray, "Default Grayscale" );<P>
+
+				&nbsp;&nbsp;&nbsp;</B>// Separation color space with a sampled transformation function<B><BR>
+				&nbsp;&nbsp;&nbsp;IPdfFunction objFunc = objDoc.CreateFunction("type=0; Dmin1=0;Dmax1=1; Rmin1=0;Rmax1=1; Size1=5; BitsPerSample=8");<BR>
+				&nbsp;&nbsp;&nbsp;object [] arrSamples = new object[5] { (object)0, (object)32, (object)64, (object)128, (object)255 };<BR>
+				&nbsp;&nbsp;&nbsp;objFunc.SetSampleData( arrSamples );<BR>
+				&nbsp;&nbsp;&nbsp;IPdfColorSpace csSep = objDoc.CreateColorSpace("Separation", Missing.Value);<BR>
+				&nbsp;&nbsp;&nbsp;csSep.SetSeparationParams( "PANTONE 4525 C", csGray, objFunc );<P>
+
+				&nbsp;&nbsp;&nbsp;DrawBars( 180, csSep, "Grayscale based on a sampled function" );<P>
+
+				&nbsp;&nbsp;&nbsp;</B>// Calibrated Gray<B><BR>
+				&nbsp;&nbsp;&nbsp;IPdfColorSpace csCalGray = objDoc.CreateColorSpace("CalGray", "Xw=0.7; Yw=1; Zw=1.3");<BR>
+				&nbsp;&nbsp;&nbsp;DrawBars( 60, csCalGray, "Calibrated Grayscale" );<P>
+
+				&nbsp;&nbsp;&nbsp;String strFilename = objDoc.Save( Server.MapPath("colorspace.pdf"), false );<P>
+					
+				&nbsp;&nbsp;&nbsp;lblResult.Text = "Success! Download your PDF file &lt;A HREF=" + strFilename + ">here&lt;/A>";<BR>
+				}<P>
+
+
+				void DrawBars( int YCoord, IPdfColorSpace ColorSpace, string Title )<BR>
+				{<BR>
+				&nbsp;&nbsp;&nbsp;</B>// stroking colors: for bar borders<B><BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.SetColorEx( "c1=0" );<BR>
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.LineWidth = 5;<P>
+
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.SetFillColorSpace( ColorSpace );<P>
+
+				&nbsp;&nbsp;&nbsp;for( double c = 0; c <= 1; c += 0.1 )<BR>
+				&nbsp;&nbsp;&nbsp;{<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objPage.Canvas.SetFillColorEx( "c1=" + c.ToString() );<P>
+						
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawRect( 20 + (float)c * 500, YCoord, 50, 100 );<BR>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objPage.Canvas.FillRect( 20 + (float)c * 500, YCoord, 50, 100 );<BR>
+				&nbsp;&nbsp;&nbsp;}<P>
+
+				&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( Title, "x=20; y=" + (YCoord + 10).ToString(), objDoc.Fonts["Helvetica", Missing.Value] );<BR>
+				}<BR>
+
+				</B></font>
+			</TD>
+		</TR>
+	</TABLE>
+	<p>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_15/15_colorspace.asp">http://localhost/asppdf/manual_15/15_colorspace.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_15/15_colorspace.aspx">http://localhost/asppdf/manual_15/15_colorspace.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	</Blockquote>
+
+
+	<A NAME="15_4"><FONT COLOR="#c06000"><B>15.4 Using Color Spaces with PdfTable and Other Objects</B></FONT>
+	<Blockquote>
+	As of Version 2.7, the <B><A HREF="manual_07.html">PdfTable</A></B> object has been retrofitted 
+	to enable the border and background colors of a table to be specified
+	in color spaces other than RGB (previous versions only allowed the table colors to be in the RGB color space.)	
+	To allow color spaces to be specified via PdfParam objects or parameter strings, 
+	the color space <i>index</i>, a unique integer identifier, is passed instead of an instance of the PdfColorSpace object.
+	<P>
+	Two new methods have been added to enable arbitrary colors to be specified: 
+	PdfTable.<B>SetColor</B> and PdfCell.<B>SetColor</B>.
+	The former can be used to specify the table border, table background, cell border and cell
+	background colors for the entire table. The latter specifies the border and background
+	colors for an individual cell.
+	<P>
+	Both <B>SetColor</B> methods expect a single argument: a PdfParam object or parameter string
+	containing the following parameters:
+	<UL>
+	<li><i>Type</i> - specifies which color is to be modified. The valid values are: 
+	1 (border color), 2 (cell border color), 3 (background color) and 4 (cell background color).
+	The PdfTable.<B>SetColor</B> method allows all four values, while PdfCell.<B>SetColor</B>
+	only allows values 2 and 4.
+	</li>
+	<P>
+	<li><i>ColorSpace</i> - specifies the color space index. This value should
+	be obtained from the <B>Index</B> property of the PdfColorSpace object.</li>
+	<P>
+	<li><i>c1</i>, <i>c2</i>, ..., <i>cN</i> - specify the individual color components for the color.
+	These values must be in the range [0, 1] and the number of color components must match
+	the color space being used.</li>
+	<P>
+	<li><i>Top</i>, <i>Bottom</i>, <i>Left</i>, <i>Right</i>  - 
+	if set to True, specify which side(s) of the cell the specified border color should apply to.
+	These parameters are only used by PdfCell.<B>SetColor</B> and only
+	if <i>Type=2</i>. If none of these are set to True, the color applies to the entire cell border.</li>
+	</UL>
+
+	<P>
+	Starting with Version 2.7, the <i>ColorSpace</i> and <i>c1</i>, <i>c2</i>, ..., <i>cN</i> parameters
+	can also be used with the PdfCanvas.<B>DrawText</B>
+	and PdfCell.<B>AddText</B> methods to specify text colors in color spaces
+	other than RGB and CMYK.
+
+
+	<P>
+	The following code sample creates an ICC-based color space and uses it to paint 
+	an entire table, an individual cell, and a text string inside a cell:
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.CreateDocument<P>
+		
+		Set Page = Doc.Pages.Add<P>
+
+		' Create an ICC color space<BR>
+		Set csICC = Doc.CreateColorSpace( "ICCBased", "N=3" )<BR>
+		csICC.LoadDataFromFile Server.MapPath( "AdobeRGB1998.icc" )<P>
+
+		Set Table = doc.CreateTable("rows=2; cols=3; width=400; height=300; border=10; cellborder=5; cellspacing=10; cellpadding=2")<BR>
+		Table.Font = Doc.Fonts("Helvetica")<P>
+    
+		' Border color<BR>
+		Table.SetColor "Type=1; ColorSpace=" & csICC.Index & "; c1=1; c2=0.5; c3=0.2"<P>
+    
+		' Cell Border Color<BR>
+		Table.SetColor "Type=2; ColorSpace=" & csICC.Index & "; c1=0; c2=0; c3=1"<P>
+    
+		' BG Color<BR>
+		Table.SetColor "Type=3; ColorSpace=" & csICC.Index & "; c1=1; c2=1; c3=0"<P>
+    
+		' Cell BG Color<BR>
+		Table.SetColor "Type=4; ColorSpace=" & csICC.Index & "; c1=0; c2=1; c3=0"<P>
+    
+		' Border color for individual cell<BR>
+		Table(1, 1).SetColor "Type=2; ColorSpace=" & csICC.Index & "; c1=1; c2=0; c3=1"<P>
+
+		' Draw text, use the same color space for it<BR>
+		Table(1, 1).AddText "Test", "ColorSpace=" & csICC.Index & ";c1=0.2; c2=0.4; c3=0.3"<P>
+
+		' Render table<BR>
+		Page.Canvas.DrawTable Table, "x=106; y=700"<P>
+
+		Filename = Doc.Save( Server.MapPath( "cs_table.pdf" ), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		objDoc = objPdf.CreateDocument( Missing.Value );<P>
+
+		objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+		// Create an ICC color space<BR>
+		IPdfColorSpace csICC = objDoc.CreateColorSpace( "ICCBased", "N=3" );<BR>
+		csICC.LoadDataFromFile( Server.MapPath( "AdobeRGB1998.icc" ) );<P>
+
+		IPdfTable objTable = objDoc.CreateTable("rows=2; cols=3; width=400; height=300; border=10; cellborder=5; cellspacing=10; cellpadding=2");<BR>
+		objTable.Font = objDoc.Fonts["Helvetica", Missing.Value];<P>
+
+		// Border color<BR>
+		objTable.SetColor("Type=1; ColorSpace=" + csICC.Index + "; c1=1; c2=0.5; c3=0.2");<P>
+
+		// Cell Border Color<BR>
+		objTable.SetColor("Type=2; ColorSpace=" + csICC.Index + "; c1=0; c2=0; c3=1");<P>
+
+		// BG Color<BR>
+		objTable.SetColor("Type=3; ColorSpace=" + csICC.Index + "; c1=1; c2=1; c3=0");<P>
+
+		// Cell BG Color<BR>
+		objTable.SetColor("Type=4; ColorSpace=" + csICC.Index + "; c1=0; c2=1; c3=0");<P>
+
+		// Border color for individual cell<BR>
+		objTable[1, 1].SetColor("Type=2; ColorSpace=" + csICC.Index + "; c1=1; c2=0; c3=1");<P>
+
+		// Draw text, use the same color space for it<BR>
+		objTable[1, 1].AddText("Test", "ColorSpace=" + csICC.Index + ";c1=0.2; c2=0.4; c3=0.3", Missing.Value);<P>
+
+		// Render table<BR>
+		objPage.Canvas.DrawTable( objTable, "x=106; y=700" );<P>
+
+		String strFilename = objDoc.Save( Server.MapPath("cs_table.pdf"), false );
+	</font></TD></TR>
+	</table>
+
+	<p>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_15/15_table.asp">http://localhost/asppdf/manual_15/15_table.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_15/15_table.aspx">http://localhost/asppdf/manual_15/15_table.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+
+
+	</Blockquote>
+
+	
+	<A HREF="manual_16.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 16: IE-based HTML-to-PDF Conversion"></A>
+	<A HREF="manual_14.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 14: PDF to Image Conversion"></A>
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

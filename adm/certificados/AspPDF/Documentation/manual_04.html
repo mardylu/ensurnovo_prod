@@ -1,0 +1,605 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 4: Drawing</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 4: Drawing
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	
+	<A HREF="manual_05.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 5: Image and Graphics Objects"></A>
+	<A HREF="manual_03.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 3: Your First AspPDF Application"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 4: Drawing</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#4_1">4.1 Introduction to PDF Drawing</A><BR>
+	<A HREF="#4_2">4.2 AspPDF Implementation of Drawing</A><BR>
+	<A HREF="#4_3">4.3 Filling Rules</A><BR>
+	<A HREF="#4_4">4.4 Managing Graphics State</A><BR>
+	<A HREF="#4_5">4.5 Advanced Graphics State Issues</A><BR>	
+	<A HREF="#4_6">4.6 Code Sample: Torus 3D</A><BR>	
+	</B>
+
+	<P>
+	<A NAME="4_1">
+	<FONT COLOR="#C06000"><B>4.1 Introduction to PDF Drawing</B></FONT>
+	<Blockquote>
+	Any page of a PDF document contains a set of graphics operators that define
+	the appearance of this page on computer screen, printer or any
+	other device. Some operators define the current <i>graphics state</i>
+	which includes the current color, current line width, etc. 
+	Others define lines, shapes, curves and regions of various sorts
+	by their coordinates. Still others display sequences of text characters,
+	etc.
+	<P>
+	By default, all drawing on a page occurs in the <I>default user coordinate space</i>
+	with the origin in the lower-left corner of the page. The positive <i>x</i>
+	axis extends horizontally to the right, and the positive <i>y</i> axis vertically
+	upwards, as in standard mathematical practice. The length of a unit along
+	both <i>x</i> and <i>y</i> axes is 1/72 inch.
+	<P>
+	The central notion in PDF drawing is a <i>path</i>, which is a composition of
+	straight and curved line segments which may connect to one another or may be
+	disconnected. 
+	<P>
+	A straight line is defined by two points - the current point and endpoint.
+	A curved path segment is specified as a <i>Cubic Bezier Curve</i>. Such curves
+	are defined by four points: the two endpoints (the current point P<sub>0</sub>
+	and the final point P<sub>3</SUB>) and two control points P<sub>1</sub> and 
+	P<sub>2</sub>. The curve does not, in general, pass through the control points:
+	<P>
+	<IMG SRC="images/04_curve.gif">
+	<P>
+	A path is made up of one or more disconnected subpaths, each comprising a sequence
+	of connected segments.
+	Typically, a subpath is defined by specifying its starting point,
+	appending one or more segments to it, and then closing it
+	by appending a straight line segment from the current point to the starting point of the subpath.
+	<P>
+	Once a path is defined, it is painted by <i>stroking</i>, <i>filling</i>, or both.
+
+	</Blockquote>
+
+	<A NAME="4_2">
+	<FONT COLOR="#C06000"><B>4.2 AspPDF Implementation of Drawing</B></FONT>
+	<Blockquote>
+	AspPDF implements drawing functionality via the <B>PdfCanvas</B> object.
+	At least one instance of PdfCanvas is associated with every page and
+	graphics object. To draw on the foreground of a page, the <B>Page.Canvas</B> property
+	is used. To draw on the background, <B>Page.Background</B> is used. Both
+	properties return separate instances of the PdfCanvas object.
+	<P>
+	The following code segment draws a 5-point star by defining
+	a path made up of a single subpath and stroking it:
+	<P>
+	<IMG SRC="images/04_star.gif" ALIGN="RIGHT">
+	<font face="courier new"><b>
+	With Page.Canvas<BR>
+	&nbsp;&nbsp;&nbsp;.MoveTo 100, 60<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 306, 600<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 512, 60<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 20, 400<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 592, 400<BR>
+	&nbsp;&nbsp;&nbsp;.ClosePath<P>
+	&nbsp;&nbsp;&nbsp;.Stroke<BR>
+	End With
+	</b></font>
+	<P>
+	A path is started by calling the <B>MoveTo</B> method. A call to <B>LineTo</B> adds
+	a straight line segment to the path. Finally, the path is closed
+	and stroked.
+	<P>
+	The following code segment draws a propeller-like figure by
+	defining and filling a path made up of two subpaths:
+	<P>
+	<IMG SRC="images/04_flower.gif" ALIGN="RIGHT">
+	<P>
+	<font face="courier new"><b>
+	With Page.Canvas<BR>
+	&nbsp;&nbsp;&nbsp;.MoveTo 306, 196<BR>
+	&nbsp;&nbsp;&nbsp;.AddCurve 446, 296, 166, 496, 306, 596<BR>
+	&nbsp;&nbsp;&nbsp;.ClosePath<P>
+
+	&nbsp;&nbsp;&nbsp;.MoveTo 106, 396<BR>
+	&nbsp;&nbsp;&nbsp;.AddCurve 206, 256, 406, 536, 506, 396<BR>
+	&nbsp;&nbsp;&nbsp;.ClosePath<P>
+
+	&nbsp;&nbsp;&nbsp;.Fill<BR>
+	End With<BR>
+	</b></font>
+	<P>
+	In addition to <B>Stroke</B> and <B>Fill</B> methods,
+	PdfCanvas also offers the <B>FillStroke</B> method which first fills
+	a path and then strokes it.
+
+	</Blockquote>
+
+	<A NAME="4_3">
+	<FONT COLOR="#C06000"><B>4.3 Filling Rules</B></FONT>
+	<Blockquote>
+	The <B>Fill</B> method used in the previous section paints
+	the insides of all the subpaths of a current path, considered together.
+	Any subpaths that are open are implicitly closed before being filled.
+	<P>
+	For a simple path, it is intuitively clear what region lies inside. However, for a
+	more complex path -- for example, a path that intersects itself or has one subpath
+	that encloses another -- the interpretation of "inside" is not always obvious. The
+	path machinery uses one of two rules for determining which points lie inside a
+	path: the nonzero winding number rule and the even-odd rule.
+	<P>
+	<B><U>4.3.1 Nonzero Winding Number Rule</U></B>
+	<P>
+	The nonzero winding number rule determines whether a given point is inside a
+	path by conceptually drawing a ray from that point to infinity in any direction
+	and then examining the places where a segment of the path crosses the ray. Starting
+	with a count of 0, the rule adds 1 each time a path segment crosses the ray
+	from left to right and subtracts 1 each time a segment crosses from right to left.
+	After counting all the crossings, if the result is 0 then the point is outside the path;
+	otherwise it is inside.
+	<P>
+	For simple convex paths, the nonzero winding number rule defines the inside
+	and outside as one would intuitively expect. The more interesting cases are those
+	involving complex or self-intersecting paths.
+	For a path consisting of a five-pointed star, drawn with five connected straight
+	line segments intersecting each other, the rule considers the inside to be the entire
+	area enclosed by the star, including the pentagon in the center. For a path composed
+	of two concentric circles, the areas enclosed by both circles are considered
+	to be inside, provided that both are drawn in the same direction. If the circles are
+	drawn in opposite directions, only the "doughnut" shape between them is inside,
+	according to the rule; the "doughnut hole" is outside:
+	<P>
+	<IMG SRC="images/04_nonzero.gif">
+	<P>
+	<B><U>4.3.2 Even-Odd Rule</U></B>
+	<P>
+	An alternative to the nonzero winding number rule is the even-odd rule. This rule
+	determines the "insideness" of a point by drawing a ray from that point in any
+	direction and simply counting the number of path segments that cross the ray,
+	regardless of direction. If this number is odd, the point is inside; if even, the point
+	is outside. This yields the same results as the nonzero winding number rule for
+	paths with simple shapes, but produces different results for more complex
+	shapes.
+	<P>
+	<IMG SRC="images/04_oddeven.gif">
+	<P>
+	To fill a path using the Even-Odd rule, the <B>Fill</B> and <B>FillStroke</B> methods 
+	must be called with a True argument, as follows:
+	<P>
+	<font face="courier new"><b>
+	Page.Canvas.Fill True<BR>
+	Page.Canvas.FillStroke True
+	</b></font>
+
+	</Blockquote>
+
+	
+	<A NAME="4_4">
+	<FONT COLOR="#C06000"><B>4.4 Managing Graphics State</B></FONT>
+	<Blockquote>
+	The PdfCanvas object provides properties and methods
+	to define the current <i>graphics state</i> which 
+	holds all major drawing parameters, such as the current 
+	stoking and filling colors, color space, line width, line join style, and others.
+	Many graphics state parameters can be specified via their respective
+	designated properties and methods, such as <B>LineWidth</B>,
+	as well as the universal <B>SetParams</B> method.
+	<P>
+	<B><u>4.4.1 Colors</u></B><P>
+
+	The current stroking and filling colors are set via the <B>SetColor</B> 
+	and <B>SetFillColor</B> methods, respectively. Both methods accept
+	three RGB color components in the range of 0.0 to 1.0. For example,
+	the code
+	<P>
+	<B>Page.Canvas.SetColor 0, 0, 1<BR>
+	Page.Canvas.SetFillColor 1, 0, 0</B>
+	<P>
+	sets the current stroking color to blue and filling color to red. Alternatively, the current colors
+	can be specified via a parameter string passed to 
+	the <B>SetParams</B> method, for example:
+	<P>
+	<B>Page.Canvas.SetParams "color=blue; fillcolor=red"</B>
+	<P>
+	Both the stroking and filling colors are black by default.
+
+	<P>
+
+	In addition to setting the stroking and filling colors, the SetColor and SetFillColor methods also set the current <i>color space</i>
+	to RGB. To switch to the CMYK color space and set CMYK colors for the stroking and filling operations, 
+	the methods	<B>SetColorCMYK</B> and <B>SetFillColorCMYK</B> methods should be used, respectively.
+	These methods expect 4 arguments: cyan, magenta, yellow and black components.
+	<P>
+	As of Version 2.5, AspPDF supports many additional color spaces besides RGB and CMYK. Advanced
+	color spaces are described in <A HREF="manual_15.html">Chapter 15 - Color Spaces</A>.
+
+	<P>
+
+	<A NAME="4_4_2">
+	<B><u>4.4.2 Line Width and Cap Style</u></B><P>
+	<P>
+	The current line width is set via the <B>LineWidth</B> property which is set
+	to 1 by default. A line width can be a fractional number. Alternatively, 
+	the line width can be specified via the SetParams method, as follows:
+	<P>
+	<B>Page.Canvas.SetParams "LineWidth=0.1"</B>
+	<P>
+	The Line Cap style specifies the shape to be used at the ends of open subpaths
+	(and dashes, if any) when they are stoked. The Line Cap parameter
+	can be set to one of three values:
+	<P>
+	Style 0: <i>Butt cap</i>. The stroke is squared off at the endpoint of the path. There is no
+	projection beyond the end of the path. This is the default value.<P>
+	Style 1: <i>Round cap</i>. A semicircular arc with a diameter equal to the line width is
+	drawn around the endpoint and filled in.
+	<P>
+	Style 2: <i>Projecting square cap</i>. The stroke continues beyond the endpoint of the path
+	for a distance equal to half the line width and is then squared off.
+	<P>
+	<IMG SRC="images/04_cap.gif">
+	<P>
+	The current Line Cap parameter is specified via the <B>LineCap</B> property, or
+	via the SetParams method as follows:
+	<P>
+	<B>Page.Canvas.SetParams "LineCap=1"</B>
+
+	<P>
+	<A NAME="4_4_3">
+	<B><u>4.4.3 Line Join Style and Miter Limit</u></B><P>
+	The Line Join style specifies the shape to be used at the corners of paths that are
+	stroked. The Line Join parameter can be set to one of three values:
+	<P>
+	Style 0: <I>Miter join</i>. The outer edges of the strokes for the two segments are extended
+	until they meet at an angle. If the segments meet at
+	too sharp an angle (as defined by the miter limit parameter described below), 
+	a bevel join is used instead. This is the default style.<P>
+
+	Style 1: <i>Round join</i>. A circle with a diameter equal to the line width is drawn around
+	the point where the two segments meet and is filled in, producing a rounded
+	corner.
+	<P>
+	Style 2: <i>Bevel join</i>. The two segments are finished with butt caps 
+	and the resulting notch beyond the ends of the segments is filled with a triangle.
+	<P>
+	<IMG SRC="images/04_join.gif">
+	<P>
+	When two line segments meet at a sharp angle and mitered joins have been specified 
+	as the line join style, it is possible for the miter to extend far beyond the
+	thickness of the line stroking the path. The miter limit imposes a maximum on
+	the ratio of the miter length to the line width. When the limit is
+	exceeded, the join is converted from a miter to a bevel.
+	The ratio of miter length to line width is directly related to the angle <i>alpha</i>
+	between	the segments in user space by the formula
+	<P>
+	miterLength / lineWidth = 1 / sin( <i>alpha</i> / 2 )
+	<P>
+	The Line Join style and Miter Limit parameters can be specified via the
+	<B>LineJoin</B> and <B>MiterLimit</B> properties, respectively,
+	as well as the SetParams method,
+	as follows:
+	<P>
+	<B>Page.Canvas.SetParams "LineJoin=0; MiterLimit=1.414"</B>
+	<P>
+	
+	<A NAME="4_4_4">
+	<B><u>4.4.4 Line Dash Pattern</u></B><P>
+	The line dash pattern controls the pattern of dashes and gaps used to stroke paths.
+	It is specified by a dash array and a dash phase. The dash array’s elements are
+	numbers that specify the lengths of alternating dashes and gaps; the dash phase
+	specifies the distance into the dash pattern at which to start the dash.
+	By default, the dash value array is empty and dash phase is 0,
+	which corresponds to a solid, unbroken line.
+	<P>
+	Dash array values and dash phase can only be specified via the <B>SetParams</B>
+	method.  The following five calls to the SetParams method
+	produce patterns displayed below:
+	<P>
+	<B>
+	Page.Canvas.SetParams "Dash1=3; DashPhase=0"<BR>
+	Page.Canvas.SetParams "Dash1=2; DashPhase=1"<BR>
+	Page.Canvas.SetParams "Dash1=2; Dash2=1; DashPhase=0"<BR>
+	Page.Canvas.SetParams "Dash1=3; Dash2=1; DashPhase=6"<BR>
+	Page.Canvas.SetParams "Dash1=2; Dash2=3; DashPhase=11"<BR></B>
+	</B>
+	<P>
+	<IMG SRC="images/04_dash.gif">
+	<P>
+	Starting with version 1.6.0.11, a line can be made solid via the syntax
+	<P>
+	<B>
+	Page.Canvas.SetParams "Dash1=0"
+	</B>
+
+	</Blockquote>
+
+
+
+	<A NAME="4_5">
+	<FONT COLOR="#C06000"><B>4.5 Advanced Graphics State Issues</B></FONT>
+	<Blockquote>
+
+	<A NAME="4_5_1">
+	<B><U>4.5.1 Transformation Martix</U></B>
+	<P>
+	A transformation matrix specifies the relationship between two coordinate spaces.
+	By modifying a transformation matrix, objects can be scaled, rotated, translated,
+	or transformed in other ways.
+	<P>
+	A transformation matrix in PDF is specified by an array of six numbers,
+	[a b c d e f]. It can represent any linear transformation from one coordinate
+	system to another. The most common types of transformation
+	are translation, scaling, rotation and skew.
+	<P>
+	<I>Translations</i> are specified as [1 0 0 1 tx ty], where tx and ty are the distances 
+	to translate the origin of the coordinate system in the horizontal and vertical
+	dimensions, respectively.
+	<P>
+	<i>Scaling</i> is obtained by [sx 0 0 sy 0 0]. This scales the coordinates so that 1
+	unit in the horizontal and vertical dimensions of the new coordinate system is
+	the same size as sx and sy units, respectively, in the previous coordinate system.
+	<P>
+	<I>Rotations</i> are produced by [cos(alpha) sin(alpha) -sin(alpha) cos(alpha) 0 0], which has the effect
+	of rotating the coordinate system axes by an angle <i>alpha</i> counterclockwise.
+	<P>
+	<i>Skew</i> is specified by [1 tan(alpha) tan(beta) 1 0 0], which skews the x axis by an angle
+	<i>alpha</i> and the y axis by an angle <i>beta</i>.
+	<P>
+	<IMG SRC="images/04_transform.gif">
+	<P>
+	To specify a transformation matrix, the PdfCanvas objects the method <B>SetCTM</B> which takes 6 numbers, a, b, c, d, e, and f,
+	as arguments. By default, the current transformation matrix (CTM) is [1 0 0 1 0 0]
+	which corresponds to identity transformation.
+	Each call to SetCTM changes the CTM to the result of the multiplication
+	of the current matrix with the new one.
+	<P>
+
+	<A NAME="4_5_2">
+	<B><U>4.5.2 Graphics State Stack</U></B>
+	<P>
+	A well-structured PDF document typically contains many graphical elements
+	that are essentially independent of each other and sometimes nested to multiple
+	levels. The graphics state stack allows these elements to make local changes to the
+	graphics state without disturbing the graphics state of the surrounding environment.
+	<P>
+	The <B>SaveState</B> method pushes a copy of the entire graphics state onto the stack.
+	The <B>RestoreState</B> method restores the entire graphics state to its former value by popping
+	it from the stack. For example:
+	<P>
+	<font face="courier new"><b>
+	Page.Canvas.SaveState<BR>
+	Page.Canvas.SetColor 1, 0.5, 0<BR>
+	Page.Canvas.SetCTM 1, 0, 0, 1, 10, 15<BR>
+	...<BR>
+	Page.Canvas.RestoreState
+	</b></font>
+	
+	<P>
+	<A NAME="4_5_3">
+	<B><U>4.5.3 Clipping Paths</U></B>
+	<P>
+	The graphics state contains a <i>current clipping path</i>
+	that limits the regions of the page affected by painting operators. The initial
+	clipping path includes the entire page.
+	<P>
+	A clipping path is created the same way as a regular path, but at the end 
+	instead	of calling Fill, Stroke or FillStroke, you must call the 
+	<B>Clip</B> method (and optionally pass True if you want the path
+	to be computed according to the Odd-Even rule, see Section <A HREF="#4_3">4.3</A> above).
+	For example:
+	<P>
+	<font face="courier new"><b>
+	Page.Canvas.SaveState<BR>
+	Page.Canvas.MoveTo 10, 10<BR>
+	Page.Canvas.LineTo 500, 10<BR>
+	Page.Canvas.LineTo 500, 500<BR>
+	Page.Canvas.Clip<BR>
+	...<BR>
+	&lt;<i>only the triangular area defined above will be affected></i><BR>
+	...<BR>	
+	Page.Canvas.RestoreState
+	</b></font>
+
+
+	</Blockquote>
+	
+	<IMG SRC="images/04_torus.gif" ALIGN=RIGHT><P>
+	<P>
+	<A NAME="4_6">
+	<FONT COLOR="#C06000"><B>4.6 Code Sample: Torus 3D</B></FONT>
+	<Blockquote>
+	The following code sample uses basic graphics methods
+	provided by the PdfCanvas object, such as SetParams and FillStroke,
+	to create a 3D image of a torus.
+	<P>
+	The torus's surface is tiled with filled and stroked quadralaterals.
+	<P>
+	Several 3D graphics techniques are being employed
+	by this code sample to build a projection of the torus at an angle, achieve
+	a perspective effect and remove invisible surfaces.
+	<P>
+	Click on the links below to run this code sample:
+
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_04/04_torus.asp">http://localhost/asppdf/manual_04/04_torus.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_04/04_torus.aspx">http://localhost/asppdf/manual_04/04_torus.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+
+	<A HREF="manual_05.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 5: Image and Graphics Objects"></A>
+	<A HREF="manual_03.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 3: Your First AspPDF Application"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

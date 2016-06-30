@@ -1,0 +1,620 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 5: Image and Graphics Objects</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 5: Image and Graphics Objects
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_06.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 6: Text and Fonts"></A>
+	<A HREF="manual_04.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 4: Drawing"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 5: Image and Graphics Objects</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#5_1">5.1 PdfImage Object</A><BR>
+	<A HREF="#5_2">5.2 Masking and Transparency</A><BR>
+	<A HREF="#5_3">5.3 PdfGraphics Object</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="5_1">
+	<FONT COLOR="#C06000"><B>5.1 PdfImage Object</B></FONT>
+	<Blockquote>
+	AspPDF is capable of placing arbitrary images on a PDF document.
+	It supports images in BMP, GIF, JPEG, PNG and TIFF formats. To display an image
+	on a canvas, the method <B>Canvas.DrawImage</B> should be used. This method
+	expects two arguments, an instance of the <B>PdfImage</B> object
+	and a parameter object (or parameter string).
+	<P>
+	A <B>PdfImage</B> object is created via PdfDocument's 
+	<B>OpenImage</B> method which takes an image path as an argument. 
+	PdfImage can also be created via the <B>OpenImageBinary</B>
+	method which opens an image from memory. Once
+	an instance of PdfImage is created, it can be displayed 
+	multiple times across a PDF document. 
+	<P>
+	The following code segment displays the image painting.jpg three times on a page
+	with various scaling factors:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+	Set Doc = Pdf.CreateDocument<BR>
+	Set Page = Doc.Pages.Add<P>
+
+	Set Image = Doc.OpenImage( Server.MapPath( "painting.jpg") )<P>
+
+	Set Param = Pdf.CreateParam<P>
+
+	For i = 1 To 3<BR>
+	&nbsp;&nbsp;&nbsp;Param("x") = (Page.Width - Image.Width / i) / 2<BR>
+	&nbsp;&nbsp;&nbsp;Param("y") = Page.Height - Image.Height * i / 2 - 200<BR>
+	&nbsp;&nbsp;&nbsp;Param("ScaleX") = 1 / i<BR>
+	&nbsp;&nbsp;&nbsp;Param("ScaleY") = 1 / i<P>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.DrawImage Image, Param<BR>
+	Next<P>
+	
+	Filename = Doc.Save( Server.MapPath("image.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<BR>
+		IPdfPage objPage = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<P>
+
+		IPdfImage objImage = objDoc.OpenImage( Server.MapPath( "painting.jpg"), Missing.Value );<BR>
+
+		IPdfParam objParam = objPdf.CreateParam(Missing.Value);<BR>
+
+		for( int i = 1; i <=3; i++ )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objParam["x"].Value = (objPage.Width - objImage.Width / i) / 2.0f;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["y"].Value = objPage.Height - objImage.Height * i / 2.0f - 200;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["ScaleX"].Value = 1.0f / i;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["ScaleY"].Value = 1.0f / i;<P>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage, objParam );<BR>
+		}<P>
+
+		String strFilename = objDoc.Save( Server.MapPath("image.pdf"), false );
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Here, we pass four arguments to the <B>DrawImage</B> method: X, Y, ScaleX and ScaleY.
+	<I>X</i> and <i>Y</i> are required: they specify the coordinates of the lower-left corner of the image being displayed.
+	<P>
+	<I>ScaleX</i> and <i>ScaleY</i> are optional: they specify scaling factors along the X and Y coordinates.
+	Both arguments are 1 by default, which means the image size on the page (in user coordinates)
+	will be equal to its pixel size, provided that the image resolution is 
+	the standard 72 dots per inch (dpi). 
+	For example, if a 72dpi image is 360 x 216 pixels and 
+	the ScaleX/ScaleY arguments are not specified, the image will occupy
+	360 x 216 units of space, or 5" x 3". A 300dpi image with the same
+	pixel size will only occupy 1.2" x .72".
+	<P>
+	You can optionally specify a rotation <i>Angle</i> (in degrees) by which the image will 
+	be rotated counter-clockwise around its lower-left corner.
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_image.asp">http://localhost/asppdf/manual_05/05_image.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_image.aspx">http://localhost/asppdf/manual_05/05_image.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	The <B>Doc.OpenImageBinary</B> method
+	does the same as OpenImage but it opens an image from a memory array
+	as opposed to disk. This method can be used if the image being opened
+	is stored in a database table as a blob:
+	<P>
+	<FONT face="courier new" size="2"><B>
+	Set Image = Doc.OpenImageBinary( rs("image_blob").Value )
+	</B></font>
+
+	<P>
+	<U><B>5.2.1 Image-to-PDF Conversion</B></U>
+	<P>
+	The PdfImage properties <B>ResolutionX</B> and <B>ResolutionY</B>
+	(introduced by AspPDF 1.1)
+	enable conversion of GIF, JPEG, BMP, PNG and TIFF images
+	to one-page PDF documents with the size and
+	resolution of the original image fully preserved. These properties 
+	return the dot-per-inch (DPI) resolutions of an image along 
+	the X and Y coordinates. For GIF, PNG and BMP images, these values are
+	always 72 dpi, the resolution of JPEG and TIFF images may vary
+	and usually ranges from 72 to 600 dpi.
+	<P>
+	The following code fragment converts an arbitrary image
+	into a one-page PDF document with the page size
+	calculated based on the size and resolution of the image being converted:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	...<BR>
+	Set Image = Doc.OpenImage(Server.MapPath( "atlanticocean.tif" ) )
+	<P>
+	' Add empty page. Page size is based on resolution and size of image<BR>
+	Width = Image.Width * 72 / Image.ResolutionX<BR>
+	Height = Image.Height * 72 / Image.ResolutionY<BR>
+	Set Page = Doc.Pages.Add( Width, Height )<P>
+
+	' Draw image<BR>
+	Page.Canvas.DrawImage Image, "x=0, y=0"<BR>
+	...
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	...<BR>
+	// Open image from file<BR>
+	IPdfImage objImage = objDoc.OpenImage(Server.MapPath( "atlanticocean.tif" ), Missing.Value );<p>
+
+	// Add empty page. Page size is based on resolution and size of image<BR>
+	float fWidth = objImage.Width * 72.0f / objImage.ResolutionX;<BR>
+	float fHeight = objImage.Height * 72.0f / objImage.ResolutionY;<BR>
+	IPdfPage objPage = objDoc.Pages.Add( fWidth, fHeight, Missing.Value );<P>
+
+	// Draw image<BR>
+	objPage.Canvas.DrawImage( objImage, "x=0, y=0" );<br>
+	...
+	</font></TD></TR>
+	</table>
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_convert.asp">http://localhost/asppdf/manual_05/05_convert.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_convert.aspx">http://localhost/asppdf/manual_05/05_convert.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	</Blockquote>
+	
+	<A NAME="5_2">
+	<FONT COLOR="#C06000"><B>5.2 Masking and Transparency</B></FONT>
+	<Blockquote>
+	Usually, an image completely covers an area it occupies. All portions
+	of the image, whether black, white, gray or color, completely obscure
+	any marks that may previously have existed in the same place on the page.
+	<P>
+	However, it is possible to crop, or "mask out" the background
+	of an image and then place the masked image on a different background,
+	allowing the existing background to show through the masked areas. Two masking methods
+	are available: <i>explicit masking</i> using a separate image, and <i>color key masking</i>.
+	<P>
+	<A NAME="5_2_1">
+	<B><u>5.2.1 Explicit Masking</u></b><P>
+	This method requires a separate <i>monochrome</i> image which serves as an image
+	mask. Such an image can be created using the Microsoft Paint application (included in all versions
+	of Windows). Copy an image you need masked into Paint, 
+	change its attribute to Black and White, then save it as a monochrome
+	bitmap. White areas of the bitmap will mask out the corresponding pixels
+	of the image being masked.
+	<P>
+	An image is masked as follows:<P>
+	1. The monochrome mask image is opened with <B>OpenImage</B>/<B>OpenImageBinary</B>, then its
+	<B>IsMask</B> property is set to True.<P>
+	2. The image to be masked is opened with <B>OpenImage</B>/<B>OpenImageBinary</B> also, then
+	its <B>SetImageMask</B> method is called and the image object obtained in Step 1 is passed 
+	as an argument.
+
+	<P>
+	The following code sample takes the image <B>exclam.gif</B> 
+	and its monochrome bitmap mask <b>exclam.bmp</B>, and places the image on top of a drawing to demonstrate
+	that the existing background is showing through the masked areas.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	...<BR>
+	Set ImageMask = Doc.OpenImage( Server.MapPath( "exclam.bmp") )<BR>
+	ImageMask.IsMask = True ' Mark this image object as a mask<P>
+
+	Set Image = Doc.OpenImage( Server.MapPath( "exclam.gif") )<BR>
+	Image.SetImageMask ImageMask<P>
+
+	Page.Canvas.DrawImage Image, "x=10, y=550"<BR>
+	...<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	...<BR>
+	IPdfImage objImageMask = objDoc.OpenImage( Server.MapPath( "exclam.bmp"), Missing.Value );<BR>
+	objImageMask.IsMask = true;	// Mark this image object as a mask<P>
+
+	IPdfImage objImage = objDoc.OpenImage( Server.MapPath( "exclam.gif"), Missing.Value );<BR>
+	objImage.SetImageMask( objImageMask );<P>
+
+	objPage.Canvas.DrawImage( objImage, "x=10, y=550" );<BR>
+	...<BR>
+	</font></TD></TR>
+	</table>
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_mask.asp">http://localhost/asppdf/manual_05/05_mask.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_mask.aspx">http://localhost/asppdf/manual_05/05_mask.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	<A NAME="5_2_2">
+	<B><u>5.2.2 Color Key Masking</u></b><P>
+	An alternative way to mask an image is by specifying
+	a range of colors to mask. All <i>samples</i> (a PDF term roughly equivalent to "pixels") 
+	of the image with color
+	components falling within the specified range are masked (not painted).
+	<P>
+	A color range is an array of 2 x N integers where N is the number
+	of color components per sample. N is 3 for RGB images, 4 for CMYK images,
+	and 1 for monochrome bitmaps.
+	<P>
+	Each integer in the array must be between 0 and 2 <sup>BitsPerComponent</sup> - 1.
+	The BitsPerComponent value may be 1, 2, 4, or 8 depending on the image. Use
+	PdfImage properties <B>ComponentsPerSample</B> and <B>BitsPerComponent</B>
+	to know exactly what these values are for your image.
+	<P>
+	To specify a color key mask, the PdfImage provides the method <B>SetColorMask</B>
+	which takes a parameter object (or parameter string) as an argument.
+	The parameters in the parameter object must be named <i>Min1</i>, <i>Max1</i>, 
+	<i>Min2</i>, <i>Max2</i>, ..., <i>Min</i>N, <i>Max</i>N.
+	<P>
+	For example, the image <B>exclam.gif</B> 
+	used in the previous section is a GIF, so its ComponentsPerSample is 3
+	and BitsPerComponent is 8. To set a mask, we need to 
+	specify three ranges, or 6 integers each between 0 and 255. 
+	Therefore, to mask the white and light gray areas of 
+	this image, we may use the following code:
+	<P>
+	<font face="courier new" SIZE="1"><B>
+	Image.SetColorMask "Min1=250;Max1=255; Min2=250;Max2=255; Min3=250;Max3=255"
+	</B></FONT>
+	<P>
+	Here, we specify three ranges for each of the R, G, and B color components. The
+	ranges are between 250 and 255 which corresponds to white and very light gray.
+
+	<P>
+	<A NAME="5_2_3">
+	<B><u>5.2.3 GIF Transparency Support</u></b><P>
+	Starting with Version 1.6.0.3, AspPDF 
+	provides full transparency support for GIF images. 
+	The transparent areas of GIF images are automatically masked.
+	<P>
+	The effect of the GIF transparency support is illustrated by the picture below.
+	A transparent GIF icon was drawn on a yellow background
+	with an AspPDF version prior to 1.6.0.3 (left) and with version 1.6.0.3 (right).
+	<P>
+	<IMG SRC="images/05_transp.gif">
+
+	<P>
+	<A NAME="5_2_4">
+	<B><u>5.2.4 PNG Transparency Support</u></b><P>
+	Starting with version 1.6.0.2, AspPDF supports Portable Network Graphics format
+	also known as <B>PNG</B>. AspPDF fully supports both the PNG Alpha Channel and 
+	simple transparency. PNG transparency support is fully automatic, i.e.
+	no additional coding is needed to display an alpha-  or transparency-enabled PNG image.
+	</Blockquote>
+
+	<P>
+	<A NAME="5_3">
+	<FONT COLOR="#C06000"><B>5.3 PdfGraphics Object</B></FONT>
+	<Blockquote>
+	Sometimes, a composite graphics object comprised
+	of drawings, text and images, such as a company's logo and slogan on a
+	background, needs to be displayed in multiple places and on multiple pages within a PDF
+	document, possibly with various scaling factors.
+	<P>
+	PDF specifications describe such self-contained, complex entities under the name <I>Form XObjects</i>
+	but to avoid confusion with interactive forms described in <A HREF="manual_11.html">Chapter 11</A>,
+	AspPDF refers to them as <B>graphics objects</B>.
+	<P>
+	<P>
+	<A NAME="5_3_1">
+	<B><u>5.3.1 PdfGraphics Object Overview</u></b><P>
+	
+	AspPDF provides support for graphics entities via the <B>PdfGraphics</B>
+	object creatable via PdfDocument's <B>CreateGraphics</B> method.
+	A graphics object has a fixed size specified at creation time, but 
+	it can be scaled and rotated when displayed via the <B>Cavas.DrawGraphics</B>
+	method, the same way as an image.
+	<P>
+	PdfGraphics has an associated <B>PdfCanvas</B> object
+	accessible via the <B>Canvas</B> property much the same way as PdfPage.
+	Therefore, a graphics object may contain drawings, 
+	images, text and other graphics objects. 
+	<P>
+	PdfGraphics objects may be
+	used stand-alone to help display repetitive graphics entities. They can also
+	be used to define the appearance of annotations and form fields
+	described in later chapters.
+	<P>
+	The code sample below creates an instance of PdfGraphics,
+	draws a mathematically defined shape on it, and also draws a string of text.
+	After that, the graphics is drawn on the page multiple times with rotation around
+	the center of the page.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		...<BR>
+		Set Graphics = Doc.CreateGraphics("Left=0,Bottom = 0;Right=100;Top=100")<P>
+
+		With Graphics.Canvas<BR>
+		&nbsp;&nbsp;&nbsp;.DrawRect 1, 1, 99, 99<BR>
+		&nbsp;&nbsp;&nbsp;.MoveTo 50, 90<BR>
+		&nbsp;&nbsp;&nbsp;For i = 0 to 628<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.LineTo 40 * sin(i / 25) + 50, 40 * cos(i / 20) + 50<BR>
+		&nbsp;&nbsp;&nbsp;Next<BR>
+		&nbsp;&nbsp;&nbsp;.Fill<P>
+			
+		&nbsp;&nbsp;&nbsp;.DrawText "AspPDF Rules!", "x=20, y=12; size=8", doc.Fonts("Courier")<BR>
+		End With<P>
+
+		Set Param = Pdf.CreateParam<P>
+
+		For angle = 0 To 330 step 30<BR>
+		&nbsp;&nbsp;&nbsp;Param("x") = 306 + 150 * cos( angle / 360 * 6.28 )<BR>
+		&nbsp;&nbsp;&nbsp;Param("y") = 396 + 150 * sin( angle / 360 * 6.28 )<BR>
+		&nbsp;&nbsp;&nbsp;Param("Angle") = Angle<P>
+			
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graphics, Param<BR>
+		Next<BR>
+		...
+
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		...<BR>
+		IPdfGraphics objGraphics = objDoc.CreateGraphics("Left=0,Bottom=0;Right=100;Top=100");<P>
+
+		objGraphics.Canvas.DrawRect( 1, 1, 99, 99 );<BR>
+		objGraphics.Canvas.MoveTo( 50, 90 );<BR>
+		for( int i = 0; i <= 628; i++ )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objGraphics.Canvas.LineTo( (float)(40 * Math.Sin(i / 25.0) + 50), (float)(40 * Math.Cos(i / 20.0) + 50) );<BR>
+		}<BR>
+		objGraphics.Canvas.Fill( Missing.Value );<P>
+		
+		objGraphics.Canvas.DrawText( "AspPDF Rules!", "x=20, y=12; size=8", objDoc.Fonts["Courier", Missing.Value] );<P>
+
+		IPdfParam objParam = objPdf.CreateParam(Missing.Value);<P>
+
+		for(int angle = 0; angle <= 330; angle +=30 )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objParam["x"].Value = (float)(306+150.0*Math.Cos(angle/360.0*6.28 ) );<BR>
+		&nbsp;&nbsp;&nbsp;objParam["y"].Value = (float)(396+150.0*Math.Sin(angle/360.0*6.28 ) );<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Angle"].Value = angle;<P>
+			
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraphics, objParam );<BR>
+		}<BR>
+		...
+
+	</font></TD></TR>
+	</table>
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_graphics.asp">http://localhost/asppdf/manual_05/05_graphics.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_05/05_graphics.aspx">http://localhost/asppdf/manual_05/05_graphics.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>	
+
+
+	<P>
+	<A NAME="5_3_2">
+	<B><u>5.3.2 Tiling Patterns</u></b><P>
+
+	A tiling pattern consists of a small graphical figure called a pattern cell. Filling an area with the pattern
+	replicates the cell vertically and horizontally within this area.
+	<P>
+	Starting with Version 1.6, AspPDF supports tiling patterns via the method PdfCanvas.<B>FillWithPattern</B>
+	which expects an instance of the PdfGraphics object representing the pattern cell to be used.
+	The 2nd optional argument, <i>EvenOdd</i>, is the same as in the PdfCanvas.<A HREF="object_canvas.html#Fill"><B>Fill</B></A> method.
+	To designate an instance of the PdfGraphics object as a pattern cell, the <B>CreateGraphics</B> method
+	must be called with the parameter <I>Pattern=true</i>.
+	<P>
+	The following code snippet fills a circular area with a pattern consisting of a single small image:
+	<P>
+	<font size=2 face="courier new"><B>
+	</B>' Create pattern cell from an image<B><BR>
+	Set Image = Doc.OpenImage("c:\path\airplane_icon.gif")<BR>
+    Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=42;top=45; <i>pattern=true;</i>")<BR>
+    Graph.Canvas.DrawImage Image, "x=0, y=0"<P>
+	
+	</B>' Create path, fill it with the pattern<B><BR>
+	Page.Canvas.AddEllipse 300, 200, 100, 100<BR>
+    Page.Canvas.FillWithPattern Graph<BR>
+	...</B>
+	</font>
+	<P>
+	<IMG SRC="images/05_pattern.gif">
+
+	<P>
+	<A NAME="5_3_3">
+	<B><u>5.3.3 Creating Graphics from Pages</u></b><P>
+
+	<P>
+	As of Version 2.3, a PdfGraphics object can be created from the page of another existing
+	document and then drawn on this document one or more times with shifting, 
+	scaling and rotation applied, if necessary. This functionality
+	is provided via the method PdfDocument.<B>CreateGraphicsFromPage</B>
+	and described in detail in <A HREF="manual_09.html#9_6">Section 9.6 - Drawing Other Documents' Pages</A>.
+
+	</Blockquote>
+
+
+
+	<A HREF="manual_06.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 6: Text and Fonts"></A>
+	<A HREF="manual_04.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 4: Drawing"></A>
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

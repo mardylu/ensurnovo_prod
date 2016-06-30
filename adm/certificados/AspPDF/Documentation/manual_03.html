@@ -1,0 +1,426 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 3: Your First AspPDF Application</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 3: Your First AspPDF Application
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_04.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 4: Drawing"></A>
+	<A HREF="manual_02.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 2: Object Model Overview"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 3: Your First AspPDF Application</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#3_1">3.1 Hello World Application</A><BR>
+	<A HREF="#3_2">3.2 Alternative Save Options</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="3_1">
+	<FONT COLOR="#C06000"><B>3.1 Hello World Application</B></FONT>
+	<Blockquote>
+	Our first application will create a one-page PDF document, set
+	its Title and Creator properties, and draw the phrase
+	"Hello, World!" in large Helvetica letters across the page.
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.CreateDocument<P>
+
+		Doc.Title = "AspPDF Chapter 3 Hello World Sample"<BR>
+		Doc.Creator = "John Smith"<P>
+
+		Set Page = Doc.Pages.Add<P>
+
+		Set Font = Doc.Fonts("Helvetica")<P>
+
+		Params = "x=0; y=650; width=612; alignment=center; size=50"<BR>
+		Page.Canvas.DrawText "Hello World!", Params, Font<P>
+
+		Filename = Doc.Save( Server.MapPath("hello.pdf"), False )<P>
+
+		Response.Write "Success! Download your PDF file &lt;A HREF=" & Filename & ">here&lt;/A>"<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<P>
+
+		objDoc.Title = "AspPDF Chapter 3 Hello World Sample";<BR>
+		objDoc.Creator = "John Smith";<P>
+
+		IPdfPage objPage = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<BR>
+		IPdfFont objFont = objDoc.Fonts["Helvetica", Missing.Value];<P>
+
+		String strParams = "x=0; y=650; width=612; alignment=center; size=50";<BR>
+		objPage.Canvas.DrawText( "Hello World!", strParams, objFont );<P>
+
+		String strFilename = objDoc.Save( Server.MapPath("hello.pdf"), false );<P>
+
+		lblResult.Text = "Success! Download your PDF file &lt;A HREF=" + strFilename + ">here&lt;/A>";
+	</font></TD></TR>
+	</table>
+
+	<P>
+	The first line creates an instance of the PdfManager object,
+	AspPDF's top-level object. The following line creates an empty PdfDocument
+	object. The Pdf.CreateDocument method accepts a single optional argument, 
+	a document <I>ID</i> string. If no ID is specified, AspPDF will generate 
+	a random one automatically. The document ID argument is rarely used.
+	<P>
+	<B>
+	Doc.Title = "AspPDF Chapter 3 Hello World Sample"<BR>
+	Doc.Creator = "John Smith"</B><P>
+	
+	These two lines set the document's Title and Creator. These values can be viewed 
+	in Acrobat Reader under File/Document Properties/Summary. Other document properties 
+	that can be set via the PdfDocument object include Subject, Author, Keywords,
+	Producer, CreationDate and ModDate.
+	<P>
+	<B>Set Page = Doc.Pages.Add</B>
+	<P>
+	This line adds a new page to the document. The Pages.Add method accepts
+	three optional arguments: <I>Width</I>, <I>Height</i> (in PDF units, 1 unit equals 1/72 of an inch)
+	and <I>InsertBefore</i> which controls the location of the new page among existing page
+	(not applicable if the document is initially empty).
+	<P>
+	By default, the page width and height are 612 and 792, respectively,
+	which corresponds to the standard 8.5" x 11" size.
+	<P>
+	If <I>InsertBefore</i> is omitted, the new page is added to the end of the document.
+	If present, it must be a 1-based index of an existing page in the document.
+	<P>
+	<B>Set Font = Doc.Fonts("Helvetica")</B>
+	<P>
+	This line queries the Doc.Fonts collection for a desired font. The 
+	default parameterized Fonts.Item property expects a font name
+	as the first parameter, and a CharSet code as the second optional parameter.
+	Font management is described in detail in <A HREF="manual_06.html">Chapter 6</A>.
+	<P>
+	<B>
+	Params = "x=0; y=650; width=612; alignment=center; size=50"<BR>
+	Page.Canvas.DrawText "Hello World!", Params, Font<P></B>
+	<P>
+	These two lines display the text "Hello World!" in size 50 Helvetica on the page. 
+	(The auxiliary string variable <i>Params</i> is used for readability purposes only.
+	The second argument to Canvas.DrawText could also be an
+	initialized PdfParam object.)
+	<P>
+	Besides the text and font arguments, five numeric arguments are being passed
+	to the DrawText method. <i>X</i> and <i>Y</i> are always required, the others are 
+	optional in most cases. In this case, text alignment is set to <B>center</B>
+	which makes the <i>Width</i> parameter required as well.
+	<P>
+	<B>Filename = Doc.Save( Server.MapPath("hello.pdf"), False )</B>
+	<P>
+	This line saves the document to disk. The first argument is required and
+	must be set to a full file path. The second argument is optional. If set to
+	True or omitted, it instructs the Save method to overwrite an existing file.
+	If set to False, it forces unique file name generation. For example, if the file
+	<B>hello.pdf</B> already exists in the specified directory and another document
+	is being saved under the same name, the Save method tries the filenames
+	<B>hello(1).pdf</B>, <B>hello(2).pdf</B>, etc., until a non-existent name is found.
+	The Save method returns the filename (without the path) under which the file was
+	saved.
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello.asp">http://localhost/asppdf/manual_03/03_hello.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello.aspx">http://localhost/asppdf/manual_03/03_hello.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	</Blockquote>
+
+	<P>
+	<A NAME="3_2">
+	<FONT COLOR="#C06000"><B>3.2 Alternative Save Options</B></FONT>
+	<Blockquote>
+	In addition to the Save method looked at in the previous section,
+	the PdfDocument object provides two more save methods: SaveToMemory and SaveHttp.
+	<P>
+	<A NAME="3_2_1">
+	<B><U>3.2.1 Saving to Memory</u></b>
+	<P>
+	The <B>SaveToMemory</B> method does the same as Save but it produces
+	a memory array as opposed to disk file. This memory array can be saved
+	directly in the database as a BLOB by simply assigning the return value
+	of SaveToMemory to a recordset object, as follows:
+	<P>
+	<B>rs("FileBlob").Value = Doc.SaveToMemory</B>
+	<P>
+	The following code sample does the same as the previous one, except
+	that it saves a resultant PDF file in the database as a BLOB. 
+	For the sake of brevity, only the bottom portion of the code is shown.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		...<P>
+		Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=" & Server.MapPath("..\db\asppdf.mdb")<BR>
+		Set rs = Server.CreateObject("adodb.recordset")<BR>
+		rs.Open "PDFFILES", Connect, 2, 3<BR>
+		rs.AddNew<BR>
+		rs("FileBlob").Value = Doc.SaveToMemory<BR>
+		rs.Update<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		...<P>
+		String strConnect = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("..\\db\\asppdf.mdb");<BR>
+		OleDbConnection myConnection = new OleDbConnection( strConnect );<BR>
+		myConnection.Open();<P>
+
+		OleDbDataAdapter myDataAdapter = new OleDbDataAdapter ("select * from pdffiles", myConnection);<BR>
+		DataSet myDataSet = new DataSet();<BR>
+		myDataAdapter.Fill( myDataSet, "pdffiles" );<P>
+
+		DataTable tblImages = myDataSet.Tables["pdffiles"];<BR>
+		DataRow rowImage;<BR>
+		rowImage = tblImages.NewRow();<BR>
+		tblImages.Rows.Add( rowImage );<P>
+			
+		rowImage.BeginEdit();<BR>
+		rowImage["FileBlob"]	= objDoc.SaveToMemory();<BR>
+		rowImage.EndEdit();<P>
+				
+		OleDbCommandBuilder myCB = new OleDbCommandBuilder(myDataAdapter);<BR>
+		myDataAdapter.Update( myDataSet, "pdffiles" );
+
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello_mem.asp">http://localhost/asppdf/manual_03/03_hello_mem.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello_mem.aspx">http://localhost/asppdf/manual_03/03_hello_mem.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	<A NAME="3_2_2">
+	<B><U>3.2.2 Saving to HTTP Stream</u></b>
+	<P>
+	Yet another option is to save to an HTTP stream via the <B>SaveHttp</B> method.
+	This method enables your Web application to send a PDF document
+	directly to the client browser without creating a temporary copy
+	on the server's hard drive for better performance and security.
+	<P>
+	The SaveHttp method takes two arguments, a value for the 
+	Content-Disposition	header, and optionally a value for the Content-Type header.
+	The latter value is "application/pdf" by default.
+	<P>
+	The Content-Disposition header contains the name of the PDF file as displayed
+	to the user in the File Save As dialog box. The format for this header is:
+	<P>
+	<B>"filename=myfile.pdf"</B>
+	<P>
+	or
+	<P>
+	<B>"attachment;filename=myfile.pdf"</B>
+	<P>
+	The second version makes a browser prompt the user to save the file to disk 
+	instead of opening it in-place.
+	<P>
+	SaveHttp can only be used in an ASP/ASP.NET environment
+	as it calls the Response.BinaryWrite method internally.
+	If you use this method from an ASP.NET application,
+	you must enable classic ASP compatibility mode, as follows:
+	<P>
+	<B>&lt;%@ Page aspCompat="True" <i>other attributes</i> %></B>
+	<P>
+	Also, make sure your ASP/ASP.NET script contains no HTML tags whatsoever
+	to avoid HTTP stream corruption.
+	<P>
+	The following code samples are almost identical to 03_hello.asp/.aspx
+	except that they contain no HTML headers and use Doc.SaveHttp instead of Doc.Save.
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello_http.asp">http://localhost/asppdf/manual_03/03_hello_http.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_03/03_hello_http.aspx">http://localhost/asppdf/manual_03/03_hello_http.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	</Blockquote>
+
+
+
+
+	<A HREF="manual_04.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 4: Drawing"></A>
+	<A HREF="manual_02.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 2: Object Model Overview"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

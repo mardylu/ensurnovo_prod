@@ -1,0 +1,624 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 13: HTML to PDF Conversion</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 13: HTML to PDF Conversion
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD xWIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_14.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 14: PDF-to-Image Conversion"></A>
+	<A HREF="manual_12.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 12: Miscellaneous Features"></A>
+	
+	<br>
+	
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 13: HTML to PDF Conversion</B> 
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#13_1">13.1 ImportFromUrl Method</A><BR>
+	<A HREF="#13_2">13.2 Authentication</A><BR>
+	<A HREF="#13_3">13.3 Error Log</A><BR>
+	<A HREF="#13_4">13.4 Page Breaks</A><BR>
+	<A HREF="#13_5">13.5 Direct HTML Feed</A><BR>
+	<A HREF="#13_6">13.6 CSS Media Selection</A><BR>
+	<A HREF="#13_7">13.7 Obtaining Y-Boundary</A><BR>
+	<A HREF="#13_8">13.8 Templates</A><BR>
+	</B>
+	<P>
+	<A NAME="13_1"><FONT COLOR="#c06000"><B>13.1 ImportFromUrl Method</B></FONT>
+	<Blockquote>
+	Starting with version 1.6, AspPDF is capable of converting HTML documents to PDF
+	via PdfDocument's <B>ImportFromUrl</B> method.
+	This method opens an HTML document from a given URL, splits it into pages and renders it
+	onto an empty or existing PDF document. The document can then be further edited, if necessary,
+	and saved to disk, memory or an HTTP stream as usual.
+	<P>
+	ImportFromUrl's support for various HTML tags and constructs is not quite as extensive
+	as that of major browsers, but still considerably stronger than the limited
+	<A HREF="manual_06.html#6_4">HTML functionality of Canvas.DrawText</A>
+	available in older version of AspPDF. ImportFromUrl recognizes tables, images, lists, cascading style sheets, etc.
+	<P>
+	<B>ImportFromUrl</B> accepts four parameters, all but the first one optional: the input URL, a parameter
+	list, and a username/password pair. 
+	<P>
+	The URL parameter can be an HTTP or HTTPS address, such as 
+	<i>http://www.server.com/path/file.html</i>, or a local physical path such as <i>c:\path\file.html</i>.
+	Note that if you want to open a dynamically generated document such as an .asp or aspx file,
+	you need to  invoke it via HTTP even if this file is local to your own script.
+	<P>
+	Starting with Service Release 1.6.0.8, you can also specify an HTML string directly via the URL
+	parameter. This is described in <A HREF="#13_5">Section 13.5</A> of this chapter.
+	<P>
+	The following simple code snippet creates a PDF document out of the Persits Software site persits.com:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		Doc.ImportFromUrl "http://www.persits.com", "scale=0.6; hyperlinks=true; drawbackground=true"<P>
+
+		Filename = Doc.Save( Server.MapPath("importfromurl.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+		objDoc.ImportFromUrl( "http://www.persits.com", "scale=0.6; hyperlinks=true; drawbackground=true", Missing.Value, Missing.Value );<P>
+
+		String strFilename = objDoc.Save( Server.MapPath("importfromurl.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_13/13_importfromurl.asp">http://localhost/asppdf/manual_13/13_importfromurl.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_13/13_importfromurl.aspx">http://localhost/asppdf/manual_13/13_importfromurl.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	The ImportFromUrl method's 2nd argument is a PdfParam object or parameter string
+	specifying additional parameters controlling the HTML to PDF conversion process.
+	For example, to create a document in a landscape orientation, the <i>Landscape</i>
+	parameter must be set to true, for example:
+	<P>
+	<font size=2 face="courier new"><B>
+	Doc.ImportFromUrl "http://www.persits.com", "landscape=true"
+	</b></font>
+	<P>
+	When new pages have to be added to the document during the conversion process,	
+	the default page size is U.S. Letter. This can be changed via the 
+	<i>PageWidth</i> and <i>PageHeight</i> parameters. 
+	<P>
+	When rendering HTML content on a page, AspPDF leaves 0.75" margins around the content area.
+	That can be changed via the <i>LeftMargin</i>, <i>RightMargin</i>, <i>TopMargin</i> and <i>BottomMargin</i> 
+	parameters.
+	<P>
+	The full list of ImportFromUrl parameters can be found <A HREF="object_document.html#ImportFromUrl">here</A>.
+
+	<P>
+
+	<div style="background-color: lightgrey; width: 80%; padding: 5pt; border: solid 1pt black">
+	<B>IMPORTANT:</B> Avoid calling <B>ImportFromUrl</B> on a URL located in the same virtual directory as the script
+	that makes the call to <B>ImportFromUrl</B>. According to Microsoft KB article 
+	<A TARGET="_NEW" HREF="http://support.microsoft.com/default.aspx?scid=kb;en-us;Q316451"><B>Q316451</B></A>, 
+	"this can result in poor performance due to thread starvation," and may produce
+	the error exception "<i>MSXML2::ServerXMLHTTP Error: The request has timed out.</i>"
+	</div>
+
+
+	</Blockquote>
+	<P>
+
+
+
+	<A NAME="13_2">
+	<FONT COLOR="#C06000"><B>13.2 Authentication</B></FONT>
+	<Blockquote>
+	<B><U>13.2.1 Basic Authentication</u></B>
+	<P>
+	The 3rd and 4th arguments of the ImportFromUrl method are a username and password
+	that can be used if the URL being opened is protected via Basic Authentication, as follows:
+	<P>
+	<font size=2 face="courier new"><B>
+	Doc.ImportFromUrl "http://www.server.com/script.asp", "landscape=true", "jsmith", "pwd"
+	</b></font>
+	<P>
+	<B><U>13.2.2 .NET Forms Authentication</u></B>
+	<P>
+	Under .NET, the Username and Password arguments can instead be used to pass an authentication cookie
+	in case both the script calling ImportFromUrl and a file being converted to PDF
+	are protected by the same user account under .NET Forms authentication.
+	To pass a cookie to ImportFromUrl, the cookie name prepended with the prefix "Cookie:" is passed
+	via the Username argument, and the cookie value via the Password argument. 
+	The following example illustrates this technique.
+	<P>
+	Suppose you need to implement a "Click here for a PDF version of this page" feature 
+	in a .NET-based web application. The application is protected with .NET Forms Authentication:
+	<P>
+
+	<font size=2 face="courier new"><B>
+	&lt;authentication mode="Forms"><BR>
+	&nbsp;&nbsp;&lt;forms name="<font color=blue>MyAuthForm</font>" loginUrl="login.aspx" protection="All"><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;credentials passwordFormat = "SHA1"><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;user name="JSmith" password="13A23E365BFDBA30F788956BC2B8083ADB746CA3"/><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B> ... other users<B><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/credentials><BR>
+	&nbsp;&nbsp;&lt;/forms><BR>
+	&lt;/authentication><BR>
+	 </B></font>
+	<P>
+	The page that needs to be converted to PDF, say <B>report.aspx</B>, contains the button 
+	"Download PDF version of this report" that invokes another script, say <B>convert.aspx</B>, which 
+	calls AspPDF's ImportFromUrl. Both scripts reside in the same directory under the same protection.
+	<P>
+	If <B>convert.aspx</B> simply calls objDoc.ImportFromUrl( "http://localhost/dir/report.aspx", ... ),
+	the page that ends up being converted will be login.aspx and not report.aspx, because 
+	AspPDF itself has not been authenticated against the user database and naturally will be forwarded
+	to the login screen.
+	<P>
+	To solve this problem, we just need to pass the authentication cookie whose name is <font color=blue>MyAuthForm</font>
+	(the same as the form name) to ImportFromUrl. The following code (placed in convert.aspx) does the job:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		&lt;%@ Import Namespace="System.Web" %><BR>
+		&lt;%@ Import Namespace="System.Reflection" %><BR>
+		&lt;%@ Import Namespace="ASPPDFLib" %><P>
+
+		&lt;script runat=server language="C#"><P>
+
+		private void Page_Load(object sender, System.EventArgs e)<BR>
+		{<BR>
+		&nbsp;&nbsp;IPdfManager objPDF;<BR>
+		&nbsp;&nbsp;objPDF = new PdfManager();<P>
+
+		&nbsp;&nbsp;String strCookieName = "", strCookieValue = "";<P>
+
+		&nbsp;&nbsp;// Search for our authentication cookie<BR>
+		&nbsp;&nbsp;for( int i = 0; i < Request.Cookies.Count; i++ )<BR>
+		&nbsp;&nbsp;{<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;if( Request.Cookies[i].Name == "<font color=blue>MyAuthForm</font>" )<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strCookieName = Request.Cookies[i].Name;<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strCookieValue = Request.Cookies[i].Value;<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+		&nbsp;&nbsp;}<P>
+
+		&nbsp;&nbsp;IPdfDocument objDoc = objPDF.CreateDocument(Missing.Value);<BR>
+		&nbsp;&nbsp;objDoc.ImportFromUrl( "http://localhost/dir/report.aspx", Missing.Value, <BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;"Cookie:" + strCookieName, strCookieValue );<P>
+
+		&nbsp;&nbsp;objDoc.SaveHttp( "attachment;filename=report.pdf" );<BR>
+		}<P>
+
+		&lt;/script>
+	</font></TD></TR>
+	</table>
+	<P>
+	Note that the cookie name is prepended with the prefix "Cookie:" before being passed to ImportFromUrl.
+
+
+	</Blockquote>
+	<P>
+
+
+
+	<A NAME="13_3">
+	<FONT COLOR="#C06000"><B>13.3 Error Log</B></FONT>
+	<Blockquote>
+	ImportFromUrl throws an exception if the specified URL cannot be found or invalid, and no HTML to PDF conversion
+	takes place. However, if the main URL is valid but some of the dependent information (fonts, image URLs, CSS files, etc.) cannot be
+	found, the conversion will go on uninterrupted, although the resultant PDF document may not look as expected.
+	<P>
+	To simplify debugging, ImportFromUrl can be used in a debug mode.
+	If the parameter <i>Debug=true</i> is used, ImportFromUrl returns a log of non-fatal errors encountered
+	during the conversion process. A log entry consists of the entry type, such as "Image", "CSS", etc., 
+	error message, and relevant data, such as the invalid URL, unknown font name, etc.
+	Log entries are separated by two pairs of CR/LF characters.
+	<P>
+	The following code snippet invokes ImportFromUrl in the debug mode and displays the error log:
+	<P>
+	<font size=2 face="courier new"><B>
+	strLog = Doc.ImportFromUrl( "http://www.server.com/script.asp", "debug=true" )<BR>
+	Response.Write strLog
+	</b></font>
+	<P>
+	A typical log string may look as follows:
+	<P>
+	<font color=red>
+	Image: Error opening URL. HTTP Status Code: 404<BR>
+	Data: http://www.persits.com/image.gif<P>
+	Font: Font name cannot be found.<BR>
+	Data: Arrial
+	</font>
+	<P>
+	</Blockquote>
+
+
+
+	<A NAME="13_4">
+	<FONT COLOR="#C06000"><B>13.4 Page Breaks</B></FONT>
+	<Blockquote>
+
+	HTML allows page breaks for printing purposes via the CSS properties <B>page-break-before</B>
+	and <B>page-break-after</b>. The ImportFromUrl method recognizes these properties for the purpose of page breaking
+	in a limited set of HTML tags. The value for these two properties must be set to "always", other values
+	will have no effect. Just like with any CSS property, inline syntax or a separate style sheet can be used.
+	For example:
+	<P>
+	<font size=2 face="courier new"><B>
+	&lt;BR style="page-break-before: always">
+	</B></font>
+	<P>
+	The property <B>page-break-before: always</B> can be applied to the following tags:<P>
+	<font size=2 face="courier new"><B>
+	&lt;BR><BR>
+	&lt;IMG><BR>
+	&lt;HR><BR>
+	&lt;TABLE><BR>
+	&lt;DIV><BR>
+	</B></font>
+	<P>
+	The property <B>page-break-after: always</B> can be applied to the following tags:<P>
+	<font size=2 face="courier new"><B>
+	&lt;BR><BR>
+	&lt;IMG><BR>
+	&lt;HR><BR>
+	</B></font>
+
+	</Blockquote>
+
+	<A NAME="13_5">
+	<FONT COLOR="#C06000"><B>13.5 Direct HTML Feed</B></FONT>
+	<Blockquote>
+	
+	Starting with Service Release 1.6.0.8, the ImportFromUrl method allows you to specify
+	an HTML string directly via the first parameter (<i>URL</i>). 
+	The string must contain the sub-string <B>&lt;HTML</B>
+	or <B>&lt;html</b> to be recognized as a direct HTML feed and not a URL. For example:
+	<P>
+	<font size=2 face="courier new"><B>
+	str = "&lt;HTML>&lt;TABLE>&lt;TR>&lt;TD>Text1&lt;/TD>&lt;TD>Text2&lt;/TD>&lt;/TR>&lt;/TABLE>&lt;/HTML>"<BR>
+	Doc.ImportFromUrl str
+	</b></font>
+
+	<P>
+	If an HTML string is to include references to images, or other external objects, you must use fully qualified URLs
+	for these objects. Fractional URLs will not be recognized since there is no "base" URL to be applied here:
+	<P>
+	<font size=2 face="courier new"><B>
+	<font color=green>' Correct</font><BR>
+	str = "&lt;HTML>&lt;IMG SRC=""http://localhost/images/logo.jpg"">&lt;/HTML>"
+	<P>
+	<font color=green>' Correct</font><BR>
+	str = "&lt;HTML>&lt;IMG SRC=""c:\path\logo.jpg"">&lt;/HTML>"
+	<P>
+	<font color=red>' Incorrect</font><BR>
+	str = "&lt;HTML>&lt;IMG SRC=""images/logo.jpg"">&lt;/HTML>"
+	</b>
+	</FONT>
+	</Blockquote>
+
+
+	<A NAME="13_6">
+	<FONT COLOR="#C06000"><B>13.6 CSS Media Selection</B></FONT>
+	<Blockquote>
+	As of AspPDF 1.7, the <B>ImportFromUrl</B> method can be configured to choose which cascading style sheets
+	to read and which to ignore depending on the MEDIA attribute of the
+	&lt;STYLE> and &lt;LINK> tags.
+	<P>
+	ImportFromUrl recognizes the following values for the MEDIA attribute:
+	<P>
+	"ALL"<BR>"SCREEN"<BR>"PRINT"<BR>"ASPPDF"<P>
+	The first three are part of the CSS specs, and the last one is a special value which enables
+	you to create a style sheet specifically for AspPDF.
+	<P>
+	Using the <i>Media</i> parameter, you can specify a combination (sum) of the following values:
+	<P>
+	<TABLE cellspacing=0 cellpadding=2 border style="border-collapse: collapse; font-family: arial; font-size: 10pt">
+	<tr><th>Value</th><th>Meaning</th></tr>
+	<tr><td>1</td><td>MEDIA="ALL" (or no MEDIA attribute)</td></tr>
+	<tr><td>2</td><td>MEDIA="SCREEN"</td></tr>
+	<tr><td>4</td><td>MEDIA="PRINT"</td></tr>
+	<tr><td>8</td><td>MEDIA="ASPPDF"</td></tr>
+	<tr><td>128</td><td>MEDIA="&lt;all others>"</td></tr>
+	</table>
+	<P>
+	For example, the following call makes ImportFromUrl read only the style sheets with the 
+	MEDIA attribute set to "ALL" and "ASPPDF" (and also 
+	those without a MEDIA attribute):
+	<P>
+	<font size=2 face="courier new"><B>
+	Doc.ImportFromUrl "http://www.someurl.com", "media=9"
+	</B></FONT>
+	
+	<P>
+	By default, the <i>Media</i> parameter is set to 255 which means ImportFromUrl ignores 
+	the MEDIA attribute altogether and loads all the style sheets it encounters.
+	</Blockquote>	
+
+
+
+	<A NAME="13_7">
+	<FONT COLOR="#C06000"><B>13.7 Obtaining Y-Boundary</B></FONT>
+	<Blockquote>
+
+	As of Version 1.9, you can retrieve the (estimated) Y-coordinate of the lowest boundary
+	of the HTML content rendered by the last successful call to ImportFromUrl, and also the index
+	of the page within the document where the rendering ends.
+	<P>
+	This information is obtained via a new PdfDocument property, <B>ImportInfo</B>,
+	which returns an instance of the PdfParam object populated with two items, "Y" and "Page",
+	which correspond to the Y-coordinate and page index, respectively.
+	<P>
+	The following snippet performs some HTML-to-PDF conversion and then draws 
+	a horizontal line right underneath the HTML content on the page where the rendering ends:
+	<P>
+	<font size=2 face="courier new"><B>
+	Doc.ImportFromUrl "http://www.server.com/script.asp"<br>
+
+	Set Param = Doc.ImportInfo<P>
+
+	Index = Param("Page")<BR>
+	Y = Param("Y")<P>
+
+	Set Page = Doc.Pages(Index)<br>
+
+	Page.Canvas.DrawLine 0, Y, Page.Width, Y
+	</B></FONT>
+	
+
+	</Blockquote>	
+
+
+
+	<A NAME="13_8">
+	<FONT COLOR="#C06000"><B>13.8 Templates</B></FONT>
+	<Blockquote>
+	As of Version 3.2, a PdfDocument object may be assigned one or more PdfGraphics objects to be used as templates
+	automatically every time a new page is added to the document. This feature should be used in conjunction with the ImportFromUrl
+	method when HTML rendering needs to be performed on top of templates as opposed to blank pages.
+	<P>
+	One or more PdfGraphics objects can be designated as <i>templates</i> for a particular PdfDocument object
+	by calling the method PdfDocument.<B>AddTemplate</B>. This method takes two arguments: an instance of the PdfGraphics object
+	to be used as a template, and an optional list of parameters specifying which pages (by index) this template should be applied to,
+	as well as the template's position and scaling on the pages.
+	<P>
+	The <i>From</i> and <i>To</i> parameters specify a 1-based range of page indices that this template is applicable to.
+	By default, <i>From</i> is 1 and <i>To</i> is infinity. To specify multiple ranges, the pairs <i>From1</i>/<i>To1</i>,
+	<i>From2</i>/<i>To2</i>, etc. should be used.
+	Odd and even pages can be excluded from the selected ranges if the parameter <i>Exclude</i> is set to 1 and 2, respectively.
+	If this parameter is set to any other number or omitted, no pages are excluded.
+	<P>
+	The location and scaling of the graphics template on the page are controlled by the optional parameters <i>X</i>, <i>Y</i>,
+	<i>ScaleX</i>, <i>ScaleY</i> and <i>Angle</i>. <i>X</i> and <i>Y</i> are 0 by default, which corresponds
+	to the lower-left corner of the page. In case the page is in landscape orientation, 
+	<i>Angle</i> should be set to 90 and <i>X</i> to the page width to properly position and orient the template.
+	<P>
+	A template is usually applied to multiple pages, and multiple templates can apply to the same page. Note that only newly added pages
+	are subject to templating, but not existing pages.
+	To cancel templating, the method PdfDocument.<B>ClearTemplates</B> should be called.
+	<P>
+	The following code snippet uses pages from existing PDF documents as templates for a new document imported from HTML.
+	Page 1 of the new document uses <B>head.pdf</B> as the template, all subsequent even pages use <B>even.pdf</B>, and all subsequent odd pages use <B>odd.pdf</B>.
+	Converting PDF pages to PdfGraphics objects is covered in <A HREF="manual_09.html#9_6">Section 9.6 - Drawing Other Documents' Pages</A>.
+	
+	<P>
+
+	<font size=2 face="courier new"><B>
+	Set Pdf = Server.CreateObject("Persits.PDF")<P>
+
+	</B>' Create new document<B><BR>
+	Set Doc = Pdf.CreateDocument<P>
+
+	</B>' Convert pages of existing PDFs to template graphics objects<B><BR>
+	Set Doc1 = Pdf.OpenDocument( "c:\path\head.pdf" )<BR>
+	Set Template1 = Doc.CreateGraphicsFromPage( Doc1, 1 ) </B>' page 1 of Doc1<B><P>
+
+	Set Doc2 = Pdf.OpenDocument( "c:\path\even.pdf" )<BR>
+	Set Template2 = Doc.CreateGraphicsFromPage( Doc2, 1 ) </B>' page 1 of Doc2<B><P>
+
+	Set Doc3 = Pdf.OpenDocument( "c:\path\odd.pdf" )<BR>
+	Set Template3 = Doc.CreateGraphicsFromPage( Doc3, 1 ) </B>' page 1 of Doc3<B><P>
+
+	</B>' Set templates<B><BR>
+	Doc.AddTemplate Template1, "From=1; To=1" </B>' affect page 1 only<B><BR>
+	Doc.AddTemplate Template2, "From=2; Exclude=1" </B>' exclude odd pages<B><BR>
+	Doc.AddTemplate Template3, "From=2; Exclude=2" </B>' exclude even pages<B><P>
+
+	Doc.ImportFromUrl "http://support.persits.com/default.asp?displayall=1"<P>
+
+	Doc.Save "c:\path\fromhtml.pdf", false
+	</B></FONT>
+
+	<P>
+
+	In case the document needs to be in landscape orientation, the code above should be modified as follows:
+
+	<P>
+
+	<font size=2 face="courier new"><B>	
+	...<BR>
+	Doc.AddTemplate Template1, "From=1; To=1; Angle=90; x=612" </B>' affect page 1 only<B><BR>
+	...<BR>
+	Doc.ImportFromUrl "http://support.persits.com/default.asp?displayall=1", "landscape=true"<BR>
+	...
+	</B></FONT>
+
+	</B></Blockquote>
+
+	<A HREF="manual_14.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 14: PDF-to-Image Conversion"></A>
+	<A HREF="manual_12.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 12: Miscellaneous Features"></A>
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

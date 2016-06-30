@@ -1,0 +1,741 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 7: Tables</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 7: Tables
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_08.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 8: Security"></A>
+	<A HREF="manual_06.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 6: Text and Fonts"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 7: Tables</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#7_1">7.1 Table Support Overview</A><BR>
+	<A HREF="#7_2">7.2 Cell Spanning and Size Adjustment</A><BR>
+	<A HREF="#7_3">7.3 Table Rendering</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="7_1">
+	<FONT COLOR="#C06000"><B>7.1 Table Support Overview</B></FONT>
+	<Blockquote>
+	With AspPDF, you can create HTML-style tables and fill them with text
+	data. Once a table is created and filled, it can be rendered onto a canvas.
+	<P>
+	Tables are represented by the <B>PdfTable</B> object creatable
+	via the <B>CreateTable</B> method of the PdfDocument object.
+	<P>
+	PdfTable is a free-floating entity. It is not tied to a canvas, page
+	or any other object. Creating or changing a PdfTable object
+	has no effect on the appearance of the document until the table,
+	or any portion thereof,	is rendered onto a canvas via the 
+	<B>Canvas.DrawTable</B> method. The same table can be drawn on
+	multiple pages, or be part of one or more PdfGraphics objects.
+	<P>
+	<B><u>7.1.1 Table Creation Parameters</u></B>
+	<P>
+	The <B>Doc.CreateTable</B> method requires two parameters:
+	<I>Width</i> and <i>Height</i> (in default user units).
+	The number of columns and rows in the table
+	is specified via <I>Cols</i> and <i>Rows</I>, respectively.
+	These parameters are both 1 by default. When a table is created,
+	all rows and columns are spaced out evenly within the table.
+	<P>
+	A generic table has an outer border, and several
+	rows of cells. Each cell has a border of its own. Cells
+	are separated from each other and the outer border by 
+	a margin. The following diagram illustrates various table
+	parameters:
+
+	<P>
+	<IMG SRC="images/07_table.gif">
+	<P>
+	A table's origin is located in the upper-left corner of the table. The
+	y axis still extends upwards, so all y-coordinates of the cells are negative.
+	<P>
+	<i>Border</i> is the width of the table's outer border (0 by default.)<P>
+	<i>CellBorder</i> is the width of all cell borders (1 by default.)
+	<i>CellSpacing</i> is the width of a margin that separates
+	individual cells from each other and the outer border (0 by default).<P>
+	<i>CellPadding</i> is the width of a margin within a cell that 
+	separates text written in that cell from the cell's borders (0 by default.)
+	<P>
+	The table colors are specified by the following parameters: <i>BorderColor</i>
+	(the color of the outer border, black by default),
+	<i>CellBorderColor</i> (the color of all cell borders, black
+	by default), <i>BgColor</i> (the color of areas between cells, transparent by default),
+	and <i>CellBgColor</i> (the color of areas within cell borders, transparent by default).
+	<P>
+	As of Version 2.7, color spaces other than RGB can be used to 
+	specify table colors.
+	See <A HREF="manual_15.html#15_4">Section 15.4 - Using Color Spaces with PdfTable and Other Objects</A>
+	for more information. 
+	<P>
+	<B><u>7.1.2 Working with Individual Rows and Cells</u></B>
+	<P>
+	The <B>PdfTable</B> object provides the <B>Rows</B> property
+	which returns the <B>PdfRows</b> collection of <B>PdfRow</B>
+	objects representing individual table rows. The PdfRow object
+	allows you to change this row's height and move it up and down within 
+	the table. It also allows you to change border and background
+	colors of all its cells via the <B>BorderColor</B> and <B>BgColor</B> properties.
+	<P>
+	The PdfRow object provides the <B>Cells</B> property which
+	returns the <B>PdfCells</B> collection of <B>PdfCell</B>
+	objects representing individual cells in a row.
+	The PdfCell object enables you to change the border
+	width, border color, background color, size, padding,
+	ColSpan and RowSpan of an individual cell.
+	<P>
+	An individual table cell can also be referenced
+	directly via PdfTable's default property <B>At</B>
+	by specifying 1-based row and cell indices as arguments, as follows:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Cell = Table.At(4, 2)
+	</b></font>
+	<P>
+	or simply
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Cell = Table(4, 2)
+	</b></font>
+	<P>
+	Rows and Cells are numbered from left to right and from top to bottom.
+	Therefore, the upper-left cell of a table has the indices (1, 1).
+	<P>
+	The PdfCell object also provides the <B>AddText</B> method
+	for placing text in a cell. This method
+	is almost identical to Canvas.DrawText, except that instead of 
+	the <i>X</i>, <i>Y</i>, <i>Width</i> and <i>Height</i> parameters
+	the cell coordinates and sizes are used, and two extra optional parameters,
+	<I>IndentX</i> and <i>IndentY</i> are added for
+	precise positioning of text inside the cell. This method also 
+	uses an optional <I>Expand</i> parameter described below.
+	AddText's Font argument is optional but for it to be omitted,
+	you must specify a table-wide default font via the <B>Table.Font</B>
+	property.
+	<P>
+	The following code sample uses all the properties, methods
+	and collections	described above to draw a chessboard. Here, we also 
+	use a freeware symbol font <i>Chess Merida</i> residing in the file MERIFONT.TTF.
+	<P>
+	<IMG SRC="images/07_chess.gif">
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	' Create 8x8 table to depict a chessboard<BR>
+	Set Table = Doc.CreateTable( "width=200; height=200; rows=8; cols=8; border=1; cellborder=0; cellspacing=2")<P>
+
+	' Select a Chess font to depict chess pieces<BR>
+	Set Font = Doc.Fonts.LoadFromFile( Server.MapPath("MERIFONT.TTF") )<P>
+
+	Table.Font = Font<P>
+
+	' initialize Pieces array<BR>
+	Dim Pieces<BR>
+	Pieces = Array(0,_<BR>
+	&HF074, &HF06D, &HF076, &HF077, &HF06C, &HF076, &HF06D, &HF074, _<BR>
+	&HF06F, &HF06F, &HF06F, &HF06F, &HF06F, &HF06F, &HF06F, &HF06F, _<BR>
+	&HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, _<BR>
+	&HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, _<BR>
+	&HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, _<BR>
+	&HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, &HF000, _<BR>
+	&HF070, &HF070, &HF070, &HF070, &HF070, &HF070, &HF070, &HF070, _<BR>
+	&HF072, &HF06E, &HF062, &HF071, &HF06B, &HF062, &HF06E, &HF072 )<P>
+
+	' go over all cells in the table<BR>
+	For Each Row in Table.Rows<BR>
+	&nbsp;&nbsp;&nbsp;For Each Cell in Row.Cells<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' set background on cells which sum of indices is odd<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If (Cell.Index + Row.Index) Mod 2 = 1 Then<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell.BgColor = "brown"<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End if<p>
+			
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Piece = Pieces( 8 * (Row.Index - 1) + Cell.Index )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell.AddText ChrW(Piece), "size=20; indentx=1; indenty=1"<BR>		
+	&nbsp;&nbsp;&nbsp;Next<BR>
+	Next<P>
+
+	' Add a new page<BR>
+	Set Page = Doc.Pages.Add<P>
+
+	Page.Canvas.DrawTable Table, "x=206, y=498"
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	... // beginning omitted for brevity<P>
+	
+	// initialize Pieces array<BR>
+	int	[] Pieces = {0,<BR>
+	0xF074, 0xF06D, 0xF076, 0xF077, 0xF06C, 0xF076, 0xF06D, 0xF074,<BR>
+	0xF06F, 0xF06F, 0xF06F, 0xF06F, 0xF06F, 0xF06F, 0xF06F, 0xF06F,<BR>
+	0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000,<BR>
+	0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000,<BR>
+	0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000,<BR>
+	0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000, 0xF000,<BR>
+	0xF070, 0xF070, 0xF070, 0xF070, 0xF070, 0xF070, 0xF070, 0xF070,<BR>
+	0xF072, 0xF06E, 0xF062, 0xF071, 0xF06B, 0xF062, 0xF06E, 0xF072 };<P>
+
+	// go over all cells in the table<BR>
+	foreach( IPdfRow objRow in objTable.Rows )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;foreach( IPdfCell objCell in objRow.Cells )<BR>
+	&nbsp;&nbsp;&nbsp;{<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// set background on cells which sum of indices is odd<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if( (objCell.Index + objRow.Index) % 2 == 1 )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objCell.BgColor = "brown";<P>
+			
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int Piece = Pieces[ 8 * (objRow.Index - 1) + objCell.Index ];<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objCell.AddText( ((char)Piece).ToString(), "size=20; indentx=1; indenty=1", Missing.Value );<BR>
+	&nbsp;&nbsp;&nbsp;}<BR>
+	}<P>
+	... // end omitted for brevity
+
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_07/07_chess.asp">http://localhost/asppdf/manual_07/07_chess.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_07/07_chess.aspx">http://localhost/asppdf/manual_07/07_chess.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	<B><U>7.1.3 Cell Border Management</U></B>
+	<P>
+	By default, each cell's border is a rectangle with all four sides
+	drawn in the same color (specified via Cell.BorderColor).
+	It is also possible to hide any, or all, of this rectangle's
+	sides, and also assign individual colors to each side.
+	<P>
+	Side visibility and coloring is set via PdfCell's <B>SetBorderParams</B>
+	method which accepts a PdfParam object or parameter string as an argument.
+	The following parameters can be used (all optional):
+	<UL>
+	<LI><I>Top</i>, <I>Bottom</i>, <I>Right</i>, <I>Left</i> -
+	if set to False, hide the top, bottom, right or left side
+	of the cell border, respectively. True by default.
+	<LI><I>TopColor</i>, <I>BottomColor</i>, <I>RightColor</i>, <I>LeftColor</i> -
+	specify the line color for the top, bottom, right or left
+	side, respectively.
+	</UL>
+	<P>
+	The following code fragment hides the left, top and right sides
+	of a cell and sets the bottom side color to green:
+	<P>
+	<font face="courier new" size="1"><B>
+	Table.At(1, 2).SetBorderParams "Left=False, Right=False, Top=False, BottomColor=Green"
+	</b></font>
+	
+	<P>
+	<A NAME="7_1_4">
+	<B><U>7.1.4 Drawing in a Cell</U></B>
+	<P>
+	The PdfCell object provides a <B>Canvas</B> property
+	which enables you to draw inside an individual cell
+	the same way you would on a page as a whole.
+	The coordinate space origin is located in the lower-left
+	corner of the cell. Cell.Canvas allows you to draw graphics, text and even
+	other tables inside a cell.
+	<P>
+	When a table is rendered onto a page, its cells' contents is rendered
+	in the following order:
+	<P>
+	1. Cell background.<BR>
+	2. The contents of Cell.Canvas, if any.<BR>
+	3. Text strings specified via Cell.AddText, if any.<BR>
+	4. Cell borders.
+	<p>
+	The following code fragment draws a small table inside a large table's
+	cell. The small table, in turn, has the word "Hello" drawn in its upper-left
+	cell.
+	<P>
+	<font face="courier new" size="1"><B>
+    Set SmallTable = Doc.CreateTable("Height=30; Width=30; cols=2; rows=2")<BR>
+	SmallTable.At(1, 1).Canvas.DrawText "Hello", "x=1, y=15; size=5", font<BR>
+	...<P>
+	Table.At(1, 2).Canvas.DrawTable SmallTable, "x=2; y=50"
+	</b></font>
+	<P>
+	Note that unlike the Cell.AddText method, Cell.Canvas.DrawText does not affect
+	the size of the cell.
+
+	</Blockquote>
+
+	<A NAME="7_2">
+	<FONT COLOR="#C06000"><B>7.2 Cell Spanning and Size Adjustment</B></FONT>
+	<Blockquote>
+	As mentioned earlier, all cells are created equal in size when a new
+	table is created. Heights and widths of individual rows and columns
+	can then be adjusted using the <B>Row.Height</B>, <B>Cell.Height</B>
+	and <B>Cell.Width</B> properties.
+	Changing Row.Height changes the heights of all the cells in that row, 
+	as well as the overall table height. Changing Cell.Height
+	has the same effect as changing the height of the row this cell belongs to.
+	Changing Cell.Width also changes the widths of cells above and below
+	this cell, as well as the overall table width.
+	<P>
+	The method <B>Cell.AddText</B>, if called with the parameter <I>Expand</i>
+	set to True, has the side effect of changing the cell's height
+	to accommodate the entire text string passed to it.
+	<P>
+	Similarly to HTML tables, PdfTable enables you to change the row span and column
+	span of individual cells via the properties <B>Cell.RowSpan</B> and <B>Cell.ColSpan</B>,
+	respectively. A cell whose ColSpan and/or RowSpan
+	is set to a number greater than 1 "swallows" cells to the right
+	and/or below itself. This cell's width and/or height is increased by that of
+	the cells it "swallows" (plus the width of cell spacing, if applicable).
+	<P>
+	The following code fragment transforms a default 3 x 4 table (shown in the
+	upper half of the diagram below)
+	into a table shown in the lower half of the diagram:
+	<P>
+	<font face="courier new" size="2"><B>
+    Set param = Pdf.CreateParam("rows=3, cols=4, width=400, height=150")<BR>
+    ... (set other parameters)<BR>    
+    Set Table = Doc.CreateTable(param)<P>
+
+    Table.Rows(1).Cells(1).width = 20<BR>
+    Table(1, 1).RowSpan = 3<BR>
+    Table(1, 3).RowSpan = 2<BR>
+    Table(1, 3).ColSpan = 2<BR>    
+    Table.Rows(1).Cells(2).width = 200<BR>
+    Table(3, 2).AddText "Hello World!!!", "size=30; expand=true", Font
+	</b></font>
+	<P>
+	<IMG SRC="images/07_before.gif">
+	<P>
+	<IMG SRC="images/07_after.gif">
+	<P>
+	Note that the height of row 3 was implicitly increased
+	by calling AddText with the <i>Expand</i> parameter set to True.
+	If that parameter were omitted, only the word "Hello" would be
+	showing and the cell height would remain unchanged.
+	<P>
+	Rows can be added to a table via the <B>Rows.Add</b>
+	method which takes two arguments: row height and, optionally, 
+	the desired position of the new row. By default, rows
+	are added to the end of the table. The second argument
+	is the 1-based index of a row to insert the new one after.
+	The value of 0 means the new row becomes first.
+
+	</Blockquote>
+	
+	<A NAME="7_3">
+	<FONT COLOR="#C06000"><B>7.3 Table Rendering</B></FONT>
+	<Blockquote>
+	Once a table is created, adjusted and filled with data,
+	it can be rendered onto a canvas via the <B>Canvas.DrawTable</B>
+	method. This method expects two requires parameters,
+	<i>X</i> and <i>Y</i>, which specify the coordinates
+	of the table's upper-left corner (origin) on the canvas.
+	<P>
+	The DrawTable method also accepts an optional <i>MaxHeight</I>
+	parameter which limits the vertical space the table
+	can occupy on a canvas. By default, the limit is the 
+	bottom of the canvas. If a row does not fully fit in the 
+	space provided, it is not rendered, and neither are
+	the rows that follow.
+	<P>
+	The DrawTable method is capable of rendering only a certain
+	range of rows, or a set of ranges. This is especially
+	handy when you need to render a large table that spans several pages,
+	and you want the header and/or footer rows of the table to be present on each page.
+	The row ranges are specified via the parameters <I>RowFrom</i> - <i>RowTo</i>,
+	<I>RowFrom1</i> - <i>RowTo1</i>, <I>RowFrom2</i>- <i>RowTo2</i>, etc.
+	<P>
+	DrawTable returns the index of the last row it managed to render.
+	<P>
+	The following code sample renders a multi-page
+	report from data residing in a database table.
+	This sample dynamically appends pages to the PDF document as needed
+	to accommodate the table. The data for this code sample is taken from the MS
+	Access file <B>asppdf.mdb</b> residing in the \Samples\Db subdirectory
+	of the installation.
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set PDF = Server.CreateObject("Persits.Pdf")<BR>
+	Set Param = PDF.CreateParam<BR>
+	Set TextParam = PDF.CreateParam<BR>
+	Set Doc = PDF.CreateDocument<P>
+
+	' Create table with one row (header), and 5 columns<BR>
+	Set Table = Doc.CreateTable("width=500; height=20; Rows=1; Cols=5; Border=1; CellSpacing=-1; cellpadding=2 ")<BR>
+	Table.Font = Doc.Fonts("Helvetica")<P>
+	
+	Set HeaderRow = Table.Rows(1)<BR>
+	Param.Set("alignment=center")<BR>
+	With HeaderRow<BR>
+	&nbsp;&nbsp;&nbsp;.BGColor = &H90F0FE<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(1).AddText "Category", Param<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(2).AddText "Description", Param<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(3).AddText "Billable", Param<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(4).AddText "Date", Param<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(5).AddText "Amount", Param<BR>
+	End With<P>
+
+	' Set column widths<BR>
+	With Table.Rows(1)<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(1).Width = 80<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(2).Width = 160<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(3).Width = 50<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(4).Width = 70<BR>
+	&nbsp;&nbsp;&nbsp;.Cells(5).Width = 60<BR>
+	End With<P>
+	
+	' Populate table with data<BR>
+	Set Conn = Server.CreateObject("ADODB.Connection")<BR>
+	Connect = "Driver={Microsoft Access Driver (*.mdb)};DBQ=" & Server.MapPath("..\db\asppdf.mdb")<BR>
+	Conn.Open Connect<BR>
+	Set rs = Server.CreateObject("adodb.recordset")<BR>
+	rs.Open "select * from report order by expensedate", Conn<P>
+
+	param.Set "expand=true" ' expand cell vertically<P>
+
+	Do While Not rs.EOF<BR>
+	&nbsp;&nbsp;&nbsp;Set Row = Table.Rows.Add(20) ' row height<BR>
+		
+	&nbsp;&nbsp;&nbsp;param.Add "alignment=left"<BR>
+	&nbsp;&nbsp;&nbsp;Row.Cells(1).AddText rs("Category"), param<BR>
+	&nbsp;&nbsp;&nbsp;Row.Cells(2).AddText rs("Description"), param<P>
+		
+	&nbsp;&nbsp;&nbsp;param.Add "alignment=center"<BR>
+	&nbsp;&nbsp;&nbsp;If rs("Billable") Then Billable = "Yes" Else Billable = "No"<BR>
+	&nbsp;&nbsp;&nbsp;Row.Cells(3).AddText Billable, param<BR>
+	&nbsp;&nbsp;&nbsp;Row.Cells(4).AddText pdf.FormatDate( rs("ExpenseDate"), "%d %b %Y" ), param<P>
+		
+	&nbsp;&nbsp;&nbsp;param.Add "alignment=right"<BR>
+	&nbsp;&nbsp;&nbsp;Row.Cells(5).AddText pdf.FormatNumber(rs("Amount"), "precision=2, delimiter=true"), param<BR>
+
+	&nbsp;&nbsp;&nbsp;rs.MoveNext<BR>
+	Loop<P>
+
+	' Render table on document<BR>
+	Set Page = Doc.Pages.Add(612, 150)<BR>	
+	Param.Clear	<BR>
+	Param("x") = (Page.Width - Table.Width) / 2 ' center table on page<BR>
+	Param("y") = Page.Height - 20<BR>
+	Param("MaxHeight") = 100<P>
+	
+	FirstRow = 2<BR>
+	Do While True<BR>
+	&nbsp;&nbsp;&nbsp;LastRow = Page.Canvas.DrawTable( Table, Param )<P>
+
+	&nbsp;&nbsp;&nbsp;' Print record numbers<BR>
+	&nbsp;&nbsp;&nbsp;TextParam("x") = (Page.Width - Table.Width) / 2<BR>
+	&nbsp;&nbsp;&nbsp;TextParam("y") = Page.Height - 5<BR>
+	&nbsp;&nbsp;&nbsp;TextParam.Add("color=darkgreen")<BR>
+	&nbsp;&nbsp;&nbsp;TextStr="Records "&FirstRow-1&" to "&LastRow-1&" of "&Table.Rows.Count-1<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.DrawText TextStr, TextParam, doc.fonts("Courier-Bold")<P>
+
+	&nbsp;&nbsp;&nbsp;if LastRow >= Table.Rows.Count Then Exit Do ' entire table displayed<P>
+
+	&nbsp;&nbsp;&nbsp;' Display remaining part of table on the next page<BR>
+	&nbsp;&nbsp;&nbsp;Set Page = Page.NextPage<BR>
+	&nbsp;&nbsp;&nbsp;Param.Add( "RowTo=1; RowFrom=1" ) ' Row 1 is header.<BR>
+	&nbsp;&nbsp;&nbsp;Param("RowFrom1") = LastRow + 1 ' RowTo1 is omitted and presumed infinite<BR>
+
+	&nbsp;&nbsp;&nbsp;FirstRow = LastRow + 1<BR>
+	Loop<BR>
+	...
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPdf = new PdfManager();<BR>
+	IPdfParam objParam = objPdf.CreateParam(Missing.Value);<BR>
+	IPdfParam objTextParam = objPdf.CreateParam(Missing.Value);<BR>
+	IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<P>
+
+	// Create table with one row (header), and 5 columns<BR>
+	IPdfTable objTable = objDoc.CreateTable("width=500; height=20; Rows=1; Cols=5; Border=1; CellSpacing=-1; cellpadding=2 ");<BR>
+	objTable.Font = objDoc.Fonts["Helvetica", Missing.Value];<P>
+	
+	IPdfRow objHeaderRow = objTable.Rows[1];<BR>
+	objParam.Set("alignment=center");<BR>
+	objHeaderRow.BgColor = 0x90F0FE;<BR>
+	objHeaderRow.Cells[1].AddText( "Category", objParam, Missing.Value );<BR>
+	objHeaderRow.Cells[2].AddText( "Description", objParam, Missing.Value );<BR>
+	objHeaderRow.Cells[3].AddText( "Billable", objParam, Missing.Value );<BR>
+	objHeaderRow.Cells[4].AddText( "Date", objParam, Missing.Value );<BR>
+	objHeaderRow.Cells[5].AddText( "Amount", objParam, Missing.Value );<P>
+
+	// Set column widths<BR>
+	objHeaderRow.Cells[1].Width = 80;<BR>
+	objHeaderRow.Cells[2].Width = 160;<BR>
+	objHeaderRow.Cells[3].Width = 50;<BR>
+	objHeaderRow.Cells[4].Width = 70;<BR>
+	objHeaderRow.Cells[5].Width = 60;<p>
+
+	objParam.Set( "expand=true" ); // expand cells vertically<P>
+
+	// Build OLE DB connection string<BR>
+	String strConnect = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("..\\db\\asppdf.mdb");<P>
+
+	OleDbConnection myConnection = new OleDbConnection( strConnect );<BR>
+	myConnection.Open();<BR>
+	OleDbDataAdapter myDataAdapter = new OleDbDataAdapter ("select * from report", myConnection);<BR>
+	DataSet myDataSet = new DataSet();<BR>
+	myDataAdapter.Fill( myDataSet, "report" );<p>
+
+	// Populate table with data<BR>
+	DataTable tbl = myDataSet.Tables[0];<BR>
+	int nCount = tbl.Rows.Count;<BR>
+	for( int i = 0; i < nCount; i++ )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfRow objRow = objTable.Rows.Add(20, Missing.Value); // row height<P>
+		
+	&nbsp;&nbsp;&nbsp;objParam.Add( "alignment=left" );<BR>
+	&nbsp;&nbsp;&nbsp;objRow.Cells[1].AddText( tbl.Rows[i]["Category"].ToString(), objParam, Missing.Value );<BR>
+	&nbsp;&nbsp;&nbsp;objRow.Cells[2].AddText( tbl.Rows[i]["Description"].ToString(), objParam, Missing.Value );<P>
+		
+	&nbsp;&nbsp;&nbsp;objParam.Add( "alignment=center" );<P>
+
+	&nbsp;&nbsp;&nbsp;String strBillable;<BR>
+	&nbsp;&nbsp;&nbsp;if( tbl.Rows[i]["Billable"].ToString() == "True" )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strBillable = "Yes";<BR>
+	&nbsp;&nbsp;&nbsp;else <BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strBillable = "No";<P>
+
+	&nbsp;&nbsp;&nbsp;DateTime dt = new DateTime();<BR>
+	&nbsp;&nbsp;&nbsp;dt = (DateTime)tbl.Rows[i]["ExpenseDate"];<BR>
+	&nbsp;&nbsp;&nbsp;objRow.Cells[3].AddText( strBillable, objParam, Missing.Value );<BR>
+	&nbsp;&nbsp;&nbsp;objRow.Cells[4].AddText( objPdf.FormatDate( dt, "%d %b %Y" ), objParam, Missing.Value );<P>
+
+	&nbsp;&nbsp;&nbsp;float fAmount = Decimal.ToSingle( (Decimal)tbl.Rows[i]["Amount"] );<BR>
+	&nbsp;&nbsp;&nbsp;objParam.Add( "alignment=right" );<BR>
+	&nbsp;&nbsp;&nbsp;objRow.Cells[5].AddText( objPdf.FormatNumber( fAmount, "precision=2, delimiter=true"), objParam, Missing.Value );<BR>
+	}<P>
+
+	// Render table on document, add pages as necessary<BR>
+	IPdfPage objPage = objDoc.Pages.Add(612, 150, Missing.Value);<P>
+	
+	objParam.Clear();<BR>
+	objParam["x"].Value = (objPage.Width - objTable.Width) / 2; // center table<BR>
+	objParam["y"].Value = objPage.Height - 20;<BR>
+	objParam["MaxHeight"].Value = 100;<P>
+	
+	int nFirstRow = 2; // use this to print record count on page<BR>
+	while( true )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;// Draw table. This method returns last visible row index<BR>
+	&nbsp;&nbsp;&nbsp;int nLastRow = objPage.Canvas.DrawTable( objTable, objParam );<p>
+		
+	&nbsp;&nbsp;&nbsp;// Print record numbers<BR>
+	&nbsp;&nbsp;&nbsp;objTextParam["x"].Value = (objPage.Width - objTable.Width) / 2;<BR>
+	&nbsp;&nbsp;&nbsp;objTextParam["y"].Value = objPage.Height - 5;<BR>
+	&nbsp;&nbsp;&nbsp;objTextParam.Add("color=darkgreen");<BR>
+	&nbsp;&nbsp;&nbsp;String strTextStr = "Records " + (nFirstRow - 1) + " to " + (nLastRow - 1) + " of " + (objTable.Rows.Count - 1 );<p>
+		
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( strTextStr, objTextParam, objDoc.Fonts["Courier-Bold", Missing.Value] );<p>
+
+	&nbsp;&nbsp;&nbsp;if( nLastRow >= objTable.Rows.Count )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; // entire table displayed<p>
+
+	&nbsp;&nbsp;&nbsp;// Display remaining part of table on the next page<BR>
+	&nbsp;&nbsp;&nbsp;objPage = objPage.NextPage;<BR>
+	&nbsp;&nbsp;&nbsp;objParam.Add( "RowTo=1; RowFrom=1" );	// Row 1 is header<BR>
+	&nbsp;&nbsp;&nbsp;objParam["RowFrom1"].Value = nLastRow + 1; // RowTo1 is omitted<p>
+
+	&nbsp;&nbsp;&nbsp;nFirstRow = nLastRow + 1;<BR>
+	}<BR>
+	...
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_07/07_db.asp">http://localhost/asppdf/manual_07/07_db.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_07/07_db.aspx">http://localhost/asppdf/manual_07/07_db.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	</Blockquote>
+
+
+	<A HREF="manual_08.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 8: Security"></A>
+	<A HREF="manual_06.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 6: Text and Fonts"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

@@ -1,0 +1,1025 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - Object Reference: PdfCanvas</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b><a href="manual.html">Manual</A></b>&nbsp;|&nbsp;
+	<b>Object Reference</b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<a HREF="index.html"><B><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="objectreference.html"><FONT COLOR="#FFFFFF">Object Reference</font></b></a>&nbsp;|&nbsp;<B>
+	PdfCanvas
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="object_cell.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfCell"></A>
+	<A HREF="object_annots.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfAnnots"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>PdfCanvas Object</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	PdfCanvas encapsulates AspPDF's drawing functionality. PdfCanvas
+	is returned by PdfPage's <B>Canvas</B> and <B>Background</B> properties,
+	as well as by PdfGraphics' <B>Canvas</B> property.
+	For more information about drawing, see <A HREF="manual_04.html">Chapter 4: Drawing</A>.<P>
+
+	<TABLE WIDTH="340" CELLPADDING=2 CELLSPACING=0 BORDER=1>
+		<TR><TD WIDTH=50% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Properties">Properties</A></B></FONT></TD>
+			<TD WIDTH=100% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Methods">Methods</A></B></FONT></TD>
+		</TR>
+		<TR>
+			<TD WIDTH=50% BGCOLOR="#FFFFFF" ALIGN=LEFT VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">
+
+			<A HREF="#HtmlTag">HtmlTag</A><BR>
+			<A HREF="#LineCap">LineCap</A><BR>
+			<A HREF="#LineJoin">LineJoin</A><BR>
+			<A HREF="#LineWidth">LineWidth</A><BR>
+			<A HREF="#MiterLimit">MiterLimit</A><BR>
+			<A HREF="#Value">Value</A><BR>
+			</td>
+			<TD VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">
+			<A HREF="#AbandonPath">AbandonPath</A><BR>
+			<A HREF="#AddCurve">AddCurve</A><BR>
+			<A HREF="#AddEllipse">AddEllipse</A><BR>
+			<A HREF="#AddRect">AddRect</A><BR>
+			<A HREF="#Append">Append</A><BR>
+			<A HREF="#BeginText">BeginText</A><BR>
+			<A HREF="#Clear">Clear</A><BR>
+			<A HREF="#Clip">Clip</A><BR>
+			<A HREF="#ClosePath">ClosePath</A><BR>
+			<A HREF="#DrawBarcode">DrawBarcode</A><BR>
+			<A HREF="#DrawBarcode2D">DrawBarcode2D</A><BR>
+			<A HREF="#DrawEllipse">DrawEllipse</A><BR>
+			<A HREF="#DrawGraphics">DrawGraphics</A><BR>
+			<A HREF="#DrawImage">DrawImage</A><BR>
+			<A HREF="#DrawLine">DrawLine</A><BR>
+			<A HREF="#DrawRect">DrawRect</A><BR>
+			<A HREF="#DrawTable">DrawTable</A><BR>
+			<A HREF="#DrawText">DrawText</A><BR>
+			<A HREF="#EndText">EndText</A><BR>
+			<A HREF="#Fill">Fill</A><BR>
+			<A HREF="#FillEllipse">FillEllipse</A><BR>
+			<A HREF="#FillRect">FillRect</A><BR>
+			<A HREF="#FillStroke">FillStroke</A><BR>
+			<A HREF="#FillWithPattern">FillWithPattern</A><BR>
+			<A HREF="#LineTo">LineTo</A><BR>
+			<A HREF="#MoveTo">MoveTo</A><BR>
+			<A HREF="#RestoreState">RestoreState</A><BR>
+			<A HREF="#SaveState">SaveState</A><BR>
+			<A HREF="#SetColor">SetColor</A><BR>
+			<A HREF="#SetColorCMYK">SetColorCMYK</A><BR>
+			<A HREF="#SetColorEx">SetColorEx</A><BR>
+			<A HREF="#SetColorSpace">SetColorSpace</A><BR>
+			<A HREF="#SetCTM">SetCTM</A><BR>
+			<A HREF="#SetFillColor">SetFillColor</A><BR>
+			<A HREF="#SetFillColorCMYK">SetFillColorCMYK</A><BR>
+			<A HREF="#SetFillColorEx">SetFillColorEx</A><BR>
+			<A HREF="#SetFillColorSpace">SetFillColorSpace</A><BR>
+			<A HREF="#SetGState">SetGState</A><BR>
+			<A HREF="#SetParams">SetParams</A><BR>
+			<A HREF="#SetTM">SetTM</A><BR>
+			<A HREF="#Stroke">Stroke</A><BR>
+			</B></FONT></TD>
+		</TR>
+	</TABLE>
+	<P>
+
+	<A NAME="Properties">
+	<FONT COLOR="#C06000"><B>Properties</B></FONT>
+	<Blockquote>
+
+		<HR CLASS="objectseparator">
+		<A NAME="HtmlTag">
+		<B><FONT COLOR="#000080">HtmlTag</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns an HTML tag reflecting the current font state when using AspPDF's HTML tag support.
+		This property is populated by a call to the <A HREF="#DrawText"><B>DrawText</B></A>
+		method with the <i>HTML</i> parameter set to True and a text string
+		too long to fit in the allocated space. Use it to correctly
+		display HTML text spanning multiple pages.
+		For more information, see <A HREF="manual_06.html#6_4">Section 6.4 - HTML Support</A>.
+		</BLOCKQUOTE>
+
+	
+		<HR CLASS="objectseparator">
+		<A NAME="LineCap">
+		<B><FONT COLOR="#000080">LineCap</FONT> As Short</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the current line cap style. Valid
+		values are 0 (Butt cap), 1 (Round cap) and 2 (Projecting square cap) 
+		described in <A HREF="manual_04.html#4_4_2">Section 4.4.2 - Line Width and Cap Style</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="LineJoin">
+		<B><FONT COLOR="#000080">LineJoin</FONT> As Short</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the current line join style. Valid
+		values are 0 (Miter join), 1 (Round join) and 2 (Bevel join) 
+		described in <A HREF="manual_04.html#4_4_3">Section 4.4.3 - Line Join Style and Miter Limit</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="LineWidth">
+		<B><FONT COLOR="#000080">LineWidth</FONT> As Single</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the current line width.
+		Line width is 1 by default (in user units).
+		<P>
+		For more information, see <A HREF="manual_04.html#4_4_2">Section 4.4.2 - Line Width and Cap Style</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="MiterLimit">
+		<B><FONT COLOR="#000080">MiterLimit</FONT> As Single</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the current miter limit
+		described in <A HREF="manual_04.html#4_4_3">Section 4.4.3 - Line Join Style and Miter Limit</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Value">
+		<B><FONT COLOR="#000080">Value</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the current canvas contents as a sequence of operators
+		in a language similar to PostScript.
+		This property is only useful
+		for trouble-shooting or debugging purposes.
+		</BLOCKQUOTE>
+
+		<HR CLASS="objectseparator">
+	
+	</Blockquote>
+
+	<A NAME="Methods">
+	<FONT COLOR="#C06000"><B>Methods</B></FONT>
+	<Blockquote>
+
+		<HR CLASS="objectseparator">
+		
+		<A NAME="AbandonPath">
+		<B>Sub <FONT COLOR="#F00000">AbandonPath</FONT> ( )</B>
+		<BLOCKQUOTE>
+		This method cancels all previous path-construction 
+		operators. For more information on
+		path construction, see <A HREF="manual_04.html#4_1">Section 4.1 - Introduction to PDF Drawing</A>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="AddCurve">
+		<B>Sub <FONT COLOR="#F00000">AddCurve</FONT> (<i>X1</i> As Single, <i>Y1</i> As Single, <i>X2</i> As Single, <i>Y2</i> As Single, <i>X3</i> As Single, <i>Y3</i> As Single)</B>
+		<BLOCKQUOTE>
+		Adds a Bezier curve to the current path using
+		the current point as the beginning, point (<i>X3</i>, <i>Y3</i>) as the ending,
+		and points (<i>X1</i>, <i>Y1</i>) and (<i>X2</i>, <i>Y2</i>)
+		as control points. For more information on paths and Bezier curves,
+		see <A HREF="manual_04.html#4_1">Section 4.1 - Introduction to PDF Drawing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="AddEllipse">
+		<B>Sub <FONT COLOR="#F00000">AddEllipse</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>RX</i> As Single, <i>RY</i> As Single)</B>
+		<BLOCKQUOTE>
+		Adds an ellipse to the current path
+		with the center in (<i>X</i>, <i>Y</i>) and radii <i>RX</i> and <i>RY</i>.
+		If <i>RX</i>=<i>RY</i>, the ellipse turns into a circle.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="AddRect">
+		<B>Sub <FONT COLOR="#F00000">AddRect</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>Width</i> As Single, <i>Height</i> As Single)</B>
+		<BLOCKQUOTE>
+		Adds a rectangle to the current path
+		with the lower-left corner in (<i>X</i>, <i>Y</i>) and size <i>Width</i> x <i>Height</i>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Append">
+		<B>Sub <FONT COLOR="#F00000">Append</FONT> (<i>Contents</i> As String)</B>
+		<BLOCKQUOTE>
+		Appends raw PostScript operators directly to the content stream of the canvas. 
+		This method should only be used by developers with advanced PDF knowledge.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="BeginText">
+		<B>Sub <FONT COLOR="#F00000">BeginText</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Appends the PDF language operator <i>BT</i>
+		to the content stream of the canvas.
+		This method should only be used by developers with advanced PDF knowledge.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Clear">
+		<B>Sub <FONT COLOR="#F00000">Clear</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Clears the current canvas of all drawing operators.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Clip">
+		<B>Sub <FONT COLOR="#F00000">Clip</FONT> (Optional <i>EvenOdd</i> = False )</B>
+		<BLOCKQUOTE>
+		Adds the current path to the clipping path.
+		For more information on clipping
+		paths, see <A HREF="manual_04.html#4_5_3">Section 4.5.3 - Clipping Paths</A>.<P>
+		<i>EvenOdd</i> specifies the filling rule to be used.
+		If set to True or omitted, the nonzero winding number rule 
+		is used, otherwise the even-odd rule is used.
+		For more information on filling rules
+		<A HREF="manual_04.html#4_2">Section 4.2 - AspPDF Implementation of Drawing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="ClosePath">
+		<B>Sub <FONT COLOR="#F00000">ClosePath</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Closes the current subpath by appending a straight line
+		from the current point to the beginning of the subpath.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawBarcode">
+		<B>Sub <FONT COLOR="#F00000">DrawBarcode</FONT> (<i>Data</i> As String, <i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Draws a scanable bar code on the canvas. 
+		<P>
+		<i>Data</i> specifies the data
+		(digits and letters) to be displayed as a barcode.<P>
+		<i>Param</i> is a parameter object
+		or parameter string specifying the barcode type
+		as well as other parameters.
+		<P>
+		For the full description of the DrawBarcode method and its parameters,
+		see <A HREF="manual_12.html#12_1">Section 12.1 - Barcodes</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawBarcode2D">
+		<B>Function <FONT COLOR="#F00000">DrawBarcode2D</FONT> (<i>TextData</i> As String, <i>Param</i> As Variant, Optional <i>BinaryData</i>) As PdfParam</B>
+		<BLOCKQUOTE>
+		Draws a two-dimensional barcode on a page. Currently, three types are supported: PDF417, Data Matrix and QR Code. 
+		Returns various properties of the barcode symbol just drawn.
+		Introduced in Version 1.8. QR Code is supported as of version 2.0.0.7.
+		<P>
+		<i>TextData</i> specifies the data
+		to be encoded as a barcode.<P>
+		<i>Param</i> is a PdfParam object
+		or parameter string specifying the following barcode properties:
+			<UL>
+			<li><I>X</i>, <I>Y</i> - the coordinates of the lower-left corner of the barcode symbol on the page.
+			These are the only required parameters.
+			<li><i>Type</i> - specifies the barcode type. Valid values are 1 (PDF417), 2 (Data Matrix) and 3 (QR Code.) 
+			1 by default.
+			<li><I>BarWidth</i> - the width of the narrowest vertical bar (PDF417) or cell (Data Matrix, QR Code), in user units. 1 by default.
+			<li><I>AspectRatio</i> - in PDF417 barcodes, the ratio of the row height to the narrowest bar width. 2 by default. 
+			Ignored in Data Matrix and QR Code barcodes as the cells are always square.
+			<li><I>ErrorLevel</i> - in PDF417 and QR Code barcodes, controls the amount of error correction information in the symbol. The higher this number is,
+			the more resistant to damage (and larger in size) the symbol gets. 
+			<ul>
+			<li>In PDF417, the valid values are 0 to 8.
+			The value of 0 means no error correction. 
+			If this parameter is not specified at all, the error level is computed automatically based on 
+			the data size according to the standard PDF417 specifications. 
+			
+			<li>In QR Code, the valid values are 0 to 3, 0 (default) being the lowest error correction level.
+			<li>This parameter is ignored 
+			in Data Matrix barcodes as the error level is always determined automatically.
+			</ul>
+			<li><I>Encoding</i> - in Data Matrix barcodes, specifies data encoding. Valid values are: 0 (Automatic), 1 (ASCII), 2 (C40), 3 (Text), 4 (X12), 5 (Edifact) and 6 (Binary).
+			0 (Automatic) by default. Ignored in PDF417 and QR Code barcodes.
+			<li><I>Columns</i> - in PDF417 barcodes, the symbol will contain at least this number of data columns, provided there is enough data for it.
+				If not specified, the number of columns is determined automatically.
+				In Data Matrix barcodes, if this value is specified, <i>Rows</i> must also be specified.
+				Valid combinations can be found <A HREF="manual_12.html#12_1_5_2">here</A>.
+				Ignored in QR Code.
+
+			<li><I>Rows</i> - in PDF417 barcodes, the symbol will contain at least this number of rows, provided there is enough data for it.
+				If not specified, the number of rows is determined automatically.
+				In Data Matrix barcodes, if this value is specified, <i>Columns</i> must also be specified.
+				Valid combinations can be found <A HREF="manual_12.html#12_1_5_2">here</A>.
+				Ignored in QR Code.
+			<li><i>Version</i> - in QR Code, determines the size of the symbol. 0 by default
+			which means the size is determined automatically. Other valid values: 1 to 40 (the bigger the number the larger the symbol.)
+			Ignored in PDF417 and DataMatrix.
+			<li><i>Angle</i> - an angle of counter-clockwise rotation (in degrees) of the barcode around its lower-left corner. 0 by default.
+			<li><i>Color</i> - barcode color, the current fill color by default.
+			<li><i>BgColor</i> - background color (the color of the "white" rectangular area underneath the barcode.) Transparent by default.
+				Useful to make the barcode background white if the page background is non-white.
+			<li><i>BgMargin</i> - the size (in user units) of the margins around the barcode. 2 x <i>BarWidth</i> by default. 
+				Ignored unless <i>BgColor</i> is specified.
+			<P>
+			<li><i>Width</i>, <i>Height</i> - in PDF417 bacodes, specify the overall width and height of the barcode symbol in user units, including the quiet zone (described below.) 
+			Both parameters must be specified to have an effect, i.e. if one is omitted, the other is ignored. If both of these parameters
+			are specified, <I>BarWidth</i> and <I>AspectRatio</i> are ignored. Requires Version 3.2.0.1+.</li>
+			<li><i>QZH</i>, <i>QZV</i> - in PDF417 bacodes, specify the "quiet zone" space margins in user units on the left/right and top/bottom sides of the barcode, respectively.
+			0 by default. These parameters are only used if the Width/Height parameters are specified.  Requires Version 3.2.0.1+.</li>
+			<li><i>Binary</i> - in PDF417 bacodes, if set to true, forces the byte (or binary) compression mode in which each codeword represents 1.2 bytes of information
+			The default text compression mode encodes (roughly) 2 characters per codeword. False by default. Requires Version 3.2.0.1+.</li>
+			</UL>
+		<P>
+		<i>BinaryData</i> specifies binary information to be encoded as a barcode. If this 
+		optional argument is specified, the <i>TextData</i> argument is ignored.
+		<P>
+		The method returns an instance of the PdfParam object populated with the following
+		properties of the symbol just rendered: <i>Width</i>, <i>Height</i>, <i>Columns</i>, <i>Rows</i>
+		and <i>ErrorLevel</i> (the latter is only returned when <i>Type</i>=1.)
+		<P>
+		For more information about 2D barcodes and the DrawBarcode2D method,
+		see <A HREF="manual_12.html#12_1_5">Section 12.1.5 - Two-Dimensional Barcodes</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawEllipse">
+		<B>Sub <FONT COLOR="#F00000">DrawEllipse</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>RX</i> As Single, <i>RY</i> As Single)</B>
+		<BLOCKQUOTE>
+		Draws an ellipse with the center in (<i>X</i>, <i>Y</i>) and radii <i>RX</i> and <i>RY</i>.		
+		If <i>RX</i>=<i>RY</i>, the ellipse turns into a circle.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawGraphics">
+		<B>Sub <FONT COLOR="#F00000">DrawGraphics</FONT> (<i>Graphics</i> As PdfGraphics, <i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Draws a PdfGraphics object on the canvas.<P>
+		<i>Graphics</i> is an instance of the PdfGraphics object representing 
+		the graphics object to be drawn.<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying
+		the following drawing parameters:
+		<UL>
+		<li><i>X</i>, <i>Y</i> (required): the coordinates of the
+		lower-left corner of the graphics on the canvas. 
+		<li><i>Angle</i> (optional): the angle (in degrees)
+		to rotate the graphics counter-clockwise around its lower-left corner.
+		<li><i>ScaleX</i>, <i>ScaleY</i> (optional): the scaling
+		factors along the X and Y axes, respectively.
+		</UL>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.DrawGraphics MyGraphics, "x=10; y=300"
+		</B></font>
+		<P>
+		For more information on the PdfGraphics object, see
+		<A HREF="manual_05.html#5_3">Section 5.3 - PdfGraphics Object</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawImage">
+		<B>Sub <FONT COLOR="#F00000">DrawImage</FONT> (<i>Image</i> As PdfImage, <i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Draws a PdfImage object on the canvas.<P>
+		<i>Image</i> is an instance of the PdfImage object representing 
+		the image to be drawn.<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying
+		image drawing parameters. The parameters are the same
+		as in the <A HREF="#DrawGraphics">DrawGraphics</A> method.
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.DrawImage Image, "x=10;y=300,ScaleX=.5,Scaley=.5"
+		</B></font>
+		<P>
+		For more information on the PdfImage object, see
+		<A HREF="manual_05.html#5_1">Section 5.1 - PdfImage Object</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawLine">
+		<B>Sub <FONT COLOR="#F00000">DrawLine</FONT> (<i>X1</i> As Single, <i>Y1</i> As Single, <i>X2</i> As Single, <i>Y2</i> As Single)</B>
+		<BLOCKQUOTE>
+		Draws a line from point (<i>X1</i>, <i>Y1</i>) to point (<i>X2</i>, <i>Y2</i>).
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawRect">
+		<B>Sub <FONT COLOR="#F00000">DrawRect</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>Width</i> As Single, <i>Height</i> As Single)</B>
+		<BLOCKQUOTE>
+		Draws a rectangle with the lower-left corner in (<i>X</i>, <i>Y</i>) and size <i>Width</i> x <i>Height</i>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawTable">
+		<B>Function <FONT COLOR="#F00000">DrawTable</FONT> (<i>Table</i> As PdfTable, <i>Param</i> As Variant) As Long</B>
+		<BLOCKQUOTE>
+		Draws a table, or a portion thereof, on the canvas.<P>
+		<i>Table</i> is an instance of the PdfTable object 
+		creatable via PdfDocument's CreateTable method. Only
+		rows that fully fit on the canvas are displayed. When the next
+		row cannot be fit on the canvas, the process stops.		
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying
+		the following table drawing parameters:
+		<UL>
+		<li><i>X</i>, <i>Y</i> (required): the coordinates of the upper-left
+		corner of the table on the canvas.
+		<li><I>MaxHeight</i> (optional): the maximum height
+		of the table on the canvas. By default, it is set to the <i>Y</I> value
+		(the distance between the top of the table and bottom of the canvas).
+		<li><I>RowFrom</I> - <I>RowTo</I>, <I>RowFrom1</I> - <I>RowTo1</I>, etc. (optional) -
+		row ranges to display. 
+		</UL>
+		<P>
+		The method returns the index of the last row it could fully fit on the canvas.
+		If the method returns 0 it means even the first row alone could not fit
+		and nothing was drawn.
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.DrawTable Table, "x=10; y=200; RowFrom=1; RowTo=20"
+		</B></font>
+		<P>
+		For more information on the PdfTable object, see
+		<A HREF="manual_07.html">Chapter 7 - Tables</A>.
+		For the full description of the DrawTable method, see
+		<A HREF="manual_07.html#7_3">Section 7.3 - Table Rendering</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="DrawText">
+		<B>Function <FONT COLOR="#F00000">DrawText</FONT> (<i>Text</i> As String, <i>Param</i> As Variant, <i>Font</i> As PdfFont) As Long</B>
+		<BLOCKQUOTE>
+		Draws a text string specified by <i>Text</i>
+		using the font specified by <i>Font</i>.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying
+		the following text drawing parameters.
+		<UL>
+		<LI><I>X</I>, <I>Y</i> (required) - the coordinates
+		of the upper-left corner of the bounding box the text will be
+		inscribed in.
+		<LI><I>Size</i> (optional) - the font size, 10 by default.
+		<LI><i>Width</i> (optional) - the width of the bounding box the text
+		will be inscribed in. The box is infinitely wide by default.
+		<LI><i>Height</i> (optional) - the height of the bounding box the text
+		will be inscribed in. The box is infinitely high by default.
+		<LI><i>Alignment</i> (optional) - text alignment, <B>left</B> (0) by default,
+		other valid values are <B>right</B> (1) and <B>center</B> (2).
+		The right and center alignment values 
+		require that <I>Width</i> be specified as well.
+		<LI><I>Rendering</i> (optional) - font rendering, valid values described in 
+		<A HREF="manual_06.html#6_1_2">Section 6.1.2 - Rendering Parameter</A>.
+		<LI><I>Color</i> (optional) - font color in RGB color space, black by default.
+		<LI><I>tc</i>, <I>tm</i>, <I>ty</i>, <I>tk</i> (optional) - font color components in CMYK color space.
+		<lI><I>Angle</i> (optional) - angle (in degrees) by which the text should be 
+		rotated counter-clockwise around the upper-left corner of 
+		the bounding box.
+		<lI><I>Spacing</i> (optional) - the distance between individual lines of text,
+		1 by default.
+		<li><I>Tab</i> (optional) - the size of a tab indent, 10 "space" characters by default.
+		<li><I>ReverseHebrewArabic</i> (optional) - reverses the sequence of Hebrew and Arabic characters
+		in a string if set to True.
+		<li><i>HTML</i> (optional) - if set to True, enables HTML tag recognition.
+		When this parameter is set to true, the <i>Angle</i>, <i>Tab</i>, <i>Alignment</i> and <i>ReverseHebrewArabic</i>
+		parameters are ignored.
+		False by default. For more information on HTML support, see
+		<A HREF="manual_06.html#6_4">Section 6.4 - HTML Support</A>.
+		<li><i>ColorSpace</i>, <i>c1</i>, <i>c2</i>, ..., <i>cN</i> (optional) -
+		introduced in Version 2.7 to enable colors in color spaces other than RGB or CMYK.
+		For more information, see <A HREF="manual_15.html#15_4">Section 15.4 - Using Color Spaces with PdfTable and Other Objects</A>.
+		</UL>
+		<P>
+		The method returns the number
+		of printed characters. This number may be less than the length
+		of the original text string if the entire string did not fit
+		in the provided bounding box.
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.DrawText "Hello World!", "x=10; y=200", Font
+		</B></font>
+		<P>
+		For more information on text and fonts, see
+		<A HREF="manual_06.html">Chapter 6 - Text and Fonts</A>.
+		For the full description of the DrawText method, see
+		<A HREF="manual_06.html#6_1">Section 6.1 - Bounding Box Parameters</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="EndText">
+		<B>Sub <FONT COLOR="#F00000">EndText</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Appends the PDF language operator <i>ET</i>
+		to the content stream of the canvas.
+		This method should only be used by developers with advanced PDF knowledge.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Fill">
+		<B>Sub <FONT COLOR="#F00000">Fill</FONT> (Optional <i>EvenOdd</i> = False )</B>
+		<BLOCKQUOTE>
+		Fills the current path.
+		<i>EvenOdd</i> specifies the filling rule to be used.
+		If set to True or omitted, the nonzero winding number rule 
+		is used, otherwise the even-odd rule is used.
+		For more information on filling rules
+		<A HREF="manual_04.html#4_2">Section 4.2 - AspPDF Implementation of Drawing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="FillEllipse">
+		<B>Sub <FONT COLOR="#F00000">FillEllipse</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>RX</i> As Single, <i>RY</i> As Single)</B>
+		<BLOCKQUOTE>
+		Fills an ellipse with the center in (<i>X</i>, <i>Y</i>) and radii <i>RX</i> and <i>RY</i>.		
+		If <i>RX</i>=<i>RY</i>, the ellipse turns into a circle.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="FillRect">
+		<B>Sub <FONT COLOR="#F00000">FillRect</FONT> (<i>X</i> As Single, <i>Y</i> As Single, <i>Width</i> As Single, <i>Height</i> As Single)</B>
+		<BLOCKQUOTE>
+		Fills a rectangle with the lower-left corner in (<i>X</i>, <i>Y</i>) and size <i>Width</i> x <i>Height</i>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="FillStroke">
+		<B>Sub <FONT COLOR="#F00000">FillStroke</FONT> (Optional <i>EvenOdd</i> = False )</B>
+		<BLOCKQUOTE>
+		Fills, then strokes the current path.
+		<i>EvenOdd</i> specifies the filling rule to be used.
+		If set to True or omitted, the nonzero winding number rule 
+		is used, otherwise the even-odd rule is used.
+		For more information on filling rules
+		<A HREF="manual_04.html#4_2">Section 4.2 - AspPDF Implementation of Drawing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="FillWithPattern">
+		<B>Sub <FONT COLOR="#F00000">FillWithPattern</FONT> (<I>Graph</i> As PdfGraphics, Optional <i>EvenOdd</i> = False )</B>
+		<BLOCKQUOTE>
+		Fills the current path with a pattern cell specified by <i>Graph</i>, a PdfGraphics object
+		created using the <i>Pattern=true</i> parameter.
+		<i>EvenOdd</i> specifies the filling rule to be used (see <A HREF="#Fill"><B>Fill</B></A> for the description of this argument).
+		<P>
+		For more information about patterns, see <A HREF="manual_05.html#5_3_2">Section 5.3.2 - Tiling Patterns</A>.
+		<P>
+		This method was introduced by version 1.6. 
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="LineTo">
+		<B>Sub <FONT COLOR="#F00000">LineTo</FONT> (<i>X</i> As Single, <i>Y</i> As Single)</B>
+		<BLOCKQUOTE>
+		Appends a straight line segment to the current path 
+		extending from the current point to (<i>X</i>, <i>Y</i>).
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="MoveTo">
+		<B>Sub <FONT COLOR="#F00000">MoveTo</FONT> (<i>X</i> As Single, <i>Y</i> As Single)</B>
+		<BLOCKQUOTE>
+		Starts a new subpath from the point (<i>X</i>, <i>Y</i>).
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="RestoreState">
+		<B>Sub <FONT COLOR="#F00000">RestoreState</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Restores the graphics state saved with <A HREF="#SaveState">SaveState</A>. For more information about 
+		saving and restoring the graphics state,
+		<A HREF="manual_04.html#4_5_2">Section 4.5.2 - Graphics State Stack</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SaveState">
+		<B>Sub <FONT COLOR="#F00000">SaveState</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Saves the current graphics state. For more information about 
+		saving and restoring the graphics state,
+		<A HREF="manual_04.html#4_5_2">Section 4.5.2 - Graphics State Stack</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetColor">
+		<B>Sub <FONT COLOR="#F00000">SetColor</FONT> (<I>R</i> As Single, <i>G</i> As Single, <I>B</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current stroking color space to "DeviceRGB", and sets the current color in RGB color space to be used by all stroking methods
+		such as Stroke, DrawLine, DrawRect, DrawEllipse, etc.
+		The current color is black by default.
+		<P>
+		<I>R</i>, <i>G</i>, <I>B</i> specify the RGB components
+		of the color in the range [0, 1].
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetColorCMYK">
+		<B>Sub <FONT COLOR="#F00000">SetColorCMYK</FONT> (<I>C</i> As Single, <i>M</i> As Single, <I>Y</i> As Single, <I>K</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current stroking color space to "DeviceCMYK", and sets the current color in CMYK color space to be used by all stroking methods
+		such as Stroke, DrawLine, DrawRect, DrawEllipse, etc.
+		The current color is black by default.
+		<P>
+		<I>C</i>, <i>M</i>, <I>Y</i>, <i>K</i> specify the CMYK components
+		of the color in the range [0, 1].
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SetColorEx">
+		<B>Sub <FONT COLOR="#F00000">SetColorEx</FONT> (<i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Sets the current stroking color. Does not change the current color space.
+		An arbitrary number of color components can be specified.
+		This method should be used in conjunction with the <B>SetColorSpace</B> method.
+		<P>
+		<i>Param</i> is a PdfParam object
+		or parameter string specifying the color component values:
+			<UL>
+			<li>c1, c2, ..., c<i>N</i> (required) - color components in the range [0.0, 1.0].
+			The number of color components must match the currently selected color space.</li>
+			</UL>
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.SetColorSpace Doc.CreateColorSpace("DeviceRGB")<BR>
+		Page.Canvas.SetColorEx "c1=0.5; c2=0.3; c3=1" </B>' 3 color components<B><BR>
+		</B></font>
+		<P>
+		For more information, see <A HREF="manual_15.html#15_1">Section 15.1 - Color Spaces</A>.
+		<P>
+		This method was introduced by Version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetColorSpace">
+		<B>Sub <FONT COLOR="#F00000">SetColorSpace</FONT> (<I>ColorSpace</i> As PdfColorSpace)</B>
+		<BLOCKQUOTE>
+		<P>
+		Sets the current stroking color space to <I>ColorSpace</i>.
+		<P>
+		For more information, see <A HREF="manual_15.html#15_1">Section 15.1 - Color Spaces</A>.
+		<P>
+		This method was introduced by Version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetCTM">
+		<B>Sub <FONT COLOR="#F00000">SetCTM</FONT> (<I>a</i> As Single, <i>b</i> As Single, <I>c</i> As Single, <I>d</i> As Single, <i>e</i> As Single, <I>f</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current transformation matrix (CTM).
+		For more information about 
+		the transformation matrix, see
+		<A HREF="manual_04.html#4_5_1">Section 4.5.1 - Transformation Martix</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SetFillColor">
+		<B>Sub <FONT COLOR="#F00000">SetFillColor</FONT> (<I>R</i> As Single, <i>G</i> As Single, <I>B</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current fill color space to "DeviceRGB", and sets the current fill color in RGB color space to be used by all filling methods
+		such as Fill, FillStroke, FillRect, FillEllipse, etc.
+		The current fill color is black by default.
+		<P>
+		<I>R</i>, <i>G</i>, <I>B</i> specify the RGB components
+		of the color in the range [0, 1].
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+
+		<A NAME="SetFillColorCMYK">
+		<B>Sub <FONT COLOR="#F00000">SetFillColorCMYK</FONT> (<I>C</i> As Single, <i>M</i> As Single, <I>Y</i> As Single, <I>K</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current fill color space to "DeviceCMYK", and sets the current fill color in CMYK color space to be used by all filling methods
+		such as Fill, FillStroke, FillRect, FillEllipse, etc.
+		The current fill color is black by default.
+		<P>
+		<I>C</i>, <i>M</i>, <I>Y</i>, <I>K</i> specify the CMYK components
+		of the color in the range [0, 1].
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetFillColorEx">
+		<B>Sub <FONT COLOR="#F00000">SetFillColorEx</FONT> (<i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Sets the current fill color. Does not change the current color space.
+		An arbitrary number of color components can be specified.
+		This method should be used in conjunction with the <B>SetFillColorSpace</B> method.
+		<P>
+		<i>Param</i> is a PdfParam object
+		or parameter string specifying the color component values:
+			<UL>
+			<li>c1, c2, ..., c<i>N</i> (required) - color components in the range [0.0, 1.0].
+			The number of color components must match the currently selected color space.</li>
+			</UL>
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Page.Canvas.SetFillColorSpace Doc.CreateColorSpace("DeviceCMYK")<BR>
+		Page.Canvas.SetFillColorEx "c1=0.5; c2=0.3; c3=1; c4=0.8" </B>' 4 color components<B><BR>
+		</B></font>
+		<P>
+		For more information, see <A HREF="manual_15.html#15_1">Section 15.1 - Color Spaces</A>.
+		<P>
+		This method was introduced by Version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SetFillColorSpace">
+		<B>Sub <FONT COLOR="#F00000">SetFillColorSpace</FONT> (<I>ColorSpace</i> As PdfColorSpace)</B>
+		<BLOCKQUOTE>
+		<P>
+		Sets the current fill color space to <I>ColorSpace</i>.
+		<P>
+		For more information, see <A HREF="manual_15.html#15_1">Section 15.1 - Color Spaces</A>.
+		<P>
+		This method was introduced by Version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetGState">
+		<B>Sub <FONT COLOR="#F00000">SetGState</FONT> (<I>GState</i> As PdfGState)</B>
+		<BLOCKQUOTE>
+		<P>
+		Sets the current graphics state object to <i>GState</i>.
+		<P>
+		For more information, see <A HREF="manual_17.html#17_1">Section 17.1 - PdfGState: Overview</A>.
+		<P>
+		This method was introduced by Version 3.1.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SetParams">
+		<B>Sub <FONT COLOR="#F00000">SetParams</FONT> (<i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Enables setting several graphics state parameters
+		at once via a PdfParam object or parameter string. These parameters
+		include:
+		<UL>
+		<LI><I>Color</i> - same effect as SetColor method, but the color can be
+		specified by name, such as <B>red</B>, or via a Hex value, such as &HFF0000.
+		<LI><i>FillColor</i> - same effect as SetFillColor method, but the 
+		fill color can be
+		specified by name, such as <B>red</B>, or via a Hex value, such as &HFF0000.
+		<lI><I>r</i>, <i>g</i>, <I>b</i> - same effect as SetColor method.
+		<LI><I>fr</i>, <i>fg</i>, <I>fb</i> - same effect as SetFillColor method.
+		<lI><I>c</i>, <i>m</i>, <I>y</i>, <I>k</i> - same effect as SetColorCMYK method.
+		<lI><I>fc</i>, <i>fm</i>, <I>fy</i>, <I>fk</i> - same effect as SetFillColorCMYK method.
+		<LI><i>LineWidth</i>, <i>LineCap</i>, <i>LineJoin</i>, <i>MeterLimit</i> - 
+		same affect as LineWidth, LineCap, LineJoin and MeterLimit properties.
+		<LI><i>Dash1</i>, <i>Dash2</i>, ...., <i>DashPhase</i> -
+		specify the line dash pattern. For more information on dash
+		patterns, see <A HREF="manual_04.html#4_4_4">Section 4.4.4 - Line Dash Pattern</A>.
+		</UL>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Canvas.SetParams "Color=blue; FillColor=yellow; LineWidth=3"<BR>
+		Canvas.SetParams "Color=&H0000FF; FillColor=&HFFFF00; Dash1=2"<BR>
+		Canvas.SetParams "r=1; g=0; b=.5; "<BR>
+		</B></font>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SetTM">
+		<B>Sub <FONT COLOR="#F00000">SetTM</FONT> (<I>a</i> As Single, <i>b</i> As Single, <I>c</i> As Single, <I>d</i> As Single, <i>e</i> As Single, <I>f</i> As Single)</B>
+		<BLOCKQUOTE>
+		Sets the current text transformation matrix (TM). A TM is
+		similar to CTM except that it applies to text operators only.
+		This method should be used by advanced users only.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Stroke">
+		<B>Sub <FONT COLOR="#F00000">Stroke</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Strokes the current path.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+	</Blockquote>
+
+
+	<A HREF="object_cell.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfCell"></A>
+	<A HREF="object_annots.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfAnnots"></A>
+
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

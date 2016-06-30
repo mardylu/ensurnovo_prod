@@ -1,0 +1,1076 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 10: Interactive Features</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 10: Interactive Features
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_11.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 11: Forms"></A>
+	<A HREF="manual_09.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 9: Working with Existing PDFs"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 10: Interactive Features</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#10_1">10.1 Destinations</A><BR>
+	<A HREF="#10_2">10.2 Outlines</A><BR>
+	<A HREF="#10_3">10.3 Annotations</A><BR>
+	<A HREF="#10_4">10.4 Actions</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="10_1">
+	<FONT COLOR="#C06000"><B>10.1 Destinations</B></FONT>
+	<Blockquote>
+	A destination defines a particular view of a document, consisting
+	of the following:
+	<UL>
+	<LI>The page of the document to be displayed;
+	<LI>The location of the document window on that page;
+	<LI>The magnification (zoom) factor to use when displaying the page.
+	</UL>
+	<P>
+	A destination is represented by the <B>PdfDest</B> object
+	creatable via <B>PdfDocument</B>'s <B>CreateDest</B> method, or
+	alternatively, via <B>PdfPage</B>'s <B>CreateDest</B> method.
+	Both CreateDest methods take an optional parameter object
+	or parameter string as an argument.
+	<P>
+	Once a destination object is created, it can be assigned to
+	PdfDocument's <B>OpenAction</B> property which controls
+	which part of the document is to be displayed, and at what zoom factor,
+	when the document is opened. A destination object can also be assigned
+	to an outline item, annotation or action (all described below).
+	<P>
+	A destination created with no parameters,
+	or with the <i>Fit</i> parameter set to True, displays a page magnified just enough
+	to fit the entire page both horizontally and vertically:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest </B><i>or</i><B><BR>
+	Set Dest = Page.CreateDest("Fit=true")
+	</B></font>
+	<P>
+	A destination created with the <i>FitH</i> parameter
+	set to True displays a page magnified just enough to
+	fit the entire width of the page within the window. An optional
+	<i>Top</i> parameter specifies the vertical position of the page to
+	be displayed at the top edge of the window:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest("FitH=true")<BR>
+	Set Dest = Page.CreateDest("FitH=true; Top=100")
+	</B></font>
+	<P>
+	Similarly, a destination created with the <i>FitV</i> parameter
+	set to True displays a page magnified just enough to
+	fit the entire height of the page within the window. An optional
+	<i>Left</i> parameter specifies the horizontal position of the page to
+	be displayed at the left edge of the window:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest("FitV=true")<BR>
+	Set Dest = Page.CreateDest("FitV=true; Left=130")
+	</B></font>
+	<P>
+	A destination created with the <i>XYZ</i> parameter set to True
+	and additional optional parameters <i>Left</i>, <i>Top</i> and <i>Zoom</i> 
+	displays page with the coordinates (<i>Left, Top</i>) positioned
+	at the top-left corner of the window and the content of the page
+	magnified by the factor <i>Zoom</i>.
+	A <i>Zoom</i> value of 1 means 100%, 2 - 200%, etc.
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest("XYZ=true; Left=100; Top=200; Zoom=2")<BR>
+	</B></font>
+	<P>
+	A destination created with the <i>FitR</i> parameter set to True
+	and additional required parameters <i>Left</i>, <i>Bottom</i>,
+	<i>Right</i> and <i>Top</i> displays a page magnified
+	just enough to fit the rectangle specified by 
+	[<i>Left</i>, <i>Bottom</i>,	<i>Right</i>, <i>Top</i>]
+	entirely within the window both horizontally and vertically:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest("FitR=true;Left=10;Bottom=10;Right=200;Top=100")<BR>
+	</B></font>
+	<P>
+	A destination created with the <I>FitB</I> parameter set to true
+	displays a page magnified enough to fit its bounding box
+	entirely within the window both horizontally and vertically. The <i>FitB</I>
+	parameter can be used stand-alone as well as in conjunction with
+	<i>FitH</i> and <i>FitV</i> parameters:<P>
+	<font size=2 face="courier new"><B>
+	Set Dest = Page.CreateDest("FitB=true")<BR>
+	Set Dest = Page.CreateDest("FitB=true; FitV=true; Left=130")<BR>
+	</B></font>
+	<P>
+	The following code sample  creates a document with gridlines, and 
+	sets the document's OpenAction
+	property to various destinations based on passed URL parameters:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<br>
+		Set Doc = Pdf.CreateDocument<br>
+		Set Page = Doc.Pages.Add<br>
+		Set Font = Doc.Fonts("Helvetica")<P>
+
+		' vertical grid<br>
+		For x = 0 to Page.Width step Page.Width / 20<br>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawLine x, 0, x, Page.Height<br>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawText x, "angle=90;y=5;x=" & x, Font<br>
+		Next<P>
+
+		' horizontal grid<br>
+		For y = 0 to Page.Height step Page.Height / 20<br>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawLine 0, y, Page.Width, y<br>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawText y, "x=5;y=" & y, Font<br>
+		Next<P>
+
+		' Create destination based on URL param<br>
+		Set Param = Pdf.CreateParam<br>
+		If Request("FitV") <> "" Then<br>
+		&nbsp;&nbsp;&nbsp;Param("FitV") = True<br>
+		&nbsp;&nbsp;&nbsp;Param("Left") = Request("Left")<br>
+		End If<P>
+
+		If Request("FitH") <> "" Then<br>
+		&nbsp;&nbsp;&nbsp;Param("FitH") = True<br>
+		&nbsp;&nbsp;&nbsp;Param("Top") = Request("Top")<br>
+		End If<P>
+
+		If Request("XYZ") <> "" Then<br>
+		&nbsp;&nbsp;&nbsp;Param("XYZ") = True<br>
+		&nbsp;&nbsp;&nbsp;Param("Top") = Request("Top")<br>
+		&nbsp;&nbsp;&nbsp;Param("Left") = Request("Left")<br>
+		&nbsp;&nbsp;&nbsp;Param("Zoom") = Request("Zoom")<br>
+		End If<P>
+
+		Set Dest = Page.CreateDest(Param)<P>
+
+		' Assign destination to Doc's OpenAction<br>
+		Doc.OpenAction = Dest<P>
+
+		' Save to HTTP stream<br>
+		Doc.SaveHttp "attachment;filename=destdemo.pdf"
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<BR>
+		IPdfPage objPage = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<BR>
+		IPdfFont objFont = objDoc.Fonts["Helvetica", Missing.Value];<P>
+
+		// vertical grid<BR>
+		for( float x = 0; x < objPage.Width; x += objPage.Width / 20 )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawLine( x, 0, x, objPage.Height );<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( x.ToString(), "angle=90;y=5;x=" + x.ToString(), objFont );<BR>
+		}<P>
+
+		// horizontal grid<BR>
+		for( float y = 0; y <= objPage.Height; y += objPage.Height / 20 )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawLine( 0, y, objPage.Width, y );<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( y.ToString(), "x=5;y=" + y.ToString(), objFont );<BR>
+		}<P>
+
+		// Create destination based on URL param<BR>
+		IPdfParam objParam = objPdf.CreateParam( Missing.Value );<P>
+		
+		if( Request["FitV"] != null )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objParam["FitV"].Value	= 1; // true<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Left"].Value	= float.Parse(Request["Left"]);<BR>
+		}<P>
+
+		if( Request["FitH"] != null )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objParam["FitH"].Value	= 1;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Top"].Value	= float.Parse(Request["Top"]);<BR>
+		}<P>
+
+		if( Request["XYZ"] != null )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objParam["XYZ"].Value	= 1;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Top"].Value	= float.Parse(Request["Top"]);<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Left"].Value	= float.Parse(Request["Left"]);<BR>
+		&nbsp;&nbsp;&nbsp;objParam["Zoom"].Value	= float.Parse(Request["Zoom"]);<BR>
+		}<P>
+
+		IPdfDest objDest = objPage.CreateDest( objParam );<P>
+
+		// Assign destination to Doc's OpenAction<BR>
+		objDoc.OpenAction = objDest;<P>
+
+		// Save document to HTTP stream<BR>
+		objDoc.SaveHttp( "attachment;filename=destdemo.pdf", Missing.Value );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.asp">http://localhost/asppdf/manual_10/10_dest.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.asp?FitV=true&left=100">http://localhost/asppdf/manual_10/10_dest.asp?FitV=true&left=100</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.asp?FitH=true&top=500">http://localhost/asppdf/manual_10/10_dest.asp?FitH=true&top=500</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.asp?XYZ=true&left=200&top=500&zoom=2">http://localhost/asppdf/manual_10/10_dest.asp?XYZ=true&left=200&top=500&zoom=2</A></B><BR>
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.aspx">http://localhost/asppdf/manual_10/10_dest.aspx</A><IMG SRC="images/dotnet.gif"></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.aspx?FitV=true&left=100">http://localhost/asppdf/manual_10/10_dest.aspx?FitV=true&left=100</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.aspx?FitH=true&top=500">http://localhost/asppdf/manual_10/10_dest.aspx?FitH=true&top=500</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_dest.aspx?XYZ=true&left=200&top=500&zoom=2">http://localhost/asppdf/manual_10/10_dest.aspx?XYZ=true&left=200&top=500&zoom=2</A></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	</Blockquote>
+
+	<A NAME="10_2">
+	<FONT COLOR="#C06000"><B>10.2 Outlines</B></FONT>
+	<Blockquote>
+	A PDF document may optionally display a <i>document outline</i>
+	on the screen, allowing the user to navigate interactively 
+	from one part of the document to another. The outline
+	consists of a tree-structured hierarchy  of <i>outline items</i>
+	(sometimes called <i>bookmarks</i>).
+	<P>
+	The document outline is represented by the <B>PdfOutline</B>
+	object obtainable via <B>PdfDocument</B>'s <B>Outline</B> property.
+	PdfOutline is a collection of
+	<B>PdfOutlineItem</B> objects representing individual outline items (bookmarks).
+	<P>
+	An outline item is added to the outline via PdfOutline's <B>Add</B>
+	method which takes the following arguments:
+	<UL>
+	<LI><B>Title</B>: a string specifying the item's caption in the hierarchy;
+	<li><B>Dest</B>: a PdfDest object to be associated with the item. This argument
+	can be <i>Nothing</i> if the item should be associated with an action rather than destination.
+	<li><B>Parent</B>: a PdfOutlineItem object which the new item will become 
+	a child of in the hierarchy.
+	This argument can be <I>Nothing</i> to indicate that the item is to 
+	be a top-level one.
+	<li><B>InsertBefore</B>: a PdfOutlineItem object at the same level
+	of the hierarchy as the new one specifying the position
+	of the new item relative to its siblings. This argument can be <i>Nothing</i>
+	to indicate that the new item is to be inserted after all its siblings.
+	<li><B>Param</B>: an optional parameter object or parameter string
+	specifying the item's appearance options. 
+	
+	<P>
+	The <i>Expanded</i>
+	parameter is True by default which means the item is open. 
+	If set to False, the item will be shown closed.
+	<P>
+	The <i>Italic</i> and <i>Bold</i> parameters are both False by default.
+	If set to true, the item is shown in italic and/or bold,
+	respectively.
+	<P>
+	The <I>R</i>, <I>G</i>, <I>B</i> parameters specify the item's color (black by default). 
+	Each of the values must be a number between 0 and 1.
+	</UL>
+
+	Once an outline item is created, it can be assigned either a destination or action
+	via its <B>SetDest</B> and <B>SetAction</B> methods, respectively.
+	Note that SetDest and SetAction are mutually exclusive - an item
+	can be associated with either an action or destination but not both.
+	<P>
+	The following code sample creates a two-page document with a 6-item
+	outline. The outline items (except the top-level one) point to various locations
+	within the document. The outline hierarchy is organized as follows:
+	<P>
+	<IMG SRC="images/10_outline.gif">
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+	Set Doc = Pdf.CreateDocument<BR>
+	Set Page1 = Doc.Pages.Add<BR>
+	Set Page2 = Doc.Pages.Add<P>
+
+	' Make document fit window and show outlines<BR>
+	Doc.OpenAction = Page1.CreateDest<BR>
+	Doc.PageMode = pdfUseOutlines<P>
+
+	Set Font = Doc.Fonts("Helvetica")<BR>
+	Params = "x=0; y=650; width=612; alignment=center; size=50"<BR>
+	Page1.Canvas.DrawText "Page 1", Params, Font<BR>
+	Page2.Canvas.DrawText "Page 2", Params, Font<P>
+
+	' Build outline hierarchy<BR>
+	Set outline = Doc.Outline<BR>
+	Set Title = outline.Add("User Manual", Nothing, Nothing, Nothing, "Bold=true")<P>
+	
+	Set Chapter1 = outline.Add("Chapter 1", Page1.CreateDest, Title, Nothing, "Bold=true; Italic=true")<BR>
+	Set Section11 = outline.Add("Section 1.1", Page1.CreateDest("XYZ=true;Zoom=2;Top=300"), Chapter1, Nothing )<P>
+	
+	Set Chapter2 = outline.Add("Chapter 2", Page2.CreateDest, Title, Nothing, "Bold=true; Italic=true")<BR>
+	Set Section21 = outline.Add("Section 2.1", Page2.CreateDest("XYZ=true;Zoom=2;Top=500"), Chapter2, Nothing )<BR>
+	Set Section22 = outline.Add("Section 2.2", Page2.CreateDest("XYZ=true;Zoom=2;Top=200"), Chapter2, Nothing )<P>
+
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("outline.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<BR>
+		IPdfPage objPage1 = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<BR>
+		IPdfPage objPage2 = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<P>
+
+		// Make document fit window and show outlines<BR>
+		objDoc.OpenAction = objPage1.CreateDest(Missing.Value);<BR>
+		objDoc.PageMode = pdfPageMode.pdfUseOutlines;<P>
+
+		IPdfFont objFont = objDoc.Fonts["Helvetica", Missing.Value];<BR>
+		String strParams = "x=0; y=650; width=612; alignment=center; size=50";<BR>
+		objPage1.Canvas.DrawText( "Page 1", strParams, objFont );<BR>
+		objPage2.Canvas.DrawText( "Page 2", strParams, objFont );<P>
+
+		// Build outline hierarchy<BR>
+		IPdfOutline objOutline = objDoc.Outline;<BR>
+		IPdfOutlineItem objTitle = objOutline.Add("User Manual", null, null, null, "Bold=true");<P>
+		
+		IPdfOutlineItem objChapter1 = objOutline.Add("Chapter 1", objPage1.CreateDest(Missing.Value), objTitle, null, "Bold=true; Italic=true");<BR>
+		IPdfOutlineItem objSection11 = objOutline.Add("Section 1.1", objPage1.CreateDest("XYZ=true;Zoom=2;Top=300"), objChapter1, null, Missing.Value );<P>
+		
+		IPdfOutlineItem objChapter2 = objOutline.Add("Chapter 2", objPage2.CreateDest(Missing.Value), objTitle, null, "Bold=true; Italic=true");<BR>
+		IPdfOutlineItem objSection21 = objOutline.Add("Section 2.1", objPage2.CreateDest("XYZ=true;Zoom=2;Top=500"), objChapter2, null, Missing.Value );<BR>
+		IPdfOutlineItem objSection22 = objOutline.Add("Section 2.2", objPage2.CreateDest("XYZ=true;Zoom=2;Top=200"), objChapter2, null, Missing.Value );<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		String strFilename = objDoc.Save( Server.MapPath("outline.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Note that we set PdfDocument's <B>PageMode</B> property to <b>pdfPageMode.pdfUseOutline</b>
+	to show the outline hierarchy automatically when the document opens.
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_outline.asp">http://localhost/asppdf/manual_10/10_outline.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_outline.aspx">http://localhost/asppdf/manual_10/10_outline.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	</Blockquote>
+	
+	<A NAME="10_3">
+	<FONT COLOR="#C06000"><B>10.3 Annotations</B></FONT>
+	<Blockquote>
+	An annotation is an interactive object placed on a page, such 
+	as a text note or embedded file. PDF includes a wide
+	variety of standard annotation types.
+	<P>
+	Many of the standard annotations may be displayed in either 
+	the open or closed state. When closed, they appear
+	on the page in some distinctive form depending on the specific annotation
+	type, such as an icon, a box or a rubber stamp. When the user activates
+	the annotation by clicking it with the mouse, it exhibits
+	its associated object, such as by opening a pop-up window displaying
+	a text note, or by opening an embedded file in its respective application.
+	<P>
+	<B><u>10.3.1 Code Sample</u></B>
+	<P>
+	The <B>Annots</B> property of the PdfPage object
+	returns a <B>PdfAnnots</B> collection of <B>PdfAnnot</B>
+	objects representing individual annotations on the page. An annotation
+	is added to a page via the <B>PdfAnnots.Add</B> method.
+	<P>
+	The following code sample puts a simple text annotation
+	on a one-page document (most of the code omitted for brevity):
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	... <BR>
+	Set Annot = Page.Annots.Add("This is a simple text annotation.", _<BR>
+	&nbsp;&nbsp;&nbsp;"x=10, y=700; width=200; height=50")<BR>
+	...
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	...<BR>
+	IPdfAnnot objAnnot=objPage.Annots.Add("This is a simple text annotation.", <BR>
+	&nbsp;&nbsp;&nbsp;"x=10, y=700; width=200; height=50", Missing.Value, Missing.Value );<BR>
+	...
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_annot.asp">http://localhost/asppdf/manual_10/10_annot.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_annot.aspx">http://localhost/asppdf/manual_10/10_annot.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+	<P>
+	<A NAME="3_2">
+	<B><u>10.3.2 Add Method Parameters</u></B>
+	<P>
+	The <B>PdfAnnots.Add</B> method takes 4 arguments:
+	<UL>
+	<LI><B>Contents</B>: Text to be displayed for the annotation, or,
+	if this type of annotation does not display text, an alternative description
+	in human-readable form.
+	<LI><B>Param</B>: A parameter object or parameter string
+	containing a number of required and optional parameters.
+	Parameters common to all annotations are the following:
+	<P>
+	<i>X</i>, <i>Y</i>, <i>Width</i>, <i>Height</i> (required) - the coordinates
+	of the annotation within a page. All other parameters are optional.<P>
+	<i>Type</i> - specifies the annotation type. The following
+	constants are defined: <B>text</B> (0, default), <B>link</B> (1), 
+	<B>freetext</B> (2), <B>line</B> (3), <B>square</B> (4), <B>circle</B> (5),
+	<B>highlight</B> (6), <B>underline</B> (7), <B>strikeout</B> (8), 
+	<B>squiggly</B> (9), <B>stamp</B> (10), <B>fileattachment</B> (11),
+	<B>sound</B> (12), <B>movie</B> (13).
+	<P>
+	<i>Open</i> - (false by default) specifies whether an annotation is to be shown 
+	in the open or closed state.
+	<P>
+	<i>Color</i> - specifies the annotation color.
+	<P>
+	<i>Border</i> - specifies border width of the annotation. 1 by default. Set this parameter to 0
+	to remove the annotation's border.
+	<P>
+	<I>BorderRadius</i> - defines the shape of border corners. 0 by default which means 
+	regular square corners.
+	<P>
+	<I>Invisible</i> - if set to True, the annotation is not displayed. False by default.
+	<P>
+	<I>Hidden</i> - if set to True, the annotation is not displayed or printed,
+	and no interactions with the user is allowed. False by default.
+	<P>
+	<i>Print</i> - if set to True, the annotation will be printed along with the 
+	rest of the page. Otherwise, it won't be printed. False by default.
+	<P>
+	<i>NoZoom</i> - if set to True, the annotation's appearance does not
+	change when the page is zoomed in or out. False by default.
+	<P> 
+	<i>NoRotate</i> - if set to True, the annotation does not
+	rotate when the page is rotated. False by default.
+	<P>
+	<i>NoView</i> - same as Hidden, but the annotation may be printed 
+	depending on the <I>Print</i> parameter. False by default.
+	<P>
+	<i>ReadOnly</i> - if set to True, the annotation is not allowed to interact 
+	with the user. False by default.
+	<P>
+	
+	<li><B>Name</B>: An optional text string. The meaning of this argument
+	depends on the particular annotation type and will be described below.
+	<P>
+	<li><B>Path</B>: An optional file path string. This argument
+	is only used for file attachment annotations and ignored otherwise.
+	</UL>
+
+	<P>
+	<A NAME="10_3_3">
+	<B><u>10.3.3 Annotation Types</u></B>
+	<P>
+	<UL>
+	<LI><B>Text Annotations</B><P>
+	A text annotation represents a "sticky note" attached to a point
+	in the PDF document. When closed, the annotation appears as an icon,
+	when closed it displays a pop-up window containing the text of the note.
+	<P>
+	The <I>Name</i> argument of the <B>PdfAnnots.Add</B> method
+	controls the type of an icon used in displaying the annotation 
+	and can be set to the following values: <B>"Note"</B> (default),
+	<B>"Comment"</B>, <B>"Key"</B>, <B>"Help"</B>, <B>"NewParagraph"</B>, 
+	<B>"Paragraph"</B>, <B>"Insert"</B>.
+	<P>
+	See Section 10.3.1 for a code sample.
+
+	<P>
+	<LI><B>Link Annotations</B><P>
+	A link annotation represents either a hypertext link 
+	or a destination elsewhere in the document. A link annotation
+	has to be assigned an action or destination.
+	<P>
+	The <i>Type</i> parameter must be set to <b>link</B> (1).
+	This type of annotation accepts an additional parameter,
+	<i>HighlightMode</i>, which specifies the visual effects
+	to be used when the button is pressed or held down inside its active area.
+	The possible values are 0, 1 (default), 2, 3 meaning 
+	none, invert, outline or push, respectively.
+	<P>
+	The following code fragment displays a hyperlink. Actions are described below.
+	<P>
+	<font face="courier new" size=1"><B>
+	page.Canvas.DrawText "www.persits.com", "x=1;y=712;color=blue", Doc.fonts("Courier")<BR>
+    Set annot = page.Annots.Add("", "Type=Link; x=1,y=700,width=100,height=10; Border=0")<BR>
+    annot.SetAction Doc.CreateAction("type=URI", "http://www.persits.com")
+	</B></font>
+
+	<P>
+	<li><B>Free Text Annotations</B><P>
+	A free text annotation displays text directly on the page. Unlike an ordinary
+	text annotation, a free text annotation has no open or closed state. Its text is
+	always visible.
+	<P>
+	The <i>Type</i> parameter must be set to <b>freetext</B> (2).
+	This type of annotation accepts an additional parameter,
+	<i>Alignment</i>, which controls text alignment.
+	Possible values are
+	<b>left</b> (0, default), <b>right</B> (1) and <B>center</b> (2).
+
+
+	<P>
+	<li><B>Line Annotations</B><P>
+	A line annotation displays a single straight line on the page.
+	When opened, it displays a pop-up window containing the text of the associated note.
+	<P>
+	The <i>Type</i> parameter must be set to <b>line</b> (3).
+	This type of annotation accepts additional parameters:<P>
+	<i>X1</i>, <i>Y1</i>, <i>X2</i>, <i>Y2</i> (required) - the line's starting and ending coordinates in the default user space.<BR>
+	<i>InnerColor</i> (optional) - the line color.<BR>
+	<i>Beginning</i>, <i>Ending</i> (optional) - controls the line's ending style.
+	Values are 0 (none, default) 1 (square), 2 (circle) 3 (diamond), 4 (open arrow), 5 (closed arrow).<BR>
+
+	<i>LineWidth</i> (optional) - the line width (1 by default).<BR>
+	<i>LineStyle</i> (optional) - the line style. 
+	Values are 0 (solid) and (1-dashed). If <i>LineStyle</i> is set to 1, also
+	accepts <i>Dash1</i> and <i>Dash2</i> parameters to define the dash pattern.
+
+
+	<P>
+	<li><B>Square and Circle Annotations</B><P>
+	Square and circle annotations display a rectangle or circle
+	on the page, respectively. The rectangle or circle is inscribed
+	within the annotation's rectangle defined by the x, y, width and height parameters.
+	<P>
+	The <i>Type</i> parameter must be set to <B>square</B> (4)
+	or <b>circle</b> (5). Additional parameters are 
+	<i>InnerColor</i>, <i>LineWidth</i>, <i>LineStyle</i>, <i>Dash1</i>, 
+	and <i>Dash2</i> (see Line Annotations for descriptions).
+
+	<P>
+	<li><B>Highlight, Underline, Strikeout and Squiggly Annotations</B><P>
+	These are also referred to as Markup annotations. Markup annotations
+	appear as highlights, underlines, strikeouts, or jagged (squiggly)
+	underlines in the text of a document. When opened, they display
+	a pop-up window containing the text of the associated note.
+	<P>
+	The <i>Type</i> parameter must be set to 
+	<B>highlight</B> (6), <B>underline</B> (7), 
+	<B>strikeout</B> (8), or <B>squiggly</B> (9).
+	Additional parameters are <i>X1</i>, <i>Y1</i>, 
+	<i>X2</i>, <i>Y2</i>, <i>X3</i>, <i>Y3</i>, 
+	<i>X4</i>, <i>Y4</i> specifying the coordinates
+	of a quadrilateral encompassing a word or group
+	of contiguous words in the text underlying the annotation.
+
+	<P>
+	<li><B>Rubber Stamp Annotations</B><P>
+	A rubber stamp annotation displays text or graphics intended
+	to look as if they were stamped on the page with a rubber stamp.
+	When opened, they display
+	a pop-up window containing the text of the associated note.
+	<P>
+	The <i>Type</i> parameter must be set to <B>stamp</B> (10).
+	The <i>Name</i> argument of the <B>PdfAnnots.Add</B> method
+	specifies an icon type to be used in displaying the annotation.
+	The possible values are: <B>"Approved"</B>,
+	<B>"Asis"</B>, <B>"Confidential"</B>, <B>"Departmental"</B>,
+	<B>"Draft"</B> (default), <B>"Experimental"</B>, <B>"Expired"</B>,
+	<B>"Final"</B>, <B>"ForComment"</B>, <B>"ForPiblicRelease"</B>,
+	<B>"NotApproved"</B>, <B>"NotForPublicRelease"</B>,
+	<B>"Sold"</B> and <B>"TopSecret"</B>.
+
+	<P>
+	<li><B>FileAttachment Annotations</B><P>
+	A file attachment annotation contains a reference to a file
+	embedded in the PDF document. For example,
+	a table of data might use a file attachment annotation
+	to link to a spreadsheet file based on that data. Activating
+	the annotation will extract the embedded file
+	and give the user an opportunity to 
+	view it or save it on disk.
+	<P>
+	The <i>Type</i> parameter must be set to <B>fileattachment</B> (11).
+	The <i>Name</i> argument of the <B>PdfAnnots.Add</B> method
+	specifies an icon type to be used to display the annotation. Possible values are
+	<B>"Graph"</B>, <B>"Paperclip"</B>, <B>"PushPin"</B> (default) and <B>"Tag"</B>.
+	<P>
+	The <i>Path</i> parameter of the <B>PdfAnnots.Add</B> method
+	specifies a file to be associated with the annotation.
+	<P>
+	The following code fragment creates a file attachment annotation:
+	<P>
+	<font face="courier new" size=1"><B>
+	Set annot = page.Annots.Add("", "x=1,y=700;width=10;height=10;Type=FileAttachment;", "Paperclip", "c:\file.txt")
+	</B></font>
+	<P>
+	It is recommended that Acrobat Reader 6.0 and higher be used
+	to view file attachment annotations.
+
+	<P>
+	<li><B>Other types of PDF annotations are currently not supported.</B><P>
+	</UL>
+
+	<P>
+	<A NAME="10_3_4">
+	<B><u>10.3.4 Changing Default Appearance of Annotations</u></B>
+	<P>
+	By default, the way an annotation is displayed on the page
+	is at the discretion of the viewer application. Acrobat Reader 5.0,
+	for example, contains built-in appearances for only a few annotation types,
+	others are displayed as gray boxes with a question mark.
+	<P>
+	AspPDF enables you to specify an arbitrary appearance (and even 
+	a set of appearances) for an annotation via PdfAnnot's <B>Graphics</B>
+	property which can be assigned an instance of
+	the PdfGraphics object
+	described in <A HREF="manual_05.html">Chapter 5</A>.
+	<P>
+	<B>Annot.Graphics</B> is a parameterized property returning or specifying a 
+	PdfGraphics object that defines this annotation's appearance. 
+	It accepts two arguments,
+	the <I>Type</i> and optional <i>State</i> (the latter
+	is only used in interactive form fields described in <A HREF="manual_11.html">Chapter 11</A>.)
+	<P>
+	In a simple scenario, an annotation only has one ("normal") appearance. 
+	An annotation may also have two more optional appearances displayed when 
+	the mouse is clicked on, or moved over, the active area, referred to as "down" 
+	and "rollover" appearances, respectively. The <i>Type</i> argument specifies 
+	the type of appearance. Possible values are: 0 (normal), 1 (down) and 2 (rollover). 
+	<P>
+	The following code sample creates an annotation of the type Stamp
+	and sets its appearance to an image displaying the word "Paid".
+	<P>
+	<IMG SRC="images/10_paid.gif">
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	...<P>
+	' Add annotation with custom appearance<BR>
+	Notice = "This invoice was paid on June 10, 2003."<BR>
+	Set Annot = Page.Annots.Add(Notice, "x=10,y=600;width=182;height=131; Type=Stamp")<P>
+
+	' Create a graphics object for this annotation containing an image<BR>
+    Set PaidGraph = Doc.CreateGraphics("left=0; bottom=0; right=182; top=131")<BR>
+    Set image = Doc.OpenImage( Server.MapPath("paid.gif") )<BR>
+    PaidGraph.Canvas.DrawImage image, "x=0, y=0"<P>
+
+	' Use this graphics object as the annotation's appearance<BR>
+	Annot.Graphics(0) = PaidGraph<P>
+
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("annot.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	...<P>
+	// Add annotation with custom appearance<BR>
+	String strNotice = "This invoice was paid on June 10, 2003.";<BR>
+	IPdfAnnot objAnnot = objPage.Annots.Add(strNotice, "x=10, y=600; width=182; height=131; Type=Stamp", Missing.Value, Missing.Value);<P>
+
+	// Create a graphics object for this annotation containing an image<BR>
+    IPdfGraphics objPaidGraph = objDoc.CreateGraphics("left=0; bottom=0; right=182; top=131");<BR>
+    IPdfImage objImage = objDoc.OpenImage( Server.MapPath("paid.gif"), Missing.Value );<BR>
+    objPaidGraph.Canvas.DrawImage( objImage, "x=0, y=0" );<P>
+
+	// Use this graphics object as the annotation's appearance<BR>
+	objAnnot.set_Graphics(0, Missing.Value, objPaidGraph );<P>
+
+	// Save document, the Save method returns generated file name<BR>
+	String strFilename = objDoc.Save(Server.MapPath("appearance.pdf"), false);
+	</font></TD></TR>
+	</table>
+	<P>
+	Note that in C# direct assignment to the Graphics property is not allowed,
+	so the syntax objAnnot.set_Graphics(...) is used.
+	<P>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_appearance.asp">http://localhost/asppdf/manual_10/10_appearance.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_10/10_appearance.aspx">http://localhost/asppdf/manual_10/10_appearance.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	</Blockquote>
+
+	
+	
+	<A NAME="10_4">
+	<FONT COLOR="#C06000"><B>10.4 Actions</B></FONT>
+	<Blockquote>
+	An action is a set of instructions or commands the viewer application must carry out
+	in response to a certain event, such a mouse click, document opening,
+	push of a button, etc. Some examples of actions
+	are jumping to another PDF document, playing a sound, launching an application
+	or executing a JavaScript script.
+	<P>
+	An action is represented by the <B>PdfAction</B>
+	object creatable via PdfDocument's <B>CreateAction</B> method.
+	This method takes two arguments: a parameter object or parameter
+	string specifying the action <i>Type</i> as well as other type-specific
+	parameters, and a string value which has different meanings
+	depending on the action type (and may be ignored altogether by some action types).
+	<P>
+	The action types currently supported are:
+	<P>
+	<B>goto</B> (1), <B>gotor</B> (2), <B>launch</B> (3), <B>uri</B> (5), 
+	<B>named</B> (9), <B>submit</B> (10), <B>reset</B> (11) and <B>javascript</B> (13).
+	<P>
+	The GoTo and GoToR actions require that a destination be associated with them,
+	the others are fully defined by the CreateAction arguments.
+	<P>
+	Once an action object is created, it is usually assigned to 
+	an annotation, outline item, or interactive form item (such as a pushbutton) 
+	via their respective <B>SetAction</B>
+	methods.
+
+	
+	<P>
+	<A NAME="10_4_1">
+	<B><u>10.4.1 Action Types</u></B>
+	<P>
+	<UL>
+	<LI><B>GoTo and GoToR Actions</B>
+	<P>
+	The GoTo and GoToR actions change the view to a specified 
+	destination in the same, or a remote, document, respectively.
+	These types of actions require that a PdfDest object be 
+	assigned to them via the <B>SetDest</B> method.
+	<P>
+	The <i>Type</i> parameter must be set to <B>goto</B> (1) or <B>gotor</B> (2).
+	<P>The following code fragment creates a link annotation
+	and assigns it a GoTo action which in turn is assigned a destination to Page 3:
+	<P>
+	<font face="courier new" size=1"><B>
+    Set Action = Doc.CreateAction("Type=GoTo", "")<BR>
+    Action.SetDest Doc.Pages(3).CreateDest("FitH=true")<P>
+    Set Annot = Doc.Pages(1).Annots.Add("", "type=link; x=10;y=600;width=200;height=20,border=0")<BR>
+    Annot.SetAction Action
+	</B></font>
+	<P>
+	Starting with Version 1.6.0.6, the GoToR action can be used to jump to an arbitrary page
+	of the remote document:
+	<P>
+	<font face="courier new" size=1"><B>
+	Set Action = doc.CreateAction("Type=GoToR", "Doc2.pdf")<BR>
+    Action.SetDest doc2.Pages(3).CreateDest("FitH=true")
+	</B></font>
+	<P>
+
+	<LI><B>Launch Actions</B>
+	<P>
+	A launch action launches an application or opens a document.
+	<P>
+	The <i>Type</i> parameter must be set to <B>launch</B> (3).
+	The <i>Value</i> argument of the <B>PdfDocument.CreateAction</B>
+	method should specify a path to the application to be launched
+	or file to be opened. This type of action takes an additional
+	parameter, <i>NewWindow</i>,
+	which, if set to True, opens the destination document in a new window.
+	If this parameter is set to False (default value), the destination
+	document will replace the current document in the same window.
+	<P>
+	The following code fragment creates a pushbutton and makes it launch 
+	another PDF file. Pushbuttons
+	are covered in the next chapter.
+	<P>
+	<font face="courier new" size=1"><B>
+	Set Action = Doc.CreateAction("Type=launch; NewWindow=true", "abc.pdf")<BR>
+    Set Annot = Page.CreatePushbutton("btn", "Open file!", "x=10; y=600; width=200; height=50", font, Nothing)<BR>
+    Annot.SetAction Action
+	</B></font>
+	<P>
+
+	<LI><B>URI Actions</B>
+	<P>
+	A uniform resource identifier (URI) is a string that identifies
+	a resource on the Internet -- typically a file (HTML or otherwise),
+	query, or some other entity.
+	A URI action causes a URI to be resolved.
+	<P>
+	The <i>Type</i> parameter must be set to <B>uri</B> (5).
+	This type of action accepts an additional parameter, <I>IsMap</i>,
+	which, if set to True, causes the mouse position to be tracked 
+	when the URI is resolved. Mouse coordinates are added to the URI,
+	separated by commas and preceded by a question mark, as follows:
+	<P>
+	http://www.someaddress.com/file.htm?100,200
+	<P>
+	A URI action code sample can be seen in <A HREF="#10_3_3">Section 10.3.3</A> under Link Annotations.
+	<P>
+
+
+	<LI><B>Named Actions</B>
+	<P>
+	Currently, PDF viewer applications support the following
+	<i>named</i> actions:
+	<P>
+	NextPage - Go to the next page of the document;<BR>
+	PrevPage - Go to the previous page of the document;<BR>
+	FirstPage - Go to the first page of the document;<BR>
+	LastPage - Go to the last page of the document.	<BR>
+	<P>
+	The <i>Type</i> parameter must be set to <B>named</B> (9).
+	and the <i>Value</i> argument of the <B>PdfDocument.CreateAction</B>
+	method should specify the action name. This argument is case-sensitive.
+	For example:
+	<P>
+	<font face="courier new" size=1"><B>
+	Set Action = Doc.CreateAction("Type=named", "NextPage")<BR>
+	</B></font>
+	<P>
+
+
+	<LI><B>Submit Actions</B>
+	<P>
+	Submit actions are used with interactive forms. A submit action
+	submits the interactive form to the specified URL.
+	<P>
+	The <i>Type</i> parameter must be set to <B>submit</B> (10),
+	and the <I>Value</i> argument specifies the submit URL.
+	This type of action accepts the following optional Boolean parameters:
+	<P>
+	<i>HTML</i> - if set to True, the form data is submitted in HTML format.
+	If set to False, the form is submitted in Form Data Format (FDF).
+	False by default.
+	<P>
+	<I>Get</i> - if set to True, the form is submitted using the GET method.
+	If set to False, the form is submitted using the POST method.
+	This parameter is only meaningful if <i>HTML</i> is set to True.
+	False by default.
+	<P>
+	<I>Coordinates</i> - if set to True, the coordinates of the mouse
+	relative to the upper-left corner of the submit button annotation
+	are submitted as part of the form data. This parameter is only 
+	meaningful if <i>HTML</i> is set to True. False by default.
+	<P>
+	<i>XML</i> - if set to True, the form is submitted in XML format.
+	If set to False, the form is submitted in either HTML or FDF format
+	depending on the <i>HTML</i> parameter. False by default.
+	<P>
+	<I>IncludeAppend</i> - if set to True, the submitted FDF file
+	includes the contents of all incremental updates. This parameter
+	is only meaningful if both <i>HTML</i> and <i>XML</i> parameters
+	are set to False. False by default.
+	<P>
+	<i>IncludeAnnots</i> - if set to True, the submitted FDF file
+	includes all annotations in the underlying PDF document.
+	This parameter
+	is only meaningful if both <i>HTML</i> and <i>XML</i> parameters
+	are set to False. False by default.
+	<P>
+	<i>PDF</i> - if set to True, the form is submitted in PDF format
+	using the MIME content type <i>application/pdf</i>. If this parameter is set
+	to True, all other parameters, except <i>Get</i>, are ignored.
+	False by default.
+	<P>
+	For more information, see <A HREF="manual_11.html">Chapter 11 - Forms</A>.
+	<P>
+
+	<LI><B>Reset Actions</B>
+	<P>
+	Reset actions are used with interactive forms. A reset action resets
+	the current interactive form by setting all form fields to their
+	respective default values.
+	<P>
+	The <i>Type</i> parameter must be set to <B>reset</B> (11),
+	and the <I>Value</i> argument is ignored.
+	<P>
+	For more information, see <A HREF="manual_11.html">Chapter 11 - Forms</A>.
+	<P>
+
+	<LI><B>JavaScript Actions</B>
+	<P>
+	A JavaScript action executes an arbitrary JavaScript script.
+	<P>
+	The <i>Type</i> parameter must be set to <B>javascript</B> (13).
+	and the <i>Value</i> argument of the <B>PdfDocument.CreateAction</B>
+	method specifies the actual JavaScript code. For example:
+	<P>
+	<font face="courier new" size=1"><B>
+	Set Action = Doc.CreateAction("type=JavaScript", "this.print(true)")
+	</font>
+	</UL>
+
+	<P>
+
+	</Blockquote>
+
+
+
+	<A HREF="manual_11.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 11: Forms"></A>
+	<A HREF="manual_09.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 9: Working with Existing PDFs"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

@@ -1,0 +1,406 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 2: Object Model Overview</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 2: Object Model Overview
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_03.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 3: Your First AspPDF Application"></A>
+	<A HREF="manual_01.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 1: Introduction"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 2: Object Model Overview</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#2_1">2.1 Major AspPDF Objects</A><BR>
+	<A HREF="#2_2">2.2 Creating an Instance of PdfManager Object</A><BR>
+	<A HREF="#2_3">2.3 PdfParam Object</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="2_1">
+	<FONT COLOR="#C06000"><B>2.1 Major AspPDF Objects</B></FONT>
+	<Blockquote>
+	AspPDF is comprised of over 20 objects representing various
+	components of a PDF document. The main top-level object
+	is <B>PdfManager</B> which serves as an "object factory" for other objects,
+	most noticeably, <B>PdfDocument</B>. The latter encapsulates various properties
+	of an actual PDF document, either a new or existing one.
+	<P>
+	The PdfDocument object provides the <B>Doc.Pages</B> property which returns a collection
+	of <B>PdfPage</B> objects, each representing an individual page in the PDF document.
+	Other important PdfDocument collections include Doc.Fonts and Doc.Form which
+	contain the document's fonts and form items, respectively. PdfDocument
+	also offers methods for creating PdfTable, PdfAction, PdfDest, and PdfGraphics 
+	objects representing tables, actions, destinations and Form XObjects, respectively 
+	(all described in detail later in the manual).
+	<P>
+	Each PdfPage object has at least one <B>PdfCanvas</B> object associated with it, which encapsulates
+	various drawing methods such as DrawRect, DrawText, etc.
+	<P>
+	Another important object creatable via PdfManager is <B>PdfParam</B> which
+	is described in detail later in this chapter.
+	<P>
+	Click <A HREF="objectreference.html">here</A> for the complete
+	object model diagram.
+	</Blockquote>
+
+	<A NAME="2_2">
+	<FONT COLOR="#C06000"><B>2.2 Creating an Instance of PdfManager Object</B></FONT>
+	<Blockquote>
+	Any application using AspPDF must start by creating an instance of the PdfManager object,
+	as follows:
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VB</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightgrey" class="thinborder"><font size=2 face="courier new">
+	Dim Pdf As New PdfManager
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPDF = new PdfManager();
+	</font></TD></TR>
+	</table>
+	<P>
+	To use AspPDF in a VB project, select the entry "Persits Software AspPDF" under
+	Project/References.
+	<P>
+	To use AspPDF in ASP.NET, you must place the wrapper assembly ASPPDFLib.dll (included
+	with the installation) in the /Bin directory of your .NET application, and use the following
+	directive in your source files:
+	<P>
+	<B>&lt;%@ Import Namespace="ASPPDFLib" %></B>
+
+	</Blockquote>
+	
+	<A NAME="2_3">
+	<FONT COLOR="#C06000"><B>2.3 PdfParam Object</B></FONT>
+	<Blockquote>
+	Due to the complexity of tasks performed by AspPDF,
+	many of its methods take a very large number of arguments.
+	For example, the method Canvas.DrawText, in addition to the 
+	Text and Font arguments, also takes 2 required and 10 optional numeric and Boolean
+	parameters.
+	<P>
+	In order to facilitate better code readability and maintainability, 
+	a special object, <B>PdfParam</B>, was added to AspPDF's object model
+	which encapsulates a series of named numeric and Boolean arguments. Instead
+	of passing multiple parameters to a method, we just pass a single
+	initialized PdfParam object.
+	<P>
+	An instance of the PdfParam object can be initialized with a single parameter string,
+	which is a comma- or semicolon-separated list of individual parameter names and their respective values
+	in the form <i>Name</i>=<i>Value</i>.
+	<P>
+	For example, without PdfParam we would have to call the method DrawText as follows:
+	<P>
+	<font face="courier new" size="1" color=red>
+	' This is not a real AspPDF method call<BR>
+	Page.Canvas.DrawText "Hello", Font, 10, 20, 100, 500, , , , 8, , , 2, &HFF0000
+	</font>
+
+	<P>
+	With PdfParam, the code looks much more readable:
+	<P>
+	<font face="courier new" size="1" color=blue>
+	Set Param = Pdf.CreateParam("x=10; y=20; width=100, height=500; Size=8; Alignment=right; color=red")<BR>
+	Page.Canvas.DrawText "Hello", Param, Font
+	</FONT>
+	<P>
+	<B><U>2.3.1 Creation and Reuse of PdfParam Objects</u></B>
+	<P>
+	An instance of the PdfParam object is created via PdfManager's CreateParam
+	method. This method expects an optional parameter string argument.
+	Once a PdfParam object has been created, it can be reused. Some or all of its items
+	can be removed or replaced by other values.
+	<P>
+	The method <B>Clear</B> removes all items from the param object. 
+	The <B>Add</B> method
+	adds new items from a parameter string. If some of the items specified
+	in the parameter string are already present in the object, their values are 
+	overwritten. For example, the following code sets the x value to 10, y to 20 and z to 30:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Param = Pdf.CreateParam("x=5")<BR>
+	Param.Add("x=10; y=20")<BR>
+	Param.Add("z=30")<BR>
+	</B></font>
+	<P>
+	The method <B>Set</B> clears the object before
+	initializing it to the new values. Therefore, the code
+	<P>
+	<font face="courier new" size="2"><B>
+	Param.Set("x=10; y=20")
+	</B></font>
+	<P>
+	is equivalent to<P>
+	<font face="courier new" size="2"><B>
+	Param.Clear<BR>
+	Param.Add("x=10; y=20")
+	</B></font>
+	<P>
+	<B><U>2.3.2 Syntax and Numeric Values</u></B>
+	<P>
+	Either the comma or semicolon character can be used as an item separator. You
+	can use both in the same string. Spaces are ignored so you can
+	use them to make your string more readable. Numeric values 
+	can be represented in hexadecimal format. A Hex number must be prepended
+	with &H or #, e.g.
+	<P>
+	<B>"x=&HFF; y=#FF0000"</B>
+	<P>
+	In a parameter string, pre-defined constants can be used instead of numbers.
+	PdfParam recognizes 140 constants designating various colors, such as 
+	<B>white</B> (&HFFFFFF), <B>black</B> (&H000000), <B>red</B> (&HFF0000), <B>maroon</B> (&H800000), etc. For
+	a complete table of colors and their names, see 
+	<A HREF="manual_A.html">Appendix A: Pre-defined Color Names</A>.
+	<P>
+	In addition to the color names, PdfParam also recognizes several commonly used
+	constants such as <B>true</B> (1), <B>false</B> (0), <B>left</B> (0), <B>right</B> (1),
+	<b>center</B> (2), and others.
+	<P>
+	Parameter names and pre-defined constants are case-insensitive. 
+	Their order in the parameter string is immaterial. Therefore, the following
+	two parameter strings are equivalent:
+	<P>
+	<B>	"Type=Widget; ReadOnly=true"<BR>
+		"readonly=True; type=widget"</B>
+
+	<P>
+
+	<B><U>2.3.3 Individual Value Assignment</u></B>
+	<P>
+	A parameter string is not the only way to assign values to a PdfParam object. 
+	An individual value can be assigned via the object's default parameterized Item property, as follows:
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Param.Item("x") = x</B>
+	</B></FONT>
+	<P>
+	or simply
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Param("x") = x</B>
+	</B></FONT>
+
+	<P>
+	The Item property of the PdfParam object returns an instance of the PdfParamItem object
+	which has two properties, Name and Value, the latter being the default property. In C#, the code above would have to look as follows:
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Param["x"].Value = x;</B>
+	</B></FONT>
+
+	<P>
+
+	When a parameter is a constant value, it is more convenient to assign it to 
+	a PdfParam object via a parameter
+	string. However, if a parameter is a variable, using the Item method is more convenient.
+	<P>
+
+	<B><U>2.3.4 Direct Use of Parameter Strings</u></B>
+
+	<P>
+	To simplify coding even further, all AspPDF methods accepting the PdfParam object as an argument also accept 
+	a parameter string directly, i.e. instead of 
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Set Param = Pdf.CreateParam("x=10, y=20; color=red")<BR>
+	Page.Canvas.DrawText "Hello", <font color="blue">Param</font>, Font
+	</B>
+	</B></FONT>
+	<P>
+	you can simply write
+	<P>
+	<font face="courier new" size="2"><B>
+	Page.Canvas.DrawText "Hello", <font color="blue">"x=10, y=20; color=red"</font>, Font
+	</B>
+	</B></FONT>
+	<P>
+
+	</Blockquote>
+
+
+	<A HREF="manual_03.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 3: Your First AspPDF Application"></A>
+	<A HREF="manual_01.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 1: Introduction"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

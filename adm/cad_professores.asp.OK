@@ -1,0 +1,790 @@
+<%If Session("key_cur")<>"ok" Then Response.Redirect "logout.asp"%>
+<!-- #INCLUDE FILE="../library/parametros.asp" -->
+<!-- #INCLUDE FILE="../library/conOpen.asp" -->
+<!-- #INCLUDE FILE="../library/fErroMsg.asp" -->
+<!-- #INCLUDE FILE="../library/fCreateSel.asp" -->
+<!-- #INCLUDE FILE="../library/fAddZero.asp" -->
+<!-- #INCLUDE FILE="../library/fFormataData.asp" -->
+<!-- #INCLUDE FILE="../library/fData.asp" -->
+<!-- #INCLUDE FILE="../library/fFormataCPF.asp" -->
+<!-- #INCLUDE FILE="../library/fFormataCep.asp" -->
+<!-- #INCLUDE FILE="../library/guid.asp" -->
+
+<%
+GUID_PROF=""
+cod = request("cod")
+if cod=0 or cod="" or isNumeric(cod)=false then cod=0
+RS.Open "SELECT * FROM PROFESSORES WHERE ID_PROFESSOR="&int(cod)
+if not RS.EOF then
+	NOME=RS("NOME")
+	CPF=RS("CPF")
+	TELEFONECEL=RS("TELEFONECEL")
+	TELEFONERES=RS("TELEFONERES")
+	ID_TEMA1=RS("TEMA1")
+	ID_TEMA2=RS("TEMA2")
+	ID_TEMA3=RS("TEMA3")
+	ID_TEMA4=RS("TEMA4")
+	ID_TEMA5=RS("TEMA5")
+	ID_TEMA6=RS("TEMA6")
+	ID_SUBTEMA1=RS("SUBTEMA1")
+	ID_SUBTEMA2=RS("SUBTEMA2")
+	ID_SUBTEMA3=RS("SUBTEMA3")
+	ID_SUBTEMA4=RS("SUBTEMA4")
+	ID_SUBTEMA5=RS("SUBTEMA5")
+	ID_SUBTEMA6=RS("SUBTEMA6")
+	ID_SUBTEMA7=RS("SUBTEMA7")
+	ID_SUBTEMA8=RS("SUBTEMA8")
+	ID_SUBTEMA9=RS("SUBTEMA9")
+	ID_SUBTEMA10=RS("SUBTEMA10")
+	ID_SUBTEMA11=RS("SUBTEMA11")
+	ID_SUBTEMA12=RS("SUBTEMA12")
+	ID_SUBTEMA13=RS("SUBTEMA13")
+	ID_SUBTEMA14=RS("SUBTEMA14")
+	ID_SUBTEMA15=RS("SUBTEMA15")
+	ID_SUBTEMA16=RS("SUBTEMA16")
+	ID_SUBTEMA17=RS("SUBTEMA17")
+	ID_SUBTEMA18=RS("SUBTEMA18")
+	ID_SUBTEMA19=RS("SUBTEMA19")
+	ID_SUBTEMA20=RS("SUBTEMA20")
+	ID_SUBTEMA21=RS("SUBTEMA21")
+	ID_SUBTEMA22=RS("SUBTEMA22")
+	ID_SUBTEMA23=RS("SUBTEMA23")
+	ID_SUBTEMA24=RS("SUBTEMA24")
+	DOMINGOM=RS("DOMINGOM")
+	DOMINGOT=RS("DOMINGOT")
+	DOMINGON=RS("DOMINGON")
+	SEGUNDAM=RS("SEGUNDAM")
+	SEGUNDAT=RS("SEGUNDAT")
+	SEGUNDAN=RS("SEGUNDAN")
+	TERCAM=RS("TERCAM")
+	TERCAT=RS("TERCAT")
+	TERCAN=RS("TERCAN")
+	QUARTAM=RS("QUARTAM")
+	QUARTAT=RS("QUARTAT")
+	QUARTAN=RS("QUARTAN")
+	QUINTAM=RS("QUINTAM")
+	QUINTAT=RS("QUINTAT")
+	QUINTAN=RS("QUINTAN")
+	SEXTAM=RS("SEXTAM")
+	SEXTAT=RS("SEXTAT")
+	SEXTAN=RS("SEXTAN")
+	SABADOM=RS("SABADOM")
+	SABADOT=RS("SABADOT")
+	SABADON=RS("SABADON")
+	EMAIL=RS("EMAIL")
+	MINICURRICULO=RS("MINICURRICULO")
+	FICHA_TECNICA=RS("FICHA_TECNICA")
+	DATA_NASCIMENTO=RS("DATA_NASCIMENTO")
+	STATUS_PROFESSOR=RS("STATUS_PROFESSOR")
+	NOME_FANTASIA=RS("NOME_FANTASIA")
+	GUID_PROF=RS("GUID_PROF")
+end if
+IF GUID_PROF="" then
+	GUID_PROF=genguid()
+END IF
+RS.Close
+
+Set RS2 = Server.CreateObject("ADODB.Recordset")
+RS2.CursorType = 0
+RS2.ActiveConnection = Con
+%>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<!-- TinyMCE -->
+	<script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript">
+		tinyMCE.init({
+			// General options
+			mode : "exact",
+			elements : "info",
+			theme : "advanced",
+			plugins : "autolink,lists,advlink,contextmenu,paste,directionality,fullscreen,noneditable,nonbreaking,inlinepopups",
+	
+			// Theme options
+			theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,|,code,fullscreen",
+			theme_advanced_buttons2 : "",
+			theme_advanced_buttons3 : "",
+			theme_advanced_buttons4 : "",
+			theme_advanced_toolbar_location : "top",
+			theme_advanced_toolbar_align : "left",
+			theme_advanced_statusbar_location : "bottom",
+			theme_advanced_resizing : true
+		});
+	</script>
+	<script type="text/javascript">
+		function GetSelectedItem1(selecionado) {
+			len = document.form.ID_TEMA1.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA1.length = 0;
+			document.forms['form'].ID_SUBTEMA2.length = 0;
+			document.forms['form'].ID_SUBTEMA3.length = 0;
+			document.forms['form'].ID_SUBTEMA4.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA1[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA1[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA1.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA2.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA3.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA4.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA1.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA2.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA3.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA4.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA1.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA2.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA3.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA4.options[xpto].selected = true;
+				GetSelectedItem2(document.form.ID_TEMA2.value);
+				}
+			}
+					
+		}
+		function GetSelectedItem2(selecionado) {
+			len = document.form.ID_TEMA2.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA5.length = 0;
+			document.forms['form'].ID_SUBTEMA6.length = 0;
+			document.forms['form'].ID_SUBTEMA7.length = 0;
+			document.forms['form'].ID_SUBTEMA8.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA2[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA2[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA5.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA6.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA7.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA8.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA5.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA6.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA7.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA8.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA5.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA6.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA7.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA8.options[xpto].selected = true;
+				GetSelectedItem3(document.form.ID_TEMA3.value);
+				}
+			}
+					
+		}
+		function GetSelectedItem3(selecionado) {
+			len = document.form.ID_TEMA3.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA9.length = 0;
+			document.forms['form'].ID_SUBTEMA10.length = 0;
+			document.forms['form'].ID_SUBTEMA11.length = 0;
+			document.forms['form'].ID_SUBTEMA12.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA3[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA3[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA9.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA10.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA11.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA12.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA9.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA10.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA11.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA12.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA9.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA10.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA11.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA12.options[xpto].selected = true;
+				GetSelectedItem4(document.form.ID_TEMA4.value);
+				}
+			}
+					
+		}
+		function GetSelectedItem4(selecionado) {
+			len = document.form.ID_TEMA4.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA13.length = 0;
+			document.forms['form'].ID_SUBTEMA14.length = 0;
+			document.forms['form'].ID_SUBTEMA15.length = 0;
+			document.forms['form'].ID_SUBTEMA16.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA4[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA4[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA13.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA14.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA15.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA16.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA13.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA14.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA15.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA16.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA13.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA14.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA15.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA16.options[xpto].selected = true;
+				GetSelectedItem7(document.form.ID_TEMA5.value);
+				}
+			}
+					
+		}
+		function GetSelectedItem5(selecionado) {
+			len = document.form.ID_TEMA5.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA17.length = 0;
+			document.forms['form'].ID_SUBTEMA18.length = 0;
+			document.forms['form'].ID_SUBTEMA19.length = 0;
+			document.forms['form'].ID_SUBTEMA20.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA5[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA5[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA17.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA18.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA19.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA20.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA17.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA18.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA19.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA20.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA17.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA18.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA19.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA20.options[xpto].selected = true;
+				GetSelectedItem5(document.form.ID_TEMA5.value);
+				}
+			}
+					
+		}
+		function GetSelectedItem6(selecionado) {
+			len = document.form.ID_TEMA6.length;
+			i = 0;
+			chosen = "none";
+			document.forms['form'].ID_SUBTEMA21.length = 0;
+			document.forms['form'].ID_SUBTEMA22.length = 0;
+			document.forms['form'].ID_SUBTEMA23.length = 0;
+			document.forms['form'].ID_SUBTEMA24.length = 0;
+			
+ 			for (i = 0; i < len; i++) {
+				var xpto;
+				if (document.form.ID_TEMA6[i].selected ) {
+				<% 
+				RS.open "SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				do while not RS.eof %>
+					if(document.form.ID_TEMA6[i].value== "<% =RS("ID_TEMA") %>") {
+						var z=1;
+						<% sql="select ID_SUBTEMA,ID_TEMA,SUBTEMA from SUBTEMAS where ID_TEMA='"&RS("ID_TEMA")&"' order by SUBTEMA"
+						RS2.Open sql %>
+						document.forms['form'].ID_SUBTEMA21.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA22.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA23.options[1] = new Option(" ");
+						document.forms['form'].ID_SUBTEMA24.options[1] = new Option(" ");
+						<%do while not RS2.eof %>
+							var seq = <% =Cint(RS2("ID_SUBTEMA")) %>
+							if (seq == selecionado) {
+								xpto = z;
+							}
+							document.forms['form'].ID_SUBTEMA21.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA22.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA23.options[z] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							document.forms['form'].ID_SUBTEMA24.options[z++] = new Option("<% =RS2("SUBTEMA") %>","<% =RS2("ID_SUBTEMA") %>");
+							
+							<% RS2.movenext
+						loop 
+						RS2.CLOSE%>
+					}
+					<% RS.movenext
+				loop 
+				RS.CLOSE
+				%>
+				document.forms['form'].ID_SUBTEMA21.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA22.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA23.options[xpto].selected = true;
+				document.forms['form'].ID_SUBTEMA24.options[xpto].selected = true;
+				}
+			}
+					
+		}
+			
+	</script>
+	<!-- /TinyMCE -->
+	<script type="text/javascript" src="../js/validacao_pb.js"></script>
+	<script type="text/javascript" src="../js/mascara.js"></script>
+	<title>ENSUR Inscrições</title>
+</head>
+<body onload="GetSelectedItem1(document.form.ID_TEMA1.value)">
+<div id="pagina">
+	<!-- #INCLUDE FILE="include/topo.asp" -->
+	<div id="conteudo">
+		<table border = 0 width=100%>
+			<tr><td><h1>Cadastro de Professores</h1></td><td><a href="lista_professores.asp"><img src="img/btnp_seta_invet.gif" border="0"></a></td></tr>
+		</table>
+		<form name="form" method="POST" action="salva_professores.asp">
+		<input type="hidden" name="cod" value="<%=cod%>">
+		<fieldset>
+			<legend>informações do professor</legend>
+			<table width=100%>
+			<tr><td nowrap><label for="NOME" class="requerido">Nome</label></td><td colspan=3><input type="text" name="NOME" id="NOME" maxlength="150" size="60" value="<%=NOME%>"></td></tr>
+			<tr><td nowrap><label for="NOME_FANTASIA" class="requerido">Nome Fantasia</label></td><td colspan=3><input type="text" name="NOME_FANTASIA" id="NOME_FANTASIA" maxlength="500" size="60" value="<%=NOME_FANTASIA%>"></td></tr>
+			<tr><td nowrap><label for="DATA_NASCIMENTO" class="requerido">Data de Nascimento</label></td><td colspan=3><input type="text" name="DATA_NASCIMENTO" id="DATA_NASCIMENTO" maxlength="10" size="15" value="<%=formatadata1(DATA_NASCIMENTO)%>" onKeyPress="return ValidateKeyPressed('DATE', this, event);" onChange="valida_campo(4,this);"></td></tr>
+			<tr><td nowrap><label for="CPF" class="requerido">CPF</label></td><td><input type="text" name="CPF" id="CPF" maxlength="14" size="30" value="<%=formatacpf(CPF)%>"></td></tr>
+			<tr><td nowrap><label for="EMAIL" class="requerido">e-mail</label></td><td colspan=3><input type="text" name="EMAIL" id="EMAIL" maxlength="200" size="60" value="<%=EMAIL%>"></td></tr>
+			<tr><td nowrap><label for="TELEFONECEL">Telefone Celular</label></td><td><input type="text" name="TELEFONECEL" id="TELEFONECEL" maxlength="14" size="20" value="<%=formatatel(TELEFONECEL)%>"></td></tr>
+			<tr><td nowrap><label for="TELEFONERES">Telefone Residencial</label></td><td><input type="text" name="TELEFONERES" id="TELEFONERES" maxlength="14" size="20" value="<%=formatatel(TELEFONERES)%>"></td></tr>
+			<tr><td nowrap>
+			<label for="STATUS_PROFESSOR" class="requerido">Status do Professor</label></td><td><select name="STATUS_PROFESSOR">
+			<option value=" "></option>
+			<option value="Bloqueado" <% if STATUS_PROFESSOR = "Bloqueado" then%> Selected <% end if %> >Bloqueado</option>
+			<option value="Ativo" <% if STATUS_PROFESSOR = "Ativo" then%> Selected <% end if %> >Ativo</option>
+			</select>
+			</td></tr>
+		</table>
+		</fieldset>
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA1" class="requerido">Tema 1</label></td><td Width="20%">
+				<select name="ID_TEMA1" id="ID_TEMA1" onchange="GetSelectedItem1(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA1 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA1">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA1" id="ID_SUBTEMA1">
+				<option></option>
+				</select>
+				</td></tr><tr>
+				<td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA2">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA2" id="ID_SUBTEMA2">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA3">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA3" id="ID_SUBTEMA3">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA4">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA4" id="ID_SUBTEMA4">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA2">Tema 2</label></td><td Width="20%">
+				<select name="ID_TEMA2" id="ID_TEMA2" onchange="GetSelectedItem2(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA2 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA5">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA5" id="ID_SUBTEMA5">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA6">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA6" id="ID_SUBTEMA6">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA7">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA7" id="ID_SUBTEMA7">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA8">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA8" id="ID_SUBTEMA8">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>		
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA3">Tema 3</label></td><td Width="20%">
+				<select name="ID_TEMA3" id="ID_TEMA3" onchange="GetSelectedItem3(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA3 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA9">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA9" id="ID_SUBTEMA9">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA10">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA10" id="ID_SUBTEMA10">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA11">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA11" id="ID_SUBTEMA11">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA12">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA12" id="ID_SUBTEMA12">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>		
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA4">Tema 4</label></td><td Width="20%">
+				<select name="ID_TEMA4" id="ID_TEMA4" onchange="GetSelectedItem4(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA4 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA13">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA13" id="ID_SUBTEMA13">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA14">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA14" id="ID_SUBTEMA14">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA15">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA15" id="ID_SUBTEMA15">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA16">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA16" id="ID_SUBTEMA16">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>		
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA5">Tema 5</label></td><td Width="20%">
+				<select name="ID_TEMA5" id="ID_TEMA5" onchange="GetSelectedItem5(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA5 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA17">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA17" id="ID_SUBTEMA17">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA18">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA18" id="ID_SUBTEMA18">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA19">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA19" id="ID_SUBTEMA19">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA20">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA20" id="ID_SUBTEMA20">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>		
+		<fieldset>
+			<legend>Temas e Sub-Temas</legend>
+			<table width=100%>
+			<tr>
+				<%
+				sql="SELECT ID_TEMA,TEMA FROM TEMAS ORDER BY TEMA"
+				rs.Open sql
+				%>
+				<td Width="20%"><label for="TEMA6">Tema 6</label></td><td Width="20%">
+				<select name="ID_TEMA6" id="ID_TEMA6" onchange="GetSelectedItem6(this.value);">
+					<option></option>
+					<%while not RS.eof%>
+						<option value="<% =RS("ID_TEMA") %>" <%if RS("ID_TEMA")=ID_TEMA6 then%>selected <%end if%>><% =RS("TEMA") %></option><%
+						RS.movenext
+					wend
+					RS.Close
+
+					%></select></p></td>
+				<td Width="20%">
+				<label for="ID_SUBTEMA21">Sub-tema 1</label></td><td Width="40%">
+				<select name="ID_SUBTEMA21" id="ID_SUBTEMA21">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA22">Sub-tema 2</label></td><td Width="40%">
+				<select name="ID_SUBTEMA22" id="ID_SUBTEMA22">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA23">Sub-tema 3</label></td><td Width="40%">
+				<select name="ID_SUBTEMA23" id="ID_SUBTEMA23">
+				<option></option>
+				</select>
+				</td></tr>
+				<tr><td Width="20%"></td><td Width="20%"></td><td Width="20%">
+				<label for="ID_SUBTEMA24">Sub-tema 4</label></td><td Width="40%">
+				<select name="ID_SUBTEMA24" id="ID_SUBTEMA24">
+				<option></option>
+				</select>
+				</td></tr>
+			</table>
+		</fieldset>		
+		<fieldset>
+			<legend>Disponibilidade</legend>
+				<table border =0 width=50% align=center>
+					<tr><td></td><td><label>Manhã</label></td><td><label class="titulo1">Tarde</label></td><td><label class="titulo1">Noite</label></td></tr>
+					<tr>
+						<td><label>Domingo</label></td>
+						<td><label><input type="checkbox" value="1" name="DOMINGOM" <% if DOMINGOM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="DOMINGOT" <% if DOMINGOT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="DOMINGON" <% if DOMINGON="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td nowrap><label>Segunda-feira</label></td>
+						<td><label><input type="checkbox" value="1" name="SEGUNDAM" <% if SEGUNDAM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SEGUNDAT" <% if SEGUNDAT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SEGUNDAN" <% if SEGUNDAN="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td><label>Terça-feira</label></td>
+						<td><label><input type="checkbox" value="1" name="TERCAM" <% if TERCAM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="TERCAT" <% if TERCAT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="TERCAN" <% if TERCAN="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td><label>Quarta-feira</label></td>
+						<td><label><input type="checkbox" value="1" name="QUARTAM" <% if QUARTAM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="QUARTAT" <% if QUARTAT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="QUARTAN" <% if QUARTAN="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td><label>Quinta-feira</label></td>
+						<td><label><input type="checkbox" value="1" name="QUINTAM" <% if QUINTAM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="QUINTAT" <% if QUINTAT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="QUINTAN" <% if QUINTAN="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td><label>Sexta-feira</label></td>
+						<td><label><input type="checkbox" value="1" name="SEXTAM" <% if SEXTAM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SEXTAT" <% if SEXTAT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SEXTAN" <% if SEXTAN="1" then%>checked<%end if%>></label></td>
+					</tr>
+					<tr>
+						<td><label>Sabado</label></td>
+						<td><label><input type="checkbox" value="1" name="SABADOM" <% if SABADOM="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SABADOT" <% if SABADOT="1" then%>checked<%end if%>></label></td>
+						<td><label><input type="checkbox" value="1" name="SABADON" <% if SABADON="1" then%>checked<%end if%>></label></td>
+					</tr>
+				</table>
+		</fieldset>	
+		<fieldset>
+			<legend>Curriculo</legend>
+			<table width=100%>
+				
+			</td></tr>
+				<tr><td colspan=6><p><label for="MINICURRICULO">Mini Curriculo</label><textarea name="MINICURRICULO" cols="80" rows="6"><%=MINICURRICULO%></textarea></p></td></tr>
+			</table>
+			<br><br>
+			<input type="hidden" value="<%=GUID_PROF%>" name="id">
+		<li><a href="javascript:window.open('../library/arquivoUploadProf.asp?tipo=minicurriculo&id=<%=GUID_PROF%>','','width=300,height=200');void(0);">Clique aqui para fazer upload do arquivo do mini-curriculo»</a></li><br><br>
+		<li><a href="javascript:window.open('../library/arquivoUploadProf.asp?tipo=curriculo&id=<%=GUID_PROF%>','','width=300,height=200');void(0);">Clique aqui para fazer upload do arquivo do curriculo»</a></li><br><br>
+		<li><a href="javascript:window.open('../library/arquivoUploadProf.asp?tipo=foto&id=<%=GUID_PROF%>','','width=300,height=200');void(0);">Clique aqui para fazer upload do arquivo da sua Foto»</a></li><br><br>
+		
+			<tr><td><br /><label for="submit">&nbsp;</label>
+			<input type="submit" name="submit" value="Enviar" class="buttonF"><br /><br /></td></tr>
+		
+
+		</fieldset>
+		</form>
+		<br />
+		<ul>
+			<li>Os campos marcados em laranja são obrigatórios</li>
+		</ul>
+		<br />
+	</div>	
+</div>
+</body>
+</html>
+<%conClose%>

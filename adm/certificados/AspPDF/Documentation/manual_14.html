@@ -1,0 +1,723 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 14: PDF to Image Conversion</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 14: PDF to Image Conversion
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD xWIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_15.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 15: Color Spaces"></A>
+	<A HREF="manual_13.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 13: HTML to PDF Conversion"></A>
+	
+	<br>
+	
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 14: PDF to Image Conversion</B> 
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#14_1">14.1 Page.ToImage Method</A><BR>
+	<A HREF="#14_2">14.2 CMYK-to-RGB Conversion</A><BR>
+	<A HREF="#14_3">14.3 Error Log</A><BR>
+	<A HREF="#14_4">14.4 Other ToImage Parameters</A><BR>
+	<A HREF="#14_5">14.5 Image Extraction</A><BR>
+	<A HREF="#14_6">14.6 Printing</A><BR>
+	<A HREF="#14_7">14.7 Structured Text Extraction</A><BR>
+
+	</B>
+	<P>
+	<A NAME="14_1"><FONT COLOR="#c06000"><B>14.1 Page.ToImage Method</B></FONT>
+	<Blockquote>
+	Starting with Version 2.0, AspPDF is capable of converting a PDF page
+	to an image via the method PdfPage.<B>ToImage</B>.
+	<P>
+	The ToImage method returns an instance of the PdfPreview object
+	which performs the PDF-to-image conversion and generates the page image. 
+	The image can then be saved to disk, memory or an HTTP stream. The ToImage method
+	accepts an optional PdfParam object or parameter string argument.
+	<P>
+	PdfPreview generates images in PNG format. This versatile image format
+	is ideal for the task since it supports true colors and uses artifact-free 
+	lossless compression. PNG format is fully supported by all major browsers.
+	<P>
+	
+	The following code sample generates a PDF document from a URL, saves/reopens it,
+	and converts page 1 of the document to an image.
+	The saving/reopening step is necessary because the PdfPage.ToImage method can only be used
+	on existing, not new, documents.
+	
+
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		Doc.ImportFromUrl "http://www.aspupload.com", "landscape=true"<P>
+
+		' Save and reopen as Page.Preview only works on new documents.<BR>
+		Set NewDoc = Pdf.OpenDocumentBinary( Doc.SaveToMemory )<P>
+
+		' Create preview for Page 1 at 50% scale.<BR>
+		Set Page = NewDoc.Pages(1)<BR>
+		Set Preview = Page.ToImage("ResolutionX=36; ResolutionY=36" )<P>
+
+		Preview.SaveHttp( "filename=preview.png" )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+		objDoc.ImportFromUrl( "http://www.aspupload.com", "landscape=true",<BR> 
+		&nbsp;&nbsp;&nbsp;Missing.Value, Missing.Value );<P>
+
+		// Save and reopen as Page.Preview only works on new documents.<BR>
+		IPdfDocument objNewDoc = <BR>
+		&nbsp;&nbsp;&nbsp;objPdf.OpenDocumentBinary( objDoc.SaveToMemory(), Missing.Value );<P>
+
+		// Create preview for Page 1 at 50% scale.<BR>
+		IPdfPage objPage = objNewDoc.Pages[1];<BR>
+		IPdfPreview objPreview = objPage.ToImage("ResolutionX=36; ResolutionY=36" );<P>
+
+		objPreview.SaveHttp( "filename=preview.png" );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_14/14_pdftoimage.asp">http://localhost/asppdf/manual_14/14_pdftoimage.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_14/14_pdftoimage.aspx">http://localhost/asppdf/manual_14/14_pdftoimage.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+
+	
+	By default, the resultant image's width and height in pixels match the page's width and height in user units.
+	For example, a standard US Letter page (8.5 x 11 inches or 612 x 792 user units)
+	becomes a 612 x 792 pixel image (in case of a landscape-oriented page,
+	the width and height of the image matches the height and width of the page, respectively.)
+	<P>
+
+	To set the page image to a desired size, the <i>ResolutionX</i> and <i>ResolutionY</i> parameters
+	to the <B>ToImage</B> method should be used. These parameters are 72 (dpi) by default.
+	
+	Note that in the code sample above, these parameters are both set to 36 which makes
+	the image dimensions half of what they would be by default. Setting these parameters to a
+	number larger (smaller) than 72 makes the resultant image proportionally larger (smaller).
+	The ResolutionX and ResolutionY values usually equal each other to avoid a distortion in the 
+	image's aspect ratio.
+	<P>
+	To obtain the pixel dimensions of the resultant image, use the PdfPreview object's properties
+	<B>Width</B> and <B>Height</B>.
+
+	</Blockquote>
+	<P>
+
+
+
+	<A NAME="14_2">
+	<FONT COLOR="#C06000"><B>14.2 CMYK-to-RGB Conversion</B></FONT>
+	<Blockquote>
+	Page images generated by the ToImage method are always in the RGB
+	color space, but the original PDF being converted to an image
+	may contain images and graphics in the CMYK color space, 
+	in which case they have to be converted to RGB.
+	<P>
+	To achieve reasonably good color reproduction, the ToImage method
+	performs a series of complex non-linear color transformations based on <i>profiles</i>, the standard color space
+	definitions established by the International Color Consortium (ICC). 
+	Profile-based CMYK-to-RGB conversion is a fairly slow process.
+	If your PDF document contains large high-resolution CMYK images and performance is of essence,
+	use the parameter <i>FastCMYK=True</i> which invokes a simple linear
+	formula for CMYK-to-RGB conversion and offers some performance improvement
+	at the expense of color-reproduction quality.
+	<P>
+	The following images demonstrate the effect of the <i>FastCMYK</i> parameter:
+
+	<P>
+
+	<table cellpadding=4 style="border: 1pt solid black; font-family: arial; font-size: 10pt; border-collapse: collapse">
+	<tr><th width=180 style="border: 1pt solid black">Original Document</th>
+		<th width=180 style="border: 1pt solid black">FastCMYK=False (default)</th>
+		<th width=180 style="border: 1pt solid black">FastCMYK=True</th></tr>
+
+	<tr><td align=center style="border: 1pt solid black"><img src="images/14_orig.png"></td>
+		<td align=center style="border: 1pt solid black"><img src="images/14_slow.png"></td>
+		<td align=center style="border: 1pt solid black"><img src="images/14_fast.png"></td>
+	</tr>
+	</table>
+	
+
+	</Blockquote>
+	<P>
+
+
+
+	<A NAME="14_3">
+	<FONT COLOR="#C06000"><B>14.3 Error Log</B></FONT>
+	<Blockquote>
+	The majority of PDF documents are self-sufficient since they embed all the fonts they use.
+	Documents like that make it easy and straightforward for PDF viewers such as Acrobat Reader and
+	PDF-to-image converters such as AspPDF to do their jobs.
+	<P>
+	Some PDF documents, however, only reference font names and do not embed the fonts themselves.
+	While large applications such as Acrobat have the luxury of being deployed with a whole library
+	of fonts they can use, AspPDF only contains the 14 required standard PDF fonts
+	in it and must rely on the fonts already installed on the system in case the PDF document
+	does not embed a certain font. Therefore, not every document can be rendered properly.
+	<P>
+	To help diagnose such issues, the PdfPreview object
+	provides the property <B>Log</B> that returns a string of errors encountered during the PDF-to-image conversion process.
+	Most of these errors are usually font-related. Error entries are separated by a pair of CRLFs.
+	To enable error logging, the parameter <B>Debug=True</B> must be used:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Preview = Page.ToImage( "ResolutionX=20; ResolutionY=20; <i>Debug=True</i>" )<BR>
+	Response.Write Preview.Log
+	</b></font>
+	<P>
+	A typical log string may look as follows:
+	<P>
+	<font color=red>
+	Font 'Palatino-Roman' was replaced by 'Helvetica'.
+	<P>
+	Could not find external TrueType font 'ArialUnicodeMS'.
+	</font>
+	<P>
+	</Blockquote>
+
+
+
+	<A NAME="14_4">
+	<FONT COLOR="#C06000"><B>14.4 Other ToImage Parameters</B></FONT>
+	<Blockquote>
+
+	A PDF page may contain a /Rotate attribute set to 90, 180 or 270 (degrees), which makes this
+	page appear in the landscape mode or upside-down. By default, the ToImage method takes the Rotate value
+	into account to orient the image appropriately. If, for whatever reason, the Rotate value needs to be ignored,
+	the parameter <i>IgnoreRotate</i> should be set to True.
+
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Preview = Page.ToImage( "...; <i>IgnoreRotate=True</i>" )<BR>
+	</b></font>
+
+	<P>
+
+	Also, some PDF pages contain /MediaBox and /CropBox attributes which are different from each other.
+	By default, the ToImage method uses the CropBox attribute to calculate the dimensions of the resultant image, 
+	which is consistent with the behavior of all major PDF viewers. If, for whatever reason, the MediaBox attribute needs to be used
+	instead (which usually covers a larger area than the CropBox), the parameter <i>IgnoreCropBox</i> should be set to True.
+	This may cause the image to include areas of the page that are normally invisible when viewed in a PDF viewer.
+
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Preview = Page.ToImage( "...; <i>IgnoreCropBox=True</i>" )<BR>
+	</b></font>
+	</Blockquote>
+
+
+
+
+
+	<A NAME="14_5">
+	<FONT COLOR="#C06000"><B>14.5 Image Extraction</B></FONT>
+	<Blockquote>
+
+	As an additional bonus, the PdfPreview object is capable 
+	of extracting images from a PDF page.
+	The method PdfPreview.<B>ExtractImage</B>
+	returns a new instance of the PdfPreview object
+	representing an image specified by a 1-based index. This image can then be saved the regular
+	way, via the methods Save, SaveToMemory or SaveHttp. If the specified index exceeds the number of images
+	on the page, ExtractImage returns <i>Nothing</i> (or <i>null</i> in C#.)
+	<P>
+	The images are always saved as PNGs as this is PdfPreview's format of choice. 
+	<P>
+	The following code snippet opens a PDF documents and saves all of the images from page 1 to disk:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		Set Doc = PDF.OpenDocument("c:\path\document.pdf")<BR>
+		Set Page = Doc.Pages(1)<P>
+    
+		Set Preview = Page.ToImage<P>
+
+		i = 1<BR>
+		Do While True<BR>
+		&nbsp;&nbsp;&nbsp;Set Image = Preview.ExtractImage(i)<BR>
+		&nbsp;&nbsp;&nbsp;If Image Is Nothing Then<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Do<BR>
+		&nbsp;&nbsp;&nbsp;Else<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image.Save "c:\path\image.png", False<BR>
+		&nbsp;&nbsp;&nbsp;End If<BR>
+		&nbsp;&nbsp;&nbsp;i = i + 1<BR>
+		Loop<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPDF = new PdfManager();<br>
+		IPdfDocument objDoc = objPDF.OpenDocument( @"c:\path\document.pdf", Missing.Value );<BR>
+		IPdfPreview objPreview = objDoc.Pages[1].ToImage(Missing.Value);<P>
+
+		int i = 1;<BR>
+		IPdfPreview objImage;<P>
+
+		while( ( objImage = objPreview.ExtractImage(i++) ) != null )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objImage.Save( @"c:\myprojects\aspdf\asp\files\image.png", false );<BR>
+		}<BR>
+	</font></TD></TR>
+	</table>
+
+
+	</Blockquote>
+
+
+	<A NAME="14_6">
+	<FONT COLOR="#C06000"><B>14.6 Printing</B></FONT>
+	<Blockquote>
+	<U><B>14.6.1 Individual Page Printing</B></U>
+	<P>
+	As of Version 2.1, the PdfPreview object offers automatic printing functionality 
+	via the method <B>SendToPrinter</B>. This method sends the image of a page contained in this PdfPreview
+	object to a printer.
+	<P>
+	The <B>SendToPrinter</B> method accepts two arguments: the local or network name of the printer
+	and, optionally, a parameter list adjusting the appearance of the printout.
+	As of Version 2.6.0.3, if the printer name is set to an empty string, the default printer name for the 
+	current machine is used.
+	<P>
+	The print quality is determined by the resolution of the image being printed. It is therefore recommended
+	that the <i>ResolutionX</i> and <i>ResolutionY</i> parameters to the <B>ToImage</B> method be set to at least 300
+	or, better yet, 600.
+	<P>
+	By default, the <B>SendToPrinter</B> method prints the image as it is, without stretching it. If the parameter <i>Stretch</i>
+	is set to True, the image is stretched to cover the entire print area. Additionaly,
+	you can use the parameters <i>ScaleX</i> and <i>ScaleY</i> to scale the image up or down.
+	For example, the values "ScaleX = 0.5; ScaleY= 0.5" scales the image down by 50%.
+	<P>
+	The following code sample sends page 2 of c:\path\document.pdf to the printer. 
+	The image is stretched to cover the entire print area.
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		Set Doc = PDF.OpenDocument("c:\path\document.pdf")<BR>
+		Set Page = Doc.Pages(2)<P>
+    
+		Set Preview = Page.ToImage("ResolutionX=600; ResolutionY=600")<P>
+
+		Preview.SendToPrinter "\\192.168.1.2\HP LaserJet 6P", "Stretch=true"
+
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPDF = new PdfManager();<br>
+		IPdfDocument objDoc = objPDF.OpenDocument( @"c:\path\document.pdf", Missing.Value );<BR>
+		IPdfPage objPage = objDoc.Pages[2];<P>
+
+		IPdfPreview objPreview = objPage.ToImage("ResolutionX=600; ResolutionY=600");<P>
+
+		objPreview.SendToPrinter( @"\\192.168.1.2\HP LaserJet 6P", "Stretch=true" );
+	</font></TD></TR>
+	</table>
+
+	<P>
+
+	You may encounter the error "Access is denied" when attempting to send the image to a network printer. To avoid
+	the error, you need to impersonate an interactive user account with the <B>LogonUser</B> method 
+	of the PdfManager object, as follows:
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		...<P>
+		
+		PDF.LogonUser "domain", "username", "password"<P>
+
+		Preview.SendToPrinter "\\192.168.1.2\HP LaserJet 6P", "Stretch=true"
+
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		...<P>
+
+		objPDF.LogonUser( "domain", "username", "password", Missing.Value );<P>
+
+		objPreview.SendToPrinter( @"\\192.168.1.2\HP LaserJet 6P", "Stretch=true" );
+	</font></TD></TR>
+	</table>
+
+	<P>
+	The <B>LogonUser</B> method was added in Version 2.1 as well. The first argument is a Windows domain
+	and can be an empty string. The 2nd and 3rd arguments are the username and password of the account to be impersonated.
+	The 4th argument is the login type and usually omitted.
+
+	<P>
+	<A NAME="14_6_2">
+	<U><B>14.6.2 Document Printing</B></U>
+	<P>
+	As of Version 2.7, the page printing functionality described in the previous sub-section
+	has been expanded to support the printing of an entire document or any portion thereof,	
+	in both simplex (one-sided) and duplex (double-sided) modes.
+	<P>
+	In AspPDF 2.7+, the PdfDocument object has been given its own <B>SendToPrinter</B> method
+	which sends the entire document (or an arbitrary set of pages)
+	to the printer as opposed to just an individual page.
+	Internally, the PdfDocument.SendToPrinter method iterates through the pages 
+	of the document, creates PdfPreview objects for each of them and sends the page images to the printer
+	one by one. If your printer supports duplex printing, this method can optionally print
+	double-sided documents in both long-edge and short-edge binding modes.
+	<P>
+	The <B>PdfDocument.SendToPrinter</B> method expects the same arguments as its PdfPreview.SendToPrinter counterpart:
+	the printer name (local or network) and a list of parameters.
+	In addition to the parameters described above, this method also accepts
+	parameters controlling the duplex mode, as well as the page ranges to be printed.
+	<P>
+	The <i>Duplex</i> parameter controls duplex printing. <i>Duplex=1</i>
+	enables duplex printing in the regular long-edge-binding
+	mode, and <i>Duplex=2</i> in the short-edge binding mode. If this parameter 
+	is set to 0 or omitted, the regular simplex (one-sided) printing is used.
+	<P>
+	The <i>From1/To1</i>, <i>From2/To2</i>, ..., <i>FromN/ToN</i>
+	pairs of parameters specify the ranges of pages to be printed.
+	Page indices are 1-based. If the specified ranges overlap,
+	the overlapping pages will be printed multiple times.
+	By default, the entire document is printed.
+	<P>
+	The following code prints pages 2, 5, and 7-10 of a document 
+	in a duplex long-edge-binding mode:
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Doc = Pdf.OpenDocument( "c:\path\doc.pdf" )<P>
+
+		Doc.SendToPrinter "Brother HL-2270DW series", _<BR>
+		&nbsp;&nbsp;&nbsp;"Stretch=true; Duplex=1; From1=2;To1=2; From2=5;To2=5; From3=7;To3=10"
+
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		PdfDocument objDoc = objPdf.OpenDocument( @"c:\path\doc.pdf" );<P>
+
+		objDoc.SendToPrinter( "Brother HL-2270DW series", <BR>
+		&nbsp;&nbsp;&nbsp;"Stretch=true; Duplex=1; From1=2;To1=2; From2=5;To2=5; From3=7;To3=10" );
+	</font></TD></TR>
+	</table>
+
+	<P>
+	As of Version 2.9, the PdfDocument.SendToPrinter method also supports printer tray (or bin) selection via the <i>Tray</i>
+	parameter. The Microsoft documentation defines the following values for this parameter:
+	<P>
+	First (1), upper (1), only one (1), lower (2), middle (3), manual (4), envelope (5), envelope manual (6), auto (7), 
+	tractor (8), small format (9), large format (10), large capacity (11), cassette (14), form source (15), last (15).
+	<P>
+	However, many printers use driver-specific tray values that start at 256 and up. The correct <i>Tray</i> values
+	for such printers should be determined by trial and error.
+	<P>
+	As of Version 3.2.0.2, the PdfDocument.SendToPrinter method also supports printing multiple copies
+	via the <i>Copies</i> parameter (1 by default.)
+
+
+	
+	
+	</Blockquote>
+
+	<A NAME="14_7">
+	<FONT COLOR="#C06000"><B>14.7 Structured Text Extraction</B></FONT>
+	<Blockquote>
+	As of version 2.8, the PdfPreview object has been expanded to perform yet another useful task: 
+	extracting text strings from the document along with their respective coordinates.
+	This feature enables you to know exactly where on the page a particular text item is.
+	Regular (coordinate-less) text extraction is described in <A HREF="manual_09.html#9_4">Section 9.4 - Content Extraction</A>.
+	<P>
+	PdfPreview's <B>TextItems</B> property returns a collection of objects,
+	each encapsulating the text fragment and its respective coordinates and dimensions.
+
+	To avoid adding a new object to AspPDF's already populous object diagram,
+	we have retrofitted the <B>PdfRect</B> for the task by adding a new <B>Text</B> property to this object
+	which returns the actual fragment of text in Unicode format.
+	The existing PdfRect properties, <B>Left</B>, <B>Bottom</B>, <B>Width</B> and <B>Height</B>,
+	return the coordinates of the lower-left corner and horizontal and vertical dimensions of the fragment, respectively.
+	<P>
+	To populate the <B>TextItems</B> collection, the <B>PdfPage.ToImage</B> method
+	must be called with the parameter <i>ExtractText</i> set to a non-zero value.
+	<I>ExtractText</i> can be a combination (sum) of the following flags:
+	<P>
+	<UL>
+	<li>Bit 1 (1): Enables text extraction. If this flag is not set, text extraction is not performed and the <B>TextItems</B> collection
+	is empty.</li>
+	<li>Bit 2 (2): Sorts text fragments in the order from top to bottom, and from left to right. 
+	If this flag is not set, the text fragments in the <B>TextItems</B> collection appear
+	in an arbitrary order.</li>
+	<li>Bit 3 (4): Glues adjacent text fragments together. If this flag is not set, 
+	a single text fragment may contain a single word, a part of the word or even a single character.
+	Setting this flag usually combines all or most text fragments of a paragraph line into a single long
+	string. For this flag to work, bit 2 must also be set.</li>
+	<li>Bit 4 (8): Does not glue adjacent text fragments if there is a space character separating them.
+	For this flag to work, flags 2 and 3 must also be set.</li>
+	</ul>
+	<P>
+	The following code sample draws red outlines around all text fragments it finds on a page,
+	as well as the order in which each fragment is encountered in the collection
+	(as shown on the image below.)
+	<P>
+	<IMG SRC="images/14_textextract.png">
+	<P>
+
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = PDF.OpenDocument( Server.MapPath("population.pdf"))<BR>
+		Set Page = doc.Pages(1)<BR>
+		Set Preview = Page.ToImage("extracttext=7") ' sort/glue<P>
+    
+		Page.Canvas.LineWidth = 0.5<BR>
+		Page.Canvas.SetFillColor 1, 0, 0<P>
+    
+		Dim i: i = 1<P>
+    
+		For Each rect In Preview.TextItems<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.SetColor 1, 0, 0<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.SetFillColor 1, 0, 0<P>
+        
+		&nbsp;&nbsp;&nbsp;' Red outline<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawRect rect.Left, rect.Bottom, rect.Width, rect.Height<P>
+        
+		&nbsp;&nbsp;&nbsp;'Small box on top to display count<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.FillRect rect.Left, rect.Top, 10, 5<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawRect rect.Left, rect.Top, 10, 5<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawText i, "x=" & rect.Left + 1 & "; y=" & rect.Top + 6 & ";color=white; size=5", Doc.Fonts("Helvetica")<p>
+        
+		&nbsp;&nbsp;&nbsp;i = i + 1<BR>
+		Next<P>
+    
+		Filename = Doc.Save( Server.MapPath("extracttext.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<BR>
+		IPdfDocument objDoc = objPdf.OpenDocument(Server.MapPath("population.pdf"), Missing.Value);<BR>
+		IPdfPage objPage = objDoc.Pages[1];<BR>
+		IPdfPreview objPreview = objPage.ToImage("extracttext=7"); // sort/glue<P>
+    
+		objPage.Canvas.LineWidth = 0.5f;<BR>
+		objPage.Canvas.SetFillColor( 1, 0, 0 );<P>
+    
+		int i = 1;<P>
+    
+		foreach( IPdfRect rect in objPreview.TextItems )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.SetColor( 1, 0, 0 );<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.SetFillColor( 1, 0, 0 );<P>
+        
+		&nbsp;&nbsp;&nbsp;// Red outline<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawRect( rect.Left, rect.Bottom, rect.Width, rect.Height );<P>
+        
+		&nbsp;&nbsp;&nbsp;// Small box on top to display count<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.FillRect( rect.Left, rect.Top, 10, 5 );<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawRect( rect.Left, rect.Top, 10, 5 );<BR>  
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawText( i.ToString(), "x=" + (rect.Left + 1).ToString() + "; y=" + (rect.Top + 6).ToString() + ";color=white; size=5", <BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objDoc.Fonts["Helvetica", Missing.Value] );<P>
+
+			i++;<BR>
+		}<P>
+
+		String strFilename = objDoc.Save( Server.MapPath("extracttext.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click on the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_14/14_extracttext.asp">http://localhost/asppdf/manual_14/14_extracttext.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_14/14_extracttext.aspx">http://localhost/asppdf/manual_14/14_extracttext.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+
+
+	</Blockquote>
+
+	
+
+	<A HREF="manual_15.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 15: Color Spaces"></A>
+	<A HREF="manual_13.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 13: HTML to PDF Conversion"></A>
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

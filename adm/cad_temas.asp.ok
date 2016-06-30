@@ -1,0 +1,26 @@
+<!-----#include file="includes/SmartSourceI.asp"-->
+	<!-- #INCLUDE FILE="include/topo.asp" -->
+
+<%
+'---------------------------------------------------------------
+	gpTabela = "temas"
+	gpOrdemLista = "tema"
+	gpDelimChave = "" 
+	gpBarraFerramentas = "sim"
+	gpPalavraParaTituloSingular = "Tema"
+	gpPalavraParaTituloPlural = "Temas"
+	gpBotaoNovo = "sim"
+'	gpExecAlterar = "NovoAltera"		
+'	gpExecAposLer = "coletadados"	
+	gpBotaoExcluir = "não"
+	gpVerificaAutorizacao = "não"
+	'gpSQL = "Select * from worker where queue_id > 0"
+	' o campo 0 é a chave de acesso ao registro
+	gpNovoCampo  0,"A","id_tema","","200","Left","",gcNUM,"4","6","auto,escondido"
+	gpNovoCampo  1,"LA","tema","Temas","800","Left","",gcTEXTO,"100","50","req"
+
+	DistribuiOperacoes
+	response.end
+'---------------------------------------------------------------
+
+%>

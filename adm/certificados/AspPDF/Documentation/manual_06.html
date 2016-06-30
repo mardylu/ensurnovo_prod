@@ -1,0 +1,773 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 6: Text and Fonts</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 6: Text and Fonts
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_07.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 7: Tables"></A>
+	<A HREF="manual_05.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 5: Image and Graphics Objects"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 6: Text and Fonts</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#6_1">6.1 Overview of Canvas.DrawText method</A><BR>
+	<A HREF="#6_2">6.2 Font Management</A><BR>
+	<A HREF="#6_3">6.3 Hebrew and Arabic Character Handling</A><BR>
+	<A HREF="#6_4">6.4 HTML Support</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="6_1">
+	<FONT COLOR="#C06000"><B>6.1 Overview of Canvas.DrawText method</B></FONT>
+	<Blockquote>
+	Text is placed on a canvas via the <B>DrawText</B> method
+	which takes three arguments: a Unicode string containing text
+	to be printed, a parameter object (or parameter string),
+	and a font object. This method returns the number 
+	of characters successfully printed. This number may be
+	less than the length of the original string
+	if the whole text did not fit in the space allocated for it.
+
+	<P>
+	<B><U>6.1.1 Bounding Box Parameters</U></B>
+	<P>
+	Besides the text and font arguments, the DrawText method takes 
+	quite a few numeric and Boolean parameters passed in via a parameter object 
+	or parameter string. The only two
+	required parameters are X and Y that specify the coordinates of 
+	the upper-left corner of a bounding box inside which the text string will be displayed,
+	as follows:
+	<P>
+	<IMG SRC="images/06_text.gif">
+	<P>
+	The vertical distance between the baseline (bottom of capital letters) of the first
+	line of text and the top of the bounding box equals the current font size which is
+	10 by default (at first). Font size can be specified via the <i>Size</i> parameter.
+	Once font size is explicitly specified, it becomes the default size
+	for this font. 
+	<P>
+	By default, the bounding box extends indefinitely to the right and downwards.
+	If the <i>Width</i> parameter is specified, 
+	the bounding box becomes closed on the right, and the DrawText method will 
+	perform word wrapping, if necessary. If <i>Width</i>
+	is specified, it is also possible to set <i>Alignment</i>
+	to <B>right</B> (1) or <b>center</B> (2). By default,
+	<I>Alignment</i> is set to <b>left</b> (0). Text justification 
+	(alignment on both the left and right sides) is also possible, but only via 
+	HTML (see <A HREF="#6_4">Section 6.4</A> below).
+	<P>
+	If both the <i>Width</i> and <i>Height</i> parameter are specified, 
+	the bounding box becomes closed from all sides, and only the portion
+	of the text string that fits in the box will be displayed. 
+	DrawText will then return the number of characters that were successfully displayed.
+	If even
+	a single line of text cannot fit in the height provided, no text will
+	be displayed at all, and DrawText will return 0.
+	<P>
+	Example:
+	<P>
+	<font face="courier new"><B>
+	Page.Canvas.DrawText "Hello World!", "x=10, y=20; width=400; height=200; size=15; alignment=center", Doc.Fonts("Courier")
+	</B></font>
+	<P>
+	<A NAME="6_1_2">
+	<B><U>6.1.2 Rendering Parameter</U></B>
+	<P>
+	The <i>Rendering</i> parameter (0 by default) determines whether showing text causes
+	character outlines to be stroked, filled, used as a clipping
+	boundary, or some combination  of the three, as follows:
+	<P>
+	<IMG SRC="images/06_render.gif">
+	<P>
+	<B><U>6.1.3 Other Parameters</U></B>
+	<P>
+	Other DrawText parameters include:
+	<P>
+	<I>Color</I>: a standard color constant (such as <B>red</B> or <B>blue</B>)
+	or a hex RGB value. This parameter is set to black (&H000000) by default.
+	<P>	
+	<I>Angle</i>: specifies the angle (in degrees) by which the text
+	should be rotated counter-clockwise around the upper-left corner of 
+	the bounding box. This parameter is set to 0 by default.
+	<P>
+	<I>Spacing</i>: This parameter controls the distance between
+	individual lines of text. By default, this parameter is 1. Set it to
+	a number greater than 1 to widen the distance between lines,
+	and to a number between 0 and 1 to narrow it down.
+	<P>
+	 <i>Tab</i>: This parameter controls how
+	 wide an indent should be when a tab character is encounterd.
+	 The indent is measured in space characters.
+	 This parameter is 10 by default which means the default
+	 tab indent is as wide as 10 space characters.
+	 <P>
+	 <i>HTML</i>: If set to True, this parameter informs the DrawText
+	 method that the text string is to be treated as HTML.
+	 Support for HTML tags is described in detail in <A HREF="#6_4">Section 6.4</A> of this chapter.
+	 False by default.
+	 <P>
+	 <i>ColorSpace</i>, <i>c1</i>, <i>c2</i>, ..., <i>cN</i>: These
+	 parameters were introduced in version 2.7 to enable colors from color spaces
+	 other than RGB or CMYK to be specified.
+	 See <A HREF="manual_15.html#15_4">Section 15.4 - Using Color Spaces with PdfTable and Other Objects</A>
+	 for more info. 
+	 <P>
+	 The Boolean parameter <i>ReverseHebrewArabic</i> will be described 
+	 in <A HREF="#6_3">Section 6.3</A> of this chapter.
+	 <P>
+
+
+	<P>
+	<A NAME="6_1_4">
+	<B><U>6.1.4 Code Sample: Spanning Multiple Pages</U></B>
+	<P>
+	The following code sample
+	displays a user-specified text string on a page, and if it does not fit, 
+	more pages are added to the document as necessary:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		Set page = Doc.Pages.Add( 216, 216 )<P>
+    
+		Text = Request("largetext")<P>
+
+		Set Font = Doc.Fonts("Times-Roman")<BR>
+		
+		Set param = pdf.CreateParam("x=10;y=206;height=196;width=196; size=30;")<P>
+	    
+		Do While Len(Text) > 0<BR>
+		&nbsp;&nbsp;&nbsp;CharsPrinted = Page.Canvas.DrawText(Text, param, Font)<P>
+
+		&nbsp;&nbsp;&nbsp;if CharsPrinted = Len(Text) Then Exit Do<P>
+
+		&nbsp;&nbsp;&nbsp;Set Page = Page.NextPage<BR>
+		&nbsp;&nbsp;&nbsp;Text = Right( Text, Len(Text) - CharsPrinted)<BR>
+		Loop<P>
+
+		Filename = Doc.Save( Server.MapPath("text.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPDF = new PdfManager();<BR>
+	IPdfDocument objDoc = objPDF.CreateDocument(Missing.Value);<BR>
+	IPdfPage objPage = objDoc.Pages.Add(216, 216, Missing.Value);<P>
+    
+	IPdfFont objFont = objDoc.Fonts["Times-Roman", Missing.Value];<BR>
+	String strText = txtLargeText.Text;<BR>
+	IPdfParam objParam = objPDF.CreateParam("x=10;y=206;height=196;width=196; size=30;");<P>
+	
+	while( strText.Length > 0 )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;int nCharsPrinted = objPage.Canvas.DrawText(strText, objParam, objFont);<P>
+
+	&nbsp;&nbsp;&nbsp;if( nCharsPrinted == strText.Length )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<P>
+
+	&nbsp;&nbsp;&nbsp;objPage = objPage.NextPage;<BR>
+	&nbsp;&nbsp;&nbsp;strText = strText.Substring( nCharsPrinted );<BR>
+	}<P>
+
+	String strFilename = objDoc.Save( Server.MapPath("mask.pdf"), false );
+	</font></TD></TR>
+	</table>
+
+	<P>
+	The property <B>Page.NextPage</B> returns the page following this one.
+	If this is the last page, a new page is created.
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_06/06_text.asp">http://localhost/asppdf/manual_06/06_text.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_06/06_text.aspx">http://localhost/asppdf/manual_06/06_text.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+	</Blockquote>
+
+	
+	<A NAME="6_2">
+	<FONT COLOR="#C06000"><B>6.2 Font Management</B></FONT>
+	<Blockquote>
+	The third argument to the <B>DrawText</B> method is an instance
+	of <B>PdfFont</B>, an object that encapsulates
+	a particular font to be used for text rendering. PdfFont objects are obtained via the <B>PdfFonts</B>
+	collection returned by PdfDocument's <B>Fonts</B> property.
+	<P>
+	A font object can be obtained from the <B>PdfFonts</b> collection
+	in two ways: via the default parameterized <B>Item</B> property,
+	or via the <B>LoadFromFile</B> method. The Item property
+	expects two arguments: a font name, and optionally character set.
+	This property only allows you to retrieve fonts that are currently
+	<i>installed</i> on the machine and appear in the Fonts control panel,
+	and also the 14 built-in PDF fonts (described below).
+	<P>
+	<B>LoadFromFile</B>, on the other hand, enables you to load
+	TrueType or OpenType fonts from .ttf or .otf files. 
+	Such font do not have to be installed on the machine.
+
+	<P>
+	<B><U>6.2.1 The 14 Standard Fonts</u></B>
+	<P>
+	All PDF viewer applications are guaranteed to recognize the following
+	14 fonts, known as the <i>standard fonts</i>:
+	<P>
+	<table style="font-face: arial; font-size=12" cellspacing="3">
+	<tr><td>Times-Roman</td><td>Helvetica</td><td>Courier</td><td>Symbol</td></tr>
+	<tr><td>Times-Bold</td><td>Helvetica-Bold</td><td>Courier-Bold</td><td>ZapfDingbats</td></tr>
+	<tr><td>Times-Italic</td><td>Helvetica-Oblique</td><td>Courier-Oblique</td></tr>
+	<tr><td>Times-BoldItalic</td><td>Helvetica-BoldOblique</td><td>Courier-BoldOblique</td></tr>
+	</table>
+	
+	<P>
+	To obtain such a font, pass the font name (including a dash
+	character, if applicable) to the <b>PdfFonts.Item</B> property, and
+	omit the 2nd optional argument, for example:
+	<P>
+		<font face="courier new" size="2"><B>
+	<B>Set Font = Doc.Fonts.Item("Times-Bold")</B>
+	</B></FONT>	
+	<P>
+	or simply<P>
+	<font face="courier new" size="2"><B>
+	<B>Set Font = Doc.Fonts("Times-Bold")</B>
+	</B></FONT>	
+	<P>
+	The word <i>Item</i> can be omitted because it is PdfFonts' default property. In C#,
+	the syntax is
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>IPdfFont objFont = objDoc.Fonts["Times-Bold", Missing.Value]</B>
+	</B></FONT>	
+	<P>
+	The advantage of using a standard font as opposed to
+	an arbitrary TrueType font
+	is that the size of your PDF document is reduced because standard fonts
+	do not have to be embedded in the document.
+	However, the standard fonts are limited to only a few
+	simple fonts, and have no support for foreign
+	alphabets. To compensate for these limitations,
+	AspPDF supports the use of arbitrary TrueType or OpenType
+	fonts.
+	<P>
+	See <A HREF="manual_B.html">Appendix B - Special Font Tables</A> for the
+	Symbol and ZapfDingbats glyphs and their respective numeric codes.
+	
+	<P>
+	<B><U>6.2.2 Using TrueType Fonts</u></B>
+	<P>
+	If anything other than a standard font name is passed
+	to <b>PdfFonts.Item</B>
+	<i>or</i> if the second CharSet argument is set to anything other than 0,
+	the PdfFonts object will look for the specified font supporting the specified character set
+	among the fonts currently installed on the machine.
+	If a font matching these criteria is found, a corresponding PdfFont
+	object is returned. Otherwise, an error exception is thrown.
+	<P>
+	AspPDF can also open a .ttf or .otf file containing a TrueType
+	or OpenType font directly via the method <B>PdfFonts.LoadFromFile</B>
+	which expects a full path to the font file, as follows:
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Set Font = Doc.Fonts.LoadFromFile("c:\windows\fonts\arial.ttf")</B>
+	</B></FONT>
+	<P>
+	As of Version 2.9.0.1, the <B>LoadFromFile</B> method supports <B>TTC</B> files as well, which are TrueType collections
+	containing multiple TrueType fonts. By default, <B>LoadFromFile</B> loads the very first font in the collection.
+	To load an arbitrary font, the 1-based font index must be appended to the TTC path, separated by a comma.
+	The following line of code loads font #2 from the TrueType font collection <i>gulim.ttc</i>:
+	<P>
+	<font face="courier new" size="2"><B>
+	<B>Set Font = Doc.Fonts.LoadFromFile("c:\windows\fonts\gulim.ttc,2")</B>
+	</B></FONT>
+	
+	<P>A TrueType or OpenType font must contain a Unicode encoding table
+	for AspPDF to be able to use it. An attempt to use
+	a font that does not have such a table will result in an error exception.
+	Most Windows fonts do have it.
+	<P>
+	AspPDF always embeds a TrueType font in the PDF document
+	it creates. It does so in an optimized manner: only the glyphs
+	(character shapes) that are used by the document are embedded,
+	not the entire font.
+
+	<P>
+	<A NAME="6_2_3">
+	<B><U>6.2.3 Copyright Issues</u></B>
+	<P>
+	Just like software, fonts are considered intellectual property
+	and are subject to copyright protection and licensing. 
+	If you are using a non-standard
+	font in your PDF document, you must carefully examine
+	this font's embedding licensing rights to avoid 
+	potential legal problems.
+	<P>
+	All TrueType fonts contain <i>embedding flags</i>
+	that indicate embedding licensing rights for the font. The <B>PdfFont</B>
+	object exposes this value via the <B>Embedding</B> property.
+	The possible values are:
+	<P>
+	<ul>
+	<li>0: Installable embedding allowed.<BR>
+	<li>2: Restricted license embedding. No embedding allowed.<BR>
+	<li>6: Print & Preview embedding allowed.  Font may be embedded in a document but installed
+	temporarily on remote system. Documents can only be opened read-only.
+	<li>10: Editable embedding only, fonts may be embedded but must only be installed temporarily on remote system.
+	</ul>
+	<P>
+	The value of 2 prohibits embedding, so we recommend using the following
+	check when using an external font:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Font = Doc.Fonts.LoadFromFile("c:\winnt\fonts\somefont.ttf")<BR>
+	If Font.Embedding = 2 Then<BR>
+	&nbsp;&nbsp;&nbsp;Response.Write "Embedding of this font is prohibited."<BR>
+	&nbsp;&nbsp;&nbsp;Set Font = Nothing<BR>
+	End If</B>
+	</FONT>
+	<P>
+	<font color="red">Note that AspPDF ignores the embedding flags, so it is the application 
+	developer's	responsibility to perform the licensing rights check shown above.
+	If in doubt, contact the font's vendor.</font>
+
+	</Blockquote>
+
+	<A NAME="6_3">
+	<FONT COLOR="#C06000"><B>6.3 Hebrew and Arabic Character Handling</B></FONT>
+	<Blockquote>
+	AspPDF's font-related functionality includes support for the
+	Hebrew and Arabic right-to-left alphabets. It also includes
+	the functionality to handle Arabic ligatures.
+	<P>
+	<B><u>6.3.1 Right-to-Left Writing</u></b>
+	<P>
+	The <i>ReverseHebrewArabic</i> parameter of the <B>DrawText</B> method,
+	if set to True, reverses the sequence of
+	Hebrew and Arabic characters in a text string, while leaving
+	other alphabets' characters and punctuation marks in their regular order.
+	Setting this parameter to True is usually combined with 
+	setting the <i>Alignment</i> parameter to <b>right</b> (1) as Hebrew
+	and Arabic texts are usually aligned to the right.
+
+	<P>
+	<B><u>6.3.2 Arabic Ligatures</u></b>
+	<P>
+	When Arabic characters are encountered, AspPDF automatically 
+	converts individual character codes into "ligatures"
+	(contextual joinings of letters), for example:
+	<P>
+	<IMG SRC="images/06_arabic.gif">
+
+	</Blockquote>
+
+	<A NAME="6_4">
+	<FONT COLOR="#C06000"><B>6.4 HTML Support</B></FONT>
+	<Blockquote>
+	In order to facilitate text formatting, text strings
+	passed to the Canvas.DrawText method may contain certain HTML tags.
+	You must let DrawText know that the string
+	is to be treated as HTML by setting an additional parameter,
+	<i>HTML</i>, to <B>true</B>, e.g.
+	<P>
+	<font face="courier new" size="1">
+	Canvas.DrawText "For more info, click &lt;A HREF=""http://www.zzz.com"">&lt;U>here&lt;/U>&lt;/A>", "x=10; y=20; html=true", Font
+	</font>
+	<P>
+	<B><u>6.4.1 Supported Tags and Syntax</u></b>
+	<P>
+	The following HTML tags are currently supported:
+	<P>
+	<font color="darkviolet" face="courier new"><B>
+	&lt;A HREF="..."><BR>
+	&lt;B><BR>
+	&lt;BR><BR>
+	&lt;CENTER><BR>
+	&lt;DIV ALIGN="..." STYLE="..."><BR>
+	&lt;FONT SIZE="..." FACE="..." COLOR="..."><BR>
+	&lt;FONT STYLE="..."><BR>
+	&lt;I><BR>
+	&lt;P><BR>
+	&lt;SUB><BR>
+	&lt;SUP><BR>
+	&lt;U><BR>
+	&lt;S><BR>
+	</B></font>
+	<P>
+	All other tags are ignored. Each attribute value inside a tag must be enclosed in double-quotes, otherwise the attribute
+	will be ignored altogether. All attributes are optional.
+	Tags and attributes are case-insensitive.
+	The CR (13), LF (10) and Tab (9) characters are treated as spaces. 
+	Multiple consecutive space characters are treated as a single space.
+	<P>
+	The <B>SIZE</B> attribute of a &lt;FONT> tag must be an integer between 1 and 7
+	which corresponds to absolute font size of 
+	7.5, 10, 12, 13.5, 18, 24 and 36, respectively (in default user units).
+	To specify an arbitrary font size, use the <B>STYLE</B> attribute described below.
+	By default, font size is set to 10 (or the value of the <i>Size</i> parameter passed to the DrawText method.)
+	<P>	
+	The <B>FACE</B> attribute of a &lt;FONT> tag specifies a font name
+	to be used to draw text that follows the tag.
+	By default, the font object passed to the DrawText method as an argument is used.
+	You must always specify a font family, such as "Courier New", instead of a
+	specific font name such as "Courier New Bold". To draw text in
+	bold, italic, or both, you must use the
+	tags &lt;B> and &lt;I>, or style attributes <B>font-weight</B> and <B>font-style</B> (described below).
+	<P>
+	For example, the following text string will be displayed using four different fonts,
+	Arial, Arial Bold, Arial Bold Italic, and Arial Italic:
+	<P>
+	<font color="blue">
+	"&lt;FONT FACE=""Arial"">Happy &lt;B>Birthday &lt;i>To&lt;/b> You&lt;/i>&lt;/FONT>"
+	<br>
+	</font>Output<font color="blue">: <FONT FACE="Arial">Happy <B>Birthday <i>To</b> You</i></FONT>
+	</font>
+	<P>
+	Note that to be able to use the &lt;B> and &lt;I> tags, the respective
+	font styles must be installed on your system, 
+	or an error exception will be thrown. AspPDF will
+	not attempt to replace a missing font with a similar one.
+	<P>
+	The <B>COLOR</B> attribute of a &lt;FONT> tag specifies font color. 
+	A color can be specified either by name or a Hex value prefixed by #, e.g.
+	<P>
+	<font color="blue">
+	&lt;FONT COLOR="violet"><BR>
+	&lt;FONT COLOR="#EE82EE">
+	</font>
+	<P>
+	By default,
+	the color is set to black (#000000) or whatever value specified by the <i>Color</i> parameter passed to DrawText.
+	<P>
+	The <B>STYLE</B> attribute of the &lt;FONT> and &lt;DIV> tags allows you to specify
+	various font attributes in a single tag using the Cascading Style Sheet (CSS) syntax.
+	The following CSS attributes are currently supported:
+	<P>
+	<font color="darkviolet" face="courier new"><B>
+	color<BR>
+	font-family<BR>
+	font-size (in <i>pt</i>, <i>in</i>, <i>cm</i> or <i>mm</i>)<BR>
+	font-style (<i>normal</i> or <i>italic</i>)<BR>
+	font-weight (<i>normal</i> or <i>bold</i>)<BR>
+	text-decoration (<i>none</i> or <i>underline</i>)
+	</B></font>
+	<P>
+	For example:
+	<P>
+	<font color="blue">
+	&lt;FONT STYLE="font-family: Arial; font-size: 12pt; font-weight: bold; color: red"><BR>
+	</font>
+	<P>
+	Text alignment to the left, center, right, and both sides is to be specified via a &lt;DIV> tag
+	with the <B>ALIGN</B> attribute set to "left", "center", "right", and "justify", respectively.
+	<P>
+	In addition to the HTML tags mentioned above, the DrawText method recognizes
+	the following special symbols:
+	<P>
+	<font color="darkviolet" face="courier new"><B>
+	&amp;amp; (&amp;)<BR>
+	&amp;cent; (&cent;)<BR>
+	&amp;copy; (&copy;)<BR>
+	&amp;deg; (&deg;)<BR>
+	&amp;euro; (&euro;)<BR>
+	&amp;ge; (&ge;)<BR>
+	&amp;gt; (&gt;)<BR>
+	&amp;le; (&le;)<BR>
+	&amp;lt; (&lt;)<BR>
+	&amp;nbsp; (non-breakable space)<BR>
+	&amp;ne; (&ne;)<BR>
+	&amp;pound; (&pound;)<BR>
+	&amp;quot; (&quot;)<BR>
+	&amp;reg; (&reg;)<BR>
+	&amp;trade; (&trade;)<BR>
+	&amp;yen; (&yen;)<BR>
+	&amp;#<i>NNN</i>; (an arbitrary character with Unicode code <i>NNN</i>)<BR>
+	</B></font>
+	
+	<P>
+	<B><u>6.4.2 Spanning Multiple Pages</u></b>
+	<P>
+	If a text string does not fit in a single page, 
+	the DrawText method must be called on the next page and 
+	passed a remainder of the string, and this has to be repeated as many times
+	as necessary.
+	The size of the remainder is determined by the return value of DrawText
+	(see the code sample in <A HREF="#6_1_4">Section 6.1.4</A>.)
+	<P>
+	For the most part, this method applies to HTML strings as well, except that
+	by cutting off a portion of the string that has already been drawn on a previous
+	page we may inadvertently cut off HTML tags that are still in effect. As a result,
+	text on subsequent pages may not be displayed correctly.
+	<P>
+	To circumvent this problem, the PdfCanvas object provides a read-only <B>HtmlTag</B>
+	property which is populated by a call to DrawText if the <i>HTML</i> parameter
+	is set to true and
+	the specified text string does not fit in the page.
+	The property contains an HTML tag representing a set of font
+	attributes currently in effect. This tag should simply be prepended to the
+	remainder of the text string for the next call to DrawText.
+	<P>
+	The following code sample demonstrates this technique:
+	<P>
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	...<P>
+	' Load string from file<BR>
+	Text = Pdf.LoadTextFromFile(Server.MapPath("html.txt") )<P>
+	
+	Set param = pdf.CreateParam("x=10; y=290; width=280; height=280; html=true")<P>
+	
+	Do While Len(Text) > 0<BR>
+	&nbsp;&nbsp;&nbsp;CharsPrinted = Page.Canvas.DrawText(Text, param, Font )<P>
+
+	&nbsp;&nbsp;&nbsp;' Save HTML tag generated by DrawText to reflect current font state<BR>
+	&nbsp;&nbsp;&nbsp;HtmlTag = Page.Canvas.HtmlTag<P>
+
+	&nbsp;&nbsp;&nbsp;' We printed the entire string. Exit loop.<BR>
+	&nbsp;&nbsp;&nbsp;if CharsPrinted = Len(Text) Then Exit Do<P>
+
+	&nbsp;&nbsp;&nbsp;' Otherwise print remaining text on next page<BR>
+	&nbsp;&nbsp;&nbsp;Set Page = Page.NextPage<P>
+
+	&nbsp;&nbsp;&nbsp;Text = HtmlTag & Right( Text, Len(Text) - CharsPrinted)<BR>
+	Loop<P>
+	...
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	...<P>
+	String strText = objPDF.LoadTextFromFile( Server.MapPath("html.txt") );<P>
+	
+	IPdfParam objParam = objPDF.CreateParam("x=10; y=290; width=280; height=280; html=true");<P>
+	
+	while( strText.Length > 0 )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;// DrawText returns the number of characters that fit in the box allocated.<BR>
+	&nbsp;&nbsp;&nbsp;int nCharsPrinted = objPage.Canvas.DrawText( strText, objParam, objFont );<P>
+
+	&nbsp;&nbsp;&nbsp;// HTML tag generated by DrawText to reflect current font state<BR>
+	&nbsp;&nbsp;&nbsp;String strHtmlTag = objPage.Canvas.HtmlTag;<P>
+
+	&nbsp;&nbsp;&nbsp;// The entire string printed? Exit loop.<BR>
+	&nbsp;&nbsp;&nbsp;if( nCharsPrinted == strText.Length )<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<P>
+
+	&nbsp;&nbsp;&nbsp;// Otherwise print remaining text on next page<BR>
+	&nbsp;&nbsp;&nbsp;objPage = objPage.NextPage;<P>
+
+	&nbsp;&nbsp;&nbsp;strText = strHtmlTag + strText.Substring( nCharsPrinted );<BR>
+	}<P>
+	...
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_06/06_html.asp">http://localhost/asppdf/manual_06/06_html.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_06/06_html.aspx">http://localhost/asppdf/manual_06/06_html.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	<B><u>6.4.3 Issues and Limitations</u></b>
+	<P>
+	<UL>
+	<li>DrawText requires that attribute values in a tag be enclosed in double quotes, 
+	although most other HTML implementations do not require that.
+	<li>An &lt;A> tag cannot span multiple pages.
+	<li>An &lt;A> tag can only be used on a PdfCanvas object associated with a page.
+	It cannot be used on a PdfCanvas object associated with a graphics or table cell.
+	This limitation is due to the fact that HTML anchors (links) in PDF are implemented
+	via annotations, and an annotation can only be associated with a page.
+	<li>When the <i>HTML</i> parameter is set to True, the <i>ReverseHebrewArabic</i>
+	and <i>Angle</i> parameters are ignored.
+	</UL>
+
+	Starting with Version 1.6, AspPDF provides a much more extensive HTML support
+	via the <B>ImportFromUrl</B> method. For more information, see 
+	<A HREF="manual_13.html">Chapter 13 - HTML to PDF Conversion</A>.
+
+	</Blockquote>
+
+
+	<A HREF="manual_07.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 7: Tables"></A>
+	<A HREF="manual_05.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 5: Image and Graphics Objects"></A>
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

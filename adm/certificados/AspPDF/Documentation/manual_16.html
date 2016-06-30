@@ -1,0 +1,830 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 16: IE-based HTML-to-PDF Conversion</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 16: IE-based HTML-to-PDF Conversion
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_17.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Transparency"></A>
+	<A HREF="manual_15.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 15: Color Spaces"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 16: IE-based HTML-to-PDF Conversion</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#16_1">16.1 OpenUrl Method: Overview</A><BR>
+	<A HREF="#16_2">16.2 Pagination</A><BR>
+	<A HREF="#16_3">16.3 Hyperlinks</A><BR>
+	<A HREF="#16_4">16.4 Miscellaneous Parameters</A><BR>
+	<A HREF="#16_5">16.5 IE Compatibility Mode</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="16_1"></A>
+	<FONT COLOR="#C06000"><B>16.1 OpenUrl Method: Overview</B></FONT>
+	<Blockquote>
+	<P>
+	<B><u>16.1.1 OpenUrl vs. ImportFromUrl</u></b>
+	<P>
+	As of Version 2.9, AspPDF expands its HTML-to-PDF functionality
+	by adding a new method, <B>OpenUrl</B>, to the PdfDocument object. Like the <B>ImportFromUrl</B> method 
+	described in <A HREF="manual_13.html">Chapter 13</A>, <B>OpenUrl</B> helps convert an arbitrary URL, or an HTML string,
+	to a PDF document, but it does so differently.
+	<P>	
+	While <B>ImportFromUrl</B> relies on our own in-house HTML-rendering engine, <B>OpenUrl</B> delegates the job to
+	<B>Microsoft Internet Explorer</B> by connecting to the IE WebBrowser object residing in the MSHTML.dll library.
+	Harnessing the robust IE engine helps achieve the perfect PDF snapshot of any HTML document, no matter how complex, whereas
+	the ImportFromUrl method is only capable of rendering basic HTML.
+	<P>
+	However, unlike ImportFromUrl, the <B>OpenUrl</B> method produces a <i>rasterized</i> image of the HTML document. 
+	This method's output is essentially a static bitmap convertible to PDF. The scalability and searchability of the original
+	document is not preserved.
+	<P>
+
+	<B><u>16.1.2 OpenUrl Usage</u></b>
+
+	<P>
+	The PdfDocument.<B>OpenUrl</B> method expects four arguments: a URL or HTML string, a list of parameters, and a username and password.
+	The first argument is required, the others are optional. The method returns an instance of the <B>PdfImage</B>
+	object representing the image of the specified URL or HTML string. This image can then
+	be drawn on a PDF page via the PdfCanvas.<B>DrawImage</B> method in an arbitrary position and at an arbitrary scale.
+	By default, the entire web document is converted to a single image. Pagination is covered in the <A HREF="#16_2">next section</A>.
+
+	<P>
+
+	The following code sample converts our corporate web site <A HREF="http://www.persits.com"><B>http://www.persits.com</B></A> to a PDF:
+
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Create empty document<BR>
+		Set Doc = Pdf.CreateDocument<P>
+
+		' Add a new page<BR>
+		Set Page = Doc.Pages.Add<P>
+
+		' Convert www.persits.com to image<BR>
+		Set Image = Doc.OpenUrl( "http://www.persits.com" )<P>
+
+		' Shrink as needed to fit width<BR>
+		Scale = Page.Width / Image.Width<P>
+
+		' Align image top with page top<BR>
+		Y = Page.Height - Image.Height * Scale<P>
+		
+		' Draw image<BR>
+		Set Param = Pdf.CreateParam<BR>
+		Param("x") = 0<BR>
+		Param("y") = Y<BR>
+		Param("ScaleX") = Scale<BR>
+		Param("ScaleY") = Scale<BR>
+		Page.Canvas.DrawImage Image, Param<P>
+
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc.Save( Server.MapPath("iehtmltopdf.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<P>
+
+		// Add a new page<BR>
+		IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<p>
+
+		// Convert www.persits.com to image<BR>
+		IPdfImage objImage = objDoc.OpenUrl( "http://www.persits.com", Missing.Value, Missing.Value, Missing.Value );<P>
+
+		// Shrink as needed to fit width<BR>
+		float fScale = objPage.Width / objImage.Width;<P>
+
+		// Align image top with page top<BR>
+		float fY = objPage.Height - objImage.Height * fScale;<P>
+		
+		// Draw image<BR>
+		IPdfParam objParam = objPdf.CreateParam( Missing.Value );<BR>
+		objParam["x"].Value = 0;<BR>
+		objParam["y"].Value = fY;<BR>
+		objParam["ScaleX"].Value = fScale;<BR>
+		objParam["ScaleY"].Value = fScale;<BR>
+		objPage.Canvas.DrawImage( objImage, objParam );<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		string strFilename = objDoc.Save( Server.MapPath("iehtmltopdf.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_simple.asp">http://localhost/asppdf/manual_16/16_simple.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_simple.aspx">http://localhost/asppdf/manual_16/16_simple.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+
+	<B><u>16.1.3 Authentication</u></b>
+
+	<P>
+
+	If the URL being opened is protected with Basic authentication, the valid username and password must be passed to the <B>OpenUrl</B> method
+	as the 3rd and 4th arguments, as follows:
+
+	<P>
+
+	<font face="Courier New"><B>Set Image = Doc.OpenUrl( url, "", "username", "password" )</B></font>
+	<P>
+	Under .NET, the Username and Password arguments can instead be used to pass an authentication cookie
+	in case both the script calling OpenUrl and the URL itself
+	are protected by the same user account under .NET Forms authentication.
+	To pass a cookie to OpenUrl, the cookie name prepended with the prefix "Cookie:" is passed
+	via the Username argument, and the cookie value via the Password argument. 
+	The following example illustrates this technique.
+	<P>
+	Suppose you need to implement a "Click here for a PDF version of this page" feature 
+	in a .NET-based web application. The application is protected with .NET Forms Authentication:
+	<P>
+
+	<font size=2 face="courier new"><B>
+	&lt;authentication mode="Forms"><BR>
+	&nbsp;&nbsp;&lt;forms name="<font color=blue>MyAuthForm</font>" loginUrl="login.aspx" protection="All"><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;credentials passwordFormat = "SHA1"><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;user name="JSmith" password="13A23E365BFDBA30F788956BC2B8083ADB746CA3"/><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B> ... other users<B><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/credentials><BR>
+	&nbsp;&nbsp;&lt;/forms><BR>
+	&lt;/authentication><BR>
+	 </B></font>
+	<P>
+	The page that needs to be converted to PDF, say <B>report.aspx</B>, contains the button 
+	"Download PDF version of this report" that invokes another script, say <B>convert.aspx</B>, which 
+	calls OpenUrl. Both scripts reside in the same directory under the same protection.
+	<P>
+	If <B>convert.aspx</B> simply calls objDoc.OpenUrl( "http://localhost/dir/report.aspx", ... ),
+	the page that ends up being converted will be <B>login.aspx</B> and not <B>report.aspx</B>, because 
+	AspPDF itself has not been authenticated against the user database and naturally will be forwarded
+	to the login screen.
+	<P>
+	To solve this problem, we just need to pass the authentication cookie whose name is <font color=blue>MyAuthForm</font>
+	(the same as the form name) to OpenUrl. The following code (placed in <B>convert.aspx</B>) demonstrates this technique:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">	
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black ><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+        string <B>strName</B> = "Cookie:" + Request.Cookies[<font color="blue">"MyAuthForm"</font>].Name;<BR>
+        string <B>strValue</B> = Request.Cookies[<font color="blue">"MyAuthForm"</font>].Value;<P>
+
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<P>
+
+		// Add a new page<BR>
+		IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<p>
+
+		// Convert URL to image<BR>
+		IPdfImage objImage = objDoc.OpenUrl( "http://localhost/dir/report.aspx", Missing.Value, <B>strName</B>, <B>strValue</B> );<P>
+		...
+
+	</font></TD></TR>
+	</table>
+	
+
+	<P>
+
+	<B><u>16.1.4 Direct HTML Feed</u></b>
+
+	<P>
+
+	The first argument to the OpenUrl method can be used to directly pass an HTML string instead of a URL.
+	The string must start with the characters <B>"&lt;HTML"</B> or <B>"&lt;html"</B>
+	to signal that the value is to be treated as an HTML text and not a URL.
+	The non-ASCII characters in the string must be in Unicode format, and not encoded in any way. For example:
+
+	<P>
+
+	<font face="Courier New"><B>
+	strText = "&lt;html>&lt;table border>&lt;tr>&lt;th>AA&lt;/th>&lt;th>BB&lt;/th>&lt;/tr>&lt;tr>&lt;td>CC&lt;/td>&lt;td>DD&lt;/td>&lt;/tr>&lt;/table>&lt;/html>"<BR>
+	strText = Replace( strText, "AA", "Greek" )<BR>
+	strText = Replace( strText, "BB", "Chinese" )<BR>
+	strText = Replace( strText, "CC", ChrW( &H03A9 ) )<BR>
+	strText = Replace( strText, "DD", ChrW( &H56FD ) )<P>
+
+	Set Image = Doc.OpenUrl( strText )<BR>
+	...	
+	</B></font>
+	<P>
+	The script above produces the following output:
+	<P>
+	<IMG SRC="images/16_greek.jpg">
+	<P>
+
+	Note that in the direct HTML feed mode, there is no "base" URL by default, so if your HTML string contains images and other objects
+	pointed to via their relative paths, you must also provide the base URL information via the <B>&lt;base></B> tag, as follows:
+	<P>
+	<font face="Courier New"><B>strText = "&lt;html>&lt;base href=""c:\images\"">
+	...
+	&lt;img src=""logo.png"">
+	...
+	&lt;/html>"
+	</B></font>
+
+
+
+	</Blockquote>
+
+	<A NAME="16_2"></A>
+	<FONT COLOR="#C06000"><B>16.2 Pagination</B></FONT>
+	<Blockquote>
+	<B><u>16.2.1 PageHeight & AspectRatio Parameters</u></b>
+	<P>
+	As mentioned above, the OpenUrl method returns the snapshot of the HTML document as a single continuous image by default.
+	For long HTML documents spanning multiple pages, this default behavior may not be practical as multiple images representing the individual pages
+	of the document are needed instead.
+
+	<P>
+
+	The OpenUrl method is capable of splitting the HTML document's snapshot image into multiple pages. When used in the pagination mode, 
+	OpenUrl generates a <i>linked list</i> of images. The method returns an instance of the PdfImage object which represents
+	the <i>top</i> page of the document. The subsequent images are obtained via the PdfImage.<b>NextImage</b> property. 
+	This property returns the next PdfImage object in the sequence
+	or Nothing (null) if the current image is the last one in the linked list.
+	<P>
+	The pixel height of each individual page image can either be specified directly, via the <i>PageHeight</i> parameter,
+	or be computed based on the current document's page width and the desired aspect ratio specified via the <i>AspectRatio</i> parameter.
+	For example, the line 
+
+	<P>
+	<font face="Courier New"><B>Set Image = Doc.OpenUrl( url, "PageHeight=792" )</B></font>
+	<P>
+	makes all page images (except possibly the last one) 792 pixels high.
+	<P>
+	Since the width of the document image wholly depends on the underlying HTML code and is not always known in advance, 
+	it is often more practical to specify the page height indirectly, via an aspect ratio that matches the aspect ratio of the PDF page on which
+	this image is ultimately to be drawn. 
+	For example, the line
+	<P>
+	<font face="Courier New"><B>Set Image = Doc.OpenUrl( url, "AspectRatio=0.7727" )</B></font>
+	<P>
+	makes the aspect ratio of all the page images (except possibly the last one) the same as that of the standard US Letter page (which is 8.5"/11" = 0.7727.)
+	The image height is computed automatically by dividing the document width, whatever it happens to be, by the specified aspect ratio value.
+	When drawing the images on the PDF pages, a scaling factor has to be applied to make the image occupy the entire area of the page.
+	The <i>PageHeight</i> and <i>AspectRatio</i> parameters are mutually exclusive. If both are specified, <i>PageHeight</i> is ignored.
+	<P>
+	The following code sample converts the URL <A HREF="http://support.persits.com/default.asp?displayall=1"><B>http://support.persits.com/default.asp?displayall=1</B></A> to a multi-page PDF
+	with pagination based on the US Letter aspect ratio:
+	<P>
+	<img src="images/16_pages.jpg">
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Create empty document<BR>
+		Set Doc = Pdf.CreateDocument<P>
+
+		Set Param = Pdf.CreateParam<P>
+
+		' Convert URL to image<BR>
+		Set Image = Doc.OpenUrl( "http://support.persits.com/default.asp?displayall=1", "AspectRatio=0.7727" )<P>
+
+		' Iterate through all images<BR>
+		While Not Image Is Nothing<BR>
+		&nbsp;&nbsp;&nbsp;' Add a new page<BR>
+		&nbsp;&nbsp;&nbsp;Set Page = Doc.Pages.Add<P>
+
+		&nbsp;&nbsp;&nbsp;' Compute scale based on image width and page width<BR>
+		&nbsp;&nbsp;&nbsp;Scale = Page.Width / Image.Width<P>
+
+		&nbsp;&nbsp;&nbsp;' Draw image<BR>
+		&nbsp;&nbsp;&nbsp;Param("x") = 0<BR>
+		&nbsp;&nbsp;&nbsp;Param("y") = Page.Height - Image.Height * Scale<BR>
+		&nbsp;&nbsp;&nbsp;Param("ScaleX") = Scale<BR>
+		&nbsp;&nbsp;&nbsp;Param("ScaleY") = Scale<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawImage Image, Param<P>
+
+		&nbsp;&nbsp;&nbsp;' Go to next image<BR>
+		&nbsp;&nbsp;&nbsp;Set Image = Image.NextImage<BR>
+		Wend<P>
+		
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc.Save( Server.MapPath("pages.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<P>
+
+		IPdfParam objParam = objPdf.CreateParam( Missing.Value );<P>
+
+		// Convert URL to image<BR>
+		IPdfImage objImage = objDoc.OpenUrl( "http://support.persits.com/default.asp?displayall=1", "AspectRatio=0.7727",<BR>
+		&nbsp;&nbsp;&nbsp;Missing.Value, Missing.Value );<P>
+
+		// Iterate through all images<BR>
+		while( objImage != null )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;// Add a new page<BR>
+		&nbsp;&nbsp;&nbsp;IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+		&nbsp;&nbsp;&nbsp;// Compute scale based on image width and page width<BR>
+		&nbsp;&nbsp;&nbsp;float fScale = objPage.Width / objImage.Width;<P>
+
+		&nbsp;&nbsp;&nbsp;// Draw image<BR>
+		&nbsp;&nbsp;&nbsp;objParam["x"].Value = 0;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["y"].Value = objPage.Height - objImage.Height * fScale;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["ScaleX"].Value = fScale;<BR>
+		&nbsp;&nbsp;&nbsp;objParam["ScaleY"].Value = fScale;<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage, objParam );<P>
+
+		&nbsp;&nbsp;&nbsp;// Go to next image<BR>
+		&nbsp;&nbsp;&nbsp;objImage = objImage.NextImage;<BR>
+		}<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		string strFilename = objDoc.Save( Server.MapPath("pages.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_pages.asp">http://localhost/asppdf/manual_16/16_pages.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_pages.aspx">http://localhost/asppdf/manual_16/16_pages.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	<B><u>16.2.2 Hemming</u></b>
+	<P>
+	The code sample in the previous subsection produces a paginated PDF document in which the page delimiters often fall on critical content 
+	such as text or images, as shown below:
+
+	<P>
+	<img src="images/16_split.jpg">
+
+	<P>
+	For cleaner cutting, the OpenUrl method can be instructed to push the bottom edge of each page upwards until it meets a relatively blank row of pixels. 
+	For the lack of a better term, we dubbed this process "hemming", a word used by tailors. Hemming reduces the height of some or all page images somewhat.
+	<P>
+	By default, OpenUrl performs no hemming. If the <i>Hem</i> parameter is specified and set to a non-zero value,
+	OpenUrl scans the specified number of pixel rows of each page, starting with the bottom row, looking for a 
+	row with the fewest number of pixels deviating from the white background.
+	Once this row is found, it is used as the new page delimiter row, and the next page begins with the row directly below it.
+	If <i>Hem</i> is set to a negative number such as -1, the entire page image is scanned in search for a suitable row.
+	The background color against which the pixels are compared is specified via the <i>HemColor</i> parameter and is usually white.
+	If this parameter is omitted, the predominant color for each row is computed and used as the base color instead.
+	<P>
+	The image below demonstrates the improvement in pagination if the code sample above is modified by adding the <i>Hem</i> and <i>HemColor</i> parameter, 
+	as follows:
+
+	<P>
+	<font face="Courier New"><B>Set Image = Doc.OpenUrl( "http://support.persits.com/default.asp?displayall=1", "AspectRatio=0.7727<font color=red>; Hem=40; HemColor=white</font>")</B></font>
+	<P>
+
+	<img src="images/16_hem.jpg">
+
+	<P>
+	<B><u>16.2.3 Colored Page Breaks</u></b>
+	<P>
+	As of Version 3.0, the OpenUrl method is capable of splitting a document into pages along colored horizontal delimiters contained in the document.
+	The parameter <i>PageBreakColor</i> specifies the color of the delimiter.
+	For example, an HTML document may contain the following construct where the page break should be:
+	<P>
+	<FONT FACE="courier new"><B>&lt;div style="background-color: green; width: 100%; height: 1pt">&lt;/div></B></FONT>
+	<P>
+	This construct appears in the document as a thin green horizontal line. Setting the <i>PageBreakColor</i> parameter to <i>green</i>, will cause
+	OpenUrl to create a page break right before this green line, as follows:
+	<P>
+	<font face="Courier New"><B>Set Image = Doc.OpenUrl( strUrl, "AspectRatio=0.7727<font color=red>; PageBreakColor=green</font>")</B></font>
+	<P>
+	When <i>PageBreakColor</i> is specified, OpenUrl scans each page image from the top down looking for a row of pixels of the specified color.
+	The parameter <i>PageBreakThreshold</i> specifies what percentage of pixels in a row must be of the specified color
+	for this row to be considered a page break line. By default, this value is 0.8 which defines the default threshold percentage to be 80%.
+
+	</Blockquote>
+
+
+	<A NAME="16_3"></A>
+	<FONT COLOR="#C06000"><B>16.3 Hyperlinks</B></FONT>
+	<Blockquote>
+	The OpenUrl method is capable of preserving the hyperlinks on the HTML document being converted.
+	If the method is called with the parameter <i>Hyperlinks</i> set to True,
+	every image object it generates is populated with the collection of PdfRect objects,
+	each representing a hyperlink depicted on this image. It is your application's responsibility to draw those hyperlinks
+	(in the form of <i>link annotations</i> connected to <i>URL actions</i>) on the PDF pages along with the images themselves.
+	Annotations and actions are described in <A HREF="manual_10.html">Chapter 10 - Interactive Features</A>.
+	<P>
+	As of Version 2.9, the PdfImage object is equipped with the <B>Hyperlinks</B>
+	property which returns a collection of <B>PdfRect</B> objects.
+	The PdfRect object encalsulates the standard properties of a rectange (<B>Left</B>, <B>Bottom</B>, <B>Top</B>, <B>Right</B>, <B>Width</B>, <B>Height</B>)
+	and also a string property, <B>Text</B>. The properties (<B>Left</B>, <B>Bottom</B>) and (<B>Width</B>, <B>Height</B>) 
+	return the coordinates of the lower-left corner of the hyperlink
+	relative to the lower-left corner of the image to which this hyperlink belongs, and the hyperlink's dimensions, respectively.
+	The <B>Text</B> property returns the target URL of this hyperlink.
+	<P>
+	Note that the coordinates of the hyperlinks are provided in the coordinate space of the image (with its origin in the lower-left corner, as in standard
+	PDF practice.) 
+	When the image is drawn on a PDF page at a certain location (as specified by the <i>X</i> and <i>Y</i>
+	parameters of the <B>DrawImage</B> method), the hyperlink annotations must be drawn with the same X and Y displacements.
+	Also, if scaling is applied to the image via the <i>ScaleX</i> and <i>ScaleY</i> parameters of the <B>DrawImage</B> method, 
+	the same scaling must apply to the hyperlink coordinates and dimensions as well. Failure to adjust the hyperlink coordinates
+	properly will result in a misalignment between the depiction of the hyperlink on the page and the actual clickable hyperlink area.
+	<P>
+	The following code sample performs hemming (described in the previous section) as well as hyperlink rendering.
+	Clickable hyperlinks on the PDF pages are created with the help of the PdfAnnot and PdfAction objects.
+	<P>
+	<img src="images/16_hyperlinks.jpg">
+	
+	<P>
+	Note that the same scaling is applied to both the image and the coordinates and dimensions of the link annotations.
+	In addition to that, the Y-coordinate shift applied to the image is also applied to the annotations (the X-coordinate
+	shift is 0 in our example.)
+	<P>
+	
+	<font face="courier new"><B>
+    HyperlinkParam("x") = Rect.Left <font color=blue>* Scale</font><BR>
+    HyperlinkParam("y") = Rect.Bottom <font color=blue>* Scale + Param("y")</font><BR>
+    HyperlinkParam("width") = Rect.Width <font color=blue>* Scale</font><BR>
+    HyperlinkParam("height") = Rect.Height <font color=blue>* Scale</font><BR>
+	</B></font>
+
+	<P>
+
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+	' Create empty document<BR>
+	Set Doc = Pdf.CreateDocument<P>
+
+	' Parameter object for image drawing<BR>
+	Set Param = Pdf.CreateParam<P>
+
+	' Parameter object for hyperlink annotation drawing<BR>
+    Set HyperlinkParam = PDF.CreateParam<BR>
+    HyperlinkParam.Set "Type = link"<P>
+
+	' Convert URL to image. Enable hyperlinks. Use hemming.<BR>
+	Set Image = Doc.OpenUrl( "http://support.persits.com/default.asp?displayall=1", _<BR>
+	&nbsp;&nbsp;&nbsp;"AspectRatio=0.7727; hyperlinks=true; hem=50; hemcolor=white" )<P>
+
+	' Iterate through all images<BR>
+	While Not Image Is Nothing<BR>
+	&nbsp;&nbsp;&nbsp;' Add a new page<BR>
+	&nbsp;&nbsp;&nbsp;Set Page = Doc.Pages.Add<P>
+
+	&nbsp;&nbsp;&nbsp;' Compute scale based on image width and page width<BR>
+	&nbsp;&nbsp;&nbsp;Scale = Page.Width / Image.Width<P>
+
+	&nbsp;&nbsp;&nbsp;' Draw image<BR>
+	&nbsp;&nbsp;&nbsp;Param("x") = 0<BR>
+	&nbsp;&nbsp;&nbsp;Param("y") = Page.Height - Image.Height * Scale<BR>
+	&nbsp;&nbsp;&nbsp;Param("ScaleX") = Scale<BR>
+	&nbsp;&nbsp;&nbsp;Param("ScaleY") = Scale<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.DrawImage Image, Param<P>
+
+	&nbsp;&nbsp;&nbsp;' Now draw hyperlinks from the Image.Hyperlinks collection<BR>
+    &nbsp;&nbsp;&nbsp;For Each Rect In Image.Hyperlinks<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HyperlinkParam("x") = Rect.Left * Scale<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' Y-coordinate must be lifted by the same amount as the image itself<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HyperlinkParam("y") = Rect.Bottom * Scale + Param("y")<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HyperlinkParam("width") = Rect.Width * Scale<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HyperlinkParam("height") = Rect.Height * Scale<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HyperlinkParam("border") = 0<P>
+            
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' Create link annotation<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set Annot = Page.Annots.Add("", HyperlinkParam)<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Annot.SetAction Doc.CreateAction("type=URI", Rect.Text)<BR>
+    &nbsp;&nbsp;&nbsp;Next<P>
+
+		' Go to next image<BR>
+	&nbsp;&nbsp;&nbsp;Set Image = Image.NextImage<BR>
+	Wend<P>
+	
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("hyperlinks.pdf"), False )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPdf = new PdfManager();<P>
+
+	// Create empty document<BR>
+	IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<P>
+
+	// Parameter object for image drawing<BR>
+	IPdfParam objParam = objPdf.CreateParam( Missing.Value );<P>
+
+	// Parameter object for hyperlink annotation drawing<BR>
+    IPdfParam objHyperlinkParam = objPdf.CreateParam( Missing.Value );<BR>
+    objHyperlinkParam.Set( "Type = link" );<P>
+
+	// Convert URL to image. Enable hyperlinks. Use hemming.<BR>
+	IPdfImage objImage = objDoc.OpenUrl( "http://support.persits.com/default.asp?displayall=1", <BR>
+	&nbsp;&nbsp;&nbsp;"AspectRatio=0.7727; hyperlinks=true; hem=50; hemcolor=white", <BR>
+	&nbsp;&nbsp;&nbsp;Missing.Value, Missing.Value );<P>
+
+	// Iterate through all images<BR>
+	while( objImage != null )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;// Add a new page<BR>
+	&nbsp;&nbsp;&nbsp;IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+	&nbsp;&nbsp;&nbsp;// Compute scale based on image width and page width<BR>
+	&nbsp;&nbsp;&nbsp;float fScale = objPage.Width / objImage.Width;<p>
+
+	&nbsp;&nbsp;&nbsp;// Draw image<BR>
+	&nbsp;&nbsp;&nbsp;objParam["x"].Value = 0;<BR>
+	&nbsp;&nbsp;&nbsp;objParam["y"].Value = objPage.Height - objImage.Height * fScale;<BR>
+	&nbsp;&nbsp;&nbsp;objParam["ScaleX"].Value = fScale;<BR>
+	&nbsp;&nbsp;&nbsp;objParam["ScaleY"].Value = fScale;<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage, objParam );<P>
+
+	&nbsp;&nbsp;&nbsp;// Now draw hyperlinks from the Image.Hyperlinks collection<BR>
+    &nbsp;&nbsp;&nbsp;foreach( IPdfRect objRect in objImage.Hyperlinks )<br>
+	&nbsp;&nbsp;&nbsp;{<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objHyperlinkParam["x"].Value = objRect.Left * fScale;<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Y-coordinate must be lifted by the same amount as the image itself<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objHyperlinkParam["y"].Value = objRect.Bottom * fScale + objParam["y"].Value;<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objHyperlinkParam["width"].Value = objRect.Width * fScale;<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objHyperlinkParam["height"].Value = objRect.Height * fScale;<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objHyperlinkParam["border"].Value = 0;<P>
+            
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Create link annotation<BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IPdfAnnot objAnnot = objPage.Annots.Add("", objHyperlinkParam, Missing.Value, Missing.Value);<BR>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objAnnot.SetAction( objDoc.CreateAction("type=URI", objRect.Text) );<BR>
+    &nbsp;&nbsp;&nbsp;}<P>
+
+	&nbsp;&nbsp;&nbsp;// Go to next image<BR>
+	&nbsp;&nbsp;&nbsp;objImage = objImage.NextImage;<BR>
+	}<P>
+
+	// Save document, the Save method returns generated file name<BR>
+	string strFilename = objDoc.Save( Server.MapPath("hyperlinks.pdf"), false );<BR>
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_hyperlinks.asp">http://localhost/asppdf/manual_16/16_hyperlinks.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_16/16_hyperlinks.aspx">http://localhost/asppdf/manual_16/16_hyperlinks.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	</Blockquote>
+
+
+	
+	<A NAME="16_4"></A>
+	<FONT COLOR="#C06000"><B>16.4 Miscellaneous Parameters</B></FONT>
+	<Blockquote>
+	<B><u>16.4.1 Allowed Content</u></b>
+	<P>
+	By default, the OpenUrl method instructs Internet Explorer to only display images and videos when rendering the HTML document.
+	The method supports six parameter, all optional, that control the type of content IE is allowed to load. These parameters are:
+	<P>
+	<UL>
+	<li><i>Images</i> (True by default) - instructs IE to load images;</li>
+	<li><i>Video</i> (True by default) - instructs IE to load video;</li>
+	<li><i>DownloadActiveX</i> (False by default) - instructs IE to download ActiveX controls;</li>
+	<li><i>RunActiveX</i> (False by default) - instructs IE to run ActiveX controls;</li>
+	<li><i>Java</i> (False by default) - instructs IE to enable Java applets;</li>
+	<li><i>Scripts</i> (False by default) - instructs IE to enable scripts.</li>
+	</UL>
+	<P>
+	<B><u>16.4.2 Threading</u></b>
+	<P>
+	OpenUrl creates a separate thread of execution to communicate with IE. Failure to create a separate
+	thread would cause the method to hang when used under ASP.NET (but not under classic ASP.)
+	While it is recommended that the separate-thread mode be used under both ASP and ASP.NET, 
+	there is still a way to enable the single-thread mode by setting the parameter <i>SingleThread</i>
+	to True. The single-thread mode of operation can only be used in classic ASP and stand-alone environments but not in ASP.NET.
+
+	<P>
+	<B><u>16.4.3 Internal Window Dimensions</u></b>
+	<P>
+	OpenUrl creates an internal window to hold the WebBrowser control. The default dimensions of this window is 100x100.
+	In most cases, the window is resized automatically to accommodate the HTML document. However,
+	if the specified URL is a frameset, the window may retain its original size which is usually not large enough for
+	the HTML content to fit. The parameters <i>WindowWidth</i> and <i>WindowHeight</i> enable you to
+	specify a window size large enough to accommodate your frameset.
+
+	</Blockquote>
+
+
+
+	<A NAME="16_5"></A>
+	<FONT COLOR="#C06000"><B>16.5 IE Compatibility Mode</B></FONT>
+	<Blockquote>
+	In most cases, the IE rendering engine runs under a "compatibility mode" by default.
+	Sometimes this causes serious rendering issues -- the output generated by the OpenUrl
+	method looks considerably different than what is displayed by a browser.
+	<P>
+	To switch the IE rendering engine to the "regular" mode, the following simple change in the registry is needed:
+
+	<P>
+	Under the key
+	<P>
+	<FONT FACE="Courier New"><B>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_BROWSER_EMULATION</B></font>
+	<P>
+	and, on a 64-bit server, under the key
+	<P>
+	<FONT FACE="Courier New"><B>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_BROWSER_EMULATION</B></font>
+	<P>
+	the following DWORD entry must be added for IIS:
+	<P>
+	Name=<B>w3wp.exe</B>, Value=<B>9000</B> (decimal), as follows:
+	<P>
+	<img src="images/16_iemode.png">
+	<P>
+	IIS has to be reset (<B>iisreset</B> command at the command prompt) for the change to take effect.
+
+	</Blockquote>
+
+
+	<A HREF="manual_17.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Transparency"></A>
+	<A HREF="manual_15.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 15: Color Spaces"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2014. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

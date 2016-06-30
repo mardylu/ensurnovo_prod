@@ -1,0 +1,758 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 9: Working with Existing PDFs</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 9: Working with Existing PDFs
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_10.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 10: Interactive Features"></A>
+	<A HREF="manual_08.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 8: Security"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 9: Working with Existing PDFs</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#9_1">9.1 OpenDocument and OpenDocumentBinary Methods</A><BR>
+	<A HREF="#9_2">9.2 Template Fill-in</A><BR>
+	<A HREF="#9_3">9.3 Page Management</A><BR>
+	<A HREF="#9_4">9.4 Content Extraction</A><BR>
+	<A HREF="#9_5">9.5 Page Extraction</A><BR>
+	<A HREF="#9_6">9.6 Drawing Other Documents' Pages</A>
+
+	</B>
+
+	<P>
+	<A NAME="9_1">
+	<FONT COLOR="#C06000"><B>9.1 OpenDocument and OpenDocumentBinary Methods</B></FONT>
+	<Blockquote>
+	So far, we have only worked with new PDF documents
+	created via PdfManager's <B>CreateDocument</B> method. AspPDF
+	works equally well with existing PDFs.
+	<P>
+	To obtain an instance of the <B>PdfDocument</B> object representing an existing PDF document,
+	the PdfManager object provides the <B>OpenDocument</B> method
+	which expects two arguments: a physical <i>path</i> to the PDF document, and an optional
+	<i>password</i> (in case the documented being opened is password-protected).
+	<P>
+	<B>OpenDocument</B> returns <I>Nothing</i> if the PDF document
+	being opened requires a password and the <i>password</i> argument is empty.
+	If the specified password is valid, or if the document does not require a password at all, 
+	the method returns an instance of the <B>PdfDocument</B> object.
+	In all other cases (invalid password, invalid path, corrupt
+	PDF document, etc.) the method throws an error exception.
+	<P>
+	The following code fragment opens a PDF document from the file <B>mydoc.pdf</B>:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+	Set Doc = Pdf.OpenDocument("c:\path\mydoc.pdf")<BR>
+	If Doc Is Nothing Then<BR>
+	&nbsp;&nbsp;&nbsp;Response.Write "This PDF is password-protected."<P>
+	&nbsp;&nbsp;&nbsp;' Obtain a password from user and try again<BR>
+	&nbsp;&nbsp;&nbsp;Set Doc = Pdf.OpenDocument("c:\path\mydoc.pdf", Pwd)<BR>
+	End If<BR>
+	...<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPdf = new PdfManager();<BR>
+	IPdfDocument objDoc = objPdf.OpenDocument("c:\\path\\mydoc.pdf", Missing.Value);<br>
+
+	if( objDoc == null )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;lblResult.Text = "This PDF is password-protected.";<P>
+	&nbsp;&nbsp;&nbsp;// Obtain a password from user and try again<BR>
+	&nbsp;&nbsp;&nbsp;objDoc = objPdf.OpenDocument("c:\\path\\mydoc.pdf", strPwd);<br>
+	}<BR>
+	...<BR>	
+	</font></TD></TR>
+	</table>
+	<P>
+	The <B>OpenDocumentBinary</B> method is similar to OpenDocument except that
+	it opens a document from a binary memory array instead of disk.
+	This method is useful when a PDF document to be opened resides in a database
+	table as a BLOB. An ADO recordset field of the datatype <I>Binary</i> (SQL Server) or 
+	<I>OLE Object</i> (Access) can be passed as the first argument 
+	to OpenDocumentBinary, as follows:
+	<P>
+	<font size=2 face="courier new"><B>
+	Set Doc = Pdf.OpenDocumentBinary( rs("blob").Value )
+	</B></font>
+	<P>
+	Like OpenDocument, the OpenDocumentBinary method takes a password as
+	the second optional argument, and its return value is the same
+	as that of OpenDocument.
+
+
+	</Blockquote>
+
+	<A NAME="9_2">
+	<FONT COLOR="#C06000"><B>9.2 Template Fill-in</B></FONT>
+	<Blockquote>
+	Once a PdfDocument object representing
+	an existing PDF is obtained via the OpenDocument or OpenDocumentBinary methods, 
+	it can be used the same way as a
+	new documents. Its various properties can be read and modified,
+	pages drawn on, added or removed, etc.
+	<P>
+	<font color="red">NOTE: The Encrypt method <B>cannot</B> be called on an existing PDF document.
+	To apply security to an insecure document, you
+	must use the <i>document stitching</i> feature described in <A HREF="manual_12.html#12_2">Section 12.2 - Document Stitching</A>.</font>
+	<P>
+	Existing PDFs can be drawn on the same way as new 
+	documents. This enables your application to
+	populate a document template
+	with dynamic data (such text, images, drawings, etc.) 
+	For example, a standard blank PDF form can be opened
+	and filled out with database- or user-supplied information.
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Dim arrX<BR>
+		Dim arrY<BR>
+		Dim arrText<BR>
+		arrX = Array(100, 325, 455, 512, 550, 100, 100)<BR>
+		arrY = Array(660, 660, 660, 687, 687, 602, 577)<BR>
+		arrText = Array("John A.", "Smith", "123-56-7890", "1,234",_<BR>
+		&nbsp;&nbsp;&nbsp;"00", "4300 Cherry Ln.", "New York, NY 10001" )<P>
+
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Open blank PDF form from file<BR>
+		Set Doc = Pdf.OpenDocument( Server.MapPath("1040es.pdf") )<P>
+
+		Set Font = Doc.Fonts("Helvetica-Bold")<P>
+
+		' Obtain the only page's canvas<BR>
+		Set Canvas = Doc.Pages(1).Canvas<BR>
+		Set Param = Pdf.CreateParam<P>
+
+		' Fill out three copies of the 1040ES<BR>
+		For i = 0 to 2<BR>
+		&nbsp;&nbsp;&nbsp;' Go over all items in arrays<BR>
+		&nbsp;&nbsp;&nbsp;For j = 0 to UBound(arrX)<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Param("x") = arrX(j)<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Param("y") = arrY(j) - 263 * i<p>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' Draw text on canvas<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canvas.DrawText arrText(j), Param, Font<BR>
+		&nbsp;&nbsp;&nbsp;Next ' j<BR>
+		Next ' i<P>
+
+
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc.Save( Server.MapPath("form.pdf"), False )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		int [] arrX = {100, 325, 455, 512, 550, 100, 100};<BR>
+		int [] arrY = {660, 660, 660, 687, 687, 602, 577};<BR>
+		String [] arrText = {"John A.", "Smith", "123-56-7890", "1,234",<BR>
+		&nbsp;&nbsp;&nbsp;"00", "4300 Cherry Ln.", "New York, NY 10001"};<P>
+
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.OpenDocument(Server.MapPath("1040es.pdf"), Missing.Value);<P>
+
+		IPdfFont objFont = objDoc.Fonts["Helvetica-Bold", Missing.Value];<P>
+
+		// Obtain the only page's canvas<BR>
+		IPdfCanvas objCanvas = objDoc.Pages[1].Canvas;<BR>
+		IPdfParam objParam = objPdf.CreateParam( Missing.Value );<P>
+
+		// Fill out three copies of the 1040ES<BR>
+		for( int i = 0; i < 3; i++ )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;// Go over all items in arrays<BR>
+		&nbsp;&nbsp;&nbsp;for( int j = 0; j < arrX.Length; j++ )<BR>
+		&nbsp;&nbsp;&nbsp;{<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objParam["x"].Value = arrX[j];<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objParam["y"].Value = arrY[j] - 263 * i;<p>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Draw text on canvas<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objCanvas.DrawText( arrText[j], objParam, objFont );<BR>
+		&nbsp;&nbsp;&nbsp;}<BR>
+		}<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		String strFilename = objDoc.Save( Server.MapPath("form.pdf"), false );<BR>
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_form.asp">http://localhost/asppdf/manual_09/09_form.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_form.aspx">http://localhost/asppdf/manual_09/09_form.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	</Blockquote>
+	
+	<A NAME="9_3">
+	<FONT COLOR="#C06000"><B>9.3 Page Management</B></FONT>
+	<Blockquote>
+	AspPDF makes it possible to insert pages into existing PDF documents, and
+	also remove pages from them.
+	<P>
+	<B><U>9.3.1 Page Insertion</u></B>
+	<P>
+	Pages are added to a documents via the <B>Doc.Pages</B> collection.
+
+	The <B>Add</B> method of this collection accepts three optional arguments:
+	the page <i>width</i>, <i>height</i>, and a 1-based <i>insert-before</i> index.
+	By default, a page is appended to the end of the document. If the
+	insert-before argument is specified, the new page is inserted right before the 
+	one pointed to by this argument. Once a new page is inserted, 
+	it is assigned the <i>insert-before</i> index, and all the following
+	pages' indices are incremented by one.
+
+	<P>
+	<B><U>9.3.2 Page Removal</u></B>
+	<P>
+	Any page can be removed from the document via the <B>PdfPages.Remove</B>
+	method. This method accepts a single argument, the 1-based index of a page
+	to be removed.
+	<P>
+	When the <B>Remove</B> method is called, AspPDF does not really remove a page
+	from the document, it just marks it as deleted, and removes a reference to it from
+	the internal page tree. The page effectively disappears from the document,
+	but the document file does not shrink. In fact, it even becomes 
+	slightly bigger	as new information has to be appended to the end of the document to indicate that one of its
+	structures (a page) is now deleted.
+	<P>
+	<B><U>9.3.3 Drawing on Page Background</u></B>
+	<P>
+	The code sample <B>09_form.asp/aspx</B> (see the previous
+	section of this chapter) uses the Page.Canvas property
+	to draw text information on a form. 
+	In general, using Page.Canvas on a page within an existing document
+	causes new graphics and text to appear <I>on top</i> of the existing drawing
+	on that page.
+	<P>
+	If new graphics belongs <i>underneath</i> the existing drawing
+	(such as, a watermark with a corporate logo), the property
+	<B>Page.Background</B> must be used instead. 
+	This property returns a separate instance of the PdfCanvas object, 
+	and whatever is drawn on it
+	will appear on the bottom of the content stack.
+	<P>
+	<B><U>9.3.4 Code Sample</u></B>
+	<P>
+	The following code sample opens a simple two-page documents
+	<B>TwoPageDoc.pdf</B> and performs the following operations with it:
+	<P>
+	- a new page is inserted before the first page;<BR>
+	- another page is inserted after what used to be the first page (and now second);<BR>
+	- page 2 of the original document (which is now page 4) is removed;<BR>
+	- a background image is drawn on all three remaining pages.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<BR>
+		Set Doc = Pdf.OpenDocument( Server.MapPath("TwoPageDoc.pdf") )<P>
+
+		' insert page before 1st<BR>
+		Set Page1 = Doc.Pages.Add(, , 1)<P>
+
+		' insert page after 2nd<BR>
+		Set Page2 = Doc.Pages.Add(, , 3)<P>
+
+		' Remove page 4 (page 2 in original doc)<BR>
+		Doc.Pages.Remove 4<P>
+
+		' Draw background image on all 3 remaining pages<BR>
+		Set Image = Doc.OpenImage( Server.MapPath("exclam.gif") )<BR>
+		For Each Page in Doc.Pages<BR>
+		&nbsp;&nbsp;&nbsp;Page.Background.DrawImage Image, "x=70, y=220; scalex=2; scaley=2"<BR>
+		Next<P>
+
+		Filename = Doc.Save( Server.MapPath("pages.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Open blank PDF form from file<BR>
+		IPdfDocument objDoc = objPdf.OpenDocument(Server.MapPath("TwoPageDoc.pdf"), Missing.Value);<P>
+
+		// insert page before 1st<BR>
+		IPdfPage objPage1 = objDoc.Pages.Add(Missing.Value, Missing.Value, 1);<P>
+
+		// insert page after 2nd<BR>
+		IPdfPage objPage2 = objDoc.Pages.Add(Missing.Value, Missing.Value, 3);<P>
+
+		// Remove page 4 (page 2 in original doc)<BR>
+		objDoc.Pages.Remove( 4 );<P>
+
+		// Draw background image on all 3 remaining pages<BR>
+		IPdfImage objImage = objDoc.OpenImage( Server.MapPath("exclam.gif"), Missing.Value );<BR>
+
+		foreach( IPdfPage objPage in objDoc.Pages )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;objPage.Background.DrawImage(objImage, "x=70,y=220;scalex=2;scaley=2" );<BR>
+		}<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		String strFilename = objDoc.Save( Server.MapPath("pages.pdf"), false );<BR>
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_pages.asp">http://localhost/asppdf/manual_09/09_pages.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_pages.aspx">http://localhost/asppdf/manual_09/09_pages.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+	<P>
+	<A NAME="9_3_5">
+	<B><U>9.3.5 Coordinate Reset</u></B>
+	<P>
+	When drawing on an existing document, the text (graphics) sometimes appears inverted, shifted,
+	scaled, or even does not appear on the page at all.
+	<P>
+	As mentioned in Chapter 4, all drawing on a page occurs in the default user coordinate space 
+	with the origin in the lower-left corner of the page and the X and Y axes extending horizontally 
+	to the right and vertically upwards, respectively.
+	Some PDF documents change this default coordinate space by shifting the origin,
+	changing axis directions, modifying the unit length, etc. (see <A HREF="manual_04.html#4_5_1">Section 4.5.1 - Transformation Martix</A>).
+	<P>
+	All drawing operations performed on such a document inherit the changed coordinate system,
+	causing unpredictable results in terms of the location, orientation and size of objects being drawn.
+	<P>
+	Starting with <B>Version 1.5</B>, AspPDF offers a new method, PdfPage.<B>ResetCoordinates</B>,
+	which brings the coordinate system on the page back to the defaults. Just call this method before 
+	drawing text or graphics, as follows:
+	<P>
+	<font face="courier new"><B>
+	Set Doc = Pdf.OpenDocument("c:\path\somedoc.pdf")<BR>
+	Set Page = Doc.Pages(1)<BR>
+	Page.ResetCoordinates<BR>
+	Page.Canvas.DrawText "text", ...
+	</B></font>
+
+	
+
+	</Blockquote>
+	
+	<A NAME="9_4">
+	<FONT COLOR="#C06000"><B>9.4 Content Extraction</B></FONT>
+	<Blockquote>
+	AspPDF is capable of extracting raw text information 
+	from PDF documents for searching and indexing purposes. Text is extracted
+	from an individual page via the <B>ExtractText</B> method
+	of the <B>PdfPage</B> object. ExtractText takes an optional
+	parameter object or parameter string (described below.) 
+	This method always returns text strings
+	in Unicode format.
+	<P>
+	Text extraction with coordinates, introduced in Version 2.8, is described in <A HREF="manual_14.html#14_7">Section 14.7 - Structured Text Extraction</A>.
+	<P>
+	<B><U>9.4.1 Code Sample</U></B>
+	<P>
+	The following code sample extracts and prints out text data from 
+	all pages of a PDF (we use the 1-page file <B>1040es.pdf</B> from section 9.2):
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Open a PDF file for text extraction<BR>
+		Set Doc = Pdf.OpenDocument( Server.MapPath("1040es.pdf") )<P>
+
+		Dim TextString<BR>
+
+		For Each Page in Doc.Pages<BR>
+		&nbsp;&nbsp;&nbsp;TextString = TextString & Page.ExtractText<BR>
+		Next<P>
+
+		Response.Write Server.HtmlEncode( TextString )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Open a PDF file for text extraction<BR>
+		IPdfDocument objDoc = objPdf.OpenDocument( Server.MapPath("1040es.pdf"), Missing.Value );<P>
+
+		String strText = "";<BR>
+
+		foreach( IPdfPage objPage in objDoc.Pages )<BR>
+		{<BR>
+		&nbsp;&nbsp;&nbsp;strText += objPage.ExtractText(Mssing.Value);<BR>
+		}<P>
+
+		lblResult.Text = Server.HtmlEncode( strText );		
+	</font></TD></TR>
+	</table>
+	
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_extract.asp">http://localhost/asppdf/manual_09/09_extract.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_extract.aspx">http://localhost/asppdf/manual_09/09_extract.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	<B><U>9.4.2 Possible Text Extraction Problems</U></B>
+	<P>
+	PDF text extraction is not always reliable, sometimes it produces split 
+	and conjoined words, or even unreadable gibberish.
+	<P>
+	<B><I>9.4.2.1 Split and Conjoined Words</i></B>
+	<P>
+	Unlike HTML or Word documents, PDFs do not usually contain
+	blocks of meaningful, readable text. Instead, they contain
+	text drawing operators that reference short phrases, individual
+	words, word parts and even separate characters.
+	As a result, an attempt to extract text information from a PDF document often 
+	yields split and conjoined words. For example, the phrase "<B>Brown dog</B>"
+	may come out as "<B>Browndog</B>" (conjoined words) or "<B>Bro wn d og</B>" 
+	(split words). 
+	<P>
+	<B><I>9.4.2.2 Gibberish</i></B>
+	<P>	
+	Many PDF documents, especially those using non-Latin alphabets, do not 
+	use strings of readable characters to display text at all. 
+	Instead, they use "glyph codes" which are numbers identifying character 
+	appearances in a font file. "Good" PDF documents also provide mapping 
+	tables (referred to as <i>ToUnicode maps</i>) enabling a consumer application 
+	to convert those codes back to human-readable characters. However, not every 
+	PDF document is "good". Those that aren't cannot technically be read. 
+	An attempt to extract text from such a document yields gibberish. 
+	Copying information from such a file via clipboard from Acrobat Reader 
+	will fail as well. 
+
+	<P>
+	<B><I>9.4.2.3 Unknown Encoding</i></B>
+	<P>
+	Certain foreign-language PDF documents use ASCII characters in the 129 - 255 
+	range to display text information. Copying and pasting from such documents 
+	with Acrobat Reader usually produces unreadable text. However, AspPDF is 
+	capable of extracting text from these documents and converting them into 
+	Unicode, but a code page must be passed to
+	ExtractText method via the <I>CodePage</i> parameter, such as "CodePage=1251" (Cyrillic), 
+	or "CodePage=1256" (Arabic), etc. 
+	<P>
+	<B><U>9.4.3 Permission Issues</U></B>
+	<P>
+	A secure document may disallow content extraction by clearing Bit 5
+	of its permission flags (see <A HREF="manual_08.html#8.1.2">Section 8.1.2</A>).
+	To be in compliance with Adobe PDF licensing requirements, AspPDF
+	enforces this permission flag. For the content extraction functionality to work,
+	a secure document with Bit 5 cleared <i>must be opened with the owner
+	password</i>, or an error exception will be thrown.
+
+	</Blockquote>
+	
+	<A NAME="9_5">
+	<FONT COLOR="#C06000"><B>9.5 Page Extraction</B></FONT>
+	<Blockquote>
+	Starting with Version 1.2, AspPDF is capable of extracting individual pages
+	from a PDF document via the <B>ExtractPages</B> method of the PdfDocument object. 
+	This method accepts a PdfParam object or parameter string as an argument, 
+	and returns a new instance of PdfDocument comprised of one or more pages extracted from the original document.
+	The 1-based indices of pages to be extracted are specified via the parameters <I>Page1</i>,
+	<I>Page2</i>, <I>Page3</i>, etc. This method can only be called on
+	an existing, not new, PDF document.
+	<P>
+	The following code fragment opens a document, extracts pages 5 and 3 from it,
+	and saves the resultant 2-page document to disk. Pages 5 and 3 of the original document become
+	pages 1 and 2 of the new document, respectively.
+	<P>
+	<FONT FACE="Courier New"><B>
+	...<BR>
+	Set Doc = Pdf.OpenDocument("c:\path\original.pdf")<BR>
+	Set NewDoc = Doc.ExtractPages("Page1=5; Page2=3") <BR>
+	NewDoc.Save "c:\path\extractedpages.pdf"
+	</B></FONT>
+	<P>
+	The ExtractPages method looks for the parameters <i>Page1</i>, <i>Page2</i>, etc., until
+	a break in the sequence is encountered. 
+	<P>
+	NOTE: The PdfDocument object returned by ExtractPages cannot be used to manipulate
+	the newly extracted pages. In fact, this object cannot be used for anything other than saving 
+	(to disk, memory or an HTTP stream). If you do need to make changes to it, you must
+	save it first and then re-open, as follows:<P>
+	<FONT FACE="Courier New"><B>
+	...<BR>
+	Set NewDoc = Doc.ExtractPages("Page1=5; Page2=3") <BR>
+	Set Doc2 = Pdf.OpenDocumentBinary( NewDoc.SaveToMemory )<BR>
+	Doc2.Pages(1).Canvas.DrawText...
+	</B></FONT>
+	<P>
+	</Blockquote>
+
+
+	<A NAME="9_6">
+	<FONT COLOR="#C06000"><B>9.6 Drawing Other Documents' Pages</B></FONT>
+	<Blockquote>
+	As of Version 2.3, AspPDF enables the page of another existing document to be turned into a <B>PdfGraphics</B>
+	object and then drawn on this document at an arbitrary location or locations,
+	with rotation and scaling applied, if necessary. PdfGraphics objects are described in detail 
+	in <A HREF="manual_05.html#5_6">Chapter 5</A>.
+	<P>
+	To turn another document's page into an instance of the PdfGraphics object, use the method
+	PdfDocument.<B>CreateGraphicsFromPage</B>. This method expects two arguments: the instance of another
+	document and the 1-based index of the page within that document to be converted.
+	If the document is encrypted, it needs to have been opened using the owner password.
+	<P>
+	The method returns an instance of the PdfGraphics object which can then be drawn
+	on any page of this document via the PdfCanvas.<B>DrawGraphics</B> method.
+	
+	<P>
+	<IMG SRC="images/09_graph.gif">
+	<P>
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+	' Create a new document<BR>
+	Set Doc = Pdf.CreateDocument<BR>
+	Set Page = Doc.Pages.Add<P>
+
+	' Open existing PDF<BR>
+	Set AnotherDoc = Pdf.OpenDocument( Server.MapPath("1040es.pdf") )<P>
+
+	' Turn page 1 into a PdfGraphics object<BR>
+	Set Graphics = Doc.CreateGraphicsFromPage( AnotherDoc, 1 )<P>
+
+	' Draw on this document several times<BR>
+	Page.Canvas.DrawGraphics Graphics, "x=10; y=500; scalex=0.3; scaley=0.3"<BR>
+	Page.Canvas.DrawGraphics Graphics, "x=180; y=600; scalex=0.2; scaley=0.2; angle=-30"<BR>
+	Page.Canvas.DrawGraphics Graphics, "x=300; y=550; scalex=0.1; scaley=0.1; angle=-60"<P>
+
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("page2graphics.pdf"), False )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPdf = new PdfManager();<P>
+
+	// Create a new document<BR>
+	IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+	IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+	// Open existing PDF<BR>
+	IPdfDocument objAnotherDoc = objPdf.OpenDocument( Server.MapPath("1040es.pdf"), Missing.Value );<P>
+
+	// Turn page 1 into a PdfGraphics object<BR>
+	IPdfGraphics objGraphics = objDoc.CreateGraphicsFromPage( objAnotherDoc, 1 );<P>
+
+	// Draw on this document several times<BR>
+	objPage.Canvas.DrawGraphics( objGraphics, "x=10; y=500; scalex=0.3; scaley=0.3" );<BR>
+	objPage.Canvas.DrawGraphics( objGraphics, "x=180; y=600; scalex=0.2; scaley=0.2; angle=-30" );<BR>
+	objPage.Canvas.DrawGraphics( objGraphics, "x=300; y=550; scalex=0.1; scaley=0.1; angle=-60" );<P>
+
+
+	// Save document, the Save method returns generated file name<BR>
+	String strFilename = objDoc.Save( Server.MapPath("page2graphics.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_page2graphics.asp">http://localhost/asppdf/manual_09/09_page2graphics.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_09/09_page2graphics.aspx">http://localhost/asppdf/manual_09/09_page2graphics.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	Using <B>CreateGraphicsFromPage</B> is the most efficient way to create a multi-page
+	document based on a single-page PDF template.
+	See <A HREF="http://support.persits.com/show.asp?code=PS130905190">Article PS130905190</A> of our Knowledge Base for a code sample.
+
+	<P>
+	<B>UPDATE</B>: As of Version 3.2, one or more instances of the PdfGraphics object can be designated as templates
+	for a PdfDocument object via the method PdfDocument.<B>AddTemplate</B>. This way, every time a new page is added to this document, all applicable template graphics
+	are automatically drawn on this page and become this page's background.
+	This functionality is described in detail in <A HREF="manual_13.html#13_8"><B>Section 13.8 - Templates</B></A>.
+	</Blockquote>
+
+
+	<A HREF="manual_10.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 10: Interactive Features"></A>
+	<A HREF="manual_08.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 8: Security"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

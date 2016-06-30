@@ -1,0 +1,1024 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 17: Transparency</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 17: Transparency
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD xWIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_A.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Appendix A: Pre-defined Color Names"></A>
+	<A HREF="manual_16.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 16: IE-based HTML-to-PDF Conversion"></A>
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 17: Transparency</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#17_1">17.1 PdfGState Object: Overview</A><BR>
+	<A HREF="#17_2">17.2 Blend Mode</A><BR>
+	<A HREF="#17_3">17.3 Transparency Groups</A><BR>
+	<A HREF="#17_4">17.4 Soft Masks</A><BR>
+	<A HREF="#17_5">17.5 Miscellaneous Features</A><BR>
+	</B>
+	<P>
+	<A NAME="17_1"><FONT COLOR="#c06000"><B>17.1 PdfGState Object: Overview</B></FONT>
+	<Blockquote>
+	
+	<U><B>17.1.1 PdfGState As a Graphics State Object</B></U>
+	<P>
+	A <i>graphics state</i> is a central notion in the PDF format. The current graphics state is made
+	up of many parameters affecting painting operations such as the current stroke and fill colors, line width, font, and many others.
+	With AspPDF, the graphics state is modified via various properties and methods of the PdfCanvas object
+	such as SetFillColor or LineWidth. See <A HREF="manual_04.html#4_4">Section 4.4 - Managing Graphics State</A> for a detailed discussion of the graphics state.
+	<P>
+	As an alternative to setting individual parameters via separate operators, 
+	PDF also allows multiple parameters of the current graphics state to be modified in a single operation, via the <i>graphics state object</i>
+	referred to in the PDF specifications as <B>ExtGState</B>. An instance of the graphics state object is created and populated with multiple 
+	parameters and then selected in a single step, and can be reused if necessary. While using the graphics state object seems redundant,
+	there are in fact certain graphics state parameters that can <i>only</i> be specified via a graphics state object and
+	not any other way. Transparency-related parameters are among those that require a graphics state object.
+	As of Version 3.1, in order for AspPDF to support transparency, its object model has been expanded to include a new object, <B>PdfGState</B>,
+	which represents both a PDF ExtGState object, and a transparency group described in the following subsection.
+	<P>
+	An instance of the <B>PdfGState</B> object is created via the PdfDocument method <B>CreateGState</B>. This method expects
+	a single argument, a PdfParam object or parameter string specifying various graphics state parameters including those related to transparency.
+	To activate this <B>PdfGState</B> object, it is passed to the PdfCanvas method <B>SetGState</B>.
+	<P>
+	The following code snippet draws a semi-transparent text over a PDF page.
+	The blend mode (<B>BlendMode</B> parameter) is set to <i>Normal</i> (1). Blend modes are covered in detail below.
+	Both the stroke and fill transparency values (<B>Alpha</B> and <B>FillAlpha</B> parameters) are set to 0.2 (20%.)
+	<P>
+	<font face="Courier New"><B>
+	Set PDF = Server.CreateObject("Persits.PDF")<BR>
+    Set Doc = PDF.OpenDocument("c:\path\doc.pdf")<BR>
+    Set GState = Doc.CreateGState("BlendMode=1; Alpha=0.2; FillAlpha=0.2")<BR>
+	Set Page = Doc.Pages(1)<BR>
+	Page.Canvas.SetGState GState<BR>
+	Page.Canvas.DrawText "DRAFT", "x=-40; y=170; angle=52; size=240; color=blue", Doc.Fonts("Helvetica")<BR>
+	Doc.Save "c:\path\out.pdf", False
+	</B></font>
+	<P>
+	<IMG SRC="images/17_draft.png">
+	<P>
+
+	
+	<P>
+	<U><B>17.1.2 PdfGState As a Transparency Group Object</B></U>
+	<P>
+	In addition to representing a graphics state object, the PdfGState object
+	has also been assigned the task of representing a <i>transparency group</i>,
+	an important entity in the PDF transparency model.
+	Transparency groups are described in detail below.
+	<P>
+	To create a transparency group rather than a graphics state object,
+	the <B>CreateGState</B> method must be called with the <B>Group=True</B>
+	parameter. Other group-related parameters can be specified as well.
+	When the Group parameter is set to True, all graphics state-related
+	parameters are ignored. The instance of the PdfGState object
+	representing a transparency group can then be assigned
+	to a PdfGraphics or PdfPage object via the method <B>SetGroup</B>, for example:
+	<P>
+	<font face="Courier New"><B>
+	...<BR>
+    Set Group = Doc.CreateGState("<font color=green>Group=True</font>")<BR>
+	Set Graphics = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<BR>
+	Graphics.SetGroup Group<BR>
+	...
+	</B></font>
+	<P>
+	The meaning of this code snippet will be explained below.		
+
+
+	</Blockquote>
+
+
+	<P>
+
+	<A NAME="17_2">
+	<FONT COLOR="#C06000"><B>17.2 Blend Mode</B></FONT>
+	<Blockquote>
+	From the Adobe PDF Reference: "The original Adobe imaging model paints objects (fills, strokes, text, and images)
+	opaquely onto a page. The color of the page at any point is that of the topmost enclosing object, disregarding any previous
+	objects it may overlap... Under the transparency imaging model, all of the objects on a page can potentially contribute to the result.
+	Objects at a given point can be thought of as forming a <i>transparency stack</i> (or <i>stack</i> for short). The objects are arranged from bottom 
+	to top in the order in which they are specified. The color of the page at each point
+	is determined by combining the colors of all enclosing objects in the stack according to <i>compositing</i> rules defined by the transparency model...
+	A given object is composited with a <i>backdrop</i>. Ordinarily, the backdrop consists of the stack of all objects that have been specified previously.
+	The result of compositing is then treated as the backdrop of the next object."
+	<P>
+	NOTE: A comprehensive description of the PDF Transparency Model is beyond the scope of this user manual. Please refer to the Adobe PDF Reference for 
+	detailed information on this complex subject.
+
+	<P>
+	Under the PDF transparency model, when an object is painted, its color and alpha values are combined with the current backdrop's color and
+	alpha values to form a new current color and alpha values. The new values are computed according
+	to the <i>basic color compositing formula</i> which takes into account the source color (C<sub>s</sub>), 
+	backdrop color (C<sub>b</sub>), source alpha (&alpha;<sub>s</sub>), backdrop alpha
+	(&alpha;<sub>b</sub>), and a blend function B(C<sub>b</sub>, C<sub>s</sub>) which specifies
+	how the source and backdrop colors are combined in the painting operation:
+	<P>
+	<IMG SRC="images/17_function.png">
+	<P>
+	The blend function determines the <i>blend mode</i> of the painting operation and there are 16 pre-defined blend modes to choose from.
+	For example, under the <i>Normal</i> blend mode the blend function is simply
+	<P>
+	B(C<sub>b</sub>, C<sub>s</sub>) = C<sub>s</sub>
+	<P>
+	and under the <i>Multiply</i> mode it is
+	<P>
+	B(C<sub>b</sub>, C<sub>s</sub>) = C<sub>b</sub> x C<sub>s</sub>
+	<P>
+	The blend mode is specified via the <B>BlendMode</B> parameter of the PdfDocument.<B>CreateGState</B> method. The valid
+	values are 1 to 16.
+	<P>
+	The following table summarizes all the available blend modes and their effects
+	when the picture of a duck is painted on top of the picture of a rainbow.
+	<P>
+	<img src="images/17_duck.png" xalign=right><img src="images/17_rainbow.png" xalign=right>
+	<P>
+	<table id="grid">
+	<tr><th>Name</th><th>BlendMode</th><th>Effect</th><th>&nbsp;&nbsp;&nbsp;</th><th>Name</th><th>BlendMode</th><th>Effect</th></tr>
+	<tr><td>Normal</td><td align=center>1</td><td><img src="images/17_plate18_1.png"></td> <td></td> <td>Multiply</td><td align=center>2</td><td><img src="images/17_plate18_2.png"></td></tr>
+	<tr><td>Screen</td><td align=center>3</td><td><img src="images/17_plate18_3.png"></td> <td></td> <td>Overlay</td><td align=center>4</td><td><img src="images/17_plate18_4.png"></td></tr>
+	<tr><td>Darken</td><td align=center>5</td><td><img src="images/17_plate18_5.png"></td> <td></td> <td>Lighten</td><td align=center>6</td><td><img src="images/17_plate18_6.png"></td></tr>
+	<tr><td>ColorDodge</td><td align=center>7</td><td><img src="images/17_plate18_7.png"></td> <td></td> <td>ColorBurn</td><td align=center>8</td><td><img src="images/17_plate18_8.png"></td></tr>
+	<tr><td>HardLight</td><td align=center>9</td><td><img src="images/17_plate18_9.png"></td> <td></td> <td>SoftLight</td><td align=center>10</td><td><img src="images/17_plate18_10.png"></td></tr>
+	<tr><td>Difference</td><td align=center>11</td><td><img src="images/17_plate18_11.png"></td> <td></td> <td>Exclusion</td><td align=center>12</td><td><img src="images/17_plate18_12.png"></td></tr>
+	<tr><td>Hue</td><td align=center>13</td><td><img src="images/17_plate18_13.png"></td> <td></td> <td>Saturation</td><td align=center>14</td><td><img src="images/17_plate18_14.png"></td></tr>
+	<tr><td>Color</td><td align=center>15</td><td><img src="images/17_plate18_15.png"></td> <td></td> <td>Luminosity</td><td align=center>16</td><td><img src="images/17_plate18_16.png"></td></tr>
+	</table>
+
+	
+	</Blockquote>
+	
+	
+	<P>
+
+	<A NAME="17_3">
+	<FONT COLOR="#C06000"><B>17.3 Transparency Groups</B></FONT>
+	<Blockquote>
+	<U><B>17.3.1 Groups: Overview</B></U>
+	<P>
+	One or more consecutive objects in a stack can be collected together into a <i>transparency group</i>, or simply <i>group</i>. The group as a whole
+	can have various properties that modify the compositing behavior of objects within the group and their interactions with its backdrop.
+	An additional blend mode and alpha can also be associated with the group as a whole and used when compositing it with its backdrop. Groups can be nested within other groups.
+	<P>
+	With AspPDF, a transparency group is implemented by a PdfGraphics object linked to a PdfGState object representing a group, as follows:
+	<P>
+	<font face="Courier New"><B>
+	Set Group = Doc.CreateGState("Group=true; &lt;<i>other parameters</i>>")<BR>
+	Set Graph = Doc.CreateGraphics("&lt;<i>list of parameters</i>>")<BR>
+	Graph.SetGroup Group
+	</B></font>
+	<P>
+	The following four images demonstrate the effects of transparency grouping. In the upper two figures, three colored circles are painted as independent 
+	objects with no grouping. At the upper left, the three objects are painted opaquely; each completely replaces its backdrop (including previously painted
+	objects) with its own color. At the upper right, the same three independent objects are painted with an opacity of 0.5, causing them to composite with
+	each other and with the gray and white background. In the lower two figures, the three objects are combined as a transparency group.
+	At the lower-left, the individual objects have an opacity of 1.0 within the group, but the group as a whole is painted in the <i>Normal</i> blend mode
+	(BlendMode=1) with an opacity of 0.5 (FillAlpha=0.5). At the lower right, the objects have an opacity of 0.5 within the group and thus compose with each other.
+	The group as a whole is painted against the backdrop with an opacity of 1.0 but in a different blend mode, <i>HardLight</i> (BlendMode=9),
+	producing a different visual effect.
+	<P>
+	<table id="grid">
+	<tr><td><img src="images/17_plate16_1.png"></td><td><img src="images/17_plate16_2.png"></td></tr>
+	<tr><td><img src="images/17_plate16_3.png"></td><td><img src="images/17_plate16_4.png"></td></tr>
+	</table>
+	<P>
+	Below is the corresponding AspPDF script:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		' Common part: draw background<BR>
+		Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		Set Doc = PDF.CreateDocument<BR>
+		Set Page = Doc.Pages.Add<BR>
+		Page.Canvas.SetFillColor 0.8, 0.8, 0.8<BR>
+		Page.Canvas.FillRect 0, 0, page.width / 2, page.height<BR>
+		Page.Canvas.SetFillColor 1, 1, 1<BR>
+		Page.Canvas.FillRect page.width / 2, 0, page.width, page.height<P>
+
+		Page.Canvas.SaveState<BR>
+		Page.Canvas.SetCTM 1, 0, 0, 1, 206, 600<BR>
+		Call UpperLeft<BR>
+		Page.Canvas.RestoreState<P>
+
+		Page.Canvas.SaveState<BR>
+		Page.Canvas.SetCTM 1, 0, 0, 1, 206, 400<BR>
+		Call UpperRight<BR>
+		Page.Canvas.RestoreState<P>
+
+		Page.Canvas.SaveState<BR>
+		Page.Canvas.SetCTM 1, 0, 0, 1, 206, 200<BR>
+		Call LowerLeft<BR>
+		Page.Canvas.RestoreState<P>
+
+		Page.Canvas.SaveState<BR>
+		Page.Canvas.SetCTM 1, 0, 0, 1, 206, 0<BR>
+		Call LowerRight<BR>
+		Page.Canvas.RestoreState<P>
+
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc.Save( Server.MapPath("transp.pdf"), False )<BR>
+		Response.Write "Success! Download your PDF file &lt;A HREF=" & Filename & ">here&lt;/A>"<P>
+
+		' Upper-left: no grouping or transparency<BR>
+		Sub UpperLeft<BR>
+		&nbsp;&nbsp;&nbsp;Set Circ1 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.SetFillColor 1, 0, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ2 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.SetFillColor 1, 1, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ3 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.SetFillColor 0, 0, 1<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.FillEllipse 50, 50, 50, 50<P>
+
+		&nbsp;&nbsp;&nbsp;Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ1, "x=25; y=28"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ2, "x=50; y=71"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ3, "x=75; y=28"<P>
+
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graph, "x=0; y=0"<BR>
+		End Sub<P>
+
+
+		' Upper-right: no grouping, 0.5 opacity<BR>
+		Sub UpperRight<BR>
+		&nbsp;&nbsp;&nbsp;Set Circ1 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.SetFillColor 1, 0, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ2 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.SetFillColor 1, 1, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ3 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.SetFillColor 0, 0, 1<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.FillEllipse 50, 50, 50, 50<P>
+
+		&nbsp;&nbsp;&nbsp;Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<BR>
+		&nbsp;&nbsp;&nbsp;Set GState = Doc.CreateGState("BlendMode=1; FillAlpha=0.5")<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.SetGState GState<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ1, "x=25; y=28"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ2, "x=50; y=71"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ3, "x=75; y=28"<P>
+
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graph, "x=0; y=0"<BR>
+		End Sub<P>
+
+
+		' Lower-left: grouping, no opacity within group, 0.5 opacity for entire group<BR>
+		Sub LowerLeft<BR>
+		&nbsp;&nbsp;&nbsp;Set Circ1 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.SetFillColor 1, 0, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ2 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.SetFillColor 1, 1, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ3 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.SetFillColor 0, 0, 1<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.FillEllipse 50, 50, 50, 50<P>
+
+		&nbsp;&nbsp;&nbsp;Set Group = Doc.CreateGState( "Group=true")<BR>
+		&nbsp;&nbsp;&nbsp;Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<BR>
+		&nbsp;&nbsp;&nbsp;Graph.SetGroup Group<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ1, "x=25; y=28"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ2, "x=50; y=71"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ3, "x=75; y=28"<P>
+
+		&nbsp;&nbsp;&nbsp;Set GState = Doc.CreateGState("BlendMode=1; FillAlpha=0.5")<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.SetGState GState<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graph, "x=0; y=0"<BR>
+		End Sub<P>
+
+		' Lower-right: grouping, 0.5 opacity within group, no opacity for entire group, HardLight<BR>
+		Sub LowerRight<BR>
+		&nbsp;&nbsp;&nbsp;Set GState = Doc.CreateGState("BlendMode=1; FillAlpha=0.5")<P>
+			
+		&nbsp;&nbsp;&nbsp;Set Circ1 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.SetGState GState<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.SetFillColor 1, 0, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ1.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ2 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.SetGState GState<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.SetFillColor 1, 1, 0<BR>
+		&nbsp;&nbsp;&nbsp;Circ2.Canvas.FillEllipse 50, 50, 50, 50<P>
+    
+		&nbsp;&nbsp;&nbsp;Set Circ3 = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.SetGState GState<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.SetFillColor 0, 0, 1<BR>
+		&nbsp;&nbsp;&nbsp;Circ3.Canvas.FillEllipse 50, 50, 50, 50<P>
+
+		&nbsp;&nbsp;&nbsp;Set Group = Doc.CreateGState( "Group=true")<BR>
+		&nbsp;&nbsp;&nbsp;Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<BR>
+		&nbsp;&nbsp;&nbsp;Graph.SetGroup Group<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ1, "x=25; y=28"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ2, "x=50; y=71"<BR>
+		&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circ3, "x=75; y=28"<P>
+
+		&nbsp;&nbsp;&nbsp;Set GState2 = Doc.CreateGState("BlendMode=9; FillAlpha=1")<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.SetGState GState2<BR>
+		&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graph, "x=0; y=0"<BR>
+		End Sub<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfDocument objDoc;<BR>
+	IPdfPage objPage;<P>
+
+	void Page_Load(Object Source, EventArgs E)<BR>
+	{<BR>
+		// Common part: draw background<BR>
+	&nbsp;&nbsp;&nbsp;IPdfManager objPdf = new PdfManager();<BR>
+	&nbsp;&nbsp;&nbsp;objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+	&nbsp;&nbsp;&nbsp;objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetFillColor( 0.8f, 0.8f, 0.8f );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.FillRect( 0, 0, objPage.Width / 2, objPage.Height );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetFillColor( 1, 1, 1 );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.FillRect( objPage.Width / 2, 0, objPage.Width, objPage.Height );<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SaveState();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetCTM( 1, 0, 0, 1, 206, 600 );<BR>
+	&nbsp;&nbsp;&nbsp;UpperLeft();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.RestoreState();<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SaveState();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetCTM( 1, 0, 0, 1, 206, 400 );<BR>
+	&nbsp;&nbsp;&nbsp;UpperRight();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.RestoreState();<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SaveState();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetCTM( 1, 0, 0, 1, 206, 200 );<BR>
+	&nbsp;&nbsp;&nbsp;LowerLeft();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.RestoreState();<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SaveState();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetCTM( 1, 0, 0, 1, 206, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;LowerRight();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.RestoreState();<P>
+
+	&nbsp;&nbsp;&nbsp;// Save document, the Save method returns generated file name<BR>
+	&nbsp;&nbsp;&nbsp;string strFilename = objDoc.Save( Server.MapPath("transp.pdf"), false );<BR>
+	&nbsp;&nbsp;&nbsp;lblResult.Text = "Success! Download your PDF file &lt;A HREF=" + strFilename + ">here&lt;/A>";<BR>
+	}<P>
+
+	void UpperLeft()<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc1 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.SetFillColor( 1, 0, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc2 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.SetFillColor( 1, 1, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc3 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.SetFillColor( 0, 0, 1 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objGraph = objDoc.CreateGraphics("left=0; bottom=0; right=200; top=200");<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc1, "x=25; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc2, "x=50; y=71" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc3, "x=75; y=28" );<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraph, "x=0; y=0" );<BR>
+	}<P>
+
+	void UpperRight()<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc1 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.SetFillColor( 1, 0, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc2 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.SetFillColor( 1, 1, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc3 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.SetFillColor( 0, 0, 1 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objGraph = objDoc.CreateGraphics("left=0; bottom=0; right=200; top=200");<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGState objGState = objDoc.CreateGState("BlendMode=1; FillAlpha=0.5");<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc1, "x=25; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc2, "x=50; y=71" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc3, "x=75; y=28" );<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraph, "x=0; y=0" );<BR>
+	}<P>
+
+	void LowerLeft()<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc1 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.SetFillColor( 1, 0, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc2 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.SetFillColor( 1, 1, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc3 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.SetFillColor( 0, 0, 1 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGState objGroup = objDoc.CreateGState( "Group=true");<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objGraph = objDoc.CreateGraphics("left=0; bottom=0; right=200; top=200");<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.SetGroup( objGroup );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc1, "x=25; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc2, "x=50; y=71" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc3, "x=75; y=28" );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGState objGState = objDoc.CreateGState("BlendMode=1; FillAlpha=0.5");<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraph, "x=0; y=0" );<BR>
+	}<P>
+
+	void LowerRight()<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGState objGState = objDoc.CreateGState("BlendMode=1; FillAlpha=0.5");<P>
+		
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc1 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.SetFillColor( 1, 0, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc1.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc2 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.SetFillColor( 1, 1, 0 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc2.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+    
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCirc3 = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.SetFillColor( 0, 0, 1 );<BR>
+	&nbsp;&nbsp;&nbsp;objCirc3.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGState objGroup = objDoc.CreateGState( "Group=true");<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objGraph = objDoc.CreateGraphics("left=0; bottom=0; right=200; top=200");<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.SetGroup( objGroup );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc1, "x=25; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc2, "x=50; y=71" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCirc3, "x=75; y=28" );<P>
+
+	&nbsp;&nbsp;&nbsp;IPdfGState objGState2 = objDoc.CreateGState("BlendMode=9; FillAlpha=1");<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetGState( objGState2 );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraph, "x=0; y=0" );<BR>
+	}<BR>
+	</font></TD></TR>
+	</table>
+	
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_transp.asp">http://localhost/asppdf/manual_17/17_transp.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_transp.aspx">http://localhost/asppdf/manual_17/17_transp.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	<U><B>17.3.2 Isolated and Knockout Groups</B></u>
+	<P>
+	An isolated group is one whose elements are composited onto a fully transparent initial backdrop rather than onto the group's backdrop. 
+	The resulting source color and object alpha for the group are therefore independent of the group backdrop. 
+	The only interaction with the group backdrop occurs when the group's computed color and alpha are then composited with it.
+	<P>
+	In a knockout group, each individual element is composited with the group's initial backdrop rather than with the stack of preceding elements in the group.
+	Each object overwrites (knocks out) the effects of any earlier elements it overlaps within the same group. At any given point, only the topmost object 
+	enclosing the point contributes to the result color and opacity of the group as a whole.
+	<P>
+	By default, a group created with the Doc.CreateGState("Group=True") method is neither isolated nor knockout.
+	To make a group an isolated or knockout one, or both, the parameters <B>Isolated</B> and/or <B>Knockout</B> must be set to True, for example:
+	<P>
+	<font face="Courier New"><B>
+	Set Group = Doc.CreateGState("Group=True; Isolated=True; Knockout=True;")
+	</B></font>
+	<P>
+	The following images demonstrate the isolated and knockout effects
+	for a group consisting of four overlapping circles
+	in a light gray color. The circles are painted within the group with opacity 1.0 in the <i>Multiply</i> blend mode (BlendMode=2). The group
+	itself is painted against its backdrop in the <i>Normal</i> blend mode (BlendMode=1).
+	In the top row, the group is isolated and thus does not interact with the rainbow backdrop. In the bottom row, the group is non-isolated 
+	and composites with the backdrop. In the left column, the four overlapping circles are defined as a knockout group and therefore do not composite 
+	with each other within the group. In the right column, the circles 
+	form a non-knockout group and thus do composite with each other. 
+	<P>
+	<table id="grid">
+	<tr><td>&nbsp;</td><td align=center><B>Knockout</B></td><td align=center><B>Non-knockout</B></td></tr>
+	<tr><td><B>Isolated</B></td><td><img src="images/17_plate17_1.png"></td><td><img src="images/17_plate17_2.png"></td></tr>
+	<tr><td><B>Non-isolated</B></td><td><img src="images/17_plate17_3.png"></td><td><img src="images/17_plate17_4.png"></td></tr>
+	</table>
+
+	<P>
+	Below is the corresponding AspPDF script:
+	<P>
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set PDF = Server.CreateObject("Persits.PDF")<BR>
+	Set Doc = PDF.CreateDocument<BR>
+	Set Page = Doc.Pages.Add<P>
+
+	' Rainbow background image<BR>
+	Set Image = Doc.OpenImage( Server.MapPath( "17_rainbow.png" ) )<P>
+
+	Set GState = Doc.CreateGState("blendmode=2")<BR>
+	Set GState2 = Doc.CreateGState("blendmode=1")<P>
+
+	Call DrawCircles( 600, True, True )<BR>
+	Call DrawCircles( 400, True, False )<BR>
+	Call DrawCircles( 200, False, True )<BR>
+	Call DrawCircles( 0, False, False )<P>
+
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("groups.pdf"), False )<BR>
+	Response.Write "Success! Download your PDF file &lt;A HREF=" & Filename & ">here&lt;/A>"<P>
+
+	' Y-shift, isolated flag, knockout flag<BR>
+	Sub DrawCircles( Y, Isolated, Knockout )<BR>
+	&nbsp;&nbsp;&nbsp;Set Graph = Doc.CreateGraphics("left=0; bottom=0; right=200; top=200")<P>
+
+	&nbsp;&nbsp;&nbsp;' Create a circle graphics<BR>
+	&nbsp;&nbsp;&nbsp;Set Circle = Doc.CreateGraphics("left=0; bottom=0; right=100; top=100")<BR>
+	&nbsp;&nbsp;&nbsp;Circle.Canvas.SetFillColor 0.7, 0.7, 0.7<BR>
+	&nbsp;&nbsp;&nbsp;Circle.Canvas.FillEllipse 50, 50, 50, 50<P>
+
+	&nbsp;&nbsp;&nbsp;' Parameter object for group creation<BR>
+	&nbsp;&nbsp;&nbsp;Set Param = PDF.CreateParam<BR>
+	&nbsp;&nbsp;&nbsp;Param("Group") = 1 ' True<BR>
+	&nbsp;&nbsp;&nbsp;If Isolated Then Param("Isolated") = 1<BR>
+	&nbsp;&nbsp;&nbsp;If Knockout Then Param("Knockout") = 1<BR>
+	&nbsp;&nbsp;&nbsp;Set Group = Doc.CreateGState(Param)<P>
+			
+	&nbsp;&nbsp;&nbsp;Graph.SetGroup Group<BR>
+	&nbsp;&nbsp;&nbsp;Graph.Canvas.SetGState GState<BR>
+	&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circle, "x=25; y=28"<BR>
+	&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circle, "x=75; y=28"<BR>
+	&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circle, "x=25; y=78"<BR>
+	&nbsp;&nbsp;&nbsp;Graph.Canvas.DrawGraphics Circle, "x=75; y=78"<P>
+
+	&nbsp;&nbsp;&nbsp;Page.Canvas.SaveState<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.DrawImage Image, "x=0, y=" & Y<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.SetGState GState2<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.DrawGraphics Graph, "x=0; y=" & Y<BR>
+	&nbsp;&nbsp;&nbsp;Page.Canvas.RestoreState<BR>
+	End Sub
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfDocument objDoc;<BR>
+	IPdfPage objPage;<BR>
+	IPdfManager objPdf;<BR>
+	IPdfGState objGState;<BR>
+	IPdfGState objGState2;<BR>
+	IPdfImage objImage;<P>
+
+	void Page_Load(Object Source, EventArgs E)<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;// Common part: draw background<BR>
+	&nbsp;&nbsp;&nbsp;objPdf = new PdfManager();<BR>
+	&nbsp;&nbsp;&nbsp;objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+	&nbsp;&nbsp;&nbsp;objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+	&nbsp;&nbsp;&nbsp;// Rainbow background image<BR>
+	&nbsp;&nbsp;&nbsp;objImage = objDoc.OpenImage( Server.MapPath( "17_rainbow.png" ), Missing.Value );<P>
+
+	&nbsp;&nbsp;&nbsp;objGState = objDoc.CreateGState("blendmode=2");<BR>
+	&nbsp;&nbsp;&nbsp;objGState2 = objDoc.CreateGState("blendmode=1");<P>
+
+	&nbsp;&nbsp;&nbsp;DrawCircles( 600, true, true );<BR>
+	&nbsp;&nbsp;&nbsp;DrawCircles( 400, true, false );<BR>
+	&nbsp;&nbsp;&nbsp;DrawCircles( 200, false, true );<BR>
+	&nbsp;&nbsp;&nbsp;DrawCircles( 0, false, false );<P>
+
+	&nbsp;&nbsp;&nbsp;// Save document, the Save method returns generated file name<BR>
+	&nbsp;&nbsp;&nbsp;string strFilename = objDoc.Save( Server.MapPath("groups.pdf"), false );<BR>
+	&nbsp;&nbsp;&nbsp;lblResult.Text = "Success! Download your PDF file &lt;A HREF=" + strFilename + ">here&lt;/A>";<BR>
+	}<P>
+
+	// Y-shift, isolated flag, knockout flag<BR>
+	void DrawCircles( int Y, bool Isolated, bool Knockout )<BR>
+	{<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objGraph = objDoc.CreateGraphics("left=0; bottom=0; right=200; top=200");<P>
+
+	&nbsp;&nbsp;&nbsp;// Create a circle graphics<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGraphics objCircle = objDoc.CreateGraphics("left=0; bottom=0; right=100; top=100");<BR>
+	&nbsp;&nbsp;&nbsp;objCircle.Canvas.SetFillColor( 0.7f, 0.7f, 0.7f );<BR>
+	&nbsp;&nbsp;&nbsp;objCircle.Canvas.FillEllipse( 50, 50, 50, 50 );<P>
+
+	&nbsp;&nbsp;&nbsp;// Parameter object for group creation<BR>
+	&nbsp;&nbsp;&nbsp;IPdfParam objParam = objPdf.CreateParam(Missing.Value);<BR>
+	&nbsp;&nbsp;&nbsp;objParam["Group"].Value = 1; // true<BR>
+	&nbsp;&nbsp;&nbsp;if( Isolated ) objParam["Isolated"].Value = 1;<BR>
+	&nbsp;&nbsp;&nbsp;if( Knockout ) objParam["Knockout"].Value = 1;<BR>
+	&nbsp;&nbsp;&nbsp;IPdfGState objGroup = objDoc.CreateGState(objParam);<P>
+			
+	&nbsp;&nbsp;&nbsp;objGraph.SetGroup( objGroup );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.SetGState( objGState );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCircle, "x=25; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCircle, "x=75; y=28" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCircle, "x=25; y=78" );<BR>
+	&nbsp;&nbsp;&nbsp;objGraph.Canvas.DrawGraphics( objCircle, "x=75; y=78" );<P>
+
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SaveState();<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawImage( objImage, "x=0, y=" + Y );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.SetGState( objGState2 );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.DrawGraphics( objGraph, "x=0; y=" + Y );<BR>
+	&nbsp;&nbsp;&nbsp;objPage.Canvas.RestoreState();<BR>
+	}
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_groups.asp">http://localhost/asppdf/manual_17/17_groups.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_groups.aspx">http://localhost/asppdf/manual_17/17_groups.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	</Blockquote>
+
+
+	<A NAME="17_4">
+	<FONT COLOR="#C06000"><B>17.4 Soft Masks</B></FONT>
+	<Blockquote>
+	Any PDF compositing operation can be subject to a <i>soft mask</i>, or <i>alpha mask</i>,
+	which is a graphics object that serves as the source of variable opacity for the objects being drawn. 
+	The word <i>soft</i> emphasizes that the mask value at a given point is not limited to just 0.0 or 1.0 but can take on intermediate
+	fractional values as well.
+	A soft mask is activated by linking it to a graphics state object, and then activating that object.
+	<P>
+	For a graphics object to act like a soft mask, it has to be associated with a transparency group.
+	The soft mask values (opacity) can be derived either from the group's alpha values or from the group's luminosity values.
+	In the latter case, the transparency group must be associated with a color space so that the luminocity could be
+	properly calculated. 
+	<P>
+	With AspPDF, a soft mask is created by creating an instance of the PdfGraphics object and associating it with a transparency group
+	via the PdfGraphics.<B>SetGroup</B> method. The PdfGraphics object is then associated 
+	with a graphics state object via the PdfGState.<B>SetSoftMask</B> method.
+	The <B>SetSoftMask</B> method expects two arguments: an instance of the PdfGraphics object and a parameter
+	list. The optional <i>Alpha</i> parameter specifies whether the soft mask is to be derived from the group's alpha values (if set to True)
+	or luminocity values (if set to False or omitted). The optional backdrop color for the group can also be specified via the <i>C1</i>, <i>C2</i>, ..., <i>Cn</i>
+	color components (black by default.)
+	<P>	
+	Note that if <i>Alpha</i> is False or omitted, the transparency group
+	associated with this PdfGraphics object must be assigned a color space via the <B>SetColorSpace</B> method.
+	<P>
+	The following example uses a soft mask defined by a black and white image
+	to create a drop shadow for a logo:
+	<P>
+	<table>
+	<tr>
+	<td><img src="images/17_logo.png"></td>
+	<td> </td>
+	<td><img src="images/17_alpha.png"></td>
+	<td><img src="images/17_arrow.png"></td>
+	<td><img src="images/17_dropshadow.png"></td>
+	</tr>
+	</table>
+
+	<P>
+	Below is the corresponding AspPDF script:
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+	Set PDF = Server.CreateObject("Persits.PDF")<BR>
+	Set Doc = PDF.CreateDocument<BR>
+	Set Page = Doc.Pages.Add<P>
+
+	' Main Logo<BR>
+	Set Logo = Doc.CreateGraphics("left=0; bottom=0; right=128; top=206")<BR>
+	With Logo.Canvas<BR>
+	&nbsp;&nbsp;&nbsp;.SetParams ("FillColor=#313570")<BR>
+	&nbsp;&nbsp;&nbsp;.MoveTo 6, 177<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 48, 201<BR>
+	&nbsp;&nbsp;&nbsp;	.LineTo 113, 162<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 113, 86<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 70, 62<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 70, 137<BR>
+	&nbsp;&nbsp;&nbsp;.ClosePath<BR>
+	&nbsp;&nbsp;&nbsp;.Fill<P>
+    
+	&nbsp;&nbsp;&nbsp;.SetParams ("FillColor=#5B88B1")<BR>
+	&nbsp;&nbsp;&nbsp;.MoveTo 61, 5<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 61, 130<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 20, 106<BR>
+	&nbsp;&nbsp;&nbsp;.LineTo 20, 30<BR>
+	&nbsp;&nbsp;&nbsp;.ClosePath<BR>
+	&nbsp;&nbsp;&nbsp;.Fill<BR>
+	End With<P>
+
+	' Transparency group to be used with the soft mask<BR>
+	Set Group = doc.CreateGState("Group=true")<BR>
+	' Required as we use luminocity for soft mask<BR>
+	Group.SetColorSpace Doc.CreateColorSpace("DeviceRGB")<P>
+
+	' Soft mask based on an image to be used as alpha<BR>
+	Set Image = Doc.OpenImage(Server.MapPath("17_alpha.png"))<BR>
+	Set SM = Doc.CreateGraphics("left=0; bottom=0; right=128; top=206")<BR>
+	SM.Canvas.DrawImage Image, "x=0; y=0"<P>
+
+	' Associate the soft mask with a transparency group<BR>
+	SM.SetGroup Group<P>
+
+	' Drop Shadow. Uses GState object with a soft mask<BR>
+	Set GState = Doc.CreateGState("fillalpha=0.5")<BR>
+	GState.SetSoftMask SM, "alpha=false"<BR>
+	Set Shadow = Doc.CreateGraphics("left=0; bottom=0; right=128; top=206")<BR>
+	With Shadow.Canvas<BR>
+	&nbsp;&nbsp;&nbsp;.SetGState GState<BR>
+	&nbsp;&nbsp;&nbsp;.SetFillColor 0.2, 0.2, 0.2 ' gray<BR>
+	&nbsp;&nbsp;&nbsp;.FillRect 0, 0, 128, 206<BR>
+	End With<P>
+
+	' Draw shadow with an offset<BR>
+	Page.Canvas.DrawGraphics Shadow, "x=110; y=490"<P>
+
+	' Draw logo<BR>
+	Page.Canvas.DrawGraphics Logo, "x=100; y=500"<P>
+
+	' Save document, the Save method returns generated file name<BR>
+	Filename = Doc.Save( Server.MapPath("dropshadow.pdf"), False )<BR>
+	Response.Write "Success! Download your PDF file &lt;A HREF=" & Filename & ">here&lt;/A>"<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	IPdfManager objPdf = new PdfManager();<BR>
+	IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<BR>
+	IPdfPage objPage = objDoc.Pages.Add( Missing.Value, Missing.Value, Missing.Value );<P>
+
+	// Main Logo<BR>
+	IPdfGraphics objLogo = objDoc.CreateGraphics("left=0; bottom=0; right=128; top=206");<P>
+	
+    objLogo.Canvas.SetParams("FillColor=#313570");<BR>
+    objLogo.Canvas.MoveTo(6, 177);<BR>
+    objLogo.Canvas.LineTo(48, 201);<BR>
+    objLogo.Canvas.LineTo(113, 162);<BR>
+    objLogo.Canvas.LineTo(113, 86);<BR>
+    objLogo.Canvas.LineTo(70, 62);<BR>
+    objLogo.Canvas.LineTo(70, 137);<BR>
+    objLogo.Canvas.ClosePath();<BR>
+    objLogo.Canvas.Fill(Missing.Value);<P>
+    
+    objLogo.Canvas.SetParams("FillColor=#5B88B1");<BR>
+    objLogo.Canvas.MoveTo(61, 5);<BR>
+    objLogo.Canvas.LineTo(61, 130);<BR>
+    objLogo.Canvas.LineTo(20, 106);<BR>
+    objLogo.Canvas.LineTo(20, 30);<BR>
+    objLogo.Canvas.ClosePath();<BR>
+    objLogo.Canvas.Fill(Missing.Value);<P>
+
+	// Transparency group to be used with the soft mask<BR>
+	IPdfGState objGroup = objDoc.CreateGState("Group=true");<BR>
+	// Required as we use luminocity for soft mask<BR>
+	objGroup.SetColorSpace( objDoc.CreateColorSpace("DeviceRGB", Missing.Value ));<P>
+
+	// Soft mask based on an image to be used as alpha<BR>
+	IPdfImage objImage = objDoc.OpenImage(Server.MapPath("17_alpha.png"), Missing.Value );<BR>
+	IPdfGraphics objSM = objDoc.CreateGraphics("left=0; bottom=0; right=128; top=206");<BR>
+	objSM.Canvas.DrawImage( objImage, "x=0; y=0" );<P>
+
+	// Associate the soft mask with a transparency group<BR>
+	objSM.SetGroup( objGroup );<P>
+
+	// Drop Shadow. Uses GState object with a soft mask<BR>
+	IPdfGState objGState = objDoc.CreateGState("fillalpha=0.5");<BR>
+	objGState.SetSoftMask( objSM, "alpha=false" );<BR>
+	IPdfGraphics objShadow = objDoc.CreateGraphics("left=0; bottom=0; right=128; top=206");<P>
+	
+    objShadow.Canvas.SetGState( objGState );<BR>
+    objShadow.Canvas.SetFillColor( 0.2f, 0.2f, 0.2f ); // gray<BR>
+    objShadow.Canvas.FillRect( 0, 0, 128, 206 );<P>
+
+	// Draw shadow with an offset<BR>
+	objPage.Canvas.DrawGraphics( objShadow, "x=110; y=490" );<P>
+
+	// Draw logo<BR>
+	objPage.Canvas.DrawGraphics( objLogo, "x=100; y=500" );<P>
+
+	// Save document, the Save method returns generated file name<BR>
+	string strFilename = objDoc.Save( Server.MapPath("dropshadow.pdf"), false );<BR>
+	lblResult.Text = "Success! Download your PDF file &lt;A HREF=" + strFilename + ">here&lt;/A>";<BR>
+	</font></TD></TR>
+	</table>
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_softmask.asp">http://localhost/asppdf/manual_17/17_softmask.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_17/17_softmask.aspx">http://localhost/asppdf/manual_17/17_softmask.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+
+	</Blockquote>
+
+
+	<A NAME="17_5">
+	<FONT COLOR="#C06000"><B>17.5 Miscellaneous Features</B></FONT>
+	<Blockquote>
+	<U><B>17.5.1 Page Groups</B></U>
+	<P>
+	In all the transparency group-related examples of this chapter, a group was implemented by a PdfGraphics object.
+	A group can also be represented by a PdfPage object as a whole, in the exact same manner.
+	To have a page represent a group, the method PdfPage.<B>SetGroup</B> must be called, for example:
+	<P>
+	<font face="Courier New"><B>
+	Set Group = Doc.CreateGState("Group=True; Isolated=True")<BR>
+	Set Page = Doc.Pages.Add<BR>
+	Page.SetGroup Group
+	</B></font>
+
+	<P>
+	<U><B>17.5.2 Other Graphics State Parameters</B></U>
+	<P>
+	In addition to the <B>BlendMode</B>, <B>Alpha</B> and <B>FillAlpha</B> parameters described above, 
+	the <B>CreateGState</B> method also accepts the following parameters (all optional):
+	<P>
+	<UL>
+	<li>AlphaIsShape (Boolean) - specifies whether the current soft mask and alpha constant are to be interpreted
+	as shape (True) or opacity values (False).</li>
+	<li>TextKnockout (Boolean) - determines the behavior of overlapping glyphs within a text object.</li>
+	<li>Overprint (Boolean) - specifies whether to apply overprint for all stroking operations.</li>
+	<li>FillOverprint (Boolean) - specifies whether to apply overprint for all painting operations other than stroking.</li>
+	<li>OverprintMode (integer) - specifies the overprint mode which determines how to interpret a tint value of 0.0 in a CMYK color space.
+	
+	</UL>
+	</Blockquote>
+
+	<A HREF="manual_A.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Appendix A: Pre-defined Color Names"></A>
+	<A HREF="manual_16.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 16: IE-based HTML-to-PDF Conversion"></A>	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2014. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

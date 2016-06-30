@@ -1,0 +1,1135 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 12: Miscellaneous Features</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 12: Miscellaneous Features
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD xWIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_13.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 13: HTML to PDF Conversion"></A>
+	<A HREF="manual_11a.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 11a: Existing Form Fill-in"></A>
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 12: Miscellaneous Features</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#12_1">12.1 Barcodes</A><BR>
+	<A HREF="#12_2">12.2 Document Stitching</A><BR>
+	<A HREF="#12_3">12.3 Metadata</A><BR>
+	<A HREF="#12_4">12.4 PDF/A Support</A><BR>
+	</B>
+	<P>
+	<A NAME="12_1"><FONT COLOR="#c06000"><B>12.1 Barcodes</B></FONT>
+	<Blockquote>
+	AspPDF contains the ability to generate printable, scannable barcodes.
+	Various 1D (linear) and 2D barcodes are supported.
+	<P>
+		<B><U>12.1.1 Linear Barcodes</U></B>
+	<P>
+	Linear (one-dimensional) barcodes are provided by the <b>DrawBarcode</b> method of the <b>PdfCanvas</b> object. 
+	This method expects two parameters: a string indicating the data to encode as a 
+	barcode, and a <b>PdfParam</b> object or parameter string providing parameters.
+	<P>
+	The following code sample prints a UPC-A (Universal Product Code) barcode on a page.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2" ID="TableBar1">
+		<TR>
+			<TD BGCOLOR="white" ALIGN="left"><font size="2" face="courier new" color="black"><B>VBScript</B></font></TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="yellow" class="thinborder"><font size="2" face="courier new">
+				Set Pdf = Server.CreateObject("Persits.Pdf")<br>
+				Set Doc = Pdf.CreateDocument<br>
+				Set Page = Doc.Pages.Add<BR><BR>
+				strParam = "x=72; y=696; height=96; width=144; type=1" 'Barcode type 1 is UPC-A<br>
+				strData = "04310070524"<br>
+				Page.Canvas.DrawBarcode strData, strParam </font>
+			</TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="white" ALIGN="left"><font size="2" face="courier new" color="black"><B>C#</B></font></TD>
+		</TR>
+		<TR>
+			<TD BGCOLOR="lightblue" class="thinborder"><font size="2" face="courier new">
+				IPdfManager objPDF = new PdfManager();<br>
+				IPdfDocument objDoc = objPDF.CreateDocument(Missing.Value);<br>
+				IPdfPage objPage = objDoc.Pages.Add(Missing.Value, Missing.Value, Missing.Value);<BR><BR>
+				String strParams = "x=72; y=696; height=96; width=144; type=1"; //Barcode type 1 is UPC-A<br>
+				String strData = "04310070524"<br>
+				objPage.Canvas.DrawBarcode( strData, strParam ); </font>
+			</TD>
+		</TR>
+	</TABLE>
+	<p>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_barcode.asp">http://localhost/asppdf/manual_12/12_barcode.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_barcode.aspx">http://localhost/asppdf/manual_12/12_barcode.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	This will produce the following:
+	<P>
+	<img src="images/12_barcode.gif">
+	<P>
+	Note that AspPDF automatically calculated and added the UPC-A check digit (the 6.)
+	<p>
+	The <b>DrawBarcode</b> method will validate the data passed to it and throw an error exception if it is invalid for the specified type of barcode.
+	<p>
+	AspPDF also includes a sample of an HTML form page into which a user can enter data for a barcode.  This code is not repeated here due to length.  Click the links below to run this sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_barcode_form.asp">http://localhost/asppdf/manual_12/12_barcode_form.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_barcode_form.aspx">http://localhost/asppdf/manual_12/12_barcode_form.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	<B><U>12.1.2 Required Barcode Parameters</U></B>
+	<P>
+	<i>Type</i>	- What type of barcode to draw. See below for a list of supported types.
+	<P>
+	<i>X</i>, <i>Y</i> - X and Y coordinates of the lower-left corner of the barcode.
+	<P>
+	<i>Width</i>, <i>Height</i>	- Width and height of the barcode.
+	<P>
+	The X, Y, Width, and Height parameters only specify the size of the actual 
+	rectangular bars. Text associated with barcodes may extend slightly outside the 
+	specified area.
+	<P>
+	<B><U>12.1.3 Optional Barcode Parameters</U></B>
+	<P>
+	<i>Color</i> - Specifies the color of the bars and text. This can be a named color constant
+	like "red" or a hex RGB value. Defaults to black.
+	<P>
+	<i>tc, tm, ty, tk</i> - Specify the CMYK color components of the bars and text.
+	The values must be between 0 and 1.
+	If these parameters are specified, <i>Color</i> is ignored.
+	These parameters were introduced by version 2.2.0.2.
+	<P>
+	<i>BgColor</i> - Specifies the color of the spaces between the bars. If not specified, the 
+	spaces will be transparent. This can be useful to make the spaces in the 
+	barcode white if the page background is non-white. Note that very few scanners 
+	can scan barcodes in colors other than standard black and white.
+	<P>
+	<i>FontSize</i> - Specifies the size of the font used. This is not used for 
+	certain barcode types like UPC which prescribe all font sizes. This is a <b>maximum</b>
+	limit on font size. AspPDF will shrink the font as necessary to make the text 
+	fit within the width of a particular barcode type.
+	<P>
+	<i>BarWeight</i> - Certain barcode types do not prescribe a constant width ratio between "thin" and "wide" bars,
+	but allow this ratio to be specified.  Using this parameter may improve the scannability of these barcode
+	types with various scanners.  Defaults to 2, meaning "wide" bars are twice as wide as "thin" bars.
+	<P>
+	<i>DrawText</i> - Some barcode types (such as UPC) usually include printed human-readable text.  Others
+	(such as Industrial 2/5) do not.  This parameter allows you to override the default behavior.  Can be set to
+	<b>True</b> or <b>False</b>.
+	<P>
+	<i>AddCheck</i> - A few barcode types allow optional calculation and use of a check digit.  Boolean parameter.
+	<P>
+	<i>Compress</i> - Only used by Code 128, see below.  Boolean parameter.
+	<P>
+	<i>Angle</i> - Specifies an angle of counter-clockwise rotation (in degrees) of the barcode around its lower-left corner.
+	<P>
+	<B><U>12.1.4 Supported Linear Barcode Types</U></B>
+	<P>
+	<I>(Some images shortened vertically for space)</i>
+	</P>
+
+	<TABLE border=0 cellpadding=3 cellspacing=0 style="font-family: arial; font-size: 12" id="grid">
+		<tr>
+		<td>
+		<img src="images/12_barcode01.gif">
+		</td><td>
+		1. <B>UPC-A</B> - The most common type of barcode.
+		Used in retail applications.
+		Requires 11 or 12 numeric digits; if 11 are given,
+		AspPDF calculates and adds the 12th digit which is a check digit.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode02.gif"></td>
+		<td> 2. <B>UPC-E</B> - A shortened form of UPC-A.  Requires 8 numeric digits.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode03.gif"></td>
+		<td> 3. <B>EAN-13</B> - A superset of UPC-A, with one additional digit.  Requires 12 or 13 numeric digits; the 13th is a check digit in the same manner as UPC-A.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode04.gif"></td>
+		<td> 4. <B>EAN-8</B> - A shortened form of EAN-13.  Requires 7 or 8 numeric digits; the 8th is a check digit.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode05.gif"></td>
+		<td> 5. <B>UPC-A with supplemental</B> - A UPC-A code, plus either a 2-digit or 5-digit supplemental code.
+		Requires 14 numeric digits for the 2-digit version and 17 digits for the 5-digit version.
+		If the 12th character is a space, AspPDF will calculate a check digit for that space and encode it.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode06.gif"></td>
+		<td> 6. <B>UPC-E with supplemental</b> - Similar to UPC-A with supplemental.  Requires 10 or 13 numeric digits.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode07.gif"></td>
+		<td> 7. <B>EAN-13 with supplemental</b> - Similar to UPC-A with supplemental.  Requires 15 or 17 numeric digits.
+		Calculates a check digit if the 13th character is a space.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode08.gif"></td>
+		<td> 8. <B>EAN-8 with supplemental</b> - Similar to UPC-A with supplemental.  Requires 10 or 13 numeric digits.
+		Calculates a check digit if the 8th character is a space.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode09.gif"></td>
+		<td> 9. <B>2-digit supplemental</b> - The 2-digit supplemental barcode can be drawn by itself without an accompanying main barcode.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode10.gif"></td>
+		<td> 10. <B>5-digit supplemental</b> - See previous.
+		</td></tr>
+		<tr><td colspan=2>
+		None of the UPC or EAN barcode types use the FontSize or BarWeight parameter.  All other barcodes do use FontSize, and use BarWeight unless otherwise specified.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode11.gif"></td>
+		<td> 11. <B>Industrial 2 of 5</b> - Can encode any quantity of numeric characters.  AspPDF adds the start and stop bars.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode12.gif"></td>
+		<td> 12. <B>Interleave 2 of 5</b> - Similar to Industrial 2 of 5 with a more compact encoding scheme.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode13.gif"></td>
+		<td> 13. <B>Interleave 2 of 5 Special</b> - Same as Interleave 2 of 5 but with different spacing.  Does not use BarWeight.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode14.gif"></td>
+		<td> 14. <B>DataLogic 2 of 5</b> - Similar to Industrial 2 of 5 but with a different compact encoding scheme.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode15.gif"></td>
+		<td> 15. <B>Plessey</b> - Can encode any quantity of numeric characters.  AspPDF adds the start and stop bars.  This image illustrates the use of the <i>BarWeight</i> parameter set to 3.  Note that the wide bars are much thicker than the thin bars.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode16.gif"></td>
+		<td> 16. <B>Codabar</b> - Can encode any quantity of these characters:
+		<div align="center"><B><font size="3" face="courier new">0123456789-$:/.+</font></b></div>
+		Requires a matched pair of start and stop characters which must be the letters A, B, C, or D.  Does not use BarWeight.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode17.gif"></td>
+		<td> 17. <B>Code 39</b> - A common encoding scheme for alphabetic text.  Can encode numbers, uppercase letters, and these characters:
+		<div align="center"><b><font size="3" face="courier new">-. $/+%</font></b></div>
+		AspPDF encodes lowercase characters as uppercase, and adds start and stop bars.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode18.gif"></td>
+		<td> 18. <B>Code 11</b> - Can encode any quantity of numeric characters.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode20.gif"></td>
+		<td> 20. <B>Code 39 Extended</b> - Can encode the entire ASCII set (characters 0 to 127).  Can optionally add a check digit with the <i>AddCheck</i> parameter.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode21.gif"></td>
+		<td> 21. <B>Code 93</b> - Can encode the entire ASCII set (characters 0 to 127).  Does not use BarWeight.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode22.gif"></td>
+		<td> 22. <B>Code 128</b> - Can encode the entire ASCII set (characters 0 to 127).  Does not use BarWeight.  
+		<B>Must</B> use a check digit via the <i>AddCheck=true</i> parameter.
+		Automatically selects between Code-128 encoding schemes as necessary.
+		Implements the Code-C encoding scheme to compactly encode pairs of digits; this is done if the optional parameter <i>Compress</i> is set to True.
+		<P>
+		NOTE: as of Version 3.1.0.2, this barcode is replaced by a more readable Type=24 barcode described below.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode23.gif"></td>
+		<td> 23. <B>Code 128 Raw</b> - Provides access to advanced features of Code-128 encoding; AspPDF does not do any processing of the data passed to it, except for adding the stop bars and optionally adding the check digit.
+		You must provide the start code character; in VB or ASP, this would be ChrW(135) for Code A, ChrW(136) for Code B, and so on.
+		Consult a Code 128 reference for full information on specifications such as function and shift characters.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode24.gif"></td>
+		<td> 24. <B>Code 128 Auto</b> - An improved version of Code 128 (Type=22) described above. Can encode the entire ASCII set (characters 0 to 127).  Does not use BarWeight.
+		Ignores <i>AddCheck</i> and <i>Compress</i> parameters. Introduced in version 3.1.0.2 to replace barcode Type=22. Uses an alternative encoding algorithm which 
+		provides better scannability than the old Type=22 barcode.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode30.gif"></td>
+		<td> 30. <B>US Postal Code</b> - Printed on mail by the US Postal Service.  AspPDF calculates and adds a check digit.  Does not use BarWeight.
+		</td></tr>
+		<tr><td>
+		<img src="images/12_barcode31.gif"></td>
+		<td> 31. <B>UK/Canada Postal Code</b> - Printed on mail by the UK and Canada mail services.  Does not use BarWeight.
+		</td></tr>
+
+		<tr><td>
+		<img src="images/12_barcode32.gif"></td>
+		<td> 32. <B>Intelligent Mail Code</b> - Used by US Postal Service. Also known as the USPS OneCode Solution or USPS 4-State Customer Barcode.  
+		Requires 20 digits of tracking information followed by 0, 5, 9, or 11 digits of routing (zip code) information.
+		The 2nd digit of the tracking code must be in the range 0 to 4.
+		Introduced by AspPDF 2.4.
+		Does not use BarWeight.
+		</td></tr>
+	</table>
+
+	<P>
+	The barcode functionality is demonstrated by <A TARGET="_new" HREF="http://support.persits.com/pdf/demo_barcode.aspx">Live Demo #8a</a>.
+	
+	<P>
+
+	<A NAME="12_1_5">
+	<B><U>12.1.5 Two-Dimensional Barcodes</U></B>
+
+	<P>
+	AspPDF supports three popular 2-dimensional barcodes: <B>PDF417</B>, <B>Data Matrix</B> and <B>QR Code</B>
+	(PDF417 and DataMatrix were added in version 1.8, QR Code was added in service release 2.0.0.7.)
+	2D barcode symbols are drawn via the method <B>DrawBarcode2D</B> of the PdfCanvas object.
+	This method
+	has two required arguments: the text to be encoded, and an instance of the PdfParam object or 
+	parameter string. If binary data is to be encoded, the binary array with the data is to be passed via the 3rd optional
+	argument. If the 3rd argument is specified, the text argument is ignored.
+	<P>
+	<P>
+	The barcode's appearance is controlled via parameters passed as the 2nd argument. 
+	The only two required
+	parameters are <i>X</i> and <i>Y</i> which specify the position of the lower-left corner of the symbol on the page.
+	The <i>Type</i> parameter specifies which of the three barcode types to draw. The valid <i>Type</i> values are 
+	1 (PDF417, default), 2 (Data Matrix) and 3 (QR Code.) The three 2D barcode types and their parameters are described below.
+	<P>
+	The 2D barcode functionality is demonstrated by <A TARGET="_new" HREF="http://support.persits.com/pdf/demo_barcode2d.aspx">Live Demo #8b</a>.
+	<P>
+	<A NAME="12_1_5_1">
+	<B><U><i>12.1.5.1 PDF417</i></U></B>
+	<P>
+	<IMG SRC="images/12_pdf417barcode.gif">
+	<P>
+	In the context of the PDF417 barcode, "PDF" stands for Portable Data File
+	and has nothing to do with the Adobe PDF file format. 
+	A PDF417 barcode symbol is essentially a stack of 1D barcodes. A single symbol
+	can contain far more information than a 1D barcode (up to 1.1 KB) in a space
+	no larger than a traditional barcode. This format allows you to store not only text
+	and numbers but
+	binary data as well. In addition, PDF417 has a built-in error correction system
+	so that a symbol can be read even if it is partially damaged or destroyed.
+
+	The following code snippet draws the barcode symbol shown above:
+	<P>
+	<B><FONT FACE="Courier New">
+	Page.Canvas.DrawBarcode2D "AspPDF Rules!", "X=10; Y=20"
+	</FONT></B>
+	<P>
+	A PDF417 symbol has a columnar pattern. The leftmost and rightmost columns of every
+	symbol always look the same and they are called <i>start</i> and <i>stop</i> patterns. These are abutted
+	by <i>row indicator</i> columns, and the actual data columns are squeezed in the middle. The symbol above has
+	3 data columns. Each data column is a stack of "codewords" which are sequences
+	of 4 bars and 4 spaces arranged on 17 available slots. That is where the number 417 comes from.
+	A symbol can contain 1 to 30 data columns and 3 to 90 rows.
+	<P>
+	The appearance and properties of a PDF417 symbol are controlled by the following parameters (all optional):
+	<P>
+	<UL>
+	<li><I>BarWidth</i> - the width of the narrowest vertical bar (in user units.) 1 by default.
+	<li><I>AspectRatio</i> - the ratio of the row height to the narrowest bar width. 2 by default.
+	<li><I>ErrorLevel</i> - controls the amount of error correction information in the symbol. The higher this number is,
+	the more resistant to damage (and larger in size) the symbol gets. Valid values are 0 to 8.
+	The value of 0 means no error correction. 
+	If this parameter is not specified at all, the error level is computed automatically based on 
+	the data size according to the standard PDF417 specifications.
+	<li><I>Columns</i> - the symbol will contain at least this number of data columns, provided there is enough data for it.
+		If not specified, the number of columns is determined automatically.
+	<li><I>Rows</i> - the symbol will contain at least this number of rows, provided there is enough data for it.
+		If not specified, the number of rows is determined automatically.
+	<li><i>Angle</i> - an angle of counter-clockwise rotation (in degrees) of the barcode around its lower-left corner. 0 by default.
+	<li><i>Color</i> - barcode color, the current fill color by default.
+	<li><i>BgColor</i> - background color (the color of the "white" rectangular area underneath the barcode.) Transparent by default.
+		Useful to make the barcode background white if the page background is non-white.
+	<li><i>BgMargin</i> - the size (in user units) of the margins around the barcode. 2 x <i>BarWidth</i> by default. 
+		Ignored unless <i>BgColor</i> is specified.
+	</UL>
+
+	<P>
+	As of Version 3.2.0.1, the following parameters have been added to enable the creation of US Government-compliant 
+	barcodes on official USCIS forms:
+	<P>
+	<UL>
+	<li><i>Width</i>, <i>Height</i> - specify the overall width and height of the barcode symbol in user units, including the quiet zone (described below.) 
+	Both parameters must be specified to have an effect, i.e. if one is omitted, the other is ignored. If both of these parameters
+	are specified, <I>BarWidth</i> and <I>AspectRatio</i> are ignored.</li>
+	<li><i>QZH</i>, <i>QZV</i> - specify the "quiet zone" space margins in user units on the left/right and top/bottom sides of the barcode, respectively.
+	0 by default. These parameters are only used if the Width/Height parameters are specified.</li>
+	<li><i>Binary</i> - if set to true, forces the byte (or binary) compression mode in which each codeword represents 1.2 bytes of information
+	The default text compression mode encodes (roughly) 2 characters per codeword. False by default.
+
+	<P>
+	<A HREF="manual_11a.html#11a_8"><img src="images/12_govform.png" width="150" border="0" ALT="Barcode-equipped Government Forms"></A>
+	</ul>
+	<P>
+	
+
+	<P>
+	Filling out PDF417 barcode-equipped government forms is covered in detail in <A HREF="manual_11a.html#11a_8"><B>Section 11a.8 - Barcode-equipped Government Forms</B></A>.
+	<P>
+	The following code snippet encodes binary data from a BLOB recordset field. 
+	It specifies the error correction level of 5 and bar width of 2:
+	<P>
+	<B><FONT FACE="Courier New">
+	Page.Canvas.DrawBarcode2D "", "X=10; Y=20; ErrorLevel=5; BarWidth=2", rs("blob).Value
+	</FONT></B>
+
+	<P>
+
+	Unlike the DrawBarcode method described in the previous subsection, the <B>DrawBarcode2D</B>
+	method returns a value -- an instance of the PdfParam object populated with the barcode's
+	width, height, number of rows, number of columns and error level. For example,
+	the following code snippet draws a barcode and then prints out its width and height:
+	<P>
+	<B><FONT FACE="Courier New">
+	Set Param = Page.Canvas.DrawBarcode2D( "data", "X=10; Y=20;" ) <BR>
+	Response.Write "Width=" & Param("Width") <BR>
+	Response.Write "Height=" & Param("Height") <BR>
+	</FONT></B>
+	<P>
+	The number of rows, number of columns and error level are retrieved via 
+	Param("Rows"), Param("Columns") and Param("ErrorLevel"), respectively.
+
+	<P>
+	<A NAME="12_1_5_2">
+	<B><U><i>12.1.5.2 Data Matrix</i></U></B>
+	<P>
+	<IMG SRC="images/12_datamatrixbarcode.gif">
+	<P>
+	Data Matrix is another very popular 2D barcode. Its symbols are usually square and sometimes rectangular. 
+	A single symbol can encode up to 2335 characters. The required parameters
+	are <i>X</i>, <i>Y</i>, and <i>Type</i> (the latter must be set to 2.) This barcode uses the same error correction
+	system as PDF417, but the error level is determined automatically, therefore the <i>ErrorLevel</i> parameter
+	is not used. The symbol shown above was drawn using the following code:
+	<P>
+	<B><FONT FACE="Courier New">
+	Page.Canvas.DrawBarcode2D "DataMatrix is also supported!", "Type=2; X=10; Y=20"
+	</FONT></B>
+	<P>
+	The <I>BarWidth</i> parameter specifies both the width and height
+	of an individual cell of the symbol (in user units.) <I>AspectRatio</i> is not used
+	since the cells are always square.
+	<P>
+	By default, the number of cell columns and rows in a symbol is determined
+	automatically. You can specify the desired size via the <I>Columns</i> and <I>Rows</i>
+	parameters. You must either specify both parameters, or neither.
+	The following [Rows x Columns] combinations are valid: 10x10, 12x12, 14x14, 16x16, 
+	18x18, 20x20, 22x22, 24x24, 26x26, 32x32, 36x36, 40x40, 44x44, 48x48, 52x52, 64x64,
+	72x72, 80x80, 88x88, 96x96, 104x104, 120x120, 132x132, 144x144, 8x18, 8x32, 12x26, 12x36, 
+	16x36, and 16x48.
+	<P>
+	All the other parameters have the same meaning as with PDF417. The return values are also the same
+	except that there is no <i>ErrorLevel</i> value.
+	<P>
+	<A NAME="12_1_5_3">
+	<B><U><i>12.1.5.3 QR Code</i></U></B>
+	<P>
+	<IMG SRC="images/12_qrbarcode.gif">
+	<P>
+	The QR Code barcode is used	in commercial tracking applications as well as 
+	advertisements and signs aimed at mobile-phone users. It was invented in Japan in 1994. "QR" stands for
+	"quick response." 
+	The three prominent corner boxes give the QR Code symbols a very distinctive look.
+	The symbols are always square. 
+	<P>
+	A single symbol can encode up to 7,089 numeric symbols, up to 4,296 alpha-numeric symbols,
+	up to 2,953 binary bytes, or up to 1,817 Kanji/Kana characters.
+	The required parameters are <I>X</I>, <I>Y</I>, and <I>Type</I> (the latter must be set to 3.) 
+	There are 4 error correction levels, from 0 to 3, 0 being the lowest,
+	specified via the optional <i>ErrorLevel</i> parameter (0 by default.)
+	The symbol shown above was drawn using the following code:
+	<P>
+	<B><FONT FACE="Courier New">
+	Page.Canvas.DrawBarcode2D "QR is scannable art", "Type=3; X=10; Y=20"
+	</FONT></B>
+	<P>
+	By default, the size of the symbol is determined automatically. To make the symbol
+	larger than necessary, use the <i>Version</i> parameter. The valid values
+	are 0 (auto) and 1 to 40 to specify a larger size.
+	<P>
+	The <i>BarWidth</i> parameter specifies both the width and height of an individual cell of 
+	the symbol (in user units.) <i>AspectRatio</i> is not used since the cells are always square. 
+	<i>Columns</i> and <i>Rows</i> are not used since the size is determined automatically or
+	specified via the <i>Version</i> parameter.
+	
+	<P>
+	All the other parameters have the same meaning as with PDF417 and DataMatrix. The return values are also the same
+	except that there is no <i>ErrorLevel</i> value.
+	<P>
+
+
+
+
+	</Blockquote>
+	<P>
+	<A NAME="12_2">
+	<FONT COLOR="#C06000"><B>12.2 Document Stitching</B></FONT>
+	<Blockquote>
+	AspPDF is capable of joining together two 
+	or more PDFs to form a new document. This process
+	is often referred to as document stitching.
+	<P>
+	<B><U>12.2.1 AppendDocument Method</u></B>
+	<P>
+	Document stitching is performed via the <B>AppendDocument</B> method
+	provided by the <B>PdfDocument</B> object.
+	This method expects a single argument: an instance
+	of the <B>PdfDocument</B> object representing another document
+	to be appended to the current document. The AppendDocument method
+	can be called more than once to append multiple documents
+	to the current one.
+	<P>
+	The PdfDocument object to which other documents are appended 
+	(the master) can either be
+	a new or existing document. The PdfDocument objects that get appended
+	<i>must</i> be all existing documents.
+	A document cannot be appended to
+	itself.
+	<P>
+	The master document determines the general and security properties
+	of the resultant document.
+	<P>
+
+	<P>
+	The following code sample appends the file <B>doc2.pdf</B>
+	to the end of the document <B>doc1.pdf</B>:
+	<P>
+
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Open document 1<BR>
+		Set Doc1 = Pdf.OpenDocument( Server.MapPath("doc1.pdf") )<P>
+
+		' Open document 2<BR>
+		Set Doc2 = Pdf.OpenDocument( Server.MapPath("doc2.pdf") )<P>
+
+		' Append doc2 to doc1<BR>
+		Doc1.AppendDocument Doc2<P>
+
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc1.Save( Server.MapPath("stitch.pdf"), False )
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Open Document 1<BR>
+		IPdfDocument objDoc1 = objPdf.OpenDocument(Server.MapPath("doc1.pdf"), Missing.Value);<P>
+
+		// Open Document 2<BR>
+		IPdfDocument objDoc2 = objPdf.OpenDocument(Server.MapPath("doc2.pdf"), Missing.Value);<P>
+
+		// Append doc2 to doc1<BR>
+		objDoc1.AppendDocument(objDoc2);<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		String strFilename = objDoc1.Save( Server.MapPath("stitch.pdf"), false );
+	</font></TD></TR>
+	</table>
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_stitch.asp">http://localhost/asppdf/manual_12/12_stitch.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_stitch.aspx">http://localhost/asppdf/manual_12/12_stitch.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+	<P>
+	<B><U>12.2.2 Applying and Removing Security</u></B>
+	<P>
+	A cumulative document produced by appending one or more PDFs to 
+	a master document inherits the master document's security properties.
+	For example, if a master document is encrypted and the documents
+	appended to it are not, the resultant PDF
+	will be encrypted with the same passwords and permission flags
+	as the master document. Conversely, if the master document is unencrypted
+	and encrypted documents are appended to it, the result document
+	will be unencrypted.
+	<P>
+	This feature can be used to apply security to unsecure documents,
+	as well as modify or remove security from encrypted documents.
+	The idea is to create an <i>empty</i> document, call
+	the Encrypt method on it if necessary, 
+	then append the PDF that needs security added or removed.
+	<P>
+	To be in compliance with Adobe PDF licensing requirements,
+	AspPDF performs security removal only if the document
+	being appended is opened using the owner
+	password. Otherwise, an error exception is thrown.
+	<P>
+	The following code sample applies security
+	to the file <B>doc1.pdf</B>. Note that various document properties
+	are being copied from the original document (doc1.pdf) to the new one, because
+	by default the resultant PDF would inherit document properties
+	of the master PDF (in our case, an empty document) and the original
+	document's properties would be lost.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set Pdf = Server.CreateObject("Persits.Pdf")<P>
+
+		' Create empty document<BR>
+		Set Doc = Pdf.CreateDocument<P>
+
+		' Open document to apply security to<BR>
+		Set Doc1 = Pdf.OpenDocument( Server.MapPath("doc1.pdf") )<P>
+
+		' Copy properties<BR>
+		Doc.Title = Doc1.Title<BR>
+		Doc.Creator = Doc1.Creator<BR>
+		Doc.Producer = Doc1.Producer<BR>
+		Doc.CreationDate = Doc1.CreationDate<BR>
+		Doc.ModDate = Doc1.ModDate<P>
+
+		' Apply security to Doc<BR>
+		Doc.Encrypt "abc", "", 128<P>
+
+		' Append doc1 to doc<BR>
+		Doc.AppendDocument Doc1<P>
+
+		' Save document, the Save method returns generated file name<BR>
+		Filename = Doc.Save( Server.MapPath("apply.pdf"), False )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument( Missing.Value );<p>
+
+		// Open Document 1<BR>
+		IPdfDocument objDoc1 = objPdf.OpenDocument( Server.MapPath("doc1.pdf"), Missing.Value );<P>
+
+		// Copy properties<BR>
+		objDoc.Title		= objDoc1.Title;<BR>
+		objDoc.Creator		= objDoc1.Creator;<BR>
+		objDoc.Producer		= objDoc1.Producer;<BR>
+		objDoc.CreationDate = objDoc1.CreationDate;<BR>
+		objDoc.ModDate		= objDoc1.ModDate;<P>
+
+		// Apply security to Doc<BR>
+		objDoc.Encrypt( "abc", "", 128, Missing.Value );<P>
+
+		// Append doc1 to doc<BR>
+		objDoc.AppendDocument( objDoc1 );<P>
+
+		// Save document, the Save method returns generated file name<BR>
+		String strFilename = objDoc.Save( Server.MapPath("apply.pdf"), false );
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_applysecurity.asp">http://localhost/asppdf/manual_12/12_applysecurity.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_applysecurity.aspx">http://localhost/asppdf/manual_12/12_applysecurity.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+
+	<P>
+	<B><U>12.2.3 Making Changes to Documents Being Appended</u></B>
+	<P>
+	As mentioned earlier, a document being appended must be an <i>existing</i>
+	document opened via OpenDocument or OpenDocumentBinary. Changes made to a document
+	being appended will not propagate to the resultant compound document.
+	<P>
+	If you need to make changes to a document being appended, the following
+	workaround is recommended:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Doc1 = Pdf.OpenDocument(...)<BR>
+	Set Doc2 = Pdf.OpenDocument(...)<BR>
+	<i>' Make changes to Doc2</i><P>
+	Set Doc3 = Pdf.OpenDocumentBinary( Doc2.SaveToMemory )<BR>
+	Doc1.AppendDocument Doc3	
+	</B></font>
+	<P>
+	This code fragment uses an intermediary memory-based document Doc3 to hold the modified version of Doc2.
+
+	<P>
+	<B><U>12.2.4 Creating Multi-Page Documents Based on a Template</u></B>
+	<P>
+	AppendDocument is <i>not</i> a very efficent way to create multi-page documents
+	based on a single-page PDF template. We recommend that the method <B>CreateGraphicsFromPage</B>
+	described in <A HREF="manual_09.html#9_6">Section 9.6</A> be used for this task instead.
+	For a code sample, see our <A HREF="http://support.persits.com/show.asp?code=PS130905190">KB Article PS130905190</A>.
+	<P>
+
+	</Blockquote>
+	<P>
+	<A NAME="12_3">
+	<FONT COLOR="#C06000"><B>12.3 Metadata</B></FONT>
+	<Blockquote>
+	All major Adobe products share a common technology that
+	enables you to embed data describing a file, known as metadata,
+	into the file itself. This technology, called
+	<B>Extensible Metadata Platform</B> (XMP), uses XML
+	as the syntax for metadata description.
+	For more information on XMP, go to 
+	<A TARGET="_new" HREF="http://www.adobe.com/products/xmp">http://www.adobe.com/products/xmp</A>.
+	<P>
+	XML tags used in an XMP data block are described by 
+	the Resource Description Framework (RDF) available at <A TARGET="_new" HREF="">http://www.w3.org/RDF</A>.
+	<P>
+	A typical metadata string may look as follows:
+	<P>
+	<font face="courier new" size="1">
+
+	&lt;rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+	<P>
+	&nbsp;&lt;rdf:Description about='' xmlns='http://ns.adobe.com/pdf/1.3/'
+			xmlns:pdf='http://ns.adobe.com/pdf/1.3/'><BR>
+	&nbsp;&nbsp;&lt;pdf:CreationDate>2002-12-24T07:48:28Z&lt;/pdf:CreationDate><BR>
+	&nbsp;&nbsp;&lt;pdf:ModDate>2003-02-28T19:39:16+09:00&lt;/pdf:ModDate><BR>
+	&nbsp;&nbsp;&lt;pdf:Producer>Acrobat Distiller 5.0.1 for Macintosh&lt;/pdf:Producer><BR>
+	&nbsp;&nbsp;&lt;pdf:Title>Technical Specifications&lt;/pdf:Title><BR>
+	&nbsp;&nbsp;&lt;pdf:Author>John Smith&lt;/pdf:Author><BR>
+	&nbsp;&lt;/rdf:Description><P>
+
+	&nbsp;&lt;rdf:Description about=''
+	  xmlns='http://ns.adobe.com/xap/1.0/'
+	  xmlns:xap='http://ns.adobe.com/xap/1.0/'><BR>
+	&nbsp;&nbsp;&lt;xap:CreateDate>2002-12-24T07:48:28Z&lt;/xap:CreateDate><BR>
+	&nbsp;&nbsp;&lt;xap:ModifyDate>2003-02-28T19:39:16+09:00&lt;/xap:ModifyDate><BR>
+	&nbsp;&nbsp;&lt;xap:MetadataDate>2003-02-28T19:39:16+09:00&lt;/xap:MetadataDate><BR>
+	&nbsp;&nbsp;&lt;xap:Title><BR>
+	&nbsp;&nbsp;&nbsp;&lt;rdf:Alt><BR>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:li xml:lang='x-default'>Technical Specifications&lt;/rdf:li><BR>
+	&nbsp;&nbsp;&nbsp;&lt;/rdf:Alt><BR>
+	&nbsp;&nbsp;&lt;/xap:Title><BR>
+	&nbsp;&nbsp;&lt;xap:Author>John Smith&lt;/xap:Author><BR>
+	&nbsp;&lt;/rdf:Description><p>
+
+	&nbsp;&lt;rdf:Description about=''
+	  xmlns='http://purl.org/dc/elements/1.1/'
+	  xmlns:dc='http://purl.org/dc/elements/1.1/'><BR>
+	&nbsp;&nbsp;&lt;dc:title>Technical Specifications&lt;/dc:title><BR>
+	&nbsp;&nbsp;&lt;dc:creator>John Smith&lt;/dc:creator><BR>
+	&nbsp;&lt;/rdf:Description>
+	<P>
+	&lt;/rdf:RDF>
+	</font>
+	<P>
+	AspPDF enables you to retrieve and specify metadata associated with a PDF
+	document via the <B>MetaData</B> property of the PdfDocument object. The following
+	code fragment extracts and prints out metadata from an existing PDF file:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set Doc = Pdf.OpenDocument("c:\path\somedoc.pdf")<BR>
+	Response.Write Doc.MetaData
+	</B></font>
+	<P>
+	AspPDF provides no functionality for parsing out individual metadata
+	items. Any XML parser object can be used for that, such as Microsoft XML DOM.
+
+
+	</Blockquote>
+
+	<A NAME="12_4">
+	<FONT COLOR="#C06000"><B>12.4 PDF/A Support</B></FONT>
+	<Blockquote>
+	<B><u>12.4.1 PDF/A: PDF for Archiving</u></b>
+	<P>
+	The PDF/A format is a subset of the regular PDF format with certain features, deemed incompatible
+	with long-term archival and storage of documents, removed. PDF/A-compliant
+	documents must be completely self-contained, with no reliance on external resources.
+	The single most important requirement for PDF/A files is that all fonts must be embedded.
+	Other requirements include:
+	<P>
+	<ul>
+	<li>Encryption is not allowed;</li>
+	<li>Documents must contain standards-based metadata;</li>
+	<li>Links to other documents and URLs are not allowed.</li>
+	<li>Use of device-dependent color spaces such as DeviceRGB is only allowed with some restrictions.</li>
+	<li>Certain other PDF features, such as JavaScript, XML Forms Architecture (XFA), LZW compression, and others, are not allowed.</li>
+	</ul>
+	<P>
+	There are currently three levels of PDF/A conformance: PDF/A-1, PDF/A-2 and PDF/A-3, with Level 1 subdivided into sublevels A and B.
+	<P>
+	For more information on PDF/A, see <A HREF="http://www.pdfa.org/">http://www.pdfa.org</A>.
+	<P>
+	<B><u>12.4.2 AspPDF's Support for PDF/A</u></b>
+	<P>
+	As of Version 3.3, AspPDF is capable of producing PDF documents compliant with <B>PDF/A-1b</B>, 
+	the basic conformance level which ensures reliable reproduction of the visual appearance of the document.
+	Even prior to Version 3.3, AspPDF embedded all TrueType fonts and allowed metadata to be specified, thus meeting the most important PDF/A requirements.
+	Version 3.3 bridges the remaining gap to full PDF/A-1b compliance by implementing the following features and enhancements:
+	<P>
+	<UL>
+	<li>The new PdfDocument.<B>AddOutputIntent</B> method enables mapping from a device-dependent color space such as DeviceRGB 
+	to a device-independent color space via an International Color Consortium (ICC) profile, thus satisfying the 
+	media-independent visual color reproduction requirement.</li>
+	<li>The entries <B>/CIDToGIDMap</B> and <B>/CIDSet</B> have been implemented for embedded TrueType fonts.</li>
+	<li>A bug has been fixed responsible for certain stream objects to lack the required end-of-line character before the keyword <i>endstream</i>.</li>
+	</uL>
+	<P>
+	The <B>AddOutputIntent</B> method expects 4 arguments: the output condition, the output condition indentifier, the path to the .icc profile file,
+	and the number of color components in the device-dependent color space used by the document (1 for DeviceGray, 3 for DeviceRGB and 4 for DeviceCMYK.)
+	The output condition is a string concisely identifying the intended output device or production condition in human-readable form. The output condition identifier 
+	is a string that identifies the output device or production condition as it appears in an industry-standard registry, and can be set to "Custom".
+	<P>
+	The metadata format is XML-based and similar to that described in the <A HREF="#12_3">previous section</A> of this chapter, but
+	must contain additional tags. The following example is a minimal metadata string required for PDF/A-1b compliance:
+	<P>
+	<div style="border: 1pt solid black; width: 1000">
+	<font face="Courier New"><B>
+		&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?><P>
+
+		&nbsp;&nbsp;&nbsp;&lt;x:xmpmeta x:xmptk="Adobe XMP Core 4.2.1-c041 52.342996, 2008/05/07-20:48:00" xmlns:x="adobe:ns:meta/"><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:Description rdf:about="" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pdfaid:part>1&lt;/pdfaid:part><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pdfaid:conformance>B&lt;/pdfaid:conformance><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:Description><P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/"><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pdf:Producer>Persits Software AspPDF - www.persits.com&lt;/pdf:Producer><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pdf:Keywords>&lt;/pdf:Keywords><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:Description><P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:RDF><br>
+		&nbsp;&nbsp;&nbsp;&lt;/x:xmpmeta><P>
+
+		&lt;?xpacket end="w"?>
+	</B></font>
+	</div>
+	<P>
+	There are several components of this metadata string that are worth noting:
+	<P>
+	<ul>
+	<li>The metadata must be enclosed within the 	<font face="Courier New">&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?></font> 
+	and <font face="Courier New">&lt;?xpacket end="w"?></font> tags.
+	<li>The PDF/A level of conformance must be specified via the <font face="Courier New">&lt;pdfaid:part></font> 
+	and <font face="Courier New">&lt;pdfaid:conformance></font> tags (<B>1</B> and <B>B</B> for AspPDF's level of conformance.)
+	<li>The Producer value must match the current value for the PdfDocument.Producer property which is set to "Persits Software AspPDF - www.persits.com" by default.
+	</ul>
+
+	<P>
+	In addition to the tags shown above, PDF/A metadata almost always contains "Dublin Core" (DC) tags as well,
+	such as <font face="Courier New">&lt;dc:title></font> and <font face="Courier New">&lt;dc:description></font>, for example:
+	<P>
+	<div style="border: 1pt solid black; width: 1000">
+	<font face="Courier New"><B>
+		&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?><P>
+
+		&nbsp;&nbsp;&nbsp;&lt;x:xmpmeta x:xmptk="Adobe XMP Core 4.2.1-c041 52.342996, 2008/05/07-20:48:00" xmlns:x="adobe:ns:meta/"><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dc:title><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:Alt><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:li xml:lang="x-default">Sunset on the beach&lt;/rdf:li><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:li xml:lang="de-DE">Sonnenuntergang am Strand&lt;/rdf:li><BR>		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:Alt><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dc:title>
+		<P>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dc:description><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:Alt><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:li xml:lang="x-default">Hello, World&lt;/rdf:li><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdf:li xml:lang="de-DE">Hallo, Welt&lt;/rdf:li><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:Alt><BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dc:description>
+		<P>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:Description><P>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rdf:RDF><br>
+		&nbsp;&nbsp;&nbsp;&lt;/x:xmpmeta><P>
+
+		&lt;?xpacket end="w"?>
+	</B></font>
+	</div>
+
+	<P>
+
+	<B><u>12.4.3 Code Sample</u></b>
+
+	<P>
+	The following code sample creates a PDF/A-1b compliant document by importing the URL <B>http://www.asppdf.com</B>,
+	attaching the metadata from the text file <b>metadata.txt</B> located in the same folder as the code sample,
+	and adding an output intent based on the color profile <B>AdobeRGB1998.icc</B> located in the sibling folder <B>manual_15</B>
+	of the installation.
+	<P>
+	The content of the file <b>metadata.txt</B> is as follows:
+
+	<P>
+
+	<pre>
+&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+
+&lt;x:xmpmeta x:xmptk="Adobe XMP Core 4.2.1-c041 52.342996, 2008/05/07-20:48:00" xmlns:x="adobe:ns:meta/">
+	&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+		&lt;rdf:Description rdf:about="" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/">
+			&lt;pdfaid:part>1&lt;/pdfaid:part>
+			&lt;pdfaid:conformance>B&lt;/pdfaid:conformance>
+		&lt;/rdf:Description>
+
+		&lt;rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+			&lt;pdf:Producer>Persits Software AspPDF - www.persits.com&lt;/pdf:Producer>
+			&lt;pdf:Keywords>&lt;/pdf:Keywords>
+		&lt;/rdf:Description>
+
+		&lt;rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			&lt;dc:title>
+				&lt;rdf:Alt>
+					&lt;rdf:li xml:lang="x-default">@@@title@@@&lt;/rdf:li>
+				&lt;/rdf:Alt>
+			&lt;/dc:title>
+		&lt;/rdf:Description>
+
+	&lt;/rdf:RDF>
+&lt;/x:xmpmeta>
+	
+&lt;?xpacket end="w"?>
+	</pre>
+
+	<P>
+	Note that this metadata file is actually a template, it contains the placeholder <B>@@@title@@@</B>
+	where the actual title should be. The code sample replaces the placeholder with the value of the PdfDocument.<B>Title</B>
+	property (which is not known in advance since ImportFromUrl sets it based on the HTML content it imports)
+	to ensure that the document's Title entry and the value of the &lt;dc:title>
+	tag in the metadata match. 
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		Set Doc = PDF.CreateDocument<P>
+
+		' Convert HTML to PDF<BR>
+		Doc.ImportFromUrl "http://www.asppdf.com", "landscape=true; scale=0.75"<P>
+
+		' Add metadata from a file<BR>
+		strMetadata = PDF.LoadTextFromFile( Server.MapPath("metadata.txt") )<P>
+
+		' Replace placeholder with actual document title<BR>
+		strMetadata = Replace( strMetadata, "@@@title@@@", Doc.Title )<P>
+
+		Doc.MetaData = strMetadata<P>
+
+		' Add output intent using an RGB color profile. Borrow .icc file from Chapter 15<BR>
+		strProfilePath = Server.MapPath(".") & "\..\manual_15\AdobeRGB1998.icc"<BR>
+		Doc.AddOutputIntent "AdobeRGB", "Custom", strProfilePath, 3<P>
+
+		'Save document<BR>
+		Path = Server.MapPath( "pdfa.pdf")<BR>
+		FileName = Doc.Save( Path, false)<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+		IPdfManager objPdf = new PdfManager();<P>
+
+		// Create empty document<BR>
+		IPdfDocument objDoc = objPdf.CreateDocument(Missing.Value);<P>
+
+		// Convert HTML to PDF<BR>
+		objDoc.ImportFromUrl( "http://www.asppdf.com", "landscape=true; scale=0.75", Missing.Value, Missing.Value );<P>
+
+		// Add metadata from a file<BR>
+		string strMetadata = objPdf.LoadTextFromFile( Server.MapPath("metadata.txt") );<P>
+
+		// Replace placeholder with actual document title<BR>
+		strMetadata = strMetadata.Replace( "@@@title@@@", objDoc.Title );<P>
+
+		objDoc.MetaData = strMetadata;<P>
+
+		// Add output intent using an RGB color profile. Borrow .icc file from Chapter 15<BR>
+		string strProfilePath = Server.MapPath(".") + @"\..\manual_15\AdobeRGB1998.icc";<BR>
+		objDoc.AddOutputIntent( "AdobeRGB", "Custom", strProfilePath, 3 );<P>
+
+		// Save document<BR>
+		string strPath = Server.MapPath( "pdfa.pdf");<BR>
+		string strFileName = objDoc.Save( strPath, false);<BR>
+	</font></TD></TR>
+	</table>
+
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_pdfa.asp">http://localhost/asppdf/manual_12/12_pdfa.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_12/12_pdfa.aspx">http://localhost/asppdf/manual_12/12_pdfa.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	
+
+	</Blockquote>
+
+	<A HREF="manual_13.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 13: HTML to PDF Conversion"></A>
+	<A HREF="manual_11a.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 11a: Existing Form Fill-in"></A>	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2014. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

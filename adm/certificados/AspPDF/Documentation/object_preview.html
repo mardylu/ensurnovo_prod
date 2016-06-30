@@ -1,0 +1,377 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - Object Reference: PdfPreview</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b><a href="manual.html">Manual</A></b>&nbsp;|&nbsp;
+	<b>Object Reference</b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<a HREF="index.html"><B><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="objectreference.html"><FONT COLOR="#FFFFFF">Object Reference</font></b></a>&nbsp;|&nbsp;<B>
+	PdfPreview
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="object_rect.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfRect"></A>
+	<A HREF="object_paramitem.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfParamItem"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>PdfPreview Object</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	Introduced in Version 2.0, the PdfPreview object implements the PDF-to-image conversion
+	functionality. An instance of the PdfPreview object is created via the <B>PdfPage.ToImage</B> method
+	and represents the rasterized image of the page from which it is created.
+	The image in PNG format can be saved to disk, memory or an HTTP stream 
+	via the methods Save, SaveToMemory and SaveHttp, respectively.
+	<P>
+	For more information about the PDF-to-image conversion functionality,
+	see <A HREF="manual_14.html"><B>Chapter 14 - PDF to Image Conversion</B></A>.
+	<P>
+
+	<TABLE WIDTH="340" CELLPADDING=2 CELLSPACING=0 BORDER=1>
+		<TR><TD WIDTH=50% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Properties">Properties</A></B></FONT></TD>
+			<TD WIDTH=100% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Methods">Methods</A></B></FONT></TD>
+		</TR>
+		<TR>
+			<TD WIDTH=50% BGCOLOR="#FFFFFF" ALIGN=LEFT VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">
+
+			<A HREF="#Height">Height</A><BR>			
+			<A HREF="#Log">Log</A><BR>
+			<A HREF="#TextItems">TextItems</A><BR>
+			<A HREF="#Width">Width</A><BR>
+			</td>
+			<TD VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">
+			<A HREF="#ExtractImage">ExtractImage</A><BR>
+			<A HREF="#Save">Save</A><BR>
+			<A HREF="#SaveHttp">SaveHttp</A><BR>
+			<A HREF="#SaveToMemory">SaveToMemory</A><BR>
+			<A HREF="#SendToPrinter">SendToPrinter</A><BR>
+			</B></FONT></TD>
+		</TR>
+	</TABLE>
+	<P>
+
+	<A NAME="Properties">
+	<FONT COLOR="#C06000"><B>Properties</B></FONT>
+	<Blockquote>
+	
+		<HR CLASS="objectseparator">
+		<A NAME="Height">
+		<B><FONT COLOR="#000080">Height</FONT> As Long</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the pixel height of the resultant PNG image.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Log">
+		<B><FONT COLOR="#000080">Log</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns a double-CRLF separated list of errors encountered during
+		the PDF-to-image conversion process. The parameter
+		<i>Debug=True</i> needs to be used in the ToImage method to enable error logging.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="TextItems">
+		<B><FONT COLOR="#000080">TextItems</FONT> As PdfTextItems</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns a collection of PdfRect objects each representing a text fragment
+		obtained during structured text extraction.
+		This collection is only populated if the <B>PdfPage.ToImage</B> method
+		is called with a non-zero <i>ExtractText</i> parameter.
+		This property was introduced in Version 2.8.
+		<P>
+		For more information, see <A HREF="manual_14.html#14_7">Section 14.7 - Structured Text Extraction</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Width">
+		<B><FONT COLOR="#000080">Width</FONT> As Long</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the pixel width of the resultant PNG image.
+		</BLOCKQUOTE>
+
+
+
+
+		<HR CLASS="objectseparator">
+	
+	</Blockquote>
+
+	<A NAME="Methods">
+	<FONT COLOR="#C06000"><B>Methods</B></FONT>
+	<Blockquote>
+		<HR CLASS="objectseparator">
+
+		<A NAME="ExtractImage">
+		<B>Function <FONT COLOR="#F00000">ExtractImage</FONT> (<i>Index</i> As Integer) As PdfPreview</B>
+		<BLOCKQUOTE>
+		Extracts an image specified via 1-based <i>Index</i> from the PDF page from which the current PdfPreview
+		object was created. Returns a <i>new</i> instance of the PdfPreview
+		object representing the extracted image. Returns <i>Nothing</i> (null) if <i>Index</i>
+		exceeds the number of images on the page.
+		<P>
+		For more information, see <A HREF="manual_14.html#14_5">Section 14.5 - Image Extraction</A>.
+		<P>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Save">
+		<B>Function <FONT COLOR="#F00000">Save</FONT> (<i>Path</i> As String, Optional <I>Overwrite</i> = True) As String</B>
+		<BLOCKQUOTE>
+		Saves the resultant PNG image to disk, returns the file name under which
+		the image was saved (without a path).
+		<P>
+		<I>Path</i> specifies the full file path.<P>
+		<i>Overwrite</i> is an optional argument specifying
+		whether a file under the same name should be overwritten (if set to True or omitted)
+		or a unique filename should be generated to avoid overwriting an existing
+		file (if set to False). True by default.
+		<P>
+		Returns the filename (without the path) under which this image ends up being saved.
+		<P>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SaveHttp">
+		<B>Sub <FONT COLOR="#F00000">SaveHttp</FONT> (<i>DispHeader</i> As String)</B>
+		<BLOCKQUOTE>
+		Sends the PNG image to an HTTP stream.
+		SaveHttp can only be
+		called in an ASP or ASP.NET environment as it internally uses
+		ASP's Response.BinaryWrite method.
+		<P>
+		<I>DispHeader</i> specifies the Content-Disposition header
+		to be included in the HTTP stream. This header
+		carries the file name information to be presented to the user
+		when the file is saved to disk on the client machine. This argument has
+		to be in the following two formats:
+		<P>
+		<B>"filename=<i>somename</i>.png"</B>
+		<P>
+		or
+		<P>
+		<B>"attachment; filename=<i>somename</i>.png"</B>
+		<P>
+		The latter prompts the user to save the file
+		to disk instead of opening it in-place in the browser.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SaveToMemory">
+		<B>Function <FONT COLOR="#F00000">SaveToMemory</FONT> ( ) As Variant</B>
+		<BLOCKQUOTE>
+		Saves the image to a memory array. This method is useful
+		for saving the images in the database as blobs.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SendToPrinter">
+		<B>Sub <FONT COLOR="#F00000">SendToPrinter</FONT> (<i>Printer</i> As String, Optional <i>Param</i> As Variant )</B>
+		<BLOCKQUOTE>
+		Sends the underlying page image to a printer. <i>Printer</i> is a network printer name, such as "\\192.168.1.2\HP LaserJet 6P".
+		As of Version 2.6.0.3, if <i>Printer</i> is set to an empty string, the default printer name for the current machine is used. 
+		<i>Param</i> is a PdfParam object or parameter string. 
+		
+		The following optional parameters are supported:
+		<ul>
+		<li><i>Stretch</i> - if set to True, the image is stretched to cover the entire print area. False by default.		<BR>
+		<li><i>ScaleX</i>, <i>ScaleY</i> - a number greater than 0. Specifies the scaling factor when 
+		<i>Stretch</i> is set to True. A value greater than 1 increases the image, less than 1 decreases it. 
+		Ignored when <i>Stretch</i> is False.
+		</ul>
+		<P>
+		For more information, see <A HREF="manual_14.html#14_6">Section 14.6 - Printing</A>.
+		<P>
+		This method was introduced in Version 2.1.
+		<P>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+	</Blockquote>
+	
+	<A HREF="object_rect.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfRect"></A>
+	<A HREF="object_paramitem.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfParamItem"></A>
+
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

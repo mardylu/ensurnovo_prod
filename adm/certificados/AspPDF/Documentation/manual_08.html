@@ -1,0 +1,1164 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - ASP PDF User Manual Chapter 8: Security</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b>Manual</b>&nbsp;|&nbsp;
+	<b><a HREF="objectreference.html">Object Reference</a></b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<b>
+	<a HREF="index.html"><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="manual.html"><FONT COLOR="#FFFFFF">Manual</font></b></a>&nbsp;|&nbsp;<B>
+	Chapter 8: Security
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="manual_09.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 9: Working with Existing PDFs"></A>
+	<A HREF="manual_07.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 7: Tables"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>Chapter 8: Security</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	<B>
+	<A HREF="#8_1">8.1 Overview of PDF Security</A><BR>
+	<A HREF="#8_2">8.2 PdfDocument.Encrypt Method</A><BR>
+	<A HREF="#8_3">8.3 Digital Signing</A><BR>
+	<A HREF="#8_4">8.4 Client-Side Signing of Server-Side PDFs</A><BR>
+	<A HREF="#8_5">8.5 PDF-based Secure Mail</A><BR>
+
+	</B>
+
+	<P>
+	<A NAME="8_1">
+	<FONT COLOR="#C06000"><B>8.1 Overview of PDF Security</B></FONT>
+	<Blockquote>
+	A secure PDF is a document that imposes a set of 
+	restrictions on this document’s user, such as requiring a password on 
+	opening, or preventing copying/pasting of the document’s content.
+	<P>
+	There are two aspects to the standard (or built-in) PDF security: 
+	password protection and permission flags.
+	<P>
+	<B><u>8.1.1 Password Protection</U></B>
+	<P>
+	When a secure PDF is created, 	
+	the document author supplies two secret strings: 
+	the <i>Owner</i> and <i>User</i> passwords.	
+	Applying these two passwords to the document using an algorithm described in Adobe PDF specifications
+	produces a secure document.
+	<P>
+	A secure PDF’s content is encrypted with the <B>RC4</B> algorithm, a stream cipher invented 
+	by Ron Rivest of RSA Security. Either a 40-bit or 128-bit key can be used. As of AspPDF 2.2,
+	the 128-bit Advanced Encryption Standard (<B>AES</B>) cipher is also supported.
+	An encryption key is derived from the user password alone. The owner password is 
+	used to encrypt the user password and also to protect the immutability of 
+	the document’s permission flags. An encrypted copy of the user password is 
+	embedded in a secure PDF for validation purposes.
+	<P>
+ 	To open an encrypted document, the viewer must specify either the user or 
+	owner password. Specifying the valid user password enables a user to view the 
+	document, but also makes her subject to the permission flags associated with the document. 
+	For example, a user may not be able to modify or print the document. 
+	Specifying the valid owner password gives the user full control over the document:
+	not only can she view it, but also change or remove its security settings.
+	<P>
+	An empty string is a perfectly valid value for either password. 
+	There are 4 possible password use scenarios:
+	<P>
+	<B>Scenario 1</B>: Both user and owner passwords are non-empty and not equal to 
+	each other.
+	<blockquote>
+	A user must specify a password to open the document. Use this scenario to create 
+	private password-protected documents with certain usage restrictions imposed, 
+	such as "no printing". If the two passwords are the same, the owner password 
+	is ignored and this turns into Scenario 3.
+	</blockquote>
+
+	<B>Scenario 2</B>: The owner password is non-empty, the user password is empty.
+	<blockquote>
+	The document can be viewed without specifying a password, but a user is subject 
+	to permission flags. Use this scenario to create publicly accessible documents 
+	with certain usage restrictions imposed.
+	</blockquote>
+ 
+
+	<B>Scenario 3</B>: The owner password is empty, the user password is non-empty.
+	<blockquote>
+	A user must specify a password to open the document. Use this scenario to create 
+	password-protected documents with no usage restrictions.
+	</blockquote>
+ 
+
+	<B>Scenario 4</B>: Both the owner and user passwords are empty.
+	<blockquote>
+	Although technically the document is encrypted, there is no true security in it
+	as anyone can read the document and modify/remove permission flags. Using this scenario 
+	is not recommended.
+	</blockquote>
+
+	<P>
+	<A NAME="8.1.2">
+	<B><u>8.1.2 Permission Flags</U></B>
+	<P>
+	Version 4.0 and earlier of the Adobe Acrobat family of products
+	supported 40-bit encryption, and recognized the following four permission
+	flags:
+	<UL>
+	<LI><B>Bit 3</B>: Print the document;<BR>
+	<LI><B>Bit 4</B>: Modify the document, except by operations controlled by Bit 6;<BR>
+	<LI><B>Bit 5</B>: Copy/extract content;<BR>
+	<LI><B>Bit 6</B>: Add and change annotations, fill in form fields, and if Bit 4
+	is also set, create or modify interactive form fields.<BR>
+	</UL>
+	<P>
+	This version of security specifications is referred to as <B>Revision 2</B>.
+	<P>
+	Adobe Acrobat 5.0 and higher allowed both 40-bit and 128-bit encryption,
+	and introduced a more granular permission system. The new version
+	of security specifications
+	is referred to as <B>Revision 3</B>.
+	The following permission flags
+	are used in Revision 3:
+	<UL>
+	<LI><B>Bit 3</B>: Print the document, possibly not at high-resolution depending on Bit 12;
+	<LI><B>Bit 4</B>: Modify content of the document by operations
+	other than those controlled by Bits 6,9, and 11;
+	<LI><B>Bit 5</B>: Copy/ extract content by operations other than those controlled by Bit 10;
+	<LI><B>Bit 6</B>: Add and change annotations, fill in form fields, and if Bit 4
+	is also set, create or modify interactive form fields;
+	<LI><B>Bit 9</B>: Fill in existing interactive form fields, even if Bit 6 is clear;
+	<LI><B>Bit 10</B>: Extract text and graphics (in support of accessibility
+	to disabled users)
+	<LI><B>Bit 11</B>: Assemble the document (insert, rotate, or delete pages,
+	and create bookmarks or thumbnail images), even if Bit 4 is clear.
+	<LI><B>Bit 12</B>: Print the document to a representation from
+	which a faithful digital copy of the PDF content could be generated.
+	When this bit is clear (and Bit 3 is set) printing is limited to 
+	a low-level representation of the appearance.
+	</UL>
+	</Blockquote>
+
+	<A NAME="8_2">
+	<FONT COLOR="#C06000"><B>8.2 PdfDocument.Encrypt Method</B></FONT>
+	<Blockquote>
+	To make a PDF document secure with AspPDF,
+	all you have to do is call the <B>Encrypt</B> method of the
+	<B>PdfDocument</B> object. This method accepts 4 arguments, all optional:
+	the owner password, user password, key length, and permission flags.
+	<P>
+	The owner and user password arguments are empty strings by default.
+	To avoid Scenario 4 described above, you should set at least one
+	of the passwords, or both, to non-empty strings. Specifying
+	identical strings for both passwords will result in the owner password
+	being ignored.
+	<P>
+	For RC4 encryption, the key length argument must be set to either 40 or 128. The default value
+	is 40 but 128 is strongly recommended. For AES encryption (requires AspPDF 2.2+) the value must be -128 (negative 128).
+	The negative sign specifies AES as opposed to RC4.
+	<P>
+	The permission flags argument should be set to a bit-wise combination of
+	the permission flag constants defined by the AspPDF component. 
+	These constants are:
+	<P>
+	<B>pdfFull</B> = &HFFFFFFFC (all significant bits)<BR>
+	<B>pdfPrint</B> = &H04 (Bit 3)<BR>
+	<B>pdfModify</B> = &H08 (Bit 4)<BR>
+	<B>pdfCopy</B> = &H10 (Bit 5)<BR>
+	<B>pdfAnnotations</B> = &H20 (Bit 6) <BR>
+	<B>pdfForm</B>	= &H0100 (Bit 9)<BR>
+	<B>pdfExtract</B>	= &H0200 (Bit 10)<BR>
+	<B>pdfAssemble</B>	= &H0400 (Bit 11)<BR>
+	<B>pdfPrintHigh</B> = &H0800 (Bit 12)
+	<P>
+	The default value for the permission flags argument is pdfFull.
+	<P>To use the permission flag constants in VBScript, you must include a METADATA
+	tag in your .asp file referencing the AspPDF type library (outside
+	the &lt;% and %> brackets). In C#, the type name <B>pdfPermissions</B>
+	has to be put in front of the constant names.
+	<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=1 face="courier new">
+	&lt;!--METADATA TYPE="TypeLib" UUID="{414FEE4B-2879-4090-957E-423567FFCFC6}"--><P>
+	&lt;%<BR>
+	...<BR>
+	Doc.Encrypt "abc", "xyz", 128, pdfFull And (Not pdfModify)<BR>
+	...<BR>
+	%>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=1 face="courier new">
+	...<BR>
+	objDoc.Encrypt( "abc", "xyz", 128, pdfPermissions.pdfFull & (~pdfPermissions.pdfModify) );<BR>
+	...<BR>
+	</font></TD></TR>
+	</table>
+
+	<P>
+	The code sample 08_encrypt.asp/.aspx (not shown here) is almost identical to 
+	the Hello World
+	sample used in Chapter 3, except that it also calls the <B>Encrypt</B>
+	method. The string "abc" is used for the owner password, "xyz" for the
+	user password, 128 for key length and no-printing/no-changing
+	for the permission flags.
+	<P>
+	Click the links below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_08/08_encrypt.asp">http://localhost/asppdf/manual_08/08_encrypt.asp</A></B><BR>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_08/08_encrypt.aspx">http://localhost/asppdf/manual_08/08_encrypt.aspx</A><IMG SRC="images/dotnet.gif"></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+
+	<P>
+	You will be prompted to enter a password when opening this document in Acrobat Reader.
+	You can either enter <i>abc</i> or <I>xyz</i>.
+	The Reader will display a yellow key icon in the status bar
+	indicating that the document is secure:
+	<P>
+	<IMG SRC="images/08_key.gif">
+	<P>
+	If you click on the key icon and select <i>Document Security...</i>, the 
+	Document Security dialog box comes up confirming
+	the correct security properties of the document:
+	<P>
+	<IMG SRC="images/08_security.gif">
+
+	</Blockquote>
+
+	<A NAME="8_3">
+	<FONT COLOR="#C06000"><B>8.3 Digital Signing</B></FONT>
+	<Blockquote>
+	A digital signature protects a document's integrity and
+	provides proof of the signer's identity.
+	AspPDF is capable of adding a X.509 certificate-based
+	digital signature to a PDF document in PKCS#7 format
+	via the <B>Sign</B> method of the <B>PdfDocument</B> object.
+	<P>
+	<B><U>8.3.1 AspEncrypt</u></B>
+	<P>
+
+	To create a digitally signed document, or sign an existing
+	PDF, AspPDF has to be used in tandem with another Persits Software
+	component, <B>AspEncrypt</B>. A free 30-day evaluation 
+	version of this component can be downloaded from the 
+	<A TARGET="_new" HREF="http://www.aspencrypt.com"><B>AspEncrypt.com</B><A> web site.
+	<P>
+	AspEncrypt is a comprehensive cryptographic engine which, among
+	other things, offers PKCS#7 digital signing functionality
+	and provides programmable access to X.509 certificates.
+	Using AspEncrypt, a signer certificate can be retrieved from a certificate store or .PFX file (also known as a PKCS#12 file).
+	Click <A TARGET="_new" HREF="http://www.aspencrypt.com/task_certs.html">here</A>
+	for more information about AspEncrypt's certificate management functionality.
+	<P>
+	IMPORTANT: You must use <B>Version 2.2.0.2</B> or higher of AspEncrypt
+	to produce signed PDF documents. If you are currently running
+	an older version, download your free upgrade <A TARGET="_new" HREF="http://www.aspencrypt.com/download.html">here</A>.
+	<P>
+	<B><U>8.3.2 Sign Method</u></B>
+	<P>
+	The Sign method expects an initialized instance of <B>CryptoMessage</B>,
+	an AspEncrypt object responsible for PKCS#7 digital signing.
+	The CryptoMessage object must be associated with an instance of <B>CryptoCert</B>,
+	another AspEncrypt object representing a signer certificate.
+	CryptoCert objects are obtainable from certificate stores (represented by
+	the CryptoStore object).
+	<P>
+	The Sign method also accepts the signer name, reason for signing, and location
+	arguments (the first one is required, the other two are optional),
+	and also an optional parameter string or parameter object controlling the 
+	visibility and location
+	of the signature field within the document.
+	<P>
+	The following code sample adds a signature to a PDF document based
+	on a certificate in .pfx (PKCS#12) format:
+	<P>
+	<font face="courier new" size="2"><B>
+	...<BR>
+	Set CM = Server.CreateObject("Persits.CryptoManager")<BR>
+	Set Context = CM.OpenContext("", False)<BR>
+    Set Msg = Context.CreateMessage<BR>
+	CM.RevertToSelf </B> ' to avoid a run-time error<B><P>
+        
+    Set Store = CM.OpenStoreFromPFX("c:\mycert.pfx", "mypassword")<BR>
+    Set Cert = Store.Certificates(1)<BR>
+    Msg.SetSignerCert Cert<P>
+
+	Doc.Sign Msg, "John Smith", "I created this document.", "New York, NY"<BR>
+	...
+	</B></font>
+	<P>
+	If a signer certificate is located in a system certificate store (as opposed
+	to .pfx), the code fragment responsible for obtaining a CryptoCert
+	object would look as follows:
+	<P>
+	<font face="courier new" size="2"><B>
+	...<BR>
+    Set Store = CM.OpenStore("MY", True) </B>' or False<B><BR>
+    Set Cert = Store.Certificates("112B 0783 8D43 0887 4EDF 015B CF4E E109")<BR>
+	...
+	</B></font>
+	<P>
+	This fragment opens the "MY" store (containing personal certificates)
+	located in the HKEY_LOCAL_MACHINE section of the registry 
+	(HKEY_CURRENT_USER would be used if False were passed to OpenStore),
+	and obtains a certificate from the store by its serial number.
+	<P>
+	Obtaining a certificate from a PFX file is conceptually simpler,
+	but is associated with some technical problems. 
+	The method <B>OpenStoreFromPFX</B> uses an undocumented CryptoAPI function PFXImportCertStore 
+	from the library Crypt32.dll. For this method to work under IIS 5.0/6.0, you must call 
+	CM.RevertToSelf prior to calling OpenStoreFromPFX, and your virtual directory's 
+	Application Protection option must be set to Low. Otherwise you will receive 
+	the error 
+	<P>
+	<font color="red">
+	Persits.CryptoManager.1 (0x800A0064)<BR>
+	The system cannot find the file specified. 
+	</font>
+	<P>
+	In ASP.NET, the method CM.RevertToSelf does not seem to have any effect, 
+	and you must instead use
+	CM.LogonUser with an Admin username and password.
+	<P>
+	The code sample <B>08_sign.asp</B> (not shown here) is yet another version of our Hello World
+	application. It generates documents that are both encrypted and digitally signed.
+	Before running this code sample, make sure AspEncrypt (the latest version)
+	is installed, and the virtual directory <B>/AspPDF</B>
+	has the Application Protection option set to low.
+	<P>
+	It is recommended that <B>Acrobat Reader 6.0+</B> be used to view digitally signed documents. 
+	Acrobat 5.0 (the full version, not the Reader)
+	is also acceptable, but you must also download and install the 
+	<A TARGET="_new" HREF="http://www.verisign.com/products/acrobat/index.html">VeriSign Document Signer</A>
+	plug-in, and only signatures based on VeriSign certificates seem 
+	to be recognized as valid by this plug-in. A free 60-day
+	VeriSign certificate can be obtained <A TARGET="_new" HREF="https://digitalid.verisign.com/client/class1MS.htm">here</A>.
+	<P>
+	Click the link below to run this code sample:
+	<P>
+	<B><A TARGET="_new" HREF="http://localhost/asppdf/manual_08/08_sign.asp">http://localhost/asppdf/manual_08/08_sign.asp</A></B>
+	&nbsp;<A HREF="javascript:;" OnClick="open('helppopup.html','','width=400,height=400');"><IMG SRC="images/help.gif" BORDER="0" ALT="Why is this link not working?"></A>
+	<P>
+	NOTE: A digitally signed document can only be saved to disk (via the <B>Save</B> method). 
+	Saving to memory or an HTTP stream cannot be used once <B>Sign</B>
+	is called, and an attempt to call <B>SaveToMemory</B> or <B>SaveHttp</B> will result
+	in an error exception.
+
+
+	<P>
+	<B><U>8.3.3 Visible Signatures</u></B>
+	<P>
+	By default, the Sign method creates an invisible signature.
+	Using the last optional argument of the Sign method, it is possible
+	to specify a page and location within that page where the signature
+	icon is to appear.
+	<P>
+	The following code fragment draws a signature icon in the upper-left
+	corner of the first page of the document (middle arguments omitted for brevity):
+	<P>
+	<font face="courier new" size="2"><B>
+	Doc.Sign Msg, ..., "visible=true;x=10,y=750;width=20;height=20;pageindex=1"
+	</B></font>
+	<P>
+	<IMG SRC="images/08_signature.gif">
+	<P>
+	It is also possible to change the default appearance of a signature
+	by drawing on the canvas of a <B>PdfAnnot</B> object
+	returned by the Sign method. Annotations are described in detail
+	in <A HREF="manual_10.html">Chapter 10</A>.
+
+	<P>
+	<A NAME="8_3_4">
+	<B><U>8.3.4 Signature Validation</u></B>
+	<P>
+	AspPDF's digital signature functionality would not be complete without
+	a way to verify an existing signature in a document.
+	<P>
+	Signature verification is implemented via the <B>VerifySignature</B> method
+	of the <B>PdfDocument</B> object. 
+	VerifySignature can only be called on an instance of PdfDocument 
+	created via <B>OpenDocument</B> (the latter
+	is described in detail in <A HREF="manual_09.html">Chapter 9</A>.)
+	VerifySignature expects an empty CryptoMessage object as an argument.
+	<P>
+	VerifySignature returns <i>Nothing</i> if no PKCS#7 signatures
+	are found in the document. Otherwise, it returns an instance
+	of the <B>PdfSignature</B> object
+	encapsulating various property of the signature, including
+	its validation status (valid/invalid), signer name, reason for signing,
+	location, and other information. If a document contains multiple signatures (such as, when 
+	an already signed document was signed again), the VerifySignature method
+	validates and returns the one that covers the largest portion of the document,
+	which is usually the latest signature.
+	<P>
+	The following code fragment opens a PDF document from a file,
+	and attempts to validate a signature, if one is present:
+	<P>
+	<font face="courier new" size="2"><B>
+	Set CM = Server.CreateObject("Persits.CryptoManager")<BR>
+    Set Context = CM.OpenContext("", False)<BR>
+    Set Msg = Context.CreateMessage<P>
+
+    Set Doc = Pdf.OpenDocument("c:\somefile.pdf")<BR>
+    Set Sig = Doc.VerifySignature(Msg)<P>
+    
+    If Sig Is Nothing Then<BR>
+    &nbsp;&nbsp;&nbsp;Response.Write "No signature found."<BR>
+    Else<BR>
+    &nbsp;&nbsp;&nbsp;Response.Write "Status = " & Sig.Status & "&lt;BR>"<BR>
+    &nbsp;&nbsp;&nbsp;Response.Write "Name = " & Sig.Name & "&lt;BR>"<BR>
+    &nbsp;&nbsp;&nbsp;Response.Write "Reason = " & Sig.Reason & "&lt;BR>"<BR>
+    &nbsp;&nbsp;&nbsp;Response.Write "Contents = " & Sig.Contents & "&lt;BR>"<BR>
+    End If<BR>
+	</B></font>
+
+	</Blockquote>
+
+	<P>
+	<A NAME="8_4">
+	<FONT COLOR="#C06000"><B>8.4 Client-Side Signing of Server-Side PDFs</B></FONT>
+	<Blockquote>
+	The PdfDocument.<B>Sign</B> method described in the previous section requires 
+	access to both the PDF document being signed and the private key of the certificate
+	used for signing. In most cases, this means the signer certificate has to be transferred to the
+	server, which may be undesirable as the security of the private key is jeopardized.
+	<P>
+	Version 3.4 of AspPDF introduces a new, secure way of signing PDF documents in which
+	the document being signed never leaves the server, while the signer certificate never leaves
+	the client machine: the hash value and signature do all the traveling.
+	The actual signing takes place on the client workstation using Version 2.9+
+	of the XEncrypt ActiveX control (included with the Persits AspEncrypt component.) Since an ActiveX control is involved, 
+	the user is required to run Internet Explorer on Windows.
+	<P>
+	From the user's prospective, the entire signing process can be completed with a single button click, but under the hood
+	there are three distinct steps involved: server-side pre-signing, client-side signing, and server-side signature injection.
+	Below is the detailed description of these three steps:
+	<P>
+	<B>Step 1: Server-Side Pre-Signing</B>
+		<Blockquote>
+		During pre-signing, a new document is created which looks almost completely like a real signed document but the "signature"
+		embedded in it just contains a bunch of 0's. This sequence of 0's is merely a placeholder which will eventually contain the real
+		signature (see Step 3). Also the SHA hash value of the appropriate parts of the document is computed. This hash value will be transferred to the
+		client workstation for signing in Step 2.
+		<P>
+		Pre-signing is performed by calling the PdfDocument.<B>Sign</B> method with the first argument (CryptoMessage object) simply set to Nothing (null),
+		followed by a call to PdfDocument.<B>Save</B> to create the pre-signed document.
+		The parameter <i>BinarySize</i> must be specified when calling Sign. This parameter specifies the size of the signature placeholder.
+		The value of 5000 is usually sufficient but may need to be higher in some cases. The code sample below performs signature size validation
+		and alerts the user if the space allocated for the signature is insufficient.
+		<P>
+		The SHA hash value of the relevant parts of the document along with signature location and size are returned by the property PdfDocument.<B>SignatureInfo</B>
+		in the form of a comma-separated list. The 1st item on the list is a HEX-encoded SHA value. The 2nd item is the signature location
+		within the document (this number is used in Step 3.) The 3rd item is the signature placeholder's size which matches the BinarySize parameter. 
+		The SignatureInfo property can only be called after the Save method has been called. For example:
+		<P>
+		<font face="Courier New"><B>
+			Set PDF = Server.CreateObject("Persits.PDF")<BR>
+			Set Doc = PDF.OpenDocument( Server.MapPath( "DocToSign.pdf" ) )<P>
+
+			Doc.Sign Nothing, Name, Reason, Location", "BinarySize=5000; visible=true; x=10, y=700; width=50; height=50; pageindex=1;"<P>
+
+			Doc.Save Server.MapPath( "files\" & Session.SessionID & ".pdf" ), false<BR>
+			Response.Write( Doc.SignatureInfo )
+		</b></font>
+		<P>
+		This code will display a value similar to this:
+		<P>
+
+		<font face="Courier New"><B>B7F2211A4D83D624B2C9DF7277C222BA3931E4C8,135676,5000</b></font>
+		</Blockquote>
+
+	<P>
+		<B>Step 2: Client-Side Signing</B>
+		<Blockquote>
+		The hash value obtained in Step 1 is transferred to the client workstation for signing with the user's personal certificate.
+		The actual signing is performed with the help of <B>Persits XEncrypt</B>, the client-side ActiveX control included with Persits AspEncrypt.
+		Version 2.9+ of XEncrypt implements the method CryptoMessage.<B>SignHash</B> which produces the PKCS#7 signature
+		of a SHA hash value. This ActiveX control is also capable of presenting the user with a list of certificates
+		to choose from in case the user has more than one on his/her workstation. Since an ActiveX control is involved in this operation,
+		the Microsoft IE browser on Windows is required.
+		<P>
+		The following client-side JavaScript code snippet performs client-side signing of a hash value:
+		<P>
+		<font face="Courier New"><B>
+			var Context = XEncrypt.OpenContext( '', false );<BR>
+			var Msg = Context.CreateMessage( true );<BR>
+			Msg.SetSignerCert( Cert );<P>
+
+			var HashBlob = XEncrypt.CreateBlob();<BR>
+			HashBlob.Hex = Hash;<P>
+
+			var PKCS7Blob = Msg.SignHash( HashBlob );<BR>
+			txtSignature = PKCS7Blob.Hex;<BR>
+		</b></font>
+		<P>
+
+		</Blockquote>
+
+
+		<B>Step 3: Server-Side Signature Injection</B>
+		<Blockquote>
+		Finally, the PKCS#7 signature generated by the CryptoMessage.<B>SignHash</B> method in Step 2 is transferred
+		to the server and injected into the pre-signed file created during Step 1. 
+		This operation is performed using the PdfManager.<B>InjectTextIntoFile</B> method.
+		This method expects three arguments: the path to the file, the text being injected (Hex-encoded PKCS#7 signature in our case)
+		and the location within the file where text is to be written. The signature location
+		is obtained in Step 1 via the PdfDocument.SignatureInfo property. The <B>InjectTextIntoFile</B> method returns the filename (without the path)
+		of the file being injected.
+		<P>
+		The following code snippet demonstrates this final step:
+		<P>
+		<font face="Courier New"><B>
+			Set PDF = Server.CreateObject("Persits.PDF")<BR>
+			strFilename = PDF.InjectTextIntoFile( Request("Path"), Request("Signature"), Request("Location") )<BR>
+			Response.Write strFilename			
+		</b></font>
+		</Blockquote>
+
+	<P>
+	The following code sample implements the three-step process described above 
+	via two AJAX calls: the first AJAX call invokes the sever-side pre-signing script <B>demo_clientsign_obtainhash.asp/.aspx</B>
+	and transfers the hash value (along with other useful information) to the user workstation for signing.
+	After the hash value is signed, a 2nd AJAX call transfers the PKCS#7 signature (along with other useful information)
+	to the server and invokes the signature injection script <B>demo_clientsign_injectsignature.asp/.aspx</B>.
+	<P>
+	In addition to the hash value and signature, the scripts pass around the signature location, signature size and the full
+	path of the pre-signed PDF file. The signature size value is used by the client-side JavaScript to ensure the actual signature size
+	does not exceed the size of the signature placeholder, and alerts the user if it does. The signature location and file path
+	are sent to the client side via the 1st AJAX call merely to be sent back via the 2nd AJAX call -- they are not used by the client-side JavaScript
+	for any other purpose. 
+	<P>
+	Also, in case the user does not have a valid certificate for signing, or chooses to cancel the signing operation by not
+	selecting a certificate from the list, the 2nd AJAX call contains a "delete" command which causes the pre-signed PDF file
+	to be deleted since there is no point in preserving a file with an incomplete (and invalid) signature.
+	<P>
+
+<P>
+	<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="2">
+	
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>Client-Side JavaScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightgreen" class="thinborder"><font size=2 face="courier new">
+	<pre>
+var xmlHttp;
+
+var txtHashEtc, txtSignature;
+
+var strObtainHashFilename = 'demo_clientsign_obtainhash.asp';
+var strInjectSignatureFilename = 'demo_clientsign_injectsignature.asp';
+
+function GetXmlObject()
+{
+	var xmlHttp = null;
+	try
+	{  
+		// Firefox, Opera 8.0+, Safari  
+		xmlHttp=new XMLHttpRequest();  
+	}
+	catch (e)
+	{  
+		// Internet Explorer  
+		try
+		{    
+			xmlHttp=new ActiveXObject('Msxml2.XMLHTTP');
+		}
+		catch (e)
+		{    
+			xmlHttp=new ActiveXObject('Microsoft.XMLHTTP');
+		}
+	}
+
+	return xmlHttp;
+}
+
+function SetASPX()
+{
+	strObtainHashFilename = 'demo_clientsign_obtainhash.aspx';
+	strInjectSignatureFilename = 'demo_clientsign_injectsignature.aspx';
+}
+
+function Sign()
+{
+	xmlHttp = GetXmlObject();
+	if( xmlHttp==null )
+	{
+		alert ('Your browser does not support AJAX!');
+		return;
+	} 
+
+	xmlHttp.onreadystatechange = stateChanged;
+
+	// STEP1: Send signature attributes to server, obtain hash
+
+	if( document.forms[0].txtName.value == '' )
+	{
+		alert( 'Name must be specified.' );
+		document.forms[0].txtName.focus();
+		return;
+	}
+
+	if( document.forms[0].txtReason.value == '' )
+	{
+		alert( 'Reason for signing must be specified.' );
+		document.forms[0].txtReason.focus();
+		return;
+	}
+
+	if( document.forms[0].txtLocation.value == '' )
+	{
+		alert( 'Location must be specified.' );
+		document.forms[0].txtLocation.focus();
+		return;
+	}
+
+	var strParams;
+	strParams = 'name=' + encodeURIComponent( document.forms[0].txtName.value );
+	strParams += '&reason=' + encodeURIComponent( document.forms[0].txtReason.value );
+	strParams += '&location=' + encodeURIComponent( document.forms[0].txtLocation.value );
+	strParams += '&rnd=' + Math.random(); // to prevent caching
+
+	xmlHttp.open('GET', strObtainHashFilename + '?' + strParams, true);
+	xmlHttp.send(null);
+}
+
+function stateChanged() 
+{ 
+	if( xmlHttp.readyState == 4 )
+	{ 
+		var strResponse;
+		strResponse = xmlHttp.responseText;
+
+		// check for run-time errors that may occur in the server-side script
+		if( strResponse.search('error' ) != -1 )
+		{
+			alert( 'An error occurred while obtaining hash value: ' + strResponse );
+			return;
+		}
+
+		// Save hash, location and path
+		txtHashEtc = strResponse;
+
+		// Invoke signing function
+		setTimeout( ComputeSignature, 0 );
+	}
+}
+
+
+// Uses XEncrypt ActiveX control to sign the hash
+function ComputeSignature()
+{
+	// Split signature info into hash, signature location, size and file path
+	var SigInfo = txtHashEtc.split( ',' );
+	var Hash = SigInfo[0];
+	var Location = SigInfo[1];
+	var Size = SigInfo[2];
+	var Path = SigInfo[3];
+
+	try
+	{
+		// Open "MY" certificate store which contains client certs
+		var Store = XEncrypt.OpenStore('MY', false );
+
+		// Does the store contain certificates?
+		var Count = Store.Certificates.Count;
+		if( Count == 0 )
+		{
+			alert( 'You have no certificates.' );
+			DeletePDFFile( Path );
+			return;
+		}
+
+		// If store contains more than one, enable user to pick one
+		var Cert = null;
+		if( Count > 1 )
+		{
+			Cert = XEncrypt.PickCertificate(Store, 4+8+16,
+				'Select signer certificate',
+				'This certificate\'s private key will be used for signing' );
+
+			if( Cert == null )
+			{
+				DeletePDFFile( Path );
+				return;
+			}
+		}
+		else
+		{
+			// otherwise just pick that only one cert
+			Cert = Store.Certificates(1)
+		}
+
+		// Make sure the cert has a private key associated with it
+		if( !Cert.PrivateKeyExists )
+		{
+			alert( 'This certificate has no private key associated with it.' );
+			DeletePDFFile( Path );
+			return;
+		}
+
+		var Context = XEncrypt.OpenContext( '', false );
+
+		var Msg = Context.CreateMessage( true );
+		Msg.SetSignerCert( Cert );
+
+		var HashBlob = XEncrypt.CreateBlob();
+		HashBlob.Hex = Hash;
+
+		var PKCS7Blob = Msg.SignHash( HashBlob );
+
+		if( PKCS7Blob.Length > Size )
+		{
+			alert( 'Signature size exceeds the space allocated for it. Contact technical support.' );
+			DeletePDFFile( Path );
+			return;
+		}
+
+		txtSignature = PKCS7Blob.Hex;
+	}
+	catch(err)
+	{
+		alert( 'An error occurred during digital signing: ' + err.message );
+		DeletePDFFile( Path );
+		return;
+	}
+
+	// Send signature and other info to server
+	xmlHttp.onreadystatechange = stateChanged2;
+
+	var strParams;
+	strParams = 'path=' + encodeURIComponent( Path );
+	strParams += '&location=' + encodeURIComponent( Location );
+	strParams += '&signature=' + encodeURIComponent( txtSignature );
+
+	// Use POST method as the signature is a long string
+	xmlHttp.open('POST', strInjectSignatureFilename, true);
+	xmlHttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xmlHttp.send(strParams);
+}
+
+function stateChanged2() 
+{ 
+	if( xmlHttp.readyState == 4 )
+	{ 
+		var strResponse;
+		strResponse = xmlHttp.responseText;
+
+		// check for run-time errors that may occur in the server-side script
+		if( strResponse.search('error' ) != -1 )
+		{
+			alert( 'An error occurred while comlpeting the signing: ' + strResponse );
+			return;
+		}
+
+		document.getElementById('divLink').innerHTML = 'Success! Download the signed file from <A HREF="files/' + strResponse + '">' + strResponse + '</A>';
+	}
+}
+
+function DeletePDFFile( Path )
+{
+	xmlHttp.onreadystatechange = stateChanged3;
+	var strParams;
+	strParams = 'delete=1&path=' + encodeURIComponent( Path );
+	strParams += '&rnd=' + Math.random(); // to prevent caching
+	xmlHttp.open('GET', strInjectSignatureFilename + '?' + strParams, true);
+	xmlHttp.send(null);
+}
+
+function stateChanged3() 
+{ 
+	if( xmlHttp.readyState == 4 )
+	{ 
+		var strResponse;
+		strResponse = xmlHttp.responseText;
+
+		// check for run-time errors that may occur in the server-side script
+		if( strResponse.search('error' ) != -1 )
+		{
+			alert( 'An error occurred while deleting the temporary file: ' + strResponse );
+			return;
+		}
+	}
+}
+	</pre>
+	</font></TD></TR>
+
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>VBScript</B></font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign.asp</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		<pre>
+&lt;script src="demo_clientsign_ajax.js"></script>
+
+<!-- Invisible XEncrypt ActiveX control which performs client-side signing-->
+&lt;OBJECT 
+	classid="CLSID:F9463571-87CB-4A90-A1AC-2284B7F5AF4E" 
+	codeBase="aspencrypt.dll#VERSION=2,9,0,0"
+	id="XEncrypt">
+&lt;/OBJECT>
+
+
+&lt;form name="SigningForm">
+	&lt;table border="1">
+	&lt;tr>&lt;td>Name:&lt;/td>&lt;td>&lt;input type="text" name="txtName" size="40">&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>Reason for signing:&lt;/td>&lt;td>&lt;input type="text" name="txtReason" size="40">&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>Location:&lt;/td>&lt;td>&lt;input type="text" name="txtLocation" size="40">&lt;/td>&lt;/tr>
+
+	&lt;tr>&lt;td colspan="2" align="center">
+	&lt;input type="button" name="TheButton" value="Sign this server-side PDF with your client certificate" onclick="Sign();">
+	&lt;/td>&lt;/tr>
+	&lt;/table>
+	
+	&lt;P>
+
+	&lt;div id="divLink">&lt;/div>
+&lt;/form>
+		</pre>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign_obtainhash.asp</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		Set Doc = PDF.OpenDocument( Server.MapPath( "DocToSign.pdf" ) )<P>
+
+		' Pre-sign: Nothing is passed as the first argument to Sign method<BR>
+		Set Annot = Doc.Sign( Nothing, Request("name"), Request("reason"), Request("location"), _<BR>
+		&nbsp;&nbsp;&nbsp;"BinarySize=5000; visible=true; x=10, y=700; width=50; height=50; pageindex=1; print=true" )<P>
+
+		' Give the signature the appearance of an image<BR>
+		Set Image = Doc.OpenImage( Server.MapPath( "signature.png" ) )<BR>
+		Set Graph = Doc.CreateGraphics( "Left=0; Bottom=0; Right=53; Top=53" )<BR>
+		Graph.Canvas.DrawImage Image, "x=0; y=0"<BR>
+		Annot.Graphics(0) = Graph<P>
+
+		Doc.Save Server.MapPath( "files\" & Session.SessionID & ".pdf" ), false<BR>
+		Response.Write( Doc.SignatureInfo )<BR>
+		Response.Write( "," & Doc.Path )<BR>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign_injectsignature.asp</B></font></TD></TR>
+	<TR><TD BGCOLOR="yellow" class="thinborder"><font size=2 face="courier new">
+		If Request("delete") = 1 Then<BR>
+		&nbsp;&nbsp;&nbsp;Set fs = CreateObject("Scripting.FileSystemObject")<BR>
+		&nbsp;&nbsp;&nbsp;fs.DeleteFile Request("Path")<BR>
+		Else<BR>
+		&nbsp;&nbsp;&nbsp;Set PDF = Server.CreateObject("Persits.PDF")<BR>
+		&nbsp;&nbsp;&nbsp;strFilename = PDF.InjectTextIntoFile( Request("Path"), Request("Signature"), Request("Location") )<P>
+
+		&nbsp;&nbsp;&nbsp;Response.Write strFilename<BR>
+		End If
+	</font></TD></TR>
+
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>C#</B></font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign.aspx</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	<pre>
+&lt;script src="demo_clientsign_ajax.js">&lt;/script>
+
+&lt;OBJECT 
+	classid="CLSID:F9463571-87CB-4A90-A1AC-2284B7F5AF4E" 
+	codeBase="aspencrypt.dll#VERSION=2,9,0,0"
+	id="XEncrypt">
+&lt;/OBJECT>
+
+
+&lt;form id="SigningForm" runat="server">
+	&lt;table border="1">
+	&lt;tr>&lt;td>Name:&lt;/td>&lt;td>&lt;asp:textbox runat="server" id="txtName" size="40"/>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>Reason for signing:&lt;/td>&lt;td>&lt;asp:textbox runat="server" id="txtReason" size="40"/>&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>Location:&lt;/td>&lt;td>&lt;asp:textbox runat="server" id="txtLocation" size="40"/>&lt;/td>&lt;/tr>
+
+	&lt;tr>&lt;td colspan="2" align="center">
+	&lt;asp:button runat="server" id="TheButton" Text="Sign this server-side PDF" onclientclick="SetASPX(); Sign(); return false;"/>
+	&lt;/td>&lt;/tr>
+	&lt;/table>
+	
+	&lt;p>
+
+	&lt;asp:label runat="server" id="divLink"/>
+&lt;/form>
+	</pre>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign_obtainhash.aspx</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	<pre>
+&lt;%@ Import Namespace="System.Web" %>
+&lt;%@ Import Namespace="System.Reflection" %>
+&lt;%@ Import Namespace="ASPPDFLib" %>
+
+&lt;script runat="server" LANGUAGE="C#">
+
+void Page_Load(Object Source, EventArgs E)
+{
+	// Pre-signs the PDF document: 
+	// - Creates a placeholder inside it to contain the signature
+	// - Obtains the hash value of the signable area, as well as the signature location
+
+	IPdfManager objPDF = new PdfManager();
+	IPdfDocument objDoc = objPDF.OpenDocument( Server.MapPath("DocToSign.pdf"), Missing.Value );
+
+	// Pre-sign: null is passed as the first argument to Sign method
+	IPdfAnnot objAnnot = objDoc.Sign( null, Request["name"], Request["reason"], Request["location"], 
+		"BinarySize=5000; visible=true; x=10, y=700; width=50; height=50; pageindex=1; print=true" );
+
+	// Give the signature the appearance of an image
+	IPdfImage objImage = objDoc.OpenImage( Server.MapPath( "signature.png" ), Missing.Value );
+	IPdfGraphics objGraph = objDoc.CreateGraphics( "Left=0; Bottom=0; Right=53; Top=53" );
+	objGraph.Canvas.DrawImage( objImage, "x=0; y=0" );
+	objAnnot.set_Graphics(0, Missing.Value, objGraph );
+
+	objDoc.Save( Server.MapPath( "files\\" + Session.SessionID + ".pdf" ), false );
+	Response.Write( objDoc.SignatureInfo );
+	Response.Write( "," + objDoc.Path );
+}
+
+&lt;/script>
+	</pre>
+	</font></TD></TR>
+	<TR><TD BGCOLOR="white" ALIGN="left"><font size=2 face="courier new" color=black><B>File: demo_clientsign_injectsignature.aspx</B></font></TD></TR>
+	<TR><TD BGCOLOR="lightblue" class="thinborder"><font size=2 face="courier new">
+	<pre>
+&lt;%@ Import Namespace="System.Web" %>
+&lt;%@ Import Namespace="System.Reflection" %>
+&lt;%@ Import Namespace="System.IO" %>
+&lt;%@ Import Namespace="ASPPDFLib" %>
+
+&lt;script runat="server" LANGUAGE="C#">
+
+void Page_Load(Object Source, EventArgs E)
+{
+	if( Request["delete"] != null )
+	{
+		File.Delete( Request["Path"] );
+	}
+	else
+	{
+		IPdfManager objPDF = new PdfManager();
+		string strFilename = objPDF.InjectTextIntoFile( Request["Path"], Request["Signature"], int.Parse(Request["Location"]) );
+		Response.Write( strFilename );		
+	}
+}
+
+&lt;/script>
+
+	</pre>
+	</font></TD></TR>
+
+	</table>
+
+	<P>
+	To test this application, open Internet Explorer as Administrator and go to <B>Live Demo 10b</B>:
+	<P>
+	<A TARGET="_new" HREF="https://www.support.persits.com/pdf/demo_clientsign.asp"><B>https://www.support.persits.com/pdf/demo_clientsign.asp</B></A>
+	 
+	</Blockquote>
+
+	<P>
+	<A NAME="8_5">
+	<FONT COLOR="#C06000"><B>8.5 PDF-based Secure Mail</B></FONT>
+	<Blockquote>
+		Some web applications require that the users be periodically sent sensitive information via email securely. 
+		Persits Software, Inc., the maker of AspPDF and AspPDF.NET, offers certificate-based secure email functionality via 
+		the components AspEmail and AspEncrypt. 
+		<P>
+		In order to receive and decrypt secure email, the recipient needs to have acquired a personal 
+		certificate from a certification authority such as Verisign or Thawte. The public-key portion 
+		of the certificate needs to be exported to a file and placed on the web sever generating the secure email. 
+		Also, the recipient must use stand-alone S/MIME-enabled email software to decrypt and read
+		the messages such as Outlook, Outlook Express, etc. Web-based email services such as gmail, 
+		hotmail, etc. cannot be used.
+		<P>
+		PDF format offers an alternative to certificate-based email in which the secure content is embedded in a 
+		password-protected PDF document and sent to the user as an attachment via regular, unencrypted, email. 
+		Upon the receipt of the message, the user opens the attachment with Acrobat Reader and 
+		enters his password to view the content. 
+		<P>
+		PDF is a great vehicle for delivering secure email for the following reasons:
+		
+		<UL>
+		<li>it supports strong 128-bit password-based encryption;</li>
+		<li>it provides a means for file attachments via special interactive objects called <i>annotations</i> described in <A HREF="manual_10.html#10_3">Chapter 10</A>.</li>
+		<li>it is platform-independent;</li>
+		<li>it does not require special software other than a PDF viewer such as Acrobat Reader;</li>
+		<li>it does not require a digital certificate;</li>
+		<li>it can be used with any stand-alone <i>and</i> web-based email reader.</li>
+		</UL>
+
+		PDF-based secure message functionality is demonstrated by the following AspPDF live demo:
+		<P>
+
+		<A TARGET=_new HREF="http://support.persits.com/pdf/demo_email.asp">http://support.persits.com/pdf/demo_email.asp</A>
+
+	</Blockquote>
+	
+	<P>
+
+
+
+
+
+	<A HREF="manual_09.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="Chapter 9: Working with Existing PDFs"></A>
+	<A HREF="manual_07.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="Chapter 7: Tables"></A>
+
+	
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+	
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2015. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>

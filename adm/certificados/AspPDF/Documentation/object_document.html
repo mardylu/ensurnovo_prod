@@ -1,0 +1,1532 @@
+<HTML>
+<HEAD>
+<TITLE>AspPDF - Object Reference: PdfDocument</TITLE>
+<LINK REL="stylesheet" HREF="asppdf.css" TYPE="text/css">
+
+<style>
+UL.Params LI { padding-top: 4pt; }
+</style>
+
+</HEAD>
+
+
+<BODY LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" BGCOLOR="#ffffff" TEXT="#000000">
+
+<!-- Top Line -->
+	<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<tr>
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom" COLSPAN=3>
+	<img SRC="images/spacer.gif" WIDTH="3" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+	</tr>
+
+<!--Logo-->
+<!-- Start banner -->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+
+	<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+	<tr HEIGHT="84"><TD HEIGHT="84" WIDTH="*" CLASS="Header" ALIGN="RIGHT"><A HREF="http://www.persits.com"><IMG ALT="Persits Software, Inc. Web Site" src="images/ps_logo.gif" BORDER="0"></A></TD></TR>
+	</table></td>
+
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+
+<!-- Horizontal line -->
+<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" HSPACE="0" BORDER="0"></TD></TR>
+
+
+
+<!-- End Logo/Banner -->
+
+<!-- Start Main Menu //-->
+<tr>
+	<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+	<td WIDTH="*">
+	
+<table BORDER="0" CELLPADDING="2" CELLSPACING="0" WIDTH="100%">
+<tr>
+	<td Class="MainMenu" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+		<b><font COLOR="#000000" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+		 Main Menu:&nbsp; </font></b>
+	</td>
+	<td Class="MainMenu" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%"> 
+		<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#000031">
+
+	<b><a HREF="index.html">Home</A></b>&nbsp;|&nbsp;
+	<b><a HREF="news.html">News</A></b>&nbsp;|&nbsp;
+	<b><a href="manual.html">Manual</A></b>&nbsp;|&nbsp;
+	<b>Object Reference</b>&nbsp;|&nbsp;	
+	<b><a HREF="download.html">Download & Buy</a></b>&nbsp;|&nbsp;
+	<b><a HREF="livedemo.html">Live Demo</a></b>&nbsp;|&nbsp;
+	<b><a HREF="support.html">Support</a></b>&nbsp;|&nbsp;
+	<b><a HREF="contact.html">Contact</a></b>
+</font></div>
+	</td>
+</tr>
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="*">
+	<b><font COLOR="#FFFFFF" SIZE="-1" FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif">
+	&nbsp;Navigator:&nbsp; </font></b></td>
+	<td BGCOLOR="#530E53" VALIGN="center" COLSPAN="2" ALIGN="left" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	
+	<a HREF="index.html"><B><FONT COLOR="#FFFFFF">Home</font></b></a>&nbsp;|&nbsp;<B>
+	<a HREF="objectreference.html"><FONT COLOR="#FFFFFF">Object Reference</font></b></a>&nbsp;|&nbsp;<B>
+	PdfDocument
+	</b></font></div>
+	</td>
+</tr>
+
+</table>
+
+</td>
+<td WIDTH="2" BGCOLOR="#530E53" VALIGN="bottom"><img SRC="images/spacer.gif" WIDTH="3" HEIGHT="3" HSPACE="0" BORDER="0"></td>
+</tr>
+<!-- End Main Menu //-->
+
+<!-- Body -->
+	<TR>
+	<!--Left black column-->
+	<TD WIDTH="2" BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+<!-- Data starts here -->
+	<TD VALIGN=TOP>
+
+	<!-- Three-column table for that occopies the data space:-->
+	<TABLE WIDTH="100%" CELLSPACING="2" CELLPADDING="0" BORDER="0">
+	<TR>
+	
+<!--Main Text -->
+	<TD WIDTH="1000" ALIGN="LEFT" VALIGN="TOP" HEIGHT="100%">
+
+	<A HREF="object_font.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfFont"></A>
+	<A HREF="object_dest.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfDest"></A>
+	
+	
+	<BR>
+
+	<FONT Class="Header">
+	&nbsp;&nbsp;<B>PdfDocument Object</B>
+	</FONT>
+
+	<Blockquote>
+	<FONT FACE="Arial" SIZE=2 COLOR="#000000">
+
+	PdfDocument is a major object representing a new or existing PDF document.
+	An instance of PdfDocument is creatable via PdfManager's
+	CreateDocument method as well as OpenDocument/OpenDocumentBinary methods.
+	<P>
+
+	<TABLE WIDTH="340" CELLPADDING=2 CELLSPACING=0 BORDER=1>
+		<TR><TD WIDTH=50% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Properties">Properties</A></B></FONT></TD>
+			<TD WIDTH=100% BGCOLOR="#FFCE00" ALIGN=CENTER>
+			<FONT FACE="Arial" SIZE=2 Color="white"><B><A HREF="#Methods">Methods</A></B></FONT></TD>
+		</TR>
+		<TR>
+			<TD WIDTH=50% BGCOLOR="#FFFFFF" ALIGN=LEFT VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">
+
+			<A HREF="#Author">Author</A><BR>
+			<A HREF="#CompressedXRef">CompressedXRef</A><BR>
+			<A HREF="#CreationDate">CreationDate</A><BR>
+			<A HREF="#Creator">Creator</A><BR>
+			<A HREF="#Encrypted">Encrypted</A><BR>
+			<A HREF="#Filename">Filename</A><BR>
+			<A HREF="#Fonts">Fonts</A><BR>
+			<A HREF="#Form">Form</A><BR>
+			<A HREF="#ID">ID</A><BR>
+			<A HREF="#ImportInfo">ImportInfo</A><BR>
+			<A HREF="#KeyLength">KeyLength</A><BR>
+			<A HREF="#Keywords">Keywords</A><BR>
+			<A HREF="#Mac">Mac</A><BR>
+			<A HREF="#MetaData">MetaData</A><BR>
+			<A HREF="#ModDate">ModDate</A><BR>
+			<A HREF="#OpenAction">OpenAction</A><BR>
+			<A HREF="#OriginalFilename">OriginalFilename</A><BR>
+			<A HREF="#OriginalPath">OriginalPath</A><BR>
+			<A HREF="#OriginalVersion">OriginalVersion</A><BR>
+			<A HREF="#Outline">Outline</A><BR>
+			<A HREF="#OwnerPassword">OwnerPassword</A><BR>
+			<A HREF="#OwnerPasswordUsed">OwnerPasswordUsed</A><BR>
+			<A HREF="#PageLayout">PageLayout</A><BR>
+			<A HREF="#PageMode">PageMode</A><BR>
+			<A HREF="#Pages">Pages</A><BR>
+			<A HREF="#Path">Path</A><BR>
+			<A HREF="#Permissions">Permissions</A><BR>
+			<A HREF="#Producer">Producer</A><BR>
+			<A HREF="#SignatureInfo">SignatureInfo</A><br>
+			<A HREF="#Subject">Subject</A><BR>
+			<A HREF="#Title">Title</A><BR>
+			<A HREF="#UserPassword">UserPassword</A><BR>
+			<A HREF="#Version">Version</A><BR>
+			</td>
+			<TD VALIGN="top">
+			<FONT FACE="Arial" SIZE=2 COLOR="#A0A0A0">			
+			<A HREF="#AddOutputIntent">AddOutputIntent</A><BR>
+			<A HREF="#AddTemplate">AddTemplate</A><BR>
+			<A HREF="#AppendDocument">AppendDocument</A><BR>
+			<A HREF="#ClearTemplates">ClearTemplates</A><BR>
+			<A HREF="#Close">Close</A><BR>
+			<A HREF="#CreateAction">CreateAction</A><BR>
+			<A HREF="#CreateColorSpace">CreateColorSpace</A><BR>
+			<A HREF="#CreateDest">CreateDest</A><BR>
+			<A HREF="#CreateFunction">CreateFunction</A><BR>
+			<A HREF="#CreateGraphics">CreateGraphics</A><BR>
+			<A HREF="#CreateGraphicsFromPage">CreateGraphicsFromPage</A><BR>
+			<A HREF="#CreateGState">CreateGState</A><BR>
+			<A HREF="#CreateTable">CreateTable</A><BR>
+			<A HREF="#Encrypt">Encrypt</A><BR>
+			<A HREF="#ExtractPages">ExtractPages</A><BR>
+			<A HREF="#ImportFromUrl">ImportFromUrl</A><BR>
+			<A HREF="#OpenImage">OpenImage</A><BR>
+			<A HREF="#OpenImageBinary">OpenImageBinary</A><BR>
+			<A HREF="#OpenUrl">OpenUrl</A><BR>
+			<A HREF="#Save">Save</A><BR>
+			<A HREF="#SaveHttp">SaveHttp</A><BR>
+			<A HREF="#SaveToMemory">SaveToMemory</A><BR>
+			<A HREF="#SendToPrinter">SendToPrinter</A><BR>
+			<A HREF="#SetViewerPrefs">SetViewerPrefs</A><BR>
+			<A HREF="#Sign">Sign</A><BR>
+			<A HREF="#VerifySignature">VerifySignature</A><BR>
+			</B></FONT></TD>
+		</TR>
+	</TABLE>
+	<P>
+
+	<A NAME="Properties">
+	<FONT COLOR="#C06000"><B>Properties</B></FONT>
+	<Blockquote>
+	
+		<HR CLASS="objectseparator">
+		<A NAME="Author">
+		<B><FONT COLOR="#000080">Author</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the document's author (usually the name of the person
+		who created the document).
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="CompressedXRef">
+		<B><FONT COLOR="#000080">CompressedXRef</FONT> As Boolean</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies whether the current document uses a compressed cross-reference table.
+		Modifying this property is generally not recommended. 
+		This property was introduced by version 1.8.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="CreationDate">
+		<B><FONT COLOR="#000080">CreationDate</FONT> As Date</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the date/time the document was created.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Creator">
+		<B><FONT COLOR="#000080">Creator</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the document's creator. 
+		If the document was converted from to PDF from another format, 
+		this property returns the name of the application that created
+		the original document.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Encrypted">
+		<B><FONT COLOR="#000080">Encrypted</FONT> As Boolean</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns True is the document is encrypted.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Filename">
+		<B><FONT COLOR="#000080">Filename</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the filename (without a path) under which this document was saved via
+		the <A HREF="#Save"><B>Save</B></A> method.
+		This property is particularly useful when the Save method
+		is called with the Overwrite option set to False and the actual
+		filename may differ from the desired filename passed to the Save method.
+		If the document was saved using SaveToMemory or SaveHttp,
+		this property returns an empty string.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Fonts">
+		<B><FONT COLOR="#000080">Fonts</FONT> As PdfFonts</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the <A HREF="object_fonts.html">PdfFonts</A> collection which 
+		enables you to obtain a PdfFont object to be passed to text-drawing methods
+		such as Canvas.DrawText.
+		For more information, see <A HREF="manual_06.html">Chapter 6 - Text and Fonts</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Form">
+		<B><FONT COLOR="#000080">Form</FONT> As PdfForm</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the <A HREF="object_form.html">PdfForm</A> collection 
+		of PdfAnnot objects representing interactive form fields
+		placed on this document. For more information, see <A HREF="manual_11.html">Chapter 11 - Forms</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="ID">
+		<B><FONT COLOR="#000080">ID</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns this document's Hex-encoded ID which is usually a random 16-byte 
+		binary sequence, such as "244F19CCDF3988289B47B29585AD9A12".
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="ImportInfo">
+		<B><FONT COLOR="#000080">ImportInfo</FONT> As PdfParam</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns an instance of the PdfParam object populated with the Y-coordinate
+		and page index of the lowest vertical boundary of HTML content
+		rendered by the last successful call to <A HREF="#ImportFromUrl">ImportFromUrl</A>.
+		The item names are "Y" and "Page", respectively. This property was introduced
+		in Version 1.9.
+		<P>
+		For more information, see <A HREF="manual_13.html#13_7">Section 13.7 - Obtaining Y-Boundary</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="KeyLength">
+		<B><FONT COLOR="#000080">KeyLength</FONT> As Long</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		If this document is encrypted, returns the key length: 40 or 128 for RC4,
+		and -128 for AES (AES is supported in AspPDF 2.2+.)
+		Returns 0 if the document is not encrypted.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Keywords">
+		<B><FONT COLOR="#000080">Keywords</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies keywords associated with this document.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Mac">
+		<B><FONT COLOR="#000080">Mac</FONT> As Boolean</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns True if this is an existing document and there are
+		indications the file contains a MacBinary header. Returns False
+		in all other cases.
+		</BLOCKQUOTE>
+
+		<HR CLASS="objectseparator">
+		<A NAME="MetaData">
+		<B><FONT COLOR="#000080">MetaData</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies this document's XML-based metadata string.
+		For more information, see <A HREF="manual_12.html#12_3">Section 12.3 - Metadata</A>.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="ModDate">
+		<B><FONT COLOR="#000080">ModDate</FONT> As Date</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the date/time the document was most recently modified.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OpenAction">
+		<B><FONT COLOR="#000080">OpenAction</FONT> As Object</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Specifies a PdfDest or PdfAction object to be used when 
+		the document is opened. 
+		Use this property if you need the document to fit the window
+		in a particular way upon opening,
+		or perform a certain action (such as execute a script).
+		For more information about
+		destinations and actions, see <A HREF="manual_10.html#10_1">Section 10.1 - Destinations</A>
+		and <A HREF="manual_10.html#10_4">Section 10.4 - Actions</A>, respectively.
+		<P>
+		Usage:
+		<P>
+		<font face="courier new" size="2"><B>
+		Doc.OpenAction = Doc.Pages(1).CreateDest("Fit=true")<P>
+		Doc.OpenAction = Doc.CreateAction("type=JavaScript", "this.print(true)" )
+		</B></font>
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OriginalFilename">
+		<B><FONT COLOR="#000080">OriginalFilename</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns this document's original filename (without a path)
+		if the document was opened using Pdf.OpenDocument.
+		If this is a new document, or if the document was opened using Pdf.OpenDocumentBinary,
+		this property returns an empty string.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OriginalPath">
+		<B><FONT COLOR="#000080">OriginalPath</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns this document's full original path 
+		if the document was opened using Pdf.OpenDocument.
+		If this is a new document, or if the document was opened using Pdf.OpenDocumentBinary,
+		this property returns an empty string.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OriginalVersion">
+		<B><FONT COLOR="#000080">OriginalVersion</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns this document's original PDF version embedded in the document header
+		(such as "1.3").
+		If this is a new document,
+		this property returns an empty string.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Outline">
+		<B><FONT COLOR="#000080">Outline</FONT> As PdfOutline</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the <A HREF="object_outline.html">PdfOutline</A> collection 
+		of PdfOutlineItem objects this
+		document's outline structure. For more information, see <A HREF="manual_10.html#10_2">Section 10.2 - Outlines</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OwnerPassword">
+		<B><FONT COLOR="#000080">OwnerPassword</FONT> As Boolean</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns True if this document is an existing one (i.e. opened via
+		OpenDocument or OpenDocumentBinary), encrypted
+		and has the owner password specified. Returns False in all other cases.
+		For more information about owner passwords, see
+		<A HREF="manual_08.html#8_1">Section 8.1 - Overview of PDF Security</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="OwnerPasswordUsed">
+		<B><FONT COLOR="#000080">OwnerPasswordUsed</FONT> As Boolean</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns True if this document is an existing one (i.e. opened via
+		OpenDocument or OpenDocumentBinary), encrypted,
+		and the owner password (as opposed to the user password) was used
+		to open it. Returns False in all other cases.
+		<P>
+		This property is useful for permission flag enforcement.
+		For more information about owner passwords, see
+		<A HREF="manual_08.html#8_1">Section 8.1 - Overview of PDF Security</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="PageLayout">
+		<B><FONT COLOR="#000080">PageLayout</FONT> As pdfPageLayout (Integer)</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+			Returns or specifies the page layout to be used
+			when the document is opened. This property can be set
+			to one of the four pdfPageLayout constants defined by the AspPDF component,
+			or an integer value.
+			Valid values are:
+			<UL>
+			<li>pdfSinglePage (1): display one page at a time.
+			<li>pdfOneColumn (2): display the pages in one column.
+			<li>pdfTwoColumnLeft (3): display the pages in two columns, with odd-numbered
+			pages on the left.
+			<li>pdfTwoColumnRight (4): display the pages in two columns, with odd-numbered
+			pages on the right.
+			</UL>
+		Usage (C#):
+		<P>
+		<font face="courier new" size="2"><B>
+		objDoc.PageLayout = pdfPageLayout.pdfOneColumn;
+		</b></font>
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="PageMode">
+		<B><FONT COLOR="#000080">PageMode</FONT> As pdfPageMode (Integer)</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+			Returns or specifies how the document should be displayed when opened.
+			This property can be set
+			to one of the four pdfPageMode constants defined by the AspPDF component,
+			or an integer value.
+			Valid values are:
+			<UL>
+			<li>pdfUseNone (1): neither document outline nor thumbnail
+			images are visible.
+			<li>pdfUseOutlines (2): document outlines are visible.
+			<li>pdfUseThumbs (3): thumbnail images are visible.
+			<li>pdfFullScreen (4): full-screen mode, with no menu bar, window controls
+			or any other window visible.
+			</UL>
+		Usage (C#):
+		<P>
+		<font face="courier new" size="2"><B>
+		objDoc.PageMode = pdfPageMode.pdfUseOutlines;
+		</b></font>
+		</BLOCKQUOTE>
+
+		<HR CLASS="objectseparator">
+		<A NAME="Pages">
+		<B><FONT COLOR="#000080">Pages</FONT> As PdfPages</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the <A href="object_pages.html">PdfPages</A> collection of PdfPage objects representing
+		pages in the document. PdfPages
+		is used to access, add  and remove individual pages.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Path">
+		<B><FONT COLOR="#000080">Path</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns the full path under which this document was saved via
+		the <A HREF="#Save"><B>Save</B></A> method.
+		If the document was saved using SaveToMemory or SaveHttp,
+		this property returns an empty string.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Permissions">
+		<B><FONT COLOR="#000080">Permissions</FONT> As Long</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		If this document is encrypted, returns permission flags
+		associated with this document. If the document is not encrypted,
+		returns 0.
+		<P>
+		For the detailed description of the PDF permission flags, see
+		<A HREF="manual_08.html#8_1_2">Section 8.1.2 - Permission Flags</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Producer">
+		<B><FONT COLOR="#000080">Producer</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the document's producer (usually the 
+		name of the application that generated this PDF file).
+		When a new document is created, AspPDF sets this property to "Persits Software AspPDF - www.persits.com"
+		by default.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="SignatureInfo">
+		<B><FONT COLOR="#000080">SignatureInfo</FONT> As String</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns three comma-separated properties of a digital signature: Hex-encoded SHA hash value, signature location within the PDF file, 
+		and signature placeholder's size.
+		<P>
+		For example: <B>B7F2211A4D83D624B2C9DF7277C222BA3931E4C8,135676,5000</B>
+		<P>
+		This property is populated during pre-signing, when the <B>Sign</B> method is called with the first argument set to Nothing (null),
+		and the pre-signed document is saved to disk. Pre-signing is the first step of a three-step process to perform client-side
+		signing of server-side PDFs. For more information, see <A HREF="manual_08.html#8_4">Section 8.4 - Client-Side Signing of Server-Side PDFs</A>.
+		<P>
+		This property was introduced in Version 3.4.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Subject">
+		<B><FONT COLOR="#000080">Subject</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the document's subject.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Title">
+		<B><FONT COLOR="#000080">Title</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Returns or specifies the document's title.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="UserPassword">
+		<B><FONT COLOR="#000080">UserPassword</FONT> As Boolean</B> (Read-only)
+		<P>
+		<BLOCKQUOTE>
+		Returns True if this document is an existing one (i.e. opened via
+		OpenDocument or OpenDocumentBinary), encrypted
+		and has the user password specified. Returns False in all other cases.
+		For more information about user passwords, see
+		<A HREF="manual_08.html#8_1">Section 8.1 - Overview of PDF Security</A>.
+		</BLOCKQUOTE>
+
+
+
+		<HR CLASS="objectseparator">
+		<A NAME="Version">
+		<B><FONT COLOR="#000080">Version</FONT> As String</B> (Read/Write)
+		<P>
+		<BLOCKQUOTE>
+		Specifies the PDF version to be embedded in the document header
+		when the document is saved. 
+		"1.3" by default.
+		</BLOCKQUOTE>
+
+
+		<HR CLASS="objectseparator">
+	
+	</Blockquote>
+
+	<A NAME="Methods">
+	<FONT COLOR="#C06000"><B>Methods</B></FONT>
+	<Blockquote>
+
+		<HR CLASS="objectseparator">
+
+		<A NAME="AddOutputIntent">
+		<B>Sub <FONT COLOR="#F00000">AddOutputIntent</FONT> (<I>Condition</i> As String, <I>ConditionID</i> As String, <i>ProfilePath</i> As String, <i>Colors</i> As Integer)</B>
+		<BLOCKQUOTE>
+		Adds an output intent which is a mapping between a device-dependent color space such as DeviceRGB and a device-independent color space.
+		This method should be used to create PDF/A-compliant documents.
+		<P>
+		<i>Condition</i> identifies the intended output device or production condition in human-readable form.
+		<P>
+		<i>ConditionID</i> identifies the intended output device or production condition in human- or machine-readable form.
+		Can be set to "Custom".
+		<P>
+		<i>ProfilePath</i> specifies the path to the ICC profile file (.icc) which maps the device-dependent color space used by the document
+		to a device-independent one.
+		<p>
+		<i>Colors</i> specifies the number of color components in the device-dependent color space used by the document (1 for DeviceGray, 3 for DeviceRGB
+		and 4 for DeviceCMYK.)
+		<P>
+		For more information, see <A HREF="manual_12.html#12_4">Section 12.4 - AspPDF's Support for PDF/A</A>.
+		This method was introduced in Version 3.3.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="AddTemplate">
+		<B>Sub <FONT COLOR="#F00000">AddTemplate</FONT> (<I>Graph</i> As PdfGraphics, Optional <i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Associates a template graphics with this document. If one or more templates are associated with the document, 
+		the applicable templates are automatically drawn on newly added pages
+		to serve as the background for these pages. This method is useful when new content needs to be drawn on top of a template
+		(as opposed to a blank page) and the number of pages to be added is not known in advance,
+		such as when calling the <B>ImportFromUrl</B> method. All existing templates can be cleared via the <B>ClearTemplates</B> method.
+		<P>
+		<i>Graph</i> is an instance of the PdfGraphics object representing the template graphics. It can be newly created or based on the page
+		of another document.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying which pages, by index, this template
+		is applicable to as well as the position and scaling of the template on the page. The following 
+		parameters are supported (all optional):
+		<ul>
+		<li><i>From</i> - <i>To</i>, <i>From1</i> - <i>To1</i>, ..., <i>From</i>N - <i>To</i>N - specify 1-based
+		ranges of pages that this template is to be applied to. By default, <i>From</i> is 1 and <i>To</i> is infinity.
+		<li><i>Exclude</i> - if set to 1, all odd pages are excluded; if set to 2, all even pages are excluded; if set to any 
+		other number or omitted, no pages are excluded. 0 by default.
+		<li><i>X</i>, <i>Y</i> - the coordinates of the lower-left corner of the template on the page. (0, 0) by default.
+		<li><i>ScaleX</i>, <i>ScaleY</i>, <i>Angle</i> - scaling and rotation parameters. (1, 1) and 0 by default.
+		</ul>
+		<P>
+		For more information, see <A HREF="manual_13.html#13_8">Section 13.8 - Templates</A>.
+		This method was introduced in Version 3.2.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+	
+		<A NAME="AppendDocument">
+		<B>Sub <FONT COLOR="#F00000">AppendDocument</FONT> (<I>Document</i> As PdfDocument)</B>
+		<BLOCKQUOTE>
+		Appends (stitches) an existing PDF document to the current one.
+		<i>Document</i> must be an instance of the PdfDocument object
+		created via OpenDocument or OpenDocumentBinary, but not CreateDocument.
+		One or more documents can be stitched to this document by calling
+		the AppendDocument method multiple times.
+		<P>
+		If <i>Document</i> is secure,
+		it must have been opened with the owner
+		password, not the user password, otherwise this method throws an error exception.
+		<P>
+		For more information on document stitching, see <A HREF="manual_12.html#12_2">
+		Section 12.2 - Document Stitching</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="ClearTemplates">
+		<B>Sub <FONT COLOR="#F00000">ClearTemplates</FONT> ()</B>
+		<BLOCKQUOTE>
+		Clears all templates added via the <B>AddTemplate</B> method. This method was introduced in Version 3.2.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="Close">
+		<B>Sub <FONT COLOR="#F00000">Close</FONT> ( )</B>
+		<BLOCKQUOTE>
+		Closes the underlying PDF file if this document object is based on an existing
+		PDF, i.e. opened via the OpenDocument method. Has no effect if this is a new document.
+		<P>
+		A PDF file opened via OpenDocument always gets closed automatically when 
+		the corresponding PdfDocument object
+		is destroyed. However, under .NET garbage
+		collection, the actual object destruction may be deferred thus leaving the PDF
+		file opened and locked indefinitely. The Close method enables you to close the file explicitly
+		when your application needs it.
+
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="CreateAction">
+		<B>Function <FONT COLOR="#F00000">CreateAction</FONT> (<I>Param</i> As Variant, <I>Value</i> As String) As PdfAction</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfAction object
+		representing an action.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying the action type and other type-specific parameters.<P>
+		<i>Value</i> has different meanings depending on the action type 
+		and may be ignored altogether by some action types. 
+		<P>
+		For the detailed description of the CreateAction method
+		and its parameters, see <A HREF="manual_10.html#10_4">Section 10.4 - Actions</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="CreateColorSpace">
+		<B>Function <FONT COLOR="#F00000">CreateColorSpace</FONT> (<i>Name</i> As String, Optional <I>Param</i> As Variant) As PdfColorSpace</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfColorSpace object representing a color space.
+		<P>
+		<i>Name</i> is the name of the color space, such as "DeviceRGB".<p>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying various parameters. The list of parameters is too extensive to be shown here.
+		<P>
+		For the detailed description of the CreateColorSpace method
+		and its parameters, see <A HREF="manual_15.html#15_1">Section 15.1 - PdfColorSpace Object</A>.
+		<P>
+		This method was introduced by version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="CreateDest">
+		<B>Function <FONT COLOR="#F00000">CreateDest</FONT> (<i>Page</i> As PdfPage, <I>Param</i> As Variant) As PdfDest</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfDest object
+		representing a destination. This method is redundant.
+		It is recommended that the method Page.CreateDest
+		be used instead.
+		<P>
+		<i>Page</i> is a PdfPage object the destination is associated with.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying various parameters of the destination.
+		<P>
+		For the detailed description of the CreateDest method
+		and its parameters, see <A HREF="manual_10.html#10_1">Section 10.1 - Destinations</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="CreateFunction">
+		<B>Function <FONT COLOR="#F00000">CreateFunction</FONT> (<I>Param</i> As Variant) As PdfFunction</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfFunction object representing a transformation function.
+		Functions are used in conjunction with some color spaces.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying various parameters. The list of parameters is too extensive to be shown here.
+		<P>
+		For the detailed description of the CreateFunction method
+		and its parameters, see <A HREF="manual_15.html#15_2">Section 15.2 - PdfFunction Object</A>.
+		<P>
+		This method was introduced by version 2.5.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="CreateGraphics">
+		<B>Function <FONT COLOR="#F00000">CreateGraphics</FONT> (<I>Param</i> As Variant) As PdfGraphics</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfGraphics object
+		representing a graphics (referred to as a Form XObject by PDF specifications).
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying various creation parameters of the graphics, including:
+		<UL>
+		<LI><i>Left</i>, <i>Bottom</i>, <i>Right</i>, <i>Top</i> (required) -
+		the coordinate space of the graphics. 
+		Usually, <i>Left</i> and <i>Bottom</i> are set to 0 and <i>Right</i>
+		and <i>Top</i> to the graphics width and height, respectively.
+		<LI> <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i> (optional) -
+		specify a transformation matrix 
+		that maps graphics space into user space ([1 0 0 1 0 0] by default).
+		<li> <i>Pattern</i> (optional) - if set to True, designates this graphics object as a pattern cell. False by default.
+		This parameter was introduced by version 1.6. For more information about patterns, see
+		<A HREF="manual_05.html#5_3_2">Section 5.3.2 - Tiling Patterns</A>.
+		</UL>
+		<P>
+		For more information on graphics, see <A HREF="manual_05.html#5_3">Section 5.3 - PdfGraphics Objects</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+
+		<A NAME="CreateGraphicsFromPage">
+		<B>Function <FONT COLOR="#F00000">CreateGraphicsFromPage</FONT> (<i>Document</i> As IPdfDocument, <i>Index</I> As Long) As PdfGraphics</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfGraphics object
+		representing the page of another document specified by <i>Document</i>.
+		<i>Index</i> specifies the 1-based index of the page within that document to be converted to a graphics
+		object. <i>Document</i> must be an existing document. This method cannot be called on itself.
+		<P>
+		This method allows the page of another document to be drawn on any page of this document
+		at an arbitrary location with rotation and scaling applied, if necessary.
+		<P>
+		This method was introduced in Version 2.3.
+		<P>
+		For more information on creating graphics
+		from pages, see <A HREF="manual_09.html#9_6">Section 9.6 - Drawing Other Documents' Pages</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+
+		<A NAME="CreateGState">
+		<B>Function <FONT COLOR="#F00000">CreateGState</FONT> (<I>Param</i> As Variant) As PdfGState</B>
+		<BLOCKQUOTE>
+		Creates an instance of the graphics state object encapsulating multiple graphics state parameters
+		including those related to transparency operations. Also creates a transparency group object.
+		Both the graphics state and transparency group objects are represented by an instance of the PdfGState object.
+		This method was introduced in Version 3.1.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string. Valid parameters, all optional, are as follows:
+		<UL>
+		<li><i>Group</i> - if set to True, the returned instance of the PdfGState object
+		represents a transparency group. If set to False or omitted, it represents a graphics state. False by default.</li>
+		<li><i>BlendMode</i> - a number between 1 and 16 specifying the blend mode (1 - Normal, 2 - Multiply, 3 - Screen, 4 - Overlay, 
+		5 - Darken, 6 - Lighten, 7 - ColorDodge, 8 - ColorBurn, 9 - HardLight, 10 - SoftLight, 11 - Difference, 12 - Exclusion, 
+		13 - Hue, 14 - Saturation, 15 - Color, 16 - Luminosity). Ignored if <i>Group</i> is set to True.
+		<li><i>Alpha</i>, <i>FillAlpha</i> - numbers in the range 0.0 to 1.0 specifying the stroke and fill alpha values,
+		respectively. 1.0 by default. Ignored if <i>Group</i> is set to True.</li>
+		<li><i>Overprint</i>, <i>FillOverprint</i> - stroke and fill overprint Boolean flags, respectively.
+		Ignored if <i>Group</i> is set to True.</li>
+		<li><i>AlphaIsShape</i> - alpha source flag. If set to True, the soft mask and alpha are interpreted as shape value, otherwise
+		they are interpreted as opacity values. Ignored if <i>Group</i> is set to True.</li>
+		<li><i>TextKnockout</i> - text knockout flag which determines the behavior of overlapping glyphs. Ignored if <i>Group</i> is set to True.</li>
+		<li><i>Isolated</i> - specifies the isolated flag for a transparency group. False by default. Ignored if <i>Group</i> is set to False or omitted.</li>
+		<li><i>Knockout</i> - specifies the knockout flag for a transparency group. False by default. Ignored if <i>Group</i> is set to False or omitted.</li>
+	
+		</UL>
+		
+		<P>
+		For more information on graphics state and transparency group objects, see <A HREF="manual_17.html">Chapter 17 - Transparency</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="CreateTable">
+		<B>Function <FONT COLOR="#F00000">CreateTable</FONT> (<I>Param</i> As Variant) As PdfTable</B>
+		<BLOCKQUOTE>
+		Creates and returns an instance of the PdfTable object
+		representing a table.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying various creation parameters of the table, including:
+		<UL>
+		<LI><i>Width</i>, <i>Height</i> (required) -
+		the table's initial width and height.
+		<LI><i>Cols</i>, <i>Rows</i> (optional) -
+		the initial number of columns and rows in the table. The table is
+		1x1 by default.
+		<LI><i>CellSpacing</i> (optional) - the table's cell spacing
+		which is the width of a margin separating cells from each other and the 
+		outer border. Similar to HTML's CELLSPACING attribute of the &lt;TABLE> tag.
+		0 by default.
+		<LI><i>CellPadding</i> (optional) - the table's cell padding
+		which is the width of a margin separating cell contents
+		from the cell's borders.
+		Similar to HTML's CELLPADDING attribute of the &lt;TABLE> tag.
+		0 by default.
+		<LI><i>Border</i> (optional) - the width of the outer border.
+		0 by default (which means no border).
+		<LI><i>CellBorder</i> (optional) - the width of all cell borders.
+		1 by default.
+		<li><i>BorderColor</i>, <I>CellBorderColor</i> (optional) - 
+		the color of the outer border and cell border, respectively.
+		Black by default.
+		<li><i>BgColor</i>, <I>CellBgColor</i> (optional) - 
+		the color of the table background and cell background, respectively.
+		Transparent by default.
+		</UL>
+		<P>
+		For more information on tables in general and the CreateTable method
+		in particular, see <A HREF="manual_07.html">Chapter 7 - Tables</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="Encrypt">
+		<B>Sub <FONT COLOR="#F00000">Encrypt</FONT> (Optional <I>OwnerPwd</i>, Optional <I>UserPwd</i>, Optional <I>KeyLength</i>, Optional <i>Permissions</i>)</B>
+		<BLOCKQUOTE>
+		Encrypts a document with a key of the specified length
+		using the specified passwords, and embeds the specified permission
+		flags into the encrypted document. This method
+		cannot be called on an existing document.
+		<P>
+		<I>OwnerPwd</i> - the owner password. Optional, an empty string by default.<P>
+		<I>UserPwd</i> - the user password. Optional, an empty string by default.<P>
+		<I>KeyLength</i> - the key length, must be either 40 or 128 for RC4, or -128 for AES. 
+		AES is supported in AspPDF 2.2+.
+		Optional, 40 by default.<P>
+		<i>Permissions</i> - a combination of pdfPermissions flags. Optional, pdfFull by default.
+		<P>
+		For more information on PDF security and the Encrypt method, 
+		see <A HREF="manual_08.html">Chapter 8 - Security</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="ExtractPages">
+		<B>Function <FONT COLOR="#F00000">ExtractPages</FONT> (<i>Param</i> As Variant) As PdfDocument</B>
+		<BLOCKQUOTE>
+		Extracts one or several pages from an existing document. Returns an instance of the PdfDocument
+		representing the new document.
+		<P>
+		<I>Param</i> is a PdfParam object or parameter string specifying 1-based indices 
+		of pages to be extracted via the parameters <i>Page1</i>, <i>Page2</i>, <i>Page3</i>, etc.
+		<P>An instance of the PdfDocument object returned by this method cannot be used
+		for anything other than saving.
+		<P>
+		Usage:
+		<P>
+		<B><FONT FACE="Courier New">Set NewDoc = Doc.ExtractPages("Page1=2; Page2=6")</FONT></B>
+		<P>
+		For more information, see <A HREF="manual_09.html#9_5">Section 9.5 - Page Extraction</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="ImportFromUrl">
+		<B>Function <FONT COLOR="#F00000">ImportFromUrl</FONT> (<I>URL</i> As String, Optional <I>Param</i>, Optional <I>Username</i>, Optional <I>Password</i> ) As String</B>
+		<BLOCKQUOTE>
+		Opens an HTTP <i>URL</i> and converts the content of the page into PDF.
+		Populates the current PdfDocument object with the result of the conversion.
+		The current PdfDocument can either be an empty document created with CreateDocument, or an existing
+		document opened via OpenDocument/OpenDocumentBinary.
+		<P>
+		Return value: if the <i>Debug</i> parameter (see below) is set to True, this method returns a log
+		of non-fatal errors. Otherwise returns an empty string.
+		<P>
+		<I>URL</i> can be an http or https address, such as "http://www.server.com/path/file.asp",
+		or a physical local path such as "c:\path\file.html". It can also directly specify an HTML
+		text string, such as "&lt;html>some HTML code&lt/html>".
+		<P>
+		For more information about this method, see <A HREF="manual_13.html">Chapter 13 - HTML to PDF Conversion</A>.
+		<P>
+		
+		<i>Param</i> is a PdfParam object or parameter string specifying various conversion parameters
+		(all of them optional), including:
+		<UL class=params>
+		<li><I>PageWidth</i> - page width, 612 (8.5") by default.
+		<li><I>PageHeight</i> - page height, 792 (11") by default.
+		<li><i>Landscape</i> - if set to True, the document's pages have landscape orientation. 
+		False (portrait orientation) by default.
+
+		<li><i>LeftMargin</i>, <i>RightMargin</i>, <i>TopMargin</i>, <i>BottomMargin</i> -
+		page margins, 54 (0.75") by default.
+
+		<li><i>LeftMarginNNN</i>, <i>RightMarginNNN</i>, <i>TopMarginNNN</i>, <i>BottomMarginNNN</i> -
+		page margins specified individually for page number <i>NNN</i>. Override the default margin settings. 
+		Pages with numbers higher than <i>NNN</i> inherit the new settings.
+		The effective page width must be kept unchanged, i.e. the value PageWidth - LeftMarginNNN - RightMarginNNN
+		(or in case of Landscape=true, PageHeight - TopMarginXXX - BottomMarginXXX) must be the same for all pages.
+		These parameters were introduced by
+		version 1.6.0.10. 
+
+		<li><i>CodePage</i> - specifies the encoding of the page, similar to the View/Encoding option in a browser. 
+		This parameter, if specified, overrides the <i>charset</i> value
+		specified via a &lt;META http-equiv="Content-Type"> tag in the document's body.
+		1252 (US ASCII) by default.
+		<li><i>StopAfter</i> - specifies the number of pages in a resultant document after which
+		the document creation will be aborted, with an error message added to the log (see the <i>Debug</i> parameter below.) 
+		200 by default.
+		<li><i>DrawBackground</i> - if set to True, each page of the generated PDF document
+		will display a background specified by the source HTML document's BGCOLOR or BACKGROUND
+		attributes (or their CSS equivalents BACKGROUND-COLOR and BACKGROUND-IMAGE.) False by default, which means the background
+		remains transparent/white regardless of the source HTML document's background settings.
+		<li><I>StartPage</i> - specifies the 1-based index of a page to begin rendering on. Applies
+		to non-empty documents only. If the specified value is greater than the number of pages in the current document, 
+		the rendering will begin on the last page of the document. 1 by default.
+		<li><i>Hyperlinks</i> - if set to True, all hyperlinks on the page being converted
+		will be enabled (clickable). False by default. This parameter was introduced by version 1.7.
+		<li><i>Media</i> - specifies which cascading style sheets
+		to read depending on their MEDIA attribute. Can be a combination (sum) of the following
+		values: 1 ("all"), 2 ("screen"), 4 ("print"), 8 ("asppdf") and 128 (all others.) 
+		255 by default, which means the MEDIA attribute is ignored altogether. 
+		This parameter was introduced by version 1.7.
+		<li><i>Scale</i> - specifies a scaling factor at which the document is rendered. 
+		1 by default which means 100%. A number less than 1 shrinks the document, greater than 1
+		expands it. This parameter was introduced by version 1.7.
+		<li><i>SplitImages</i> - by default, if the bottom part of an image cannot fit on the page, 
+		the whole image is pushed down to the next
+		page to preserve its integrity. If this parameter is set to True, an image may be split between 
+		adjacent pages 
+		if necessary. False by default.		
+		This parameter was introduced by version 1.7.
+		<li><i>Debug</i> - if set to True, the method returns a log	of non-fatal errors 
+		encountered during the HTML to PDF conversion process,
+		such as invalid image URLs, unknown fonts, etc. False by default.
+		This parameter should be used for debugging purposes only.
+		<li><i>Timeout</i> - if set to a positive number, specifies the timeout value (in seconds)
+		for the Resolve, Connect, Send and Receive HTTP operations (same value for all four operations.) By default, these
+		timeout values are 0 (infinite), 60 seconds, 30 seconds and 30 seconds, respectively.
+		This parameter was introduced by version 1.7.
+		<li><i>InvertCMYK</i> - if set to True, inverts all CMYK images on the HTML document back to normal. 
+		False by default. This parameter was introduced in version 2.0.0.7.
+		<li><i>CheckboxSize</i> - Specifies the display size of the checkbox and radio buttons when converting interactive HTML forms to PDF.
+		12 by default. This parameter was introduced in version 2.2.0.6.
+		</UL>
+		<P>
+		<i>Username</i>, <i>Password</i> specify authentication parameters in case the URL
+		is protected with basic authentication. These arguments can also be used to pass
+		the authentication cookie name (prefixed with the word "Cookie:") and cookie value
+		when using .NET Forms authentication. This is described in detail in 
+		<A HREF="manual_13.html#13_2">Section 13.2 - Authentication</A>.
+		<P>
+		Usage:
+		<blockquote>
+		<font face="courier new"><B>
+		</B>' Create a new PDF document from a URL, use Landscape mode, enable hyperlinks<B><BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		Doc.ImportFromUrl "http://www.server.com", "landscape=true, hyperlinks=true"<BR>
+		Doc.Save "c:\path\doc.pdf"
+		<P><hr noshade size=1>
+		</B>' Create a new PDF document from a local HTML file, enable logging<B><BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		LogString = Pdf.ImportFromUrl( "c:\path\doc.htm", "debug=true" )<BR>
+		Doc.Save "c:\path\doc.pdf"
+		<P><hr noshade size=1>
+		</B>' Render HTML from a URL onto an existing PDF document starting with page 2<B><BR>
+		Set Doc = Pdf.OpenDocument( "c:\path\template.pdf" )<BR>
+		Doc.ImportFromUrl "http://www.server.com/path/file.asp", "startpage=2"<BR>
+		Doc.Save "c:\path\doc.pdf"
+		<P><hr noshade size=1>
+		</B>' Use direct HTML feed. The argument string must contain "&lt;html>"<B><BR>
+		Set Doc = Pdf.CreateDocument<BR>
+		Doc.ImportFromUrl "&lt;html>&lt;table>&lt;tr>&lt;td>...&lt;/td>&lt;/tr>&lt;/table>"<BR>
+		Doc.Save "c:\path\doc.pdf"
+		</B></font>
+
+		</blockquote>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="OpenImage">
+		<B>Function <FONT COLOR="#F00000">OpenImage</FONT> (<i>Path</i> As String, <I>Param</i> As Variant) As PdfImage</B>
+		<BLOCKQUOTE>
+		Opens an image from a disk file and returns an instance
+		of the PdfImage object representing this image.
+		Supported image formats are BMP, GIF, JPEG and TIFF. This method
+		returns <i>Nothing</i> if the file being opened
+		is a multi-image TIFF and the <i>Index</i> parameter exceeds the number
+		of images in the file.
+		<P>
+		<i>Path</i> is a full file path to the image. Must be a physical path, not a URL.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying optional image opening properties, including:
+		<UL>
+		<li><I>Invert</i> (optional) - if set to True, inverts an image
+		and displays it as a negative. This parameter is useful
+		for displaying CMYK JPEGs. False by default.
+		<li><i>Interpolate</i> (optional) - if set to True,
+		instructs a viewer application to perform image interpolation
+		when rendering the image for better quality (but at the expense
+		of performance). False by default.
+		<li><i>Index</i> (optional) - specifies the 1-based index
+		of an image within a multi-image TIFF file. This parameter
+		is only used when a TIFF file is being opened, and ignored
+		by all other types of images. 1 by default.
+		</UL>
+		<P>
+		For more information on images, see <A HREF="manual_05.html#5_1">Section 5.1 - PdfImage Object</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="OpenImageBinary">
+		<B>Function <FONT COLOR="#F00000">OpenImageBinary</FONT> (<i>Blob</i> As Variant, <I>Param</i> As Variant) As PdfImage</B>
+		<BLOCKQUOTE>
+		Opens an image from a memory array specified by <I>Blob</i>.
+		Returns an instance
+		of the PdfImage object representing this image.
+		This method should be used if the image being opened resides
+		in the database as a blob.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string
+		specifying optional image opening properties.
+		See <A HREF="#OpenImage">OpenImage</A> for details.
+		</UL>
+		<P>
+		For more information on images, see <A HREF="manual_05.html#5_1">Section 5.1 - PdfImage Object</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="OpenUrl">
+		<B>Function <FONT COLOR="#F00000">OpenUrl</FONT> (<I>URL</i> As String, Optional <I>Param</i>, Optional <I>Username</i>, Optional <I>Password</i> ) As PdfImage</B>
+		<BLOCKQUOTE>
+		Opens the specified <i>URL</i> or HTML string (in case <i>URL</i> begins with "&lt;HTML" or "&lt;html") and converts it into a sequence of images using the Microsoft Internet Explorer rendering
+		engine. Returns the top image in the sequence. The other images are to be obtained via the PdfImage.<A HREF="object_image.html#NextImage">NextImage</A> property.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string specifying various conversion parameters
+		(all of them optional), including:
+		<UL class=params>
+		<li><I>AspectRatio</i> - a pagination parameter specifying the height of all (except possibly the last) page images produced by the method
+			indirectly, via the desired page width/height ratio value. The image height is ultimately calculated based on this value and the width of
+			the document, whatever the latter turns out to be.
+			If neither this parameter nor <I>PageHeight</i> is specified, no pagination takes place.</li>
+		<li><I>PageHeight</i> - a pagination parameter specifying the absolute height (in pixels) of all (except possibly the last) page images produced by the method.
+			If <i>AspectRatio</i> parameter is specified, this parameter is ignored.
+			If neither this parameter nor <I>AspectRatio</i> is specified, no pagination takes place.</li>
+		<li><i>Hem</i> - the maximum number of pixels each page image can be trimmed by from the bottom so that the page separators
+			would pass through a relatively blank row of pixels to achieve cleaner pagination. If this parameter is 0, no hemming takes place.
+			If this parameter is a negative number, the entire page is scanned for a suitable pixel row.
+		<li><i>HemColor</i> - a color (usually white) that the hemming process uses as the "base" color that all pixels in each
+		row are compared against to find a row with the fewest pixels deviating from this base color. If this parameter is not specified,
+		the dominant color in each row is calculated and used as the base color.
+			</li>
+		<li><i>Hyperlinks</i> - if set to True, populates the PdfImage.<A HREF="object_image.html#Hyperlinks">Hyperlinks</A> collection with the 
+		coordinate and URL information of the hyperlinks depicted on this image. False by default.</li>
+		<li><i>Images</i> - if set to True or omitted, instructs IE to load images. True by default.</li>
+		<li><i>Video</i> - if set to True or omitted, instructs IE to load video. True by default.</li>
+		<li><i>DownloadActiveX</i> - if set to True, instructs IE to download ActiveX controls. False by default.</li>
+		<li><i>RunActiveX</i> - if set to True, instructs IE to run ActiveX controls. False by default.</li>
+		<li><i>Java</i>  - if set to True, instructs IE to enable Java applets. False by default.</li>
+		<li><i>Scripts</i> - if set to True, instructs IE to enable scripts. False by default.</li>
+		<li><i>SingleThread</i> - if set to True, the IE WebBrowser object is created on the same thread as the main process. 
+		By default, a separate thread is created for that purpose. When the component is used under ASP.NET, trying to create the WebBrowser object
+		on the same thread may cause the web page to hang. False by default.</li>
+		<li><i>WindowWidth</i>, <i>WindowHeight</i> - the dimensions of the internal window hosting the WebBrowser control. 100x100 by default.
+		Changing this size is usually not necessary except when the HTML page being converted contains frames.</li>
+		<li><i>PageBreakColor</i> - if specified, causes the method to create a page break along a line of pixels of the specified color.
+		By default, a row of pixels must contain 80% of pixels of the specified color to be considered a page break line. This parameter was introduced in Version 3.0.</li>
+		<li><i>PageBreakThreshold</i> - specifies, percentage wise, how many pixels in a row must be of a particular color for this row to be considered a page break.
+		0.8 (80%) by default. This parameter was introduced in Version 3.0.</li>
+
+		</UL>
+		<P>
+		<i>Username</i>, <i>Password</i> specify authentication parameters in case the URL
+		is protected with basic authentication. These arguments can also be used to pass
+		the authentication cookie name (prefixed with the word "Cookie:") and cookie value
+		when using .NET Forms authentication.
+		<P>
+		This method was introduced in Version 2.9.
+		<P>
+		For more information, see <A HREF="manual_16.html">Chapter 16 - IE-based HTML-to-PDF conversion</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Save">
+		<B>Function <FONT COLOR="#F00000">Save</FONT> (<i>Path</i> As String, Optional <I>Overwrite</i> = True) As String</B>
+		<BLOCKQUOTE>
+		Saves the document to disk, returns the file name under which
+		the document was saved (without a path).
+		<P>
+		<I>Path</i> specifies the full file path.<P>
+		<i>Overwrite</i> is an optional argument specifying
+		whether a file under the same name should be overwritten (if set to True or omitted)
+		or a unique filename should be generated to avoid overwriting an existing
+		file (if set to False). True by default.
+		<P>
+		For example, if a document is being saved under the name <B>proposal.pdf</B>
+		with the <i>Overwrite</i> argument set to False,
+		and a file with the same name already exists in the destination
+		folder, the Save method will try the filenames <B>proposal(1).pdf</B>, <B>proposal(2).pdf</B>,
+		etc. until a unique name is found.
+		<P>
+		Returns the filename (without the path) under which this document ends up being saved.
+		<P>
+		For more information, see <A HREF="manual_03.html#3_1">Section 3.1 - Hello World Application</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="SaveHttp">
+		<B>Sub <FONT COLOR="#F00000">SaveHttp</FONT> (<i>DispHeader</i> As String, Optional <I>ContentType</i>)</B>
+		<BLOCKQUOTE>
+		Sends the document to an HTTP stream. This method
+		enables your Web-based application to
+		send PDF documents directly to client browsers without having
+		to save them to disk first.
+		SaveHttp can only be
+		called in an ASP or ASP.NET environment as it internally uses
+		ASP's Response.BinaryWrite method.
+		<P>
+		<I>DispHeader</i> specifies the Content-Disposition header
+		to be included in the HTTP stream. This header
+		carries the file name information to be presented to the user
+		when the file is saved to disk on the client machine. This argument has
+		to be in the following two formats:
+		<P>
+		<B>"filename=<i>filename</i>.pdf"</B>
+		<P>
+		or
+		<P>
+		<B>"attachment; filename=<i>filename</i>.pdf"</B>
+		<P>
+		The latter prompts the user to save the file
+		to disk instead of opening it in-place in the browser.
+		<P>
+		<i>ContentType</i> specifies the value for the Content-Type header.
+		By default, this value is "application/pdf". Using
+		this argument is generally not recommended.
+		<P>
+		For more information on the SaveHttp method, 
+		see <A HREF="manual_03.html#3_2_2">Section 3.2.2 - Saving to HTTP Stream</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SaveToMemory">
+		<B>Function <FONT COLOR="#F00000">SaveToMemory</FONT> ( ) As Variant</B>
+		<BLOCKQUOTE>
+		Saves the document to a memory array. This method is useful
+		for saving PDFs in the database as blobs.
+		<P>
+		For more information on the SaveToMemory method, 
+		see <A HREF="manual_03.html#3_2_1">Section 3.2.1 - Saving to Memory</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SendToPrinter">
+		<B>Sub <FONT COLOR="#F00000">SendToPrinter</FONT> ( <i>Printer</i> As String, <i>Param</i> As Variant)</B>
+		<BLOCKQUOTE>
+		Sends the underlying document to the printer.
+		<P>
+		<i>Printer</i> is a local or network name of the printer, such as "Brother HL-2270DW series" or "\\192.168.3.2\HP LaserJet 6P".<BR>
+		<i>Param</i> is a PdfParam object or parameter string containing
+		various printing parameters, including:
+		<UL>
+		<li><i>Stretch</i> - if set to True, the image is stretched to cover the entire print area. False by default.		<BR>
+		<li><i>ScaleX</i>, <i>ScaleY</i> - a number greater than 0. Specifies the scaling factor when 
+		<i>Stretch</i> is set to True. A value greater than 1 increases the image, less than 1 decreases it. 
+		Ignored when <i>Stretch</i> is False.
+		<li><i>Duplex</i> - if set to 1 or 2, enables duplex (double-sided) printing
+		in the long-edge-binding and short-edge-binding modes, respectively.
+		0 (one-sided printing) by default.
+		<li><i>From1/To1</i>, <i>From2/To2</i>, ..., <i>From</i>N<i>/To</i>N<i></i> - 
+		specify <i>N</i> ranges of pages to be printed. Each value must be
+		between 1 and total page count. <i>From</i>N must not exceed <i>To</i>N.<BR>
+		<li><i>Tray</i> - specifies the printer tray or bin. This parameter was introduced in Version 2.9. 
+		Valid values are printer-specific and should be determined by trial and error. 
+		For many printers, they are 256 and higher.
+		<li><i>Color</i> - if set to True, enables the color printing mode. Use this parameter
+		to print a color PDF on a color printer. This parameter was introduced in Version 3.1.
+		False by default.
+		<li><i>Copies</i> - specifies the number of copies to be printed. 1 by default. This parameter was
+		introduced in Version 3.2.0.2.		
+		<P>
+		The following parameters pertain to the PDF-to-Image conversion which SendToPrinter 
+		performs internally:
+		<P>
+		
+		<LI><i>ResolutionX</i>, <i>ResolutionY</i> - control print quality.
+		By default, the resolutions are 72 (dpi)
+		but for better print quality, values such as 300 or even 600 should be used.</li>
+
+		<li><i>FastCMYK</i> - if set to True, performs CMYK-to-RGB conversion using a simple linear formula
+		which improves conversion speed at the expense of quality. Only makes a difference if
+		the document contains large high-resolution CMYK images and graphics. False by default.</li>
+
+		<li><i>IgnoreRotate</i> - if set to True, ignores the /Rotate attribute of the pages.
+		This may cause a landscape-oriented page to be printed 
+		with the content rotated 90 degrees. 
+		False by default.</li>
+
+		<li><i>IgnoreCropBox</i> - if set to True, ignores the /CropBox attribute
+		of the pages and uses its /MediaBox attribute instead. This may cause the printout
+		to include areas of the page that are normally invisible when viewed in a PDF viewer.
+		False by default.</li>
+		</UL>
+		<P>
+		This method was introduced in Version 2.7.
+		<P>
+		For more information,  see <A HREF="manual_14.html#14_6_2">Section 14.6.2 - Document Printing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="SetViewerPrefs">
+		<B>Sub <FONT COLOR="#F00000">SetViewerPrefs</FONT> ( <I>Param</i> As Variant )</B>
+		<BLOCKQUOTE>
+		Sets various viewer preferences for the document.
+		<P>
+		<i>Param</i> is a PdfParam object or parameter string containing
+		various viewer preference parameters, including:
+		<UL>
+		<LI><I>HideToolbar</i> (optional) - if set to True, hides the viewer application's tool bar.
+		<LI><I>HideMenubar</i> (optional) - if set to True, hides the viewer application's menu bar.
+		<LI><I>HideWindowUI</i> (optional) - if set to True, hides
+		user interface elements in the document's window (such as scroll bars and navigation controls).
+		<li><I>FitWindow</i> (optional) - if set to True, resizes the document's
+		window to fit the size of the first displayed page.
+		<LI><i>CenterWindow</i> (optional) - if set to True, positions the document's
+		window in the center of the screen.
+		<LI><I>DisplayDocTitle</i> (optional) - if set to True, makes
+		the window's title bar display the document title taken from 
+		the Title property of the document. Otherwise, the title bar will
+		display the name of the PDF file containing the document.
+		<li><I>NonFullScreenPageMode</i> (optional) - the document's
+		page mode specifying how to display
+		the document on exiting full-screen mode. Valid values are:
+		1 (use none), 2 (use outlines), and 3 (use thumbs).
+		<li><i>PrintScaling</i> (optional) - controls the page scaling option in a print dialog. True by default
+		which means the application should use the current print scaling. If set to False, 
+		the print dialog should reflect no page scaling. This parameter was introduced in version 1.6.0.10.
+		</UL>
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+		<A NAME="Sign">
+		<B>Function <FONT COLOR="#F00000">Sign</FONT> (<i>Msg</i> As Object, <I>Name</i> As String, Optional <I>Reason</i>, Optional <I>Location</i>, Optional <i>Param</i>) As PdfAnnot</B>
+		<BLOCKQUOTE>
+		Digitally signs the document, embeds the signature into the document
+		in PKCS#7 certificate-based format. Returns an instance of the PdfAnnot
+		object representing this signature field.
+		Documents signed with this method
+		can only be saved to disk, not to memory or an HTTP stream.
+		<P>
+		<I>Msg</i> is an initialized CryptoMessage object of the Persits Software
+		AspEncrypt component. As of Version 3.4, this argument is optional and can be set to Nothing (null). See comments below.
+		<P>
+		<i>Name</i> specifies the signer name.<P>
+		<I>Reason</I> specifies an optional reason for signing.<P>
+		<i>Location</i> specifies an optional signing location.
+		<P>
+		<I>Param</i> is a PdfParam object or parameter string 
+		specifying various signature creation parameters, including:
+		<UL>
+		<LI><I>Visible</i> (optional) - if set to True, makes the signature visible
+		in the form of an icon
+		on a page. The page index and icon coordinates are specified by other
+		parameters. False by default. If set to False, all other parameters, except <i>Windows</i>, are ignored.
+		<LI><i>X</i>, <I>Y</i>, <I>Width</i>, <I>Height</i> (required if <i>Visible</i> is True, ignored otherwise) -
+		control the position of the signature icon on a page.
+		<li><i>PageIndex</i> (optional, ignored if <i>Visible</i> is false) - 
+		the 1-based index of the page to place the signature icon on. 1 by default.
+		<li><i>Windows</i> (optional) - if set to True, the signature filter
+		value is set to <B>Adobe.PPKMS</B> which denotes the standard
+		Windows security handler. If set to False, the signature filter value
+		is set to <B>VeriSign.PPKVS</B> (VeriSign security plug-in). False by default.
+		<li><i>BinarySize</i> (optional) - specifies the signature size in bytes.
+		By default, AspPDF determines the signature size automatically by performing an extra signing operation
+		on a random string.
+		As a result, if the signer certificate is PIN-protected, the user has to enter the PIN twice
+		which is an inconvenience.
+		If the <i>BinarySize</i> parameter is specified, AspPDF no longer needs to perform an extra signing
+		operation thus enabling the user to avoid entering the PIN twice. The value for this parameter 
+		has to be determined by trial and error. If the value is too small, an exception is thrown.
+		This parameter was added in version 2.0.0.7.
+		As of Version 3.4, this parameter is required if <i>Msg</i> argument is set to Nothing (null).
+		<LI>Other parameters recognized by the <A HREF="manual_10.html#3_2">Annots.Add</A> method can also be used.
+		</UL>
+		As of Version 3.4, if the Sign method is called with the <i>Msg</i> argument set to Nothing (null),
+		the PDF document is "pre-signed" -- a signature placeholder is allocated within the document, but it is filled with 0s.
+		The signature, based on the hash value obtained from the PdfDocument.<B>SignatureInfo</B> property,
+		is then generated on a user workstation, transferred back to the server and injected into the PDF being signed,
+		thus completing the signing process. For more information,
+		see <A HREF="manual_08.html#8_4">Section 8.4 - Client-Side Signing of Server-Side PDFs</A>.
+		<P>
+		For more information on the Sign method, 
+		see <A HREF="manual_08.html#8_3">Section 8.3 - Digital Signing</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+
+		<A NAME="VerifySignature">
+		<B>Function <FONT COLOR="#F00000">VerifySignature</FONT> (<i>Msg</i> As Object) As PdfSignature</B>
+		<BLOCKQUOTE>
+		Verifies a PKCS#7 signature in the document. Can only be called on an
+		existing document, and only on a file-based, not memory-based, document.
+		<P>
+		Returns <i>Nothing</i> if the document contains no PKCS#7 signatures.
+		Otherwise, returns an instance of the <A HREF="object_signature.html">PdfSignature</A>
+		object encapsulating various signature properties, including
+		validation status, etc.
+		<P>
+		<I>Msg</i> is an empty CryptoMessage object of the Persits Software
+		AspEncrypt component.
+		<P>
+		For more information on signature validation, 
+		see <A HREF="manual_08.html#8_3_4">Section 8.3.4 - Signature Validation</A>.
+		</BLOCKQUOTE>
+		<HR CLASS="objectseparator">
+
+
+	</Blockquote>
+
+
+	
+	<A HREF="object_font.html"><IMG BORDER="0" SRC="images/next.gif" ALIGN="RIGHT" ALT="PdfFont"></A>
+	<A HREF="object_dest.html"><IMG BORDER="0" SRC="images/previous.gif" ALIGN="RIGHT" ALT="PdfDest"></A>
+
+	</FONT>
+	</BlockQuote>
+
+
+	
+	</TD>
+
+	<!-- Vertical thin line -->
+	<TD BGCOLOR="#000000" WIDTH="1"><IMG WIDTH="1" SRC="images/spacer.gif" BORDER=0></TD>
+
+	<!-- Right side bar-->
+	<TD BGCOxLOR="#0000FF" WIDTH="200" ALIGN="CENTER" VALIGN="TOP">
+		<!-- Search this site-->
+		<TABLE WIDTH="190" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<TD WIDTH="188" Class="Box" ALIGN="CENTER" VALIGN="CENTER">Search AspPDF.com</TD>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		<TR>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		<FORM ACTION="http://www.asppdf.com/search.asp"><TD WIDTH="188" ALIGN="CENTER" BGCOLOR="#EEEEEE"><INPUT NAME="zoom_query" TYPE="TEXT" SIZE=18><input type="hidden" name="zoom_per_page" value="10"><input type="hidden" name="zoom_and" value="0"><INPUT TYPE="Submit" VALUE="Go"></TD></FORM>
+		<TD WIDTH="1" BGCOLOR="#000000"><IMG SRC="images/vertical.gif" BORDER=0 WIDTH="0"></TD>
+		</TR>
+		<TR><TD COLSPAN="3" HEIGHT="1" BGCOLOR="#000000"><IMG SRC="images/spacer.gif" HEIGHT=1 WIDTH="1"></TR>
+		</TABLE>
+		<BR>
+
+	</TD>
+	
+	</TR>
+	</TABLE> <!-- End Data table-->
+
+	</TD>
+	<!--Right black column-->
+	<TD WIDTH=2 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</TR>
+
+<tr>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+	<td BGCOLOR="#530E53" VALIGN="center" ALIGN="right" WIDTH="100%">
+	<font FACE="MS Sans serif, Geneva, Arial, Helvetica, Sans-serif" SIZE="-2" COLOR="#FFFFFF"> 
+	<b>
+
+	This site is owned and maintained by <A HREF="http://www.persits.com"><FONT COLOR="#FFFFFF">Persits Software, Inc.</font></A> Copyright &copy; 2003 - 2013. All Rights Reserved.
+
+	</b></font>
+	</td>
+	<td BGCOLOR="#530E53" NOWRAP VALIGN="center" ALIGN="right" WIDTH="2">
+	&nbsp;
+	</td>
+</tr>
+
+<!-- Bottom -->
+	<tr>
+
+	<!--Left black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+
+	<!-- Main Column -->
+	<td WIDTH="100%" BGCOLOR="#530E53" VALIGN="bottom">
+	<img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></td>
+
+	<!--Right black column-->
+	<TD WIDTH=3 BGCOLOR="#530E53"><img SRC="images/spacer.gif" WIDTH="2" HEIGHT="2" HSPACE="0" BORDER="0"></TD>
+	</tr>
+
+</table>
+
+</BODY>
+</HTML>
