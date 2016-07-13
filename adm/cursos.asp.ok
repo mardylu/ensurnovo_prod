@@ -1,0 +1,63 @@
+<%If session("key_ver")<>"ok" Then Response.Redirect "logout.asp"%>
+<!-- #INCLUDE FILE="library/conOpen.asp" -->
+<!-- #INCLUDE FILE="library/fErroMsg.asp" -->
+<!-- #INCLUDE FILE="library/fData.asp" -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<title>ENSUR Inscrições</title>
+</head>
+<body>
+<div id="pagina">
+	<!-- #INCLUDE FILE="include/topo.asp" -->
+	<div id="conteudo">
+		<%
+		st = request("st")
+		if st="" or isNumeric(st)=false then st=0
+		if st=0 then
+			tit = "em andamento"
+			sqlwhere = "C.COD_STATUS=1"
+		elseif st=2 then
+			tit = "desabilitados"
+			sqlwhere = "C.COD_STATUS=2" 
+		else
+			tit = "finalizados"
+			sqlwhere = "C.COD_STATUS=3"
+		end if
+		%>
+		<h1>Cadastro de cursos <%=tit%></h1>
+		<%
+		ord = request("ord")
+'		select case ord
+'			case "tp": sqlord = "T.DESCRICAO"
+'			case "tt": sqlord = "TITULO"
+'			case "cd": sqlord = "ALUNOS"
+'			case "st": sqlord = "C.COD_STATUS"
+'		end select
+		SQL = "SELECT COD_CURSO,T.DESCRICAO AS TDESC,S.DESCRICAO AS SDESC,TITULO FROM CURSO C JOIN CURSO_STATUS S ON C.COD_STATUS=S.COD_STATUS JOIN CURSO_TIPO T ON C.COD_TIPO=T.COD_TIPO WHERE "&sqlwhere&" ORDER BY T.DESCRICAO"
+'		RESPONSE.WRITE SQL
+		RS.Open SQL
+		
+		if RS.EOF then
+			%><p>Nenhum curso cadastrado</p><%
+		else
+			%>
+			<table id="tabela">
+			<tr><td class="header"><a href="cad_cursos.asp?ord=tt&st=<%=st%>">título</a></td><td class="header"><a href="cad_cursos.asp?ord=tp&st=<%=st%>">tipo</a></td><td class="header"><a href="cad_cursos.asp?ord=st&st=<%=st%>">status</a></td><td></td></tr>
+			<%
+			c = 0
+			while not RS.EOF
+				%><tr class="c<%=c%>"><td width="400"><%If Session("key_cur")="ok" Then%><a href="cad_cursos.asp?cod=<%=RS("COD_CURSO")%>"><%=RS("TITULO")%></a><%else%><%=RS("TITULO")%><%end if%></td><td><%=RS("TDESC")%></td><td><%=RS("SDESC")%></td><td><a href="http://cursos.ibam.org.br/default.asp?id=<%=RS("COD_CURSO")%>" target="_blank">ver</a></td></tr><%
+				c = 1 - c
+				RS.MoveNext
+			wend
+		end if
+		RS.Close
+		%>
+		</table>
+	</div>	
+</div>
+</body>
+</html>
+<%conClose%>

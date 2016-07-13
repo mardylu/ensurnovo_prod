@@ -1,0 +1,99 @@
+<%If session("key_ver")<>"ok" Then Response.Redirect "logout.asp"%>
+<!-- #INCLUDE FILE="../library/parametros.asp" -->
+<!-- #INCLUDE FILE="../library/conOpen.asp" -->
+<!-- #INCLUDE FILE="../library/fErroMsg.asp" -->
+<!-- #INCLUDE FILE="../library/fData.asp" -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	<title>ENSUR Inscrições</title>
+</head>
+<body>
+<div id="pagina">
+	<!-- #INCLUDE FILE="include/topo.asp" -->
+	<div id="conteudo">
+		<%
+		Set RS1 = Server.CreateObject("ADODB.Recordset")
+		RS1.CursorType = 0
+		RS1.ActiveConnection = Con
+		
+		st = request("st")
+		if st="" or isNumeric(st)=false then st=0
+		if st=0 then
+			tit = "habilitados"
+			sqlwhere = "C.COD_STATUS=1"
+		elseif st=2 then
+			tit = "desabilitados"
+			sqlwhere = "C.COD_STATUS=2" 
+		else
+			tit = "cancelados"
+			sqlwhere = "C.COD_STATUS=3"
+		end if
+		%>
+		<h1>Cadastro de cursos <%=tit%></h1>
+		<%
+		ord = request("ord")
+		if ord="" then
+			sqlord = "TITULO"
+		end if
+		select case ord
+			case "tp": sqlord = "T.DESCRICAO"
+			case "tt": sqlord = "TITULO"
+			case "st": sqlord = "C.COD_STATUS"
+		end select
+		SQL = "SELECT COD_CURSO,T.DESCRICAO AS TDESC,S.DESCRICAO AS SDESC,TITULO FROM CURSO C JOIN CURSO_STATUS S ON C.COD_STATUS=S.COD_STATUS JOIN CURSO_TIPO T ON C.COD_TIPO=T.COD_TIPO WHERE "&sqlwhere&" ORDER BY "&sqlord
+		RS.Open SQL
+		
+		if RS.EOF then
+			%><p>Nenhum curso cadastrado</p><%
+		else
+			%>
+			<table id="tabela">
+			<tr><td colspan =4 align=right>		
+			<button id="bt_menu" onClick="window.print();return false;">Imprimir</button></td></tr>
+
+			<tr><td class="header"><a href="cursos.asp?ord=tt&st=<%=st%>">título</a></td><td class="header"><a href="cursos.asp?ord=tp&st=<%=st%>">tipo</a></td><td class="header"><a href="cursos.asp?ord=st&st=<%=st%>">status</a></td><td></td></tr>
+			<%
+			c = 1
+			while not RS.EOF
+				%>
+				<tr class="c<%=c%>"><td width="400"><%If Session("key_cur")="ok" Then%><a href="cad_cursos.asp?cod=<%=RS("COD_CURSO")%>"><%=RS("TITULO")%></a><%else%><%=RS("TITULO")%><%end if%></td><td><%=RS("TDESC")%></td><td><%=RS("SDESC")%></td><td><a href="http://<%=URLI%>/default.asp?id=<%=RS("COD_CURSO")%>" target="_blank">ver</a></td></tr>
+				<% 
+				sql = "select DISTINCT C.COD_STATUS,N.COD_STATUS_TURMA,N.ID_TURMA,N.CODIGO_TURMA,N.DT_INICIO_TURMA,N.DT_FIM_TURMA,U.STATUS_TURMA,(SELECT ALUNOS FROM VIEW_TURMAS_ALUNOS WHERE CODIGO_TURMA=N.CODIGO_TURMA) AS ALUNOS from TURMAS N LEFT JOIN TURMA_ALUNO L ON N.ID_TURMA=L.ID_TURMA JOIN TURMA_STATUS U ON N.COD_STATUS_TURMA=U.COD_STATUS_TURMA JOIN CURSO C ON C.COD_CURSO=N.COD_CURSO  WHERE N.COD_CURSO="&RS("cod_curso")&" ORDER BY CODIGO_TURMA"
+					RS1.open sql
+					'response.write sql
+					if RS1.EOF then 
+						'<tr><td></td><td><p>Nenhuma turma cadastrada para este curso<p></td></tr>
+					else 
+						%><tr><td colspan=4><table align=center width="90%"><tr><td>Codigo da Turma</td><td>Data de Inicio</td><td>Data de Término</td><td>Status</td><td>Alunos</td><td>Inscrições</td><tr>
+						<%while not RS1.eof%>
+							<tr><td width="15%"><a href="cad_turmas.asp?tur=<%=RS1("ID_TURMA")%>"><% =RS1("CODIGO_TURMA")%></a></td><td width="15%"><% =formataData1(RS1("DT_INICIO_TURMA"))%></TD><td width="15%"><% =formataData1(RS1("DT_FIM_TURMA"))%></TD><td width="25%"><% =RS1("STATUS_TURMA")%></TD><td width="15%"><a href="alunos.asp?cod=<%=RS1("ID_TURMA")%>"><% =RS1("ALUNOS")%></a></TD>
+							<%
+							if RS1("COD_STATUS_TURMA") = 7 and RS1("COD_STATUS")=1 then
+								%>
+								<td width="15%"><a href="cadastro.asp?cod=<%=RS1("ID_TURMA")%> target='mew'" class="button2">Inscrever alunos</a></td>
+								<%
+							end if
+							%>
+							</tr>
+							<% rs1.movenext
+						wend
+						%></table></td></tr><%
+					end if
+					RS1.close
+'				c = 1 - c
+				RS.MoveNext
+			wend
+		end if
+		RS.Close
+		%>
+		</table>
+	</div>	
+</div>
+</body>
+</html>
+<%
+
+conClose
+%>

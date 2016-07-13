@@ -1,0 +1,153 @@
+/* FORM */
+
+form p.subtitulo {
+	color: #426AA6;
+	font-weight: bold;
+}
+
+fieldset {
+	border: 1px solid #7c7c7c;
+	width: 90%;
+	padding-left: 18px;
+}
+
+legend {
+	background: #D5DDE6;
+	border: 1px solid #7c7c7c;
+	padding: 2px 6px
+}
+
+label {
+	width: 160px;
+	float: left;
+	text-align: right;
+	margin-right: 8px;
+	display: block;
+}
+
+label#ext {
+	width: 380px;
+}
+
+label.requerido {
+	color: #c76505;
+}
+
+input {
+	color: #334;
+	background: white;
+	border: 1px solid #7c7c7c
+}
+
+input.readonly {
+	background: #f0f0f0;
+}
+
+p.info {
+	color: #c76505;
+}
+
+#dados_contato {
+	display: none;
+}
+
+/* BOTAO */
+
+a.button {
+	    background: transparent url('../img/bgBotao.gif') repeat-x scroll top right;
+	    display: block;
+	    float: left;
+	    font: bold 11px verdana, sans-serif;
+	    height: 20px;
+	    text-decoration: none;
+		border: #404040 1px solid;
+	}
+
+a.button span {
+	    background: transparent url('../img/bgBotao.gif') repeat-x;
+	    display: block;
+	    line-height: 14px;
+	    padding: 3px 12px;
+	    color: #404040;
+	}
+
+a.button:hover {
+	    text-decoration: none;
+	}
+
+
+INPUT.buttonF {
+	font: bold 11px verdana;
+	color: #404040;
+	height: 20px;
+	background: #404040 url(../img/bgBotao.gif) top left repeat-x;
+	border: #404040 1px solid;
+	padding: 0px 4px;
+}
+
+a.button2 {
+	background: transparent url('../img/bgBotao.gif') repeat-x scroll top right;
+	font: bold 11px verdana, sans-serif;
+	color: #446;
+	height: 20px;
+	text-decoration: none;
+	border: #446 1px solid;
+	padding: 2px 6px;
+}
+
+/* CURSO */
+
+#jaNoCurso p {
+	text-align: center;
+	color: #844;
+	font: bold 13px verdana, sans-serif;
+	margin-top: 12px;
+}
+
+table#tab_curso {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #c3c3c3;
+}
+
+thead {
+}
+
+thead th {
+	padding:1em 1em .5em 1em;
+ 	font-size:120%;
+ 	text-align:left;
+}
+
+th.destaque {
+	text-align: center;
+}
+
+th.destaque p {
+	padding: 2px;
+	color: #fff;
+	background-color: darkred;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 96px;
+}
+
+td {
+	padding:.2em 1em;
+	vertical-align: top;
+}
+
+td.status {
+	color: #c76505;
+}
+
+td.clabel {
+	text-align: right;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 120px;
+}
+
+tfoot td {
+	padding-bottom:1.5em;
+}

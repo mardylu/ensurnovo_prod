@@ -1,0 +1,253 @@
+.laranja {
+	color: #c76505;
+}
+
+/* TABELA */
+
+#tabela {
+	border-collapse: collapse;
+	width: 96%;
+}
+
+#tabela TD	{
+	border-bottom: #CCC 1px solid;
+	padding-bottom: 4px;
+}
+
+#tabela TD.header, #tabela TD.header a	{
+	font-weight: bold;
+}
+
+#tabela TR.c1	{
+	background-color: #edf3fe;
+}
+
+#tabela TD.ementa ul	{
+	margin:0;
+	padding:0;
+}
+
+
+/* FORM */
+
+form p {
+	margin: 8px 0px;
+}
+
+
+/* LOGIN */
+
+#login {
+	width: 466px;
+	position: absolute;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin-left: -233px;
+	margin-top: -100px;
+}
+#login_top {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_top.gif);
+}
+#login_mid {
+	width: 466px;
+	height: 166px;
+	background: url(../img/box_mid.gif);
+}
+#login_bot {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_bot.gif);
+}
+
+
+/* FOOTER
+-----------------------------------------*/
+
+div#footer {
+}
+
+/* FORM */
+
+form p.subtitulo {
+	color: #426AA6;
+	font-weight: bold;
+}
+
+fieldset {
+	border: 1px solid #7c7c7c;
+	width: 90%;
+	padding-left: 18px;
+}
+
+legend {
+	background: #D5DDE6;
+	border: 1px solid #7c7c7c;
+	padding: 2px 6px
+}
+
+label {
+	width: 160px;
+	float: left;
+	text-align: right;
+	margin-right: 8px;
+	display: block;
+}
+
+label#ext {
+	width: 380px;
+}
+
+label.soleitura {
+	color: #ff0000;
+}
+
+label.requerido {
+	color: #c76505;
+}
+
+label.soleitura {
+	color: #c76505;
+}
+
+input {
+	color: #334;
+	background: white;
+	border: 1px solid #7c7c7c
+}
+
+input.readonly {
+	background: #f0f0f0;
+}
+
+p.info {
+	color: #c76505;
+}
+
+#dados_contato {
+	display: none;
+}
+
+/* BOTAO */
+
+a.button {
+	    background: transparent url('../img/bgBotao.gif') repeat-x scroll top right;
+	    display: block;
+	    float: left;
+	    font: bold 11px verdana, sans-serif;
+	    height: 20px;
+	    text-decoration: none;
+		border: #404040 1px solid;
+	}
+
+a.button span {
+	    background: transparent url('../img/bgBotao.gif') repeat-x;
+	    display: block;
+	    line-height: 14px;
+	    padding: 3px 12px;
+	    color: #404040;
+	}
+
+a.button:hover {
+	    text-decoration: none;
+	}
+
+
+INPUT.buttonF {
+	font: bold 11px verdana;
+	color: #404040;
+	height: 20px;
+	background: #404040 url(../img/bgBotao.gif) top left repeat-x;
+	border: #404040 1px solid;
+	padding: 0px 4px;
+}
+
+a.button2 {
+	background: transparent url('../img/bgBotao.gif') repeat-x scroll top right;
+	font: bold 11px verdana, sans-serif;
+	color: #446;
+	height: 20px;
+	text-decoration: none;
+	border: #446 1px solid;
+	padding: 2px 6px;
+	white-space:nowrap;
+}
+
+/* CURSO */
+
+#jaNoCurso p {
+	text-align: center;
+	color: #844;
+	font: bold 13px verdana, sans-serif;
+	margin-top: 12px;
+}
+
+table#tab_curso {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #c3c3c3;
+}
+table#tab_curso_lista {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #c3c3c3;
+	padding: 1em;
+}
+
+thead {
+}
+
+thead th {
+	padding:1em 1em .5em 1em;
+ 	font-size:120%;
+ 	text-align:left;
+}
+table#tab_curso_lista th {
+ 	text-align:center;
+}
+table#tab_curso_lista tr.t1 {
+ 	background:#e8f4ff;
+}
+
+th.destaque {
+	text-align: center;
+}
+
+th.destaque p {
+	padding: 2px;
+	color: #fff;
+	background-color: darkred;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 96px;
+}
+
+td {
+	padding:.2em 1em;
+	vertical-align: top;
+}
+
+td.status {
+	color: #c76505;
+}
+
+td.clabel {
+	text-align: right;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 120px;
+}
+table#tab_curso_lista td {
+	vertical-align: middle;
+ 	text-align:center;
+ 	padding: 1em;
+}
+table#tab_curso_lista td.al_esq {
+	text-align: left;
+}
+
+tfoot td {
+	padding-bottom:1.5em;
+}

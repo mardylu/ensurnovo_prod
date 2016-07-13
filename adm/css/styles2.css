@@ -1,0 +1,173 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font: 9pt verdana;
+	text-decoration: none;
+	color: #334;
+}
+
+html, body {
+    background: url(../img/FundoVerde.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center; 
+	text-align: center;
+}
+
+p strong {
+	font-weight: bold;
+}
+
+a {
+	color: #48587A;
+}
+a:hover {
+	color: #778;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 12pt;
+	padding: 16px 0px 8px 0px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 12pt;
+	color: #556;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+#pagina {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	width: 768px;
+	text-align: left;
+	padding: 0px 10px;
+	border-left: #3281AC 16px solid;
+	border-right: #3281AC 16px solid;
+}
+
+#menu {
+	text-align: right;
+	clear: both;
+	background-color: #C3C3C3;
+	height: 30px;
+	border-top: #fff 1px solid;
+}
+
+#menu ul li {
+	float: right;
+	padding-right: 12px;
+	padding-top: 6px;
+}
+
+.laranja {
+	color: #c76505;
+}
+
+/* TOPO */
+
+#topo {
+	width: 100%;
+	background: #FFFFFF url(../img/header_logo.jpg) no-repeat;
+	white-space:nowrap;
+	list-style-type:none;
+	height: 131px;
+	border-bottom: 1px #7c7c7c solid;
+	text-align: right;
+}
+
+#logo {
+	padding-top: 100px;
+}
+
+#conteudo {
+	margin: 14px 14px;
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}
+
+/* TABELA */
+
+#tabela {
+	border-collapse: collapse;
+	width: 96%;
+}
+
+#tabela TD	{
+	border-bottom: #CCC 1px solid;
+	padding-bottom: 4px;
+}
+
+#tabela TD.header, #tabela TD.header a	{
+	font-weight: bold;
+}
+
+#tabela TR.c1	{
+	background-color: #edf3fe;
+}
+
+/* FORM */
+
+form p {
+	margin: 8px 0px;
+}
+
+
+/* LOGIN */
+
+#login {
+	width: 466px;
+	position: absolute;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin-left: -233px;
+	margin-top: -100px;
+}
+#login_top {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_top.gif);
+}
+#login_mid {
+/*	width: 466px;
+	height: 166px;   */
+	width: 466px;
+	height: 240px;
+	background: url(../img/box_mid.gif);
+}
+#login_bot {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_bot.gif);
+}
+
+#info {
+	padding-left: 45px;
+}
+
+#fundo_img {
+    background: url(../img/FundoVerde.jpg);
+    background-repeat: no-repeat;
+}
+
+
+/* FOOTER
+-----------------------------------------*/
+
+div#footer {
+}
