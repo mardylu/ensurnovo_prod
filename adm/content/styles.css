@@ -1,0 +1,206 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font: 9pt verdana;
+	text-decoration: none;
+	color: #334;
+}
+
+html, body {
+	background-color: #D5DDE6;
+	height:100%;
+	text-align: center;
+}
+
+a:hover {
+	color: #778;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 12pt;
+	padding-bottom: 8px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 10pt;
+	color: #556;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+ol li {
+	margin-left: 20px;
+}
+
+
+#pagina {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	text-align: left;
+	border-left: #7c7c7c 1px solid;
+	border-right: #7c7c7c 1px solid;
+}
+
+#conteudo {
+	margin: 14px 14px;
+}
+
+/**** Footer ***/
+
+
+#footer {
+    margin: 40px auto 0 auto;
+	text-align: center;
+	border-top: dotted 1px gray;
+	padding: 20px 0 20px 0;
+	width: 70%;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0;
+}
+
+/* LOGIN */
+
+#login {
+	width: 466px;
+	position: absolute;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin-left: -233px;
+	margin-top: -100px;
+}
+#login_top {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_top.gif);
+}
+#login_mid {
+	width: 466px;
+	height: 166px;
+	background: url(../img/box_mid.gif);
+}
+#login_bot {
+	width: 466px;
+	height: 17px;
+	background: url(../img/box_bot.gif);
+}
+*/
+#info {
+	padding-left: 45px;
+}
+
+
+/* FORM */
+
+form p.subtitulo {
+	color: #426AA6;
+	font-weight: bold;
+}
+
+fieldset {
+	border: 1px solid #7c7c7c;
+	width: 90%;
+	padding-left: 18px;
+	margin:16px;
+	padding-bottom::10px;
+}
+
+ fieldset{
+	
+	  border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+	}
+
+legend {
+	/*background: #D5DDE6;*/
+	border: 1px solid #7c7c7c;
+	padding: 2px 6px
+}
+
+label {
+	width: 120px;
+	float: left;
+	text-align: right;
+	margin-right: 8px;
+	display: block;
+	font-weight: bold;
+}
+
+label#ext {
+	width: 380px;
+}
+
+label.requerido {
+	color: #c76505;
+}
+
+input {
+	color: #334;
+	background: white;
+	border: 1px solid #7c7c7c
+}
+
+input.readonly {
+	background: #f0f0f0;
+}
+
+p.info {
+	color: darkred;
+}
+
+#dados_contato {
+	display: none;
+}
+
+/* BOTAO */
+
+a.button {
+	    background: transparent url('../img/bgBotao.gif') repeat-x scroll top right;
+	    display: block;
+	    float: left;
+	    font: bold 11px verdana, sans-serif;
+	    height: 20px;
+	    text-decoration: none;
+		border: #404040 1px solid;
+	}
+
+a.button span {
+	    background: transparent url('../img/bgBotao.gif') repeat-x;
+	    display: block;
+	    line-height: 14px;
+	    padding: 3px 12px;
+	    color: #404040;
+	}
+
+a.button:hover {
+	    text-decoration: none;
+	}
+
+
+INPUT.buttonF {
+	font: bold 11px verdana;
+	color: #404040;
+	height: 20px;
+	background: #404040 url(../img/bgBotao.gif) top left repeat-x;
+	border: #404040 1px solid;
+	padding: 0px 4px;
+
+}
+
+

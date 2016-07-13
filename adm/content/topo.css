@@ -1,0 +1,217 @@
+/* TOPO */
+
+#topo {
+	width: 100%;
+	background: #dcdcdc url(../img/bg_topo.gif);
+	white-space:nowrap;
+	list-style-type:none;
+	height: 22px;
+}
+
+/* Root = Horizontal, Secondary = Vertical */
+
+ul#navmenu {
+  float:left;
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 800px; /*For KHTML*/
+  list-style: none;
+  height: 22px;
+  z-index:4;
+}
+
+ul#navmenu li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+  height: 22px;
+  z-index:4;
+}
+
+ul#navmenu ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 250px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  z-index:4;
+}
+
+ul#navmenu ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  z-index:4;
+}
+
+ul#navmenu ul li {
+  width: 230px;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+  z-index:4;
+}
+
+ul#navmenu a.titulo {
+  margin-left: 8px;
+  color: #c30;
+  width: 120px;
+}
+ul#navmenu a:hover.titulo {
+  color: #c30;
+  background: none;
+}
+
+/* Root Menu */
+ul#navmenu a {
+  z-index:4;
+  border: 0 none;
+  padding: 0 6px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  color: #333;
+  font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  height: auto !important;
+  height: 1%; /*For IE*/
+}
+
+/* Root Menu Hover Persistence */
+ul#navmenu a:hover,
+ul#navmenu li:hover a,
+ul#navmenu li.iehover a {
+  border: 0 none;
+  background: blue url(../img/bg_topoOver.gif);
+  color: #FFF;
+  z-index:4;
+}
+
+/* 2nd Menu */
+ul#navmenu li:hover li a,
+ul#navmenu li.iehover li a {
+  border: 1px solid #FFF;
+  border-right-color: #CCC;
+  border-bottom-color: #CCC;
+  float: none;
+  background: white;
+  color: #333;
+  z-index:4;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu li:hover li a:hover,
+ul#navmenu li:hover li:hover a,
+ul#navmenu li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover a {
+  border: 1px solid #FFF;
+  background: blue url(../img/bg_topoOver.gif);
+  color: white;
+  z-index:4;
+}
+
+/* 3rd Menu */
+ul#navmenu li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li a {
+  border: 1px solid #FFF;
+  border-right-color: #CCC;
+  border-bottom-color: #CCC;
+  background: white;
+  color: #333;
+  z-index:4;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu li:hover li:hover li a:hover,
+ul#navmenu li:hover li:hover li:hover a,
+ul#navmenu li.iehover li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover a {
+  background: blue url(../img/bg_topoOver.gif);
+  color: white;
+  z-index:4;
+}
+
+/* 4th Menu */
+ul#navmenu li:hover li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li.iehover li a {
+  background: white;
+  color: #333;
+  z-index:4;
+}
+
+/* 4th Menu Hover */
+ul#navmenu li:hover li:hover li:hover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover li a:hover {
+  background: blue url(../img/bg_topoOver.gif);
+  color: white;
+  z-index:4;
+}
+
+ul#navmenu ul ul,
+ul#navmenu ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 230px;
+  z-index:4;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#navmenu li:hover ul ul,
+ul#navmenu li:hover ul ul ul,
+ul#navmenu li.iehover ul ul,
+ul#navmenu li.iehover ul ul ul {
+  display: none;
+  z-index:4;
+}
+
+ul#navmenu li:hover ul,
+ul#navmenu ul li:hover ul,
+ul#navmenu ul ul li:hover ul,
+ul#navmenu li.iehover ul,
+ul#navmenu ul li.iehover ul,
+ul#navmenu ul ul li.iehover ul {
+  display: block;
+  z-index:4;
+}
+
+#navdireita {
+	float:right;
+	top:0;
+	font-size: 0px;
+	z-index:4;
+	margin-right:8px;
+}
+#navdireita a {
+  z-index:4;
+  border: 0 none;
+  padding: 0 6px;
+  float: left; /*For IE*/
+  display: block;
+  color: #333;
+  font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  height: auto !important;
+  height: 1%; /*For IE*/
+}
+#navdireita a:hover {
+  border: 0 none;
+  background: blue url(../img/bg_topoOver.gif);
+  color: #FFF;
+  z-index:4;
+}
+#navdireita img {
+  vertical-align: text-top;
+}
